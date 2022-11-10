@@ -99,8 +99,13 @@
         "screenshotPaths": {
           "default": {
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/PartnersLogoSlider/default/preview.png",
-            "width": 802,
-            "height": 249
+            "width": 1048,
+            "height": 176
+          },
+          "partnersLogoSlider2": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/PartnersLogoSlider/partnersLogoSlider2/preview.png",
+            "width": 986,
+            "height": 183
           }
         }
       }

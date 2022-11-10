@@ -1,7 +1,8 @@
 <template>
   <section class="relative w-full h-fit bg-green-800 overflow-hidden">
     <button
-      class="absolute h-[60px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[72px] bottom-[72px] md:top-[calc(50%_-_30px)]"
+      class="absolute h-[60px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[32px] bottom-[72px] md:top-[calc(50%_-_30px)]"
+      :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToNext()">
         <svg
@@ -82,7 +83,8 @@
       </div>
     </button>
     <button
-      class="absolute h-[60px] z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[72px] bottom-[72px] md:top-[calc(50%_-_30px)]"
+      class="absolute h-[60px] z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[32px] bottom-[72px] md:top-[calc(50%_-_30px)]"
+      :class="getSliderButtonClass()"
     >
       <div @click="$refs.carousel.goToPrev()">
         <svg
@@ -171,12 +173,13 @@
       <div
         v-for="(item, i) in slice.items"
         :key="`slice-item-${i}`"
-        class="slide"
+        class="slide my-6"
       >
-        <div
-          class="w-[250px] h-[111px] bg-red-800 mx-auto flex justify-center items-center"
-        >
-          <PrismicImage class="object-contain" :field="item.partner_logo" />
+        <div :class="getSlideClass()">
+          <PrismicImage
+            :class="getSlideImageClass()"
+            :field="item.partner_logo"
+          />
         </div>
       </div>
     </agile>
@@ -226,8 +229,47 @@ export default {
       ],
     };
 
+    let classes = {};
+
+    let getSlideClass = function () {
+      let classNames =
+        'w-[250px] h-[83px] bg-white mx-auto  flex justify-center items-center';
+
+      if (this.slice.variation == 'partnersLogoSlider2') {
+        classNames =
+          'w-[250px] h-[111px] rounded bg-white drop-shadow-lg mx-auto flex justify-center items-center';
+      }
+
+      return classNames;
+    };
+
+    let getSlideImageClass = function () {
+      let classNames = 'object-cover';
+
+      if (this.slice.variation == 'partnersLogoSlider2') {
+        classNames = 'w-[194px] h-[83px] object-fill';
+      }
+
+      return classNames;
+    };
+
+    let getSliderButtonClass = function () {
+      let classNames = '';
+
+      if (this.slice.variation == 'partnersLogoSlider2') {
+        classNames = 'bg-white drop-shadow-lg';
+      }
+
+      return classNames;
+    };
+
+    console.log('slice ', this.slice);
+
     return {
       myOption,
+      getSlideClass,
+      getSliderButtonClass,
+      getSlideImageClass,
     };
   },
 };

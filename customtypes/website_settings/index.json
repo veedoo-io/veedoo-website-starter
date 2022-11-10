@@ -1,0 +1,9 @@
+{
+  "id": "website_settings",
+  "label": "Website settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

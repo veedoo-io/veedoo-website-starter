@@ -6,6 +6,43 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Home Page documents */
+type HomePageDocumentData = Record<string, never>;
+/**
+ * Home Page document from Prismic
+ *
+ * - **API ID**: `home_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HomePageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomePageDocumentData>, "home_page", Lang>;
+/** Content for Page documents */
+type PageDocumentData = Record<string, never>;
+/**
+ * Page document from Prismic
+ *
+ * - **API ID**: `page`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for Website settings documents */
+type WebsiteSettingsDocumentData = Record<string, never>;
+/**
+ * Website settings document from Prismic
+ *
+ * - **API ID**: `website_settings`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type WebsiteSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
+export type AllDocumentTypes = HomePageDocument | PageDocument | WebsiteSettingsDocument;
 /**
  * Item in PartnersLogoSlider → Items
  *
@@ -72,9 +109,9 @@ type PartnersLogoSliderSliceVariation = PartnersLogoSliderSliceDefault | Partner
 export type PartnersLogoSliderSlice = prismicT.SharedSlice<"partners_logo_slider", PartnersLogoSliderSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
-        (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client;
+        (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice };
+        export type { HomePageDocumentData, HomePageDocument, PageDocumentData, PageDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocument, AllDocumentTypes, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice };
     }
 }
