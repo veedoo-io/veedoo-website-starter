@@ -1,0 +1,109 @@
+{
+  "slices": {
+    "components": {
+      "partners_logo_slider": {
+        "library": "slices",
+        "id": "partners_logo_slider",
+        "name": "PartnersLogoSlider",
+        "description": "PartnersLogoSlider",
+        "model": {
+          "id": "partners_logo_slider",
+          "type": "SharedSlice",
+          "name": "PartnersLogoSlider",
+          "description": "PartnersLogoSlider",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PartnersLogoSlider",
+              "primary": {},
+              "items": {
+                "partner_logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Partner Logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "partnersLogoSlider2",
+              "name": "PartnersLogoSlider 2",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PartnersLogoSlider",
+              "primary": {},
+              "items": {
+                "partner_logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Partner Logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "partner_logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "partners_logo_slider"
+          },
+          "partnersLogoSlider2": {
+            "variation": "partnersLogoSlider2",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "partner_logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "partners_logo_slider"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/PartnersLogoSlider/default/preview.png",
+            "width": 802,
+            "height": 249
+          }
+        }
+      }
+    }
+  }
+}
