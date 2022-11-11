@@ -196,7 +196,7 @@ export default {
 
   data() {
     console.log('slice ', this.slice.items);
-    let numberOfSlides = this.slice?.items?.length;
+    let numberOfSlides = this.slice?.items?.length ?? 0;
     let myOption = {
       navButtons: false,
       slidesToShow: 1,
@@ -207,25 +207,25 @@ export default {
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: numberOfSlides > 2 ? 2 : numberOfSlides,
           },
         },
         {
           breakpoint: 1024,
           settings: {
-            slidesToShow: 3,
+            slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
           },
         },
         {
           breakpoint: 1280,
           settings: {
-            slidesToShow: 4,
+            slidesToShow: numberOfSlides > 4 ? 4 : numberOfSlides,
           },
         },
         {
           breakpoint: 1536,
           settings: {
-            slidesToShow: 5,
+            slidesToShow: numberOfSlides > 5 ? 5 : numberOfSlides,
           },
         },
       ],
