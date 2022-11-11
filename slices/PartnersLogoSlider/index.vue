@@ -195,6 +195,8 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
 
   data() {
+    console.log('slice ', this.slice.items);
+    let numberOfSlides = this.slice?.items?.length;
     let myOption = {
       navButtons: false,
       slidesToShow: 1,
@@ -262,8 +264,6 @@ export default {
 
       return classNames;
     };
-
-    console.log('slice ', this.slice);
 
     return {
       myOption,

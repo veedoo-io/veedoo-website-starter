@@ -1,4 +1,12 @@
 import { apiEndpoint } from './sm.json';
+const glob = require('glob');
+
+const getStoriesPaths = () => {
+  return [
+    '.slicemachine/assets/**/*.stories.@(js|jsx|ts|tsx|svelte)',
+    'customtypes/**/*.stories.@(js|jsx|ts|tsx|svelte)',
+  ].reduce((acc, p) => (glob.sync(p).length ? [...acc, `../${p}`] : acc), []);
+};
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
@@ -44,6 +52,10 @@ export default {
     endpoint: apiEndpoint,
     modern: true,
     /* see configuration for more */
+  },
+
+  storybook: {
+    stories: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
