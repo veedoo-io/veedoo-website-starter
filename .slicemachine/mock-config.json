@@ -4,11 +4,18 @@
       "default": {
         "primary": {}
       }
+    },
+    "Tags": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
     "page": {},
     "home_page": {},
-    "website_settings": {}
+    "website_settings": {},
+    "tag_item": {}
   }
 }

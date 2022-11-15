@@ -43,7 +43,16 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/prismic',
+    '@nuxtjs/google-fonts',
   ],
+
+  googleFonts: {
+    prefetch: true,
+    preconnect: true,
+    preload: true,
+    download: true,
+    Poppins: [500],
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [],
@@ -51,6 +60,18 @@ export default {
   prismic: {
     endpoint: apiEndpoint,
     modern: true,
+    apiOptions: {
+      routes: [
+        {
+          type: 'home_page',
+          path: '/',
+        },
+        {
+          type: 'page',
+          path: '/:uid',
+        },
+      ],
+    },
     /* see configuration for more */
   },
 

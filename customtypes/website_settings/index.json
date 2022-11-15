@@ -4,6 +4,67 @@
   "repeatable": false,
   "status": true,
   "json": {
-    "Main": {}
+    "Main": {
+      "google_analytics_code": {
+        "type": "Text",
+        "config": {
+          "label": "Google Analytics Code ",
+          "placeholder": ""
+        }
+      },
+      "fibery_settings": {
+        "type": "Group",
+        "config": {
+          "label": "Fibery Settings",
+          "fields": {
+            "fibery_host_url": {
+              "type": "Link",
+              "config": {
+                "label": "fibery host url",
+                "placeholder": "",
+                "select": null
+              }
+            },
+            "fibery_token": {
+              "type": "Text",
+              "config": {
+                "label": "fibery token",
+                "placeholder": ""
+              }
+            }
+          }
+        }
+      },
+      "default_email_mailto": {
+        "type": "Text",
+        "config": {
+          "label": "Default email Mailto",
+          "placeholder": ""
+        }
+      },
+      "website_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Website Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "website_fav_icon": {
+        "type": "Image",
+        "config": {
+          "label": "Website fav icon ",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {}
+        }
+      }
+    }
   }
 }

@@ -7,7 +7,24 @@ type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
 /** Content for Home Page documents */
-type HomePageDocumentData = Record<string, never>;
+interface HomePageDocumentData {
+    /**
+     * Slice Zone field in *Home Page*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HomePageDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Home Page → Slice Zone*
+ *
+ */
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice;
 /**
  * Home Page document from Prismic
  *
@@ -30,8 +47,118 @@ type PageDocumentData = Record<string, never>;
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for Tag item documents */
+type TagItemDocumentData = Record<string, never>;
+/**
+ * Tag item document from Prismic
+ *
+ * - **API ID**: `tag_item`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type TagItemDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<TagItemDocumentData>, "tag_item", Lang>;
 /** Content for Website settings documents */
-type WebsiteSettingsDocumentData = Record<string, never>;
+interface WebsiteSettingsDocumentData {
+    /**
+     * Google Analytics Code  field in *Website settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.google_analytics_code
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    google_analytics_code: prismicT.KeyTextField;
+    /**
+     * Fibery Settings field in *Website settings*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.fibery_settings[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    fibery_settings: prismicT.GroupField<Simplify<WebsiteSettingsDocumentDataFiberySettingsItem>>;
+    /**
+     * Default email Mailto field in *Website settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.default_email_mailto
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    default_email_mailto: prismicT.KeyTextField;
+    /**
+     * Website Logo field in *Website settings*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.website_logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    website_logo: prismicT.ImageField<never>;
+    /**
+     * Website fav icon  field in *Website settings*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.website_fav_icon
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    website_fav_icon: prismicT.ImageField<never>;
+    /**
+     * Slice Zone field in *Website settings*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<WebsiteSettingsDocumentDataSlicesSlice>;
+}
+/**
+ * Item in Website settings → Fibery Settings
+ *
+ */
+export interface WebsiteSettingsDocumentDataFiberySettingsItem {
+    /**
+     * fibery host url field in *Website settings → Fibery Settings*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.fibery_settings[].fibery_host_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    fibery_host_url: prismicT.LinkField;
+    /**
+     * fibery token field in *Website settings → Fibery Settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.fibery_settings[].fibery_token
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    fibery_token: prismicT.KeyTextField;
+}
+/**
+ * Slice for *Website settings → Slice Zone*
+ *
+ */
+type WebsiteSettingsDocumentDataSlicesSlice = never;
 /**
  * Website settings document from Prismic
  *
@@ -42,7 +169,7 @@ type WebsiteSettingsDocumentData = Record<string, never>;
  * @typeParam Lang - Language API ID of the document.
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
-export type AllDocumentTypes = HomePageDocument | PageDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = HomePageDocument | PageDocument | TagItemDocument | WebsiteSettingsDocument;
 /**
  * Item in PartnersLogoSlider → Items
  *
@@ -107,11 +234,76 @@ type PartnersLogoSliderSliceVariation = PartnersLogoSliderSliceDefault | Partner
  *
  */
 export type PartnersLogoSliderSlice = prismicT.SharedSlice<"partners_logo_slider", PartnersLogoSliderSliceVariation>;
+/**
+ * Primary content in Tags → Primary
+ *
+ */
+interface TagsSliceDefaultPrimary {
+    /**
+     * Title field in *Tags → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: tags.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+}
+/**
+ * Item in Tags → Items
+ *
+ */
+export interface TagsSliceDefaultItem {
+    /**
+     * tag label field in *Tags → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: tags.items[].tag_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    tag_label: prismicT.KeyTextField;
+    /**
+     * tag Image field in *Tags → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: tags.items[].tag_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    tag_image: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for Tags Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Tags`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TagsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TagsSliceDefaultPrimary>, Simplify<TagsSliceDefaultItem>>;
+/**
+ * Slice variation for *Tags*
+ *
+ */
+type TagsSliceVariation = TagsSliceDefault;
+/**
+ * Tags Shared Slice
+ *
+ * - **API ID**: `tags`
+ * - **Description**: `Tags`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TagsSlice = prismicT.SharedSlice<"tags", TagsSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomePageDocumentData, HomePageDocument, PageDocumentData, PageDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocument, AllDocumentTypes, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice };
+        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice };
     }
 }

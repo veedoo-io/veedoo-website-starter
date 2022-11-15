@@ -11,26 +11,7 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
-        }
-      }
-    ],
-    "primary": {},
-    "slice_type": "partners_logo_slider"
-  },
-  {
-    "variation": "partnersLogoSlider2",
-    "version": "sktwi1xtmkfgx8626",
-    "items": [
-      {
-        "partner_logo": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
-          },
-          "alt": null,
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+          "url": "https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png"
         }
       }
     ],

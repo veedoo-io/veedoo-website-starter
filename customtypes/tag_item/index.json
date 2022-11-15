@@ -1,0 +1,9 @@
+{
+  "id": "tag_item",
+  "label": "Tag item",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {}
+  }
+}

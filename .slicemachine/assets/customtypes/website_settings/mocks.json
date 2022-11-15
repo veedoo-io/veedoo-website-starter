@@ -10,5 +10,36 @@
   "linked_documents": [],
   "lang": "en-us",
   "alternate_languages": [],
-  "data": {}
+  "data": {
+    "google_analytics_code": "captain",
+    "fibery_settings": [
+      {
+        "fibery_host_url": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        },
+        "fibery_token": "feel"
+      }
+    ],
+    "default_email_mailto": "folks",
+    "website_logo": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+    },
+    "website_fav_icon": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+    },
+    "slices": []
+  }
 }

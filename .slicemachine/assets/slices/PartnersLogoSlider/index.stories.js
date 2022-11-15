@@ -26,7 +26,7 @@ export const _Default = () => ({
               dimensions: { width: 900, height: 500 },
               alt: null,
               copyright: null,
-              url: 'https://images.unsplash.com/photo-1586952518485-11b180e92764',
+              url: 'https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png',
             },
           },
           {
@@ -34,7 +34,7 @@ export const _Default = () => ({
               dimensions: { width: 900, height: 500 },
               alt: null,
               copyright: null,
-              url: 'https://images.unsplash.com/photo-1600861194802-a2b11076bc51',
+              url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
             },
           },
           {
@@ -42,7 +42,23 @@ export const _Default = () => ({
               dimensions: { width: 900, height: 500 },
               alt: null,
               copyright: null,
-              url: 'https://images.unsplash.com/photo-1586952518485-11b180e92764',
+              url: 'https://images.prismic.io/veedoo-web/8e07faa1-e799-4f75-9233-72a23483d0cf_Facebook+svg.png',
+            },
+          },
+          {
+            partner_logo: {
+              dimensions: { width: 900, height: 500 },
+              alt: null,
+              copyright: null,
+              url: 'https://images.prismic.io/veedoo-web/fbafd58e-10f4-40dd-b2b0-bc1e770144ff_Pinterest+svg.png',
+            },
+          }, //
+          {
+            partner_logo: {
+              dimensions: { width: 900, height: 500 },
+              alt: null,
+              copyright: null,
+              url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
             },
           },
         ],
@@ -77,7 +93,7 @@ export const _PartnersLogoSlider2 = () => ({
               dimensions: { width: 900, height: 500 },
               alt: null,
               copyright: null,
-              url: 'https://images.unsplash.com/photo-1600861194802-a2b11076bc51',
+              url: 'https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png',
             },
           },
           {
@@ -85,7 +101,7 @@ export const _PartnersLogoSlider2 = () => ({
               dimensions: { width: 900, height: 500 },
               alt: null,
               copyright: null,
-              url: 'https://images.unsplash.com/photo-1586952518485-11b180e92764',
+              url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
             },
           },
           {
@@ -93,7 +109,23 @@ export const _PartnersLogoSlider2 = () => ({
               dimensions: { width: 900, height: 500 },
               alt: null,
               copyright: null,
-              url: 'https://images.unsplash.com/photo-1600861194802-a2b11076bc51',
+              url: 'https://images.prismic.io/veedoo-web/8e07faa1-e799-4f75-9233-72a23483d0cf_Facebook+svg.png',
+            },
+          },
+          {
+            partner_logo: {
+              dimensions: { width: 900, height: 500 },
+              alt: null,
+              copyright: null,
+              url: 'https://images.prismic.io/veedoo-web/fbafd58e-10f4-40dd-b2b0-bc1e770144ff_Pinterest+svg.png',
+            },
+          }, //
+          {
+            partner_logo: {
+              dimensions: { width: 900, height: 500 },
+              alt: null,
+              copyright: null,
+              url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
             },
           },
         ],

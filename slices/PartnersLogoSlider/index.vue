@@ -1,7 +1,18 @@
 <template>
-  <section class="relative w-full h-fit bg-green-800 overflow-hidden">
+  <section class="relative w-full h-fit overflow-hidden">
     <button
-      class="absolute h-[60px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[32px] bottom-[72px] md:top-[calc(50%_-_30px)]"
+      class="
+        absolute
+        h-[60px]
+        z-10
+        right-[calc(50%_-_80px)]
+        md:right-[16px]
+        lg:right-[32px]
+        bottom-[72px]
+        md:top-[calc(50%_-_30px)]
+        hover:scale-125
+        active:scale-75
+      "
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToNext()">
@@ -83,10 +94,21 @@
       </div>
     </button>
     <button
-      class="absolute h-[60px] z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[32px] bottom-[72px] md:top-[calc(50%_-_30px)]"
+      class="
+        absolute
+        h-[60px]
+        z-10
+        left-[calc(50%_-_80px)]
+        md:left-[16px]
+        lg:left-[32px]
+        bottom-[72px]
+        md:top-[calc(50%_-_30px)]
+        hover:scale-125
+        active:scale-75
+      "
       :class="getSliderButtonClass()"
     >
-      <div @click="$refs.carousel.goToPrev()">
+      <div class="" @click="$refs.carousel.goToPrev()">
         <svg
           width="60"
           height="61"
@@ -166,7 +188,15 @@
     </button>
 
     <agile
-      class="pt-[72px] pb-[172px] md:pb-[72px] px-auto md:px-[72px] bg-white w-full"
+      class="
+        pt-[72px]
+        pb-[172px]
+        md:pb-[72px]
+        px-auto
+        md:px-[72px]
+        bg-white
+        w-full
+      "
       ref="carousel"
       :options="myOption"
     >
@@ -195,7 +225,7 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
 
   data() {
-    console.log('slice ', this.slice.items);
+    //console.log('slice ', this.slice.items);
     let numberOfSlides = this.slice?.items?.length ?? 0;
     let myOption = {
       navButtons: false,
@@ -230,8 +260,6 @@ export default {
         },
       ],
     };
-
-    let classes = {};
 
     let getSlideClass = function () {
       let classNames =

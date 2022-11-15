@@ -1963,6 +1963,15 @@
     webpack-node-externals "^3.0.0"
     webpackbar "^4.0.0"
 
+"@nuxtjs/google-fonts@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-fonts/-/google-fonts-2.0.0.tgz#a0a97b3f0d2f86b4ec2ec08077e11105c07b71e8"
+  integrity sha512-ddcv0/+e5YKK2/ivE1v6I7aGXoNfcuGjNydbJz3q+zXkucftbQDBtph8AoYcqRbTIwUpCsr4aHov8P2HXyZSbg==
+  dependencies:
+    consola "^2.15.3"
+    defu "^6.0.0"
+    google-fonts-helper "^2.0.1"
+
 "@nuxtjs/prismic@^1.4.2":
   version "1.4.2"
   resolved "https://registry.yarnpkg.com/@nuxtjs/prismic/-/prismic-1.4.2.tgz#abcdcd52a4a124b890a384edd95a6fda9bf504d8"
@@ -7958,6 +7967,15 @@ globby@^9.2.0:
     ignore "^4.0.3"
     pify "^4.0.1"
     slash "^2.0.0"
+
+google-fonts-helper@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/google-fonts-helper/-/google-fonts-helper-2.0.1.tgz#ac6859272a572c516bbd83decaea50f6f4f24535"
+  integrity sha512-qlk3in9FYYYHX6tR8O9pPBbO4KqjBLtyfuSBxz/soY+xhUruzT6yKzPT1Z+aqH8KFoquwaRCxROok9ntg2kqiw==
+  dependencies:
+    deepmerge "^4.2.2"
+    fs-extra "^9.1.0"
+    got "^11.8.2"
 
 got@^11.8.2:
   version "11.8.5"
