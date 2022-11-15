@@ -14,7 +14,10 @@
       rounded-[10px]
       hover:scale-125
       font-medium
-      text-2xl text-[#48525F]
+      text-lg
+      md:text-xl
+      lg:text-2xl
+      text-[#48525F]
     "
     :class="{
       [extraClass]: true,

@@ -1,6 +1,28 @@
 <template>
-  <section class="relative w-full h-fit overflow-hidden py-[64px] px-[96px]">
-    <h2 class="title text-[40px] font-medium mb-[64px]">
+  <section
+    class="
+      relative
+      w-full
+      h-fit
+      overflow-hidden
+      py-4
+      px-4
+      lg:py-[64px]
+      lg:px-[96px]
+    "
+  >
+    <h2
+      v-if="slice.primary.title"
+      class="
+        title
+        text-[23px]
+        md:text-[36px]
+        lg:text-[40px]
+        text-[#353C47]
+        font-medium
+        mb-[64px]
+      "
+    >
       {{ slice.primary.title }}
     </h2>
 
