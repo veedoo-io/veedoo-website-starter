@@ -28,10 +28,6 @@ export const _Default = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png',
             },
-            on_click_url: {
-              type: 'Link',
-              url: 'https://veedoo.io/',
-            },
           },
           {
             partner_logo: {
@@ -114,10 +110,6 @@ export const _PartnersLogoSlider2 = () => ({
               alt: null,
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png',
-            },
-            on_click_url: {
-              type: 'Link',
-              url: 'https://veedoo.io/',
             },
           },
           {
