@@ -28,6 +28,10 @@ export const _Default = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png',
             },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
+            },
           },
           {
             partner_logo: {
@@ -35,6 +39,10 @@ export const _Default = () => ({
               alt: null,
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
+            },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
             },
           },
           {
@@ -44,6 +52,10 @@ export const _Default = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/8e07faa1-e799-4f75-9233-72a23483d0cf_Facebook+svg.png',
             },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
+            },
           },
           {
             partner_logo: {
@@ -52,6 +64,10 @@ export const _Default = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/fbafd58e-10f4-40dd-b2b0-bc1e770144ff_Pinterest+svg.png',
             },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
+            },
           }, //
           {
             partner_logo: {
@@ -59,6 +75,10 @@ export const _Default = () => ({
               alt: null,
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
+            },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
             },
           },
         ],
@@ -95,6 +115,10 @@ export const _PartnersLogoSlider2 = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png',
             },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
+            },
           },
           {
             partner_logo: {
@@ -102,6 +126,10 @@ export const _PartnersLogoSlider2 = () => ({
               alt: null,
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
+            },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
             },
           },
           {
@@ -111,6 +139,10 @@ export const _PartnersLogoSlider2 = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/8e07faa1-e799-4f75-9233-72a23483d0cf_Facebook+svg.png',
             },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
+            },
           },
           {
             partner_logo: {
@@ -119,6 +151,10 @@ export const _PartnersLogoSlider2 = () => ({
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/fbafd58e-10f4-40dd-b2b0-bc1e770144ff_Pinterest+svg.png',
             },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
+            },
           }, //
           {
             partner_logo: {
@@ -126,6 +162,10 @@ export const _PartnersLogoSlider2 = () => ({
               alt: null,
               copyright: null,
               url: 'https://images.prismic.io/veedoo-web/de58bb2a-c4e8-4359-820d-4303928ca9e9_Spotify+svg.png',
+            },
+            on_click_url: {
+              type: 'Link',
+              url: 'https://veedoo.io/',
             },
           },
         ],

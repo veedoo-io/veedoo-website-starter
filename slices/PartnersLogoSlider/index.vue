@@ -205,12 +205,19 @@
         :key="`slice-item-${i}`"
         class="slide my-6"
       >
-        <div :class="getSlideClass()">
+        <a
+          :href="item?.on_click_url?.url"
+          target="_blank"
+          :class="{
+            [getSlideClass()]: true,
+            ['cursor-pointer']: item?.on_click_url?.url,
+          }"
+        >
           <PrismicImage
             :class="getSlideImageClass()"
             :field="item.partner_logo"
           />
-        </div>
+        </a>
       </div>
     </agile>
   </section>
@@ -227,6 +234,8 @@ export default {
   data() {
     //console.log('slice ', this.slice.items);
     let numberOfSlides = this.slice?.items?.length ?? 0;
+
+    console.log('this.slice?.items', this.slice?.items);
     let myOption = {
       navButtons: false,
       slidesToShow: 1,

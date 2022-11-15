@@ -28,5 +28,7 @@ tagWithCustomBackground.args = {
   title: 'Web Development',
   image:
     'https://veedoo-web.cdn.prismic.io/veedoo-web/38455de2-6cba-4630-9b4c-e5334c7f5051_clarity_code-line.svg',
-  extraClass: 'text-[#ff0000] bg-green-300',
+
+  bgColor: 'bg-green-300',
+  textColor: 'text-red-500',
 };

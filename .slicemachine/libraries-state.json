@@ -27,6 +27,15 @@
                     "constraint": {},
                     "thumbnails": []
                   }
+                },
+                "on_click_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "on click url",
+                    "placeholder": "link to external url",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -65,7 +74,30 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.prismic.io/veedoo-web/c34094d9-009a-4099-be70-31098c6b8240_Stripe+svg.png"
+                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                },
+                "on_click_url": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {},
+            "slice_type": "partners_logo_slider"
+          },
+          "partnersLogoSlider2": {
+            "variation": "partnersLogoSlider2",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "partner_logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
                 }
               }
             ],

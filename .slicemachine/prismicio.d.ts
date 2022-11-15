@@ -185,6 +185,16 @@ export interface PartnersLogoSliderSliceDefaultItem {
      *
      */
     partner_logo: prismicT.ImageField<never>;
+    /**
+     * on click url field in *PartnersLogoSlider → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: link to external url
+     * - **API ID Path**: partners_logo_slider.items[].on_click_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    on_click_url: prismicT.LinkField;
 }
 /**
  * Default variation for PartnersLogoSlider Slice

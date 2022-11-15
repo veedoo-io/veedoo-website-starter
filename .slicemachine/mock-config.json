@@ -2,7 +2,8 @@
   "slices": {
     "PartnersLogoSlider": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "Tags": {
