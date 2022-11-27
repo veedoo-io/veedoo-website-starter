@@ -28,7 +28,8 @@ export default {
         this.url != '' ? "href='" + this.url + "'" : ''
       } class="flex items-center justify-center w-fit h-fit gap-2  ${
         this.class
-      }" >${
+      }" >
+      ${
         this.startIcon != ''
           ? "<img class='" +
             this.iconClass +

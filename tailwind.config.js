@@ -12,7 +12,7 @@ module.exports = {
   ],
   safelist: [
     {
-      pattern: /./, // the "." means "everything"
+      pattern: /./, // uncomment this before deploying
     },
   ],
   theme: {
