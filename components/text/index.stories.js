@@ -67,5 +67,12 @@ TextWithEmoji.args = {
   text: '🚀 I am a text with emoji 🚀',
   htmlTag: 'h1',
   class: 'text-red-300  text-5xl',
-  url: 'https://veedoo.io',
+};
+
+export const largeParagraph = Template.bind({});
+
+largeParagraph.args = {
+  text: 'Lorem ipsum dolor sit amet consectetur. Sed a faucibus condimentum porta. Turpis ac interdum praesent dictum elit tellus.',
+  htmlTag: 'p',
+  class: 'text-black w-[586px] text-[19px] h-fit',
 };
