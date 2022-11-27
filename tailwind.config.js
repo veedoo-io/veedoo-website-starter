@@ -10,6 +10,11 @@ module.exports = {
     'App.{js,ts,vue}',
     'app.{js,ts,vue}',
   ],
+  safelist: [
+    {
+      pattern: /./, // the "." means "everything"
+    },
+  ],
   theme: {
     extend: {
       colors: {

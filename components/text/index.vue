@@ -3,7 +3,7 @@ import { h } from 'vue';
 
 export default {
   props: {
-    text: { type: String, default: '' },
+    text: { type: String, default: 'Text Example' },
     htmlTag: {
       type: String,
       required: true,
