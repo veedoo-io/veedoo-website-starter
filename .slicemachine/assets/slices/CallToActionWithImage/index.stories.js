@@ -2,7 +2,7 @@ import MyComponent from '../../../../slices/CallToActionWithImage';
 import SliceZone from 'vue-slicezone';
 
 export default {
-  title: 'slices/CallToActionWithImage',
+  title: 'slices/CTAs/CallToActionWithImage 1',
 };
 
 export const _Default = () => ({

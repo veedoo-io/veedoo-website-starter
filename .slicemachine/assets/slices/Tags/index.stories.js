@@ -2,7 +2,7 @@ import MyComponent from '../../../../slices/Tags';
 import SliceZone from 'vue-slicezone';
 
 export default {
-  title: 'slices/Tags',
+  title: 'slices/Tags/Tags 1',
 };
 
 export const _Default = () => ({

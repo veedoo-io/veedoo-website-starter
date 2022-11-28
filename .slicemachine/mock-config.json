@@ -17,7 +17,11 @@
         "primary": {}
       }
     },
-    "Testimonial": {}
+    "Testimonial": {
+      "default": {
+        "primary": {}
+      }
+    }
   },
   "_cts": {
     "page": {},

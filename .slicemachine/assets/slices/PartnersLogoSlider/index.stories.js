@@ -2,7 +2,7 @@ import MyComponent from '../../../../slices/PartnersLogoSlider';
 import SliceZone from 'vue-slicezone';
 
 export default {
-  title: 'slices/PartnersLogoSlider',
+  title: 'slices/Sliders/PartnersLogoSlider 1',
 };
 
 export const _Default = () => ({

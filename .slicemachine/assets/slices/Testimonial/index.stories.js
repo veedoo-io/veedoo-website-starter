@@ -1,26 +1,44 @@
 import MyComponent from '../../../../slices/Testimonial';
-import SliceZone from 'vue-slicezone'
+import SliceZone from 'vue-slicezone';
 
 export default {
-  title: 'slices/Testimonial'
-}
-
+  title: 'slices/Testimonial/Testimonial 1',
+};
 
 export const _Default = () => ({
   components: {
     MyComponent,
-    SliceZone
+    SliceZone,
   },
   methods: {
     resolve() {
-      return MyComponent
-    }
+      return MyComponent;
+    },
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"heading1","text":"Morning","spans":[]}],"description":[{"type":"paragraph","text":"Officia aliqua proident exercitation do reprehenderit. Labore culpa occaecat enim ea et ut tempor dolor qui nulla qui eu nostrud nulla. Qui enim elit officia enim sint reprehenderit qui exercitation dolore ea sunt tempor.","spans":[]}]},"slice_type":"testimonial","id":"_Default"}
-    }
+      mock: {
+        variation: 'default',
+        version: 'sktwi1xtmkfgx8626',
+        items: [
+          {
+            full_name: 'design',
+            job_position: 'kill',
+            testimonial: [
+              {
+                type: 'paragraph',
+                text: 'Deserunt consequat reprehenderit nisi fugiat reprehenderit proident proident anim minim ea aliqua veniam pariatur enim. Deserunt magna incididunt dolor consectetur ut. Eiusmod amet excepteur veniam.',
+                spans: [],
+              },
+            ],
+          },
+        ],
+        primary: {},
+        slice_type: 'testimonial',
+        id: '_Default',
+      },
+    };
   },
-  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
-})
-_Default.storyName = ''
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />',
+});
+_Default.storyName = '';

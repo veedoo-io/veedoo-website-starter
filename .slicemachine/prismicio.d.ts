@@ -419,30 +419,40 @@ type TagsSliceVariation = TagsSliceDefault;
  */
 export type TagsSlice = prismicT.SharedSlice<"tags", TagsSliceVariation>;
 /**
- * Primary content in Testimonial → Primary
+ * Item in Testimonial → Items
  *
  */
-interface TestimonialSliceDefaultPrimary {
+export interface TestimonialSliceDefaultItem {
     /**
-     * Title field in *Testimonial → Primary*
+     * full name field in *Testimonial → Items*
      *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: testimonial.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.items[].full_name
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    title: prismicT.TitleField;
+    full_name: prismicT.KeyTextField;
     /**
-     * Description field in *Testimonial → Primary*
+     * job position field in *Testimonial → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.items[].job_position
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    job_position: prismicT.KeyTextField;
+    /**
+     * Testimonial field in *Testimonial → Items*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your product
-     * - **API ID Path**: testimonial.primary.description
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.items[].testimonial
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    description: prismicT.RichTextField;
+    testimonial: prismicT.RichTextField;
 }
 /**
  * Default variation for Testimonial Slice
@@ -452,7 +462,7 @@ interface TestimonialSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TestimonialSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialSliceDefaultPrimary>, never>;
+export type TestimonialSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<TestimonialSliceDefaultItem>>;
 /**
  * Slice variation for *Testimonial*
  *
@@ -472,6 +482,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
+        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }

@@ -614,26 +614,33 @@
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
               "description": "Testimonial",
-              "primary": {
-                "title": {
-                  "type": "StructuredText",
+              "primary": {},
+              "items": {
+                "full_name": {
+                  "type": "Text",
                   "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "label": "full name",
+                    "placeholder": ""
                   }
                 },
-                "description": {
+                "job_position": {
+                  "type": "Text",
+                  "config": {
+                    "label": "job position",
+                    "placeholder": ""
+                  }
+                },
+                "testimonial": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your product"
+                    "label": "Testimonial",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 }
               },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
-              "items": {}
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -642,24 +649,19 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "full_name": "design",
+                "job_position": "kill",
+                "testimonial": [
+                  {
+                    "type": "paragraph",
+                    "text": "Deserunt consequat reprehenderit nisi fugiat reprehenderit proident proident anim minim ea aliqua veniam pariatur enim. Deserunt magna incididunt dolor consectetur ut. Eiusmod amet excepteur veniam.",
+                    "spans": []
+                  }
+                ]
+              }
             ],
-            "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Morning",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Officia aliqua proident exercitation do reprehenderit. Labore culpa occaecat enim ea et ut tempor dolor qui nulla qui eu nostrud nulla. Qui enim elit officia enim sint reprehenderit qui exercitation dolore ea sunt tempor.",
-                  "spans": []
-                }
-              ]
-            },
+            "primary": {},
             "slice_type": "testimonial"
           }
         },
