@@ -4,6 +4,27 @@
   "repeatable": true,
   "status": true,
   "json": {
-    "Main": {}
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "partners_logo_slider": {
+              "type": "SharedSlice"
+            },
+            "call_to_action_with_image": {
+              "type": "SharedSlice"
+            },
+            "tags": {
+              "type": "SharedSlice"
+            },
+            "testimonial": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
   }
 }

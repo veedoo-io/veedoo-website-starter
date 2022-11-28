@@ -15,6 +15,12 @@
             },
             "tags": {
               "type": "SharedSlice"
+            },
+            "call_to_action_with_image": {
+              "type": "SharedSlice"
+            },
+            "testimonial": {
+              "type": "SharedSlice"
             }
           }
         }
