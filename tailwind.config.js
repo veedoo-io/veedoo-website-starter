@@ -12,9 +12,9 @@ module.exports = {
   ],
   safelist: [
     {
-      pattern: /./, // uncomment this before deploying
+      pattern: /./,
     },
-  ],
+  ], // uncomment this before deploying
   theme: {
     extend: {
       colors: {

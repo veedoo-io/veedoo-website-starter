@@ -1,6 +1,132 @@
 {
   "slices": {
     "components": {
+      "call_to_action_with_image": {
+        "library": "slices",
+        "id": "call_to_action_with_image",
+        "name": "CallToActionWithImage",
+        "description": "CallToActionWithImage",
+        "model": {
+          "id": "call_to_action_with_image",
+          "type": "SharedSlice",
+          "name": "CallToActionWithImage",
+          "description": "CallToActionWithImage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "CallToActionWithImage",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "Alternate like a star"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A predesigned AlternateGrid component, that you can use to list your skills or features of a product."
+                  }
+                },
+                "backgroundcolor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "backgroundColor",
+                    "placeholder": "Slice BackgroundColor"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "button text",
+                    "placeholder": ""
+                  }
+                },
+                "button_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "button url",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                },
+                "button_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "button background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Alternate like a star",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "A predesigned AlternateGrid component, that you can use to list your skills or features of a product.",
+                  "spans": []
+                }
+              ],
+              "backgroundcolor": "#E2EEFF",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
+              },
+              "button_text": "Click here",
+              "button_url": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "button_color": "#2F80ED"
+            },
+            "slice_type": "call_to_action_with_image"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "partners_logo_slider": {
         "library": "slices",
         "id": "partners_logo_slider",
@@ -456,6 +582,78 @@
             "height": 1294
           }
         }
+      },
+      "testimonial": {
+        "library": "slices",
+        "id": "testimonial",
+        "name": "Testimonial",
+        "description": "Testimonial",
+        "model": {
+          "id": "testimonial",
+          "type": "SharedSlice",
+          "name": "Testimonial",
+          "description": "Testimonial",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Testimonial",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your product"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Morning",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Officia aliqua proident exercitation do reprehenderit. Labore culpa occaecat enim ea et ut tempor dolor qui nulla qui eu nostrud nulla. Qui enim elit officia enim sint reprehenderit qui exercitation dolore ea sunt tempor.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "testimonial"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
       }
     }
   }

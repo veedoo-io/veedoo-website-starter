@@ -19,6 +19,8 @@
     "core-js": "^3.25.3",
     "glob": "^8.0.3",
     "nuxt": "^2.15.8",
+    "tailwind-matcher": "^0.1.1",
+    "tailwind-safelist-generator": "^1.0.0",
     "vue": "^2.7.10",
     "vue-agile": "^2.0.0",
     "vue-server-renderer": "^2.7.10",

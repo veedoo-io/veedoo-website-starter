@@ -171,6 +171,105 @@ type WebsiteSettingsDocumentDataSlicesSlice = never;
 export type WebsiteSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
 export type AllDocumentTypes = HomePageDocument | PageDocument | TagItemDocument | WebsiteSettingsDocument;
 /**
+ * Primary content in CallToActionWithImage → Primary
+ *
+ */
+interface CallToActionWithImageSliceDefaultPrimary {
+    /**
+     * Title field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: call_to_action_with_image.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your product
+     * - **API ID Path**: call_to_action_with_image.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * backgroundColor field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: Slice BackgroundColor
+     * - **API ID Path**: call_to_action_with_image.primary.backgroundcolor
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    backgroundcolor: prismicT.ColorField;
+    /**
+     * image field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * button text field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_text: prismicT.KeyTextField;
+    /**
+     * button url field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.button_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    button_url: prismicT.LinkField;
+    /**
+     * button background color field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.button_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    button_color: prismicT.ColorField;
+}
+/**
+ * Default variation for CallToActionWithImage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `CallToActionWithImage`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CallToActionWithImageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<CallToActionWithImageSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *CallToActionWithImage*
+ *
+ */
+type CallToActionWithImageSliceVariation = CallToActionWithImageSliceDefault;
+/**
+ * CallToActionWithImage Shared Slice
+ *
+ * - **API ID**: `call_to_action_with_image`
+ * - **Description**: `CallToActionWithImage`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type CallToActionWithImageSlice = prismicT.SharedSlice<"call_to_action_with_image", CallToActionWithImageSliceVariation>;
+/**
  * Item in PartnersLogoSlider → Items
  *
  */
@@ -309,11 +408,60 @@ type TagsSliceVariation = TagsSliceDefault;
  *
  */
 export type TagsSlice = prismicT.SharedSlice<"tags", TagsSliceVariation>;
+/**
+ * Primary content in Testimonial → Primary
+ *
+ */
+interface TestimonialSliceDefaultPrimary {
+    /**
+     * Title field in *Testimonial → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: testimonial.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *Testimonial → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your product
+     * - **API ID Path**: testimonial.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for Testimonial Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Testimonial`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimonialSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Testimonial*
+ *
+ */
+type TestimonialSliceVariation = TestimonialSliceDefault;
+/**
+ * Testimonial Shared Slice
+ *
+ * - **API ID**: `testimonial`
+ * - **Description**: `Testimonial`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TestimonialSlice = prismicT.SharedSlice<"testimonial", TestimonialSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice };
+        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }

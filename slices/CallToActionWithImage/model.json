@@ -1,0 +1,73 @@
+{
+  "id": "call_to_action_with_image",
+  "type": "SharedSlice",
+  "name": "CallToActionWithImage",
+  "description": "CallToActionWithImage",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CallToActionWithImage",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "single": "heading1",
+            "label": "Title",
+            "placeholder": "Alternate like a star"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "single": "paragraph",
+            "label": "Description",
+            "placeholder": "A predesigned AlternateGrid component, that you can use to list your skills or features of a product."
+          }
+        },
+        "backgroundcolor": {
+          "type": "Color",
+          "config": {
+            "label": "backgroundColor",
+            "placeholder": "Slice BackgroundColor"
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "button text",
+            "placeholder": ""
+          }
+        },
+        "button_url": {
+          "type": "Link",
+          "config": {
+            "label": "button url",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        },
+        "button_color": {
+          "type": "Color",
+          "config": {
+            "label": "button background color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
