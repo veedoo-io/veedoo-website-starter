@@ -1,9 +1,11 @@
 <template>
   <section :class="getContainerClass()">
-    <PrismicImage
+    <div>
+      <PrismicImage
         class="h-[250px] object-contain"
         :field="slice.primary.image"
       />
+    </div>
     <PrismicRichText :field="slice.primary.title" />
     <PrismicRichText :field="slice.primary.description" />
     <PrismicLink :class="getButtonClass()" :field="slice.primary.button_url">{{
@@ -14,6 +16,7 @@
 
 <script>
 import { getSliceComponentProps } from '@prismicio/vue/components';
+import tailwindMatcher from '~/assets/js/util/hexToName';
 
 export default {
   name: 'Testimonial',
@@ -28,8 +31,9 @@ export default {
         this.slice.primary.backgroundcolor &&
         this.slice.primary.backgroundcolor != ''
       ) {
-        classNames =
-          classNames + ` bg-[${this.slice.primary.backgroundcolor}] `;
+        let colorName = tailwindMatcher(this.slice.primary.backgroundcolor);
+
+        classNames = classNames + ` bg-${colorName} `;
       } else {
         classNames = classNames + ' bg-white ';
       }
@@ -43,17 +47,22 @@ export default {
         this.slice.primary.button_color &&
         this.slice.primary.button_color != ''
       ) {
-        classNames = classNames + ` bg-[${this.slice.primary.button_color}] `;
+        let colorName = tailwindMatcher(this.slice.primary.button_color);
+
+        classNames = classNames + ` bg-${colorName} `;
       } else {
         classNames = classNames + ' bg-[#2F80ED]';
       }
 
+      console.log('textcolor', this.slice.primary.button_text_color);
       if (
         this.slice.primary.button_text_color &&
         this.slice.primary.button_text_color != ''
       ) {
+        let colorName = tailwindMatcher(this.slice.primary.button_text_color);
+
         classNames =
-          classNames + ` text-[${this.slice.primary.button_text_color}] `;
+          classNames + ` text-${colorName} `;
       } else {
         classNames = classNames + ' text-white ';
       }

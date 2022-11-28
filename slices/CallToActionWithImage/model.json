@@ -64,6 +64,13 @@
             "label": "button background color",
             "placeholder": ""
           }
+        },
+        "button_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "button text color",
+            "placeholder": ""
+          }
         }
       },
       "items": {},

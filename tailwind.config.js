@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  mode: 'jit',
   content: [
     './components/**/*.vue',
     './slices/**/*.vue',
@@ -10,11 +11,6 @@ module.exports = {
     'App.{js,ts,vue}',
     'app.{js,ts,vue}',
   ],
-  safelist: [
-    {
-      pattern: /./,
-    },
-  ], // uncomment this before deploying
   theme: {
     extend: {
       colors: {
@@ -42,4 +38,9 @@ module.exports = {
     },
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /./,
+    },
+  ], // uncomment this before deploying
 };

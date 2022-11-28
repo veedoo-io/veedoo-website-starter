@@ -2,23 +2,25 @@
   {
     "variation": "default",
     "version": "sktwi1xtmkfgx8626",
-    "items": [{}],
+    "items": [
+      {}
+    ],
     "primary": {
       "title": [
         {
           "type": "heading1",
-          "text": "Alternate like a star",
+          "text": "Storm",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "A predesigned AlternateGrid component, that you can use to list your skills or features of a product.",
+          "text": "Cupidatat magna laboris laboris culpa laboris nulla anim enim Lorem quis ut dolor. Do velit nisi voluptate Lorem tempor ex sint qui laboris culpa. Ullamco exercitation nulla officia aliquip.",
           "spans": []
         }
       ],
-      "backgroundcolor": "#E2EEFF",
+      "backgroundcolor": "#8cab49",
       "image": {
         "dimensions": {
           "width": 900,
@@ -26,14 +28,15 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
       },
-      "button_text": "Click here",
+      "button_text": "meant",
       "button_url": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "http://google.com"
       },
-      "button_color": "#2F80ED"
+      "button_color": "#d789ca",
+      "button_text_color": "#72bbc2"
     },
     "slice_type": "call_to_action_with_image"
   }

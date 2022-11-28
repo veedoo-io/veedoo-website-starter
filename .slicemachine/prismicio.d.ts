@@ -179,7 +179,7 @@ interface CallToActionWithImageSliceDefaultPrimary {
      * Title field in *CallToActionWithImage → Primary*
      *
      * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
+     * - **Placeholder**: Alternate like a star
      * - **API ID Path**: call_to_action_with_image.primary.title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -189,7 +189,7 @@ interface CallToActionWithImageSliceDefaultPrimary {
      * Description field in *CallToActionWithImage → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your product
+     * - **Placeholder**: A predesigned AlternateGrid component, that you can use to list your skills or features of a product.
      * - **API ID Path**: call_to_action_with_image.primary.description
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
@@ -245,6 +245,16 @@ interface CallToActionWithImageSliceDefaultPrimary {
      *
      */
     button_color: prismicT.ColorField;
+    /**
+     * button text color field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.button_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    button_text_color: prismicT.ColorField;
 }
 /**
  * Default variation for CallToActionWithImage Slice

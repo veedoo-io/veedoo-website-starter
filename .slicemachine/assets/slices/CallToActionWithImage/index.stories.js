@@ -23,7 +23,7 @@ export const _Default = () => ({
         items: [{}],
         primary: {
           title: [
-            { type: 'heading1', text: 'Alternate like a star 2', spans: [] },
+            { type: 'heading1', text: 'Alternate like a star', spans: [] },
           ],
           description: [
             {
@@ -37,11 +37,12 @@ export const _Default = () => ({
             dimensions: { width: 900, height: 500 },
             alt: null,
             copyright: null,
-            url: 'https://images.unsplash.com/photo-1531771686035-25f47595c87a',
+            url: 'https://images.unsplash.com/photo-1593642633279-1796119d5482',
           },
           button_text: 'Click here',
-          button_url: { link_type: 'Web', url: 'https://slicemachine.dev' },
+          button_url: { link_type: 'Web', url: 'http://google.com' },
           button_color: '#2F80ED',
+          button_text_color: '#ffffff',
         },
         slice_type: 'call_to_action_with_image',
         id: '_Default',
