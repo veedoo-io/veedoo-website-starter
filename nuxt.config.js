@@ -1,4 +1,7 @@
 import { apiEndpoint } from './sm.json';
+import Prismic from '@prismicio/client';
+import { Link } from '@prismicio/helpers';
+
 const glob = require('glob');
 
 const getStoriesPaths = () => {
@@ -8,8 +11,31 @@ const getStoriesPaths = () => {
   ].reduce((acc, p) => (glob.sync(p).length ? [...acc, `../${p}`] : acc), []);
 };
 
+const routes = [
+  {
+    type: 'home_page',
+    path: '/',
+  },
+  {
+    type: 'page',
+    path: '/:uid',
+  },
+];
+
 export default {
   target: 'static',
+  generate: {
+    routes: async () => {
+      const client = Prismic.client(sm.apiEndpoint, {
+        routes: routes,
+      });
+      const pages = await client.query(
+        Prismic.Predicates.at('document.type', 'page')
+      );
+
+      return pages.results.map((page) => page.url);
+    },
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'veedoo-website-starter',
@@ -62,16 +88,7 @@ export default {
     endpoint: apiEndpoint,
     modern: true,
     apiOptions: {
-      routes: [
-        {
-          type: 'home_page',
-          path: '/',
-        },
-        {
-          type: 'page',
-          path: '/:uid',
-        },
-      ],
+      routes: routes,
     },
     /* see configuration for more */
   },

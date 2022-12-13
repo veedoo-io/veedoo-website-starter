@@ -21,12 +21,25 @@
       "default": {
         "primary": {}
       }
+    },
+    "HeaderVeedoo": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "FooterVeedoo": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
     "page": {},
     "home_page": {},
     "website_settings": {},
-    "tag_item": {}
+    "tag_item": {},
+    "header": {},
+    "footer": {}
   }
 }

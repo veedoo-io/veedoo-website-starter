@@ -42,20 +42,19 @@
           "placeholder": ""
         }
       },
-      "website_logo": {
-        "type": "Image",
-        "config": {
-          "label": "Website Logo",
-          "constraint": {},
-          "thumbnails": []
-        }
-      },
       "website_fav_icon": {
         "type": "Image",
         "config": {
           "label": "Website fav icon ",
           "constraint": {},
           "thumbnails": []
+        }
+      },
+      "default_background_color": {
+        "type": "Color",
+        "config": {
+          "label": "default background Color",
+          "placeholder": ""
         }
       },
       "slices": {

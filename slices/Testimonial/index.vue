@@ -1,28 +1,42 @@
 <template>
-  <section class="section">
-    <PrismicRichText :field="slice.primary.title" class="title" />
-    <PrismicRichText :field="slice.primary.description" />
+  <section :class="getContainerClasses()">
+    <PrismicRichText :class="getTitleClasses()" :field="slice.primary.title" />
   </section>
 </template>
 
 <script>
-import { getSliceComponentProps } from "@prismicio/vue/components";
+import { getSliceComponentProps } from '@prismicio/vue/components';
 
 export default {
-  name: "Testimonial",
+  name: 'Testimonial',
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
-}
+  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+
+  data() {
+    let getContainerClasses = function () {
+      let classNames = 'section bg-red-300 py-[94px] px-[96px] ';
+
+      return classNames;
+    };
+
+    let getTitleClasses = function () {
+      let classNames = 'font-medium	flex justify-center items-center mb-10 ';
+
+      if (this?.slice?.primary?.title_color) {
+        classNames = classNames + ` text-[${this.slice.primary.title_color}]`;
+      } else {
+        classNames = classNames + ` text-[#353C47]`;
+      }
+
+      return classNames;
+    };
+
+    return {
+      getContainerClasses,
+      getTitleClasses,
+    };
+  },
+};
 </script>
 
-<style scoped>
-.section {
-  background: #f7f7f7;
-  color: #111;
-  padding: 4em;
-  text-align: center;
-}
-.title {
-  margin-bottom: 2em;
-}
-</style>
+<style scoped></style>

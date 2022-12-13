@@ -6,6 +6,64 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Footer documents */
+interface FooterDocumentData {
+    /**
+     * Slice Zone field in *Footer*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<FooterDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Footer → Slice Zone*
+ *
+ */
+type FooterDocumentDataSlicesSlice = FooterVeedooSlice;
+/**
+ * Footer document from Prismic
+ *
+ * - **API ID**: `footer`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type FooterDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
+/** Content for Header documents */
+interface HeaderDocumentData {
+    /**
+     * Slice Zone field in *Header*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<HeaderDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Header → Slice Zone*
+ *
+ */
+type HeaderDocumentDataSlicesSlice = HeaderVeedooSlice;
+/**
+ * Header document from Prismic
+ *
+ * - **API ID**: `header`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type HeaderDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 /** Content for Home Page documents */
 interface HomePageDocumentData {
     /**
@@ -19,6 +77,39 @@ interface HomePageDocumentData {
      *
      */
     slices: prismicT.SliceZone<HomePageDocumentDataSlicesSlice>;
+    /**
+     * meta_title field in *Home Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.meta_title
+     * - **Tab**: Seo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * meta_description field in *Home Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.meta_description
+     * - **Tab**: Seo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_description: prismicT.KeyTextField;
+    /**
+     * meta_image field in *Home Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home_page.meta_image
+     * - **Tab**: Seo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_image: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Home Page → Slice Zone*
@@ -48,6 +139,39 @@ interface PageDocumentData {
      *
      */
     slices: prismicT.SliceZone<PageDocumentDataSlicesSlice>;
+    /**
+     * meta_title field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_title
+     * - **Tab**: Seo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_title: prismicT.KeyTextField;
+    /**
+     * meta_description field in *Page*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_description
+     * - **Tab**: Seo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    meta_description: prismicT.KeyTextField;
+    /**
+     * meta_image field in *Page*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page.meta_image
+     * - **Tab**: Seo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    meta_image: prismicT.ImageField<never>;
 }
 /**
  * Slice for *Page → Slice Zone*
@@ -63,7 +187,7 @@ type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithIma
  *
  * @typeParam Lang - Language API ID of the document.
  */
-export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageDocumentData>, "page", Lang>;
+export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 /** Content for [do not use ] Tag item  documents */
 type TagItemDocumentData = Record<string, never>;
 /**
@@ -112,17 +236,6 @@ interface WebsiteSettingsDocumentData {
      */
     default_email_mailto: prismicT.KeyTextField;
     /**
-     * Website Logo field in *Website settings*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: website_settings.website_logo
-     * - **Tab**: Main
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    website_logo: prismicT.ImageField<never>;
-    /**
      * Website fav icon  field in *Website settings*
      *
      * - **Field Type**: Image
@@ -133,6 +246,17 @@ interface WebsiteSettingsDocumentData {
      *
      */
     website_fav_icon: prismicT.ImageField<never>;
+    /**
+     * default background Color field in *Website settings*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.default_background_color
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    default_background_color: prismicT.ColorField;
     /**
      * Slice Zone field in *Website settings*
      *
@@ -186,7 +310,7 @@ type WebsiteSettingsDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
-export type AllDocumentTypes = HomePageDocument | PageDocument | TagItemDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = FooterDocument | HeaderDocument | HomePageDocument | PageDocument | TagItemDocument | WebsiteSettingsDocument;
 /**
  * Primary content in CallToActionWithImage → Primary
  *
@@ -296,6 +420,187 @@ type CallToActionWithImageSliceVariation = CallToActionWithImageSliceDefault;
  *
  */
 export type CallToActionWithImageSlice = prismicT.SharedSlice<"call_to_action_with_image", CallToActionWithImageSliceVariation>;
+/**
+ * Primary content in FooterVeedoo → Primary
+ *
+ */
+interface FooterVeedooSliceDefaultPrimary {
+    /**
+     * footer logo field in *FooterVeedoo → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_veedoo.primary.footer_logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    footer_logo: prismicT.ImageField<never>;
+    /**
+     * footer text field in *FooterVeedoo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_veedoo.primary.footer_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    footer_text: prismicT.RichTextField;
+}
+/**
+ * Item in FooterVeedoo → Items
+ *
+ */
+export interface FooterVeedooSliceDefaultItem {
+    /**
+     * footer flag field in *FooterVeedoo → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_veedoo.items[].footer_flag
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    footer_flag: prismicT.ImageField<never>;
+}
+/**
+ * Default variation for FooterVeedoo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `FooterVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterVeedooSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterVeedooSliceDefaultPrimary>, Simplify<FooterVeedooSliceDefaultItem>>;
+/**
+ * Slice variation for *FooterVeedoo*
+ *
+ */
+type FooterVeedooSliceVariation = FooterVeedooSliceDefault;
+/**
+ * FooterVeedoo Shared Slice
+ *
+ * - **API ID**: `footer_veedoo`
+ * - **Description**: `FooterVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterVeedooSlice = prismicT.SharedSlice<"footer_veedoo", FooterVeedooSliceVariation>;
+/**
+ * Primary content in HeaderVeedoo → Primary
+ *
+ */
+interface HeaderVeedooSliceDefaultPrimary {
+    /**
+     * logo field in *HeaderVeedoo → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.primary.logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * main link text field in *HeaderVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.primary.main_link_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    main_link_text: prismicT.KeyTextField;
+    /**
+     * main link url field in *HeaderVeedoo → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.primary.main_link_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    main_link_url: prismicT.LinkField;
+    /**
+     * background color field in *HeaderVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * text color field in *HeaderVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+}
+/**
+ * Item in HeaderVeedoo → Items
+ *
+ */
+export interface HeaderVeedooSliceDefaultItem {
+    /**
+     * menu item type field in *HeaderVeedoo → Items*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: Select Type
+     * - **Default Value**: Menu
+     * - **API ID Path**: header_veedoo.items[].menu_item_type
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    menu_item_type: prismicT.SelectField<"Menu" | "Contacts" | "Get in touch!", "filled">;
+    /**
+     * menu text field in *HeaderVeedoo → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.items[].menu_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    menu_text: prismicT.KeyTextField;
+    /**
+     * menu link field in *HeaderVeedoo → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.items[].menu_link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    menu_link: prismicT.LinkField;
+}
+/**
+ * Default variation for HeaderVeedoo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `HeaderVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderVeedooSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeaderVeedooSliceDefaultPrimary>, Simplify<HeaderVeedooSliceDefaultItem>>;
+/**
+ * Slice variation for *HeaderVeedoo*
+ *
+ */
+type HeaderVeedooSliceVariation = HeaderVeedooSliceDefault;
+/**
+ * HeaderVeedoo Shared Slice
+ *
+ * - **API ID**: `header_veedoo`
+ * - **Description**: `HeaderVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderVeedooSlice = prismicT.SharedSlice<"header_veedoo", HeaderVeedooSliceVariation>;
 /**
  * Item in PartnersLogoSlider → Items
  *
@@ -436,6 +741,42 @@ type TagsSliceVariation = TagsSliceDefault;
  */
 export type TagsSlice = prismicT.SharedSlice<"tags", TagsSliceVariation>;
 /**
+ * Primary content in Testimonial → Primary
+ *
+ */
+interface TestimonialSliceDefaultPrimary {
+    /**
+     * title field in *Testimonial → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * title color field in *Testimonial → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.primary.title_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    title_color: prismicT.ColorField;
+    /**
+     * slice background color field in *Testimonial → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.primary.slice_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    slice_background_color: prismicT.ColorField;
+}
+/**
  * Item in Testimonial → Items
  *
  */
@@ -479,7 +820,7 @@ export interface TestimonialSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type TestimonialSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<TestimonialSliceDefaultItem>>;
+export type TestimonialSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestimonialSliceDefaultPrimary>, Simplify<TestimonialSliceDefaultItem>>;
 /**
  * Slice variation for *Testimonial*
  *
@@ -499,6 +840,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }

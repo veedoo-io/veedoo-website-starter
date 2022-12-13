@@ -11,26 +11,17 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "google_analytics_code": "captain",
+    "google_analytics_code": "also",
     "fibery_settings": [
       {
         "fibery_host_url": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "http://twitter.com"
         },
-        "fibery_token": "feel"
+        "fibery_token": "green"
       }
     ],
-    "default_email_mailto": "folks",
-    "website_logo": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
-    },
+    "default_email_mailto": "real",
     "website_fav_icon": {
       "dimensions": {
         "width": 900,
@@ -38,8 +29,9 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+      "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"
     },
+    "default_background_color": "#576bc3",
     "slices": []
   }
 }

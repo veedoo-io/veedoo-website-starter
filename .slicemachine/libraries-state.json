@@ -141,6 +141,231 @@
           }
         }
       },
+      "footer_veedoo": {
+        "library": "slices",
+        "id": "footer_veedoo",
+        "name": "FooterVeedoo",
+        "description": "FooterVeedoo",
+        "model": {
+          "id": "footer_veedoo",
+          "type": "SharedSlice",
+          "name": "FooterVeedoo",
+          "description": "FooterVeedoo",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FooterVeedoo",
+              "primary": {
+                "footer_logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "footer logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "footer_text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "footer text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {
+                "footer_flag": {
+                  "type": "Image",
+                  "config": {
+                    "label": "footer flag",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "footer_flag": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+                }
+              }
+            ],
+            "primary": {
+              "footer_logo": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+              },
+              "footer_text": [
+                {
+                  "type": "paragraph",
+                  "text": "Aute quis mollit do culpa consequat est est consequat non ut commodo velit ad.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "footer_veedoo"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
+      "header_veedoo": {
+        "library": "slices",
+        "id": "header_veedoo",
+        "name": "HeaderVeedoo",
+        "description": "HeaderVeedoo",
+        "model": {
+          "id": "header_veedoo",
+          "type": "SharedSlice",
+          "name": "HeaderVeedoo",
+          "description": "HeaderVeedoo",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeaderVeedoo",
+              "primary": {
+                "logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "main_link_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "main link text",
+                    "placeholder": ""
+                  }
+                },
+                "main_link_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "main link url",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "menu_item_type": {
+                  "type": "Select",
+                  "config": {
+                    "label": "menu item type",
+                    "placeholder": "Select Type",
+                    "options": [
+                      "Menu",
+                      "Contacts",
+                      "Get in touch!"
+                    ],
+                    "default_value": "Menu"
+                  }
+                },
+                "menu_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "menu text",
+                    "placeholder": ""
+                  }
+                },
+                "menu_link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "menu link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "menu_item_type": "Menu",
+                "menu_text": "discover",
+                "menu_link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {
+              "logo": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+              },
+              "main_link_text": "ear",
+              "main_link_url": {
+                "link_type": "Web",
+                "url": "https://prismic.io"
+              },
+              "background_color": "#957d0c",
+              "text_color": "#30e627"
+            },
+            "slice_type": "header_veedoo"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "partners_logo_slider": {
         "library": "slices",
         "id": "partners_logo_slider",
@@ -614,7 +839,31 @@
               "docURL": "...",
               "version": "sktwi1xtmkfgx8626",
               "description": "Testimonial",
-              "primary": {},
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "title_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title color",
+                    "placeholder": ""
+                  }
+                },
+                "slice_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "slice background color",
+                    "placeholder": ""
+                  }
+                }
+              },
               "items": {
                 "full_name": {
                   "type": "Text",
@@ -650,18 +899,28 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "full_name": "design",
-                "job_position": "kill",
+                "full_name": "naturally",
+                "job_position": "pleasant",
                 "testimonial": [
                   {
                     "type": "paragraph",
-                    "text": "Deserunt consequat reprehenderit nisi fugiat reprehenderit proident proident anim minim ea aliqua veniam pariatur enim. Deserunt magna incididunt dolor consectetur ut. Eiusmod amet excepteur veniam.",
+                    "text": "Reprehenderit eiusmod eu magna commodo ut tempor cupidatat quis enim non esse deserunt proident. Do consequat nisi dolore labore culpa adipisicing culpa anim sit commodo qui anim exercitation.",
                     "spans": []
                   }
                 ]
               }
             ],
-            "primary": {},
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Nostrud fugiat nisi est velit aliquip commodo. Laborum laborum qui minim ad incididunt do.",
+                  "spans": []
+                }
+              ],
+              "title_color": "#802932",
+              "slice_background_color": "#56afea"
+            },
             "slice_type": "testimonial"
           }
         },

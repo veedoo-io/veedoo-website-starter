@@ -11,6 +11,17 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "slices": []
+    "slices": [],
+    "meta_title": "ready",
+    "meta_description": "accept",
+    "meta_image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613"
+    }
   }
 }
