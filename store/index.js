@@ -1,10 +1,18 @@
 export const state = () => ({
   settings: null,
+  header: null,
+  footer: null,
 });
 
 export const getters = {
   getSettings(state) {
     return state.settings;
+  },
+  getHeader(state) {
+    return state.header;
+  },
+  getFooter(state) {
+    return state.footer;
   },
 };
 
@@ -12,13 +20,35 @@ export const mutations = {
   setSettings(state, settings) {
     state.settings = settings;
   },
+  setHeader(state, header) {
+    state.header = header;
+  },
+  setFooter(state, footer) {
+    state.footer = footer;
+  },
 };
 
 export const actions = {
   async nuxtServerInit({ commit }, { $prismic, $axios }) {
     try {
-      const settings = await $prismic.api.getSingle('website_settings');
+      let promises = await Promise.all([
+        $prismic.api.getSingle('website_settings'),
+        $prismic.api.getSingle('header'),
+        $prismic.api.getSingle('footer'),
+      ]);
+
+      let settings = promises[0];
+      let header = promises[1];
+      let footer = promises[2];
+
+      console.log('footer', footer);
+
       commit('setSettings', settings || null);
-    } catch (error) {}
+      commit('setHeader', header || null);
+      commit('setFooter', footer || null);
+    } catch (error) {
+      console.log('nuxtServerInit error');
+      console.log(error);
+    }
   },
 };

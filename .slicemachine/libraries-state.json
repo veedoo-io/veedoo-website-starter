@@ -175,6 +175,20 @@
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -204,7 +218,7 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
                 }
               }
             ],
@@ -216,15 +230,17 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
               },
               "footer_text": [
                 {
                   "type": "paragraph",
-                  "text": "Aute quis mollit do culpa consequat est est consequat non ut commodo velit ad.",
+                  "text": "Nisi quis est ut ut consectetur eiusmod consequat non proident nostrud in aliqua do.",
                   "spans": []
                 }
-              ]
+              ],
+              "background_color": "#e03f06",
+              "text_color": "#520731"
             },
             "slice_type": "footer_veedoo"
           }
@@ -233,7 +249,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FooterVeedoo/default/preview.png",
+            "width": 1898,
+            "height": 252
+          }
+        }
       },
       "header_veedoo": {
         "library": "slices",

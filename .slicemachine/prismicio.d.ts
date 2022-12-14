@@ -445,6 +445,26 @@ interface FooterVeedooSliceDefaultPrimary {
      *
      */
     footer_text: prismicT.RichTextField;
+    /**
+     * background color field in *FooterVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_veedoo.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * text color field in *FooterVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: footer_veedoo.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
 }
 /**
  * Item in FooterVeedoo → Items
