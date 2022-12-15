@@ -3,6 +3,7 @@
 import CallToActionWithImage from './CallToActionWithImage';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
+import HeroVeedoo from './HeroVeedoo';
 import PartnersLogoSlider from './PartnersLogoSlider';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
@@ -12,6 +13,7 @@ export {
 	CallToActionWithImage,
 	FooterVeedoo,
 	HeaderVeedoo,
+	HeroVeedoo,
 	PartnersLogoSlider,
 	Tags,
 	Testimonial,
@@ -22,6 +24,7 @@ export const components = {
 	call_to_action_with_image: CallToActionWithImage,
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
+	hero_veedoo: HeroVeedoo,
 	partners_logo_slider: PartnersLogoSlider,
 	tags: Tags,
 	testimonial: Testimonial,

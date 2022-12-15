@@ -459,6 +459,102 @@
           }
         }
       },
+      "hero_veedoo": {
+        "library": "slices",
+        "id": "hero_veedoo",
+        "name": "HeroVeedoo",
+        "description": "HeroVeedoo",
+        "model": {
+          "id": "hero_veedoo",
+          "type": "SharedSlice",
+          "name": "HeroVeedoo",
+          "description": "HeroVeedoo",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "HeroVeedoo",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "intro": {
+                  "type": "Text",
+                  "config": {
+                    "label": "intro text",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "intro_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "intro text color",
+                    "placeholder": ""
+                  }
+                },
+                "title_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title text color",
+                    "placeholder": ""
+                  }
+                },
+                "title_animation_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title animation color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": "yourself",
+              "intro": "will",
+              "background_color": "#acdf12",
+              "intro_text_color": "#fcf192",
+              "title_text_color": "#237dac",
+              "title_animation_color": "#c4bfeb"
+            },
+            "slice_type": "hero_veedoo"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/HeroVeedoo/default/preview.png",
+            "width": 2872,
+            "height": 1604
+          }
+        }
+      },
       "partners_logo_slider": {
         "library": "slices",
         "id": "partners_logo_slider",
@@ -1115,28 +1211,28 @@
                   "type": "Number",
                   "config": {
                     "label": "margin top",
-                    "placeholder": ""
+                    "placeholder": "number of pixels"
                   }
                 },
                 "margin_bottom": {
                   "type": "Number",
                   "config": {
                     "label": "margin bottom",
-                    "placeholder": ""
+                    "placeholder": "number of pixels"
                   }
                 },
                 "margin_left": {
                   "type": "Number",
                   "config": {
                     "label": "margin left",
-                    "placeholder": ""
+                    "placeholder": "number of pixels"
                   }
                 },
                 "margin_right": {
                   "type": "Number",
                   "config": {
                     "label": "margin right",
-                    "placeholder": ""
+                    "placeholder": "number of pixels"
                   }
                 }
               },
@@ -1153,8 +1249,8 @@
               {}
             ],
             "primary": {
-              "htmltag": "p",
-              "text": "bet",
+              "htmltag": "h2",
+              "text": "particularly",
               "startimage": {
                 "dimensions": {
                   "width": 900,
@@ -1162,7 +1258,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
               },
               "end_image": {
                 "dimensions": {
@@ -1171,19 +1267,19 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+                "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
               },
               "url": {
                 "link_type": "Web",
-                "url": "http://twitter.com"
+                "url": "https://slicemachine.dev"
               },
-              "background_color": "#f469f3",
-              "text_color": "#0917ef",
-              "text_size": 65,
-              "margin_top": 49,
-              "margin_bottom": 66,
-              "margin_left": 52,
-              "margin_right": 65
+              "background_color": "#6a4a3c",
+              "text_color": "#22010c",
+              "text_size": 93,
+              "margin_top": 52,
+              "margin_bottom": 31,
+              "margin_left": 98,
+              "margin_right": 90
             },
             "slice_type": "text"
           }

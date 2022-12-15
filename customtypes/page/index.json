@@ -28,6 +28,12 @@
             },
             "testimonial": {
               "type": "SharedSlice"
+            },
+            "text": {
+              "type": "SharedSlice"
+            },
+            "hero_veedoo": {
+              "type": "SharedSlice"
             }
           }
         }

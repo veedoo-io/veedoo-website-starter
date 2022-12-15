@@ -1,0 +1,61 @@
+{
+  "id": "hero_veedoo",
+  "type": "SharedSlice",
+  "name": "HeroVeedoo",
+  "description": "HeroVeedoo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroVeedoo",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "intro": {
+          "type": "Text",
+          "config": {
+            "label": "intro text",
+            "placeholder": ""
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "intro_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "intro text color",
+            "placeholder": ""
+          }
+        },
+        "title_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "title text color",
+            "placeholder": ""
+          }
+        },
+        "title_animation_color": {
+          "type": "Color",
+          "config": {
+            "label": "title animation color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

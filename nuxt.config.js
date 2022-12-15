@@ -78,7 +78,7 @@ export default {
     preconnect: true,
     preload: true,
     download: true,
-    Poppins: [500],
+    Poppins: [500, 400, 600, 700],
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules

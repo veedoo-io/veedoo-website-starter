@@ -85,28 +85,28 @@
           "type": "Number",
           "config": {
             "label": "margin top",
-            "placeholder": ""
+            "placeholder": "number of pixels"
           }
         },
         "margin_bottom": {
           "type": "Number",
           "config": {
             "label": "margin bottom",
-            "placeholder": ""
+            "placeholder": "number of pixels"
           }
         },
         "margin_left": {
           "type": "Number",
           "config": {
             "label": "margin left",
-            "placeholder": ""
+            "placeholder": "number of pixels"
           }
         },
         "margin_right": {
           "type": "Number",
           "config": {
             "label": "margin right",
-            "placeholder": ""
+            "placeholder": "number of pixels"
           }
         }
       },

@@ -1965,7 +1965,7 @@
 
 "@nuxtjs/google-fonts@^2.0.0":
   version "2.0.0"
-  resolved "https://registry.npmjs.org/@nuxtjs/google-fonts/-/google-fonts-2.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/@nuxtjs/google-fonts/-/google-fonts-2.0.0.tgz#a0a97b3f0d2f86b4ec2ec08077e11105c07b71e8"
   integrity sha512-ddcv0/+e5YKK2/ivE1v6I7aGXoNfcuGjNydbJz3q+zXkucftbQDBtph8AoYcqRbTIwUpCsr4aHov8P2HXyZSbg==
   dependencies:
     consola "^2.15.3"

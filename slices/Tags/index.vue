@@ -26,10 +26,7 @@
       {{ slice.primary.title }}
     </h2>
 
-    <div
-      v-if="slice?.items?.length > 0"
-      class="bg-red-300 flex gap-[32px] flex-wrap"
-    >
+    <div v-if="slice?.items?.length > 0" class="flex gap-[32px] flex-wrap">
       <div v-for="(item, i) in slice.items" class="" :key="`slice-item-${i}`">
         <Tag
           :title="item.tag_label"

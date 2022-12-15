@@ -115,7 +115,7 @@ interface HomePageDocumentData {
  * Slice for *Home Page → Slice Zone*
  *
  */
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice;
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice;
 /**
  * Home Page document from Prismic
  *
@@ -177,7 +177,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice;
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | HeroVeedooSlice;
 /**
  * Page document from Prismic
  *
@@ -632,6 +632,95 @@ type HeaderVeedooSliceVariation = HeaderVeedooSliceDefault;
  */
 export type HeaderVeedooSlice = prismicT.SharedSlice<"header_veedoo", HeaderVeedooSliceVariation>;
 /**
+ * Primary content in HeroVeedoo → Primary
+ *
+ */
+interface HeroVeedooSliceDefaultPrimary {
+    /**
+     * title field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * intro text field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.intro
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    intro: prismicT.KeyTextField;
+    /**
+     * background color field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * intro text color field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.intro_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    intro_text_color: prismicT.ColorField;
+    /**
+     * title text color field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.title_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    title_text_color: prismicT.ColorField;
+    /**
+     * title animation color field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.title_animation_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    title_animation_color: prismicT.ColorField;
+}
+/**
+ * Default variation for HeroVeedoo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `HeroVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroVeedooSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeroVeedooSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *HeroVeedoo*
+ *
+ */
+type HeroVeedooSliceVariation = HeroVeedooSliceDefault;
+/**
+ * HeroVeedoo Shared Slice
+ *
+ * - **API ID**: `hero_veedoo`
+ * - **Description**: `HeroVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeroVeedooSlice = prismicT.SharedSlice<"hero_veedoo", HeroVeedooSliceVariation>;
+/**
  * Item in PartnersLogoSlider → Items
  *
  */
@@ -955,7 +1044,7 @@ interface TextSliceDefaultPrimary {
      * margin top field in *Text → Primary*
      *
      * - **Field Type**: Number
-     * - **Placeholder**: *None*
+     * - **Placeholder**: number of pixels
      * - **API ID Path**: text.primary.margin_top
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
@@ -965,7 +1054,7 @@ interface TextSliceDefaultPrimary {
      * margin bottom field in *Text → Primary*
      *
      * - **Field Type**: Number
-     * - **Placeholder**: *None*
+     * - **Placeholder**: number of pixels
      * - **API ID Path**: text.primary.margin_bottom
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
@@ -975,7 +1064,7 @@ interface TextSliceDefaultPrimary {
      * margin left field in *Text → Primary*
      *
      * - **Field Type**: Number
-     * - **Placeholder**: *None*
+     * - **Placeholder**: number of pixels
      * - **API ID Path**: text.primary.margin_left
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
@@ -985,7 +1074,7 @@ interface TextSliceDefaultPrimary {
      * margin right field in *Text → Primary*
      *
      * - **Field Type**: Number
-     * - **Placeholder**: *None*
+     * - **Placeholder**: number of pixels
      * - **API ID Path**: text.primary.margin_right
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
@@ -1020,6 +1109,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
     }
 }

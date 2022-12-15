@@ -37,6 +37,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "HeroVeedoo": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
