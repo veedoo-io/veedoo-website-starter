@@ -13,7 +13,7 @@ export default {
         return ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6'].includes(value);
       },
     },
-    class: { type: String, default: '' },
+    classes: { type: String, default: '' },
     startIcon: { type: String, default: '' },
     endIcon: { type: String, default: '' },
     url: { type: Object, default: null },
@@ -25,9 +25,13 @@ export default {
       template: `
 
 
-  <${this.url ? `a href="${this.url.url}" ` : this.htmlTag}
+  <${
+    this.url?.url || this.url.link_type != 'Any'
+      ? `a href="${this.url?.url}" `
+      : this.htmlTag
+  }
     class="flex items-center justify-center w-fit h-fit gap-2 ${
-      this.class
+      this.classes
     }" style='font-size:${this.textSize}'  >
       ${
         this.startIcon != ''
@@ -48,11 +52,15 @@ export default {
             "' alt='Start Icon' />"
           : ''
       }
-      </${this.url ? 'PrismicLink' : this.htmlTag}>
+      </${this.url?.url ? `a href="${this.url?.url}" ` : this.htmlTag}>
 
 
 `,
     });
+  },
+  data() {
+    console.log('url ', this.url);
+    return {};
   },
 };
 </script>

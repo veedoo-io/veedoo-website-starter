@@ -3,18 +3,16 @@
     class="
       relative
       w-full
-      h-fit
-      overflow-hidden
+      h-screen
+      flex flex-col
+      justify-center
       py-4
-      px-4
       lg:py-[64px]
-      lg:px-[96px]
     "
   >
     <h2
       v-if="slice.primary.title"
       class="
-        title
         text-[23px]
         md:text-[36px]
         lg:text-[40px]

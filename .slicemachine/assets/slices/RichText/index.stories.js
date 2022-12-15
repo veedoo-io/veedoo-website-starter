@@ -1,8 +1,8 @@
-import MyComponent from '../../../../slices/Text';
+import MyComponent from '../../../../slices/RichText';
 import SliceZone from 'vue-slicezone';
 
 export default {
-  title: 'slices/ATOMS/Text',
+  title: 'slices/ATOMS/RichText',
 };
 
 export const _Default = () => ({

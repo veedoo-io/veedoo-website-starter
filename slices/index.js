@@ -5,9 +5,9 @@ import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
 import PartnersLogoSlider from './PartnersLogoSlider';
+import RichText from './RichText';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
-import Text from './Text';
 
 export {
 	CallToActionWithImage,
@@ -15,9 +15,9 @@ export {
 	HeaderVeedoo,
 	HeroVeedoo,
 	PartnersLogoSlider,
+	RichText,
 	Tags,
 	Testimonial,
-	Text,
 };
 
 export const components = {
@@ -26,7 +26,7 @@ export const components = {
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
 	partners_logo_slider: PartnersLogoSlider,
+	text: RichText,
 	tags: Tags,
 	testimonial: Testimonial,
-	text: Text,
 };

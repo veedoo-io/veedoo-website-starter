@@ -23,8 +23,7 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
     let getContainerClasses = function () {
-      let classes =
-        'w-screen h-screen pl-[104px] flex flex-col justify-center ';
+      let classes = 'w-screen h-screen  flex flex-col justify-center ';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);

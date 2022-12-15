@@ -795,6 +795,156 @@ type PartnersLogoSliderSliceVariation = PartnersLogoSliderSliceDefault | Partner
  */
 export type PartnersLogoSliderSlice = prismicT.SharedSlice<"partners_logo_slider", PartnersLogoSliderSliceVariation>;
 /**
+ * Primary content in RichText → Primary
+ *
+ */
+interface TextSliceDefaultPrimary {
+    /**
+     * htmlTag field in *RichText → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: p
+     * - **API ID Path**: text.primary.htmltag
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    htmltag: prismicT.SelectField<"p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6", "filled">;
+    /**
+     * text field in *RichText → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    text: prismicT.KeyTextField;
+    /**
+     * start Image field in *RichText → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.startimage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    startimage: prismicT.ImageField<never>;
+    /**
+     * end Image field in *RichText → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.end_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    end_image: prismicT.ImageField<never>;
+    /**
+     * url field in *RichText → Primary*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: Only Web Urls
+     * - **API ID Path**: text.primary.url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    url: prismicT.LinkField;
+    /**
+     * Background Color field in *RichText → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * text color field in *RichText → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+    /**
+     * text Size field in *RichText → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.text_size
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    text_size: prismicT.NumberField;
+    /**
+     * margin top field in *RichText → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: number of pixels
+     * - **API ID Path**: text.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin bottom field in *RichText → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: number of pixels
+     * - **API ID Path**: text.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
+    /**
+     * margin left field in *RichText → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: number of pixels
+     * - **API ID Path**: text.primary.margin_left
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_left: prismicT.NumberField;
+    /**
+     * margin right field in *RichText → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: number of pixels
+     * - **API ID Path**: text.primary.margin_right
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_right: prismicT.NumberField;
+}
+/**
+ * Default variation for RichText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Text`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *RichText*
+ *
+ */
+type TextSliceVariation = TextSliceDefault;
+/**
+ * RichText Shared Slice
+ *
+ * - **API ID**: `text`
+ * - **Description**: `Text`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type TextSlice = prismicT.SharedSlice<"text", TextSliceVariation>;
+/**
  * Primary content in Tags → Primary
  *
  */
@@ -954,161 +1104,11 @@ type TestimonialSliceVariation = TestimonialSliceDefault;
  *
  */
 export type TestimonialSlice = prismicT.SharedSlice<"testimonial", TestimonialSliceVariation>;
-/**
- * Primary content in Text → Primary
- *
- */
-interface TextSliceDefaultPrimary {
-    /**
-     * htmlTag field in *Text → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: *None*
-     * - **Default Value**: p
-     * - **API ID Path**: text.primary.htmltag
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    htmltag: prismicT.SelectField<"p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6", "filled">;
-    /**
-     * text field in *Text → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    text: prismicT.KeyTextField;
-    /**
-     * start Image field in *Text → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.startimage
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    startimage: prismicT.ImageField<never>;
-    /**
-     * end Image field in *Text → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.end_image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    end_image: prismicT.ImageField<never>;
-    /**
-     * url field in *Text → Primary*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: Only Web Urls
-     * - **API ID Path**: text.primary.url
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    url: prismicT.LinkField;
-    /**
-     * Background Color field in *Text → Primary*
-     *
-     * - **Field Type**: Color
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.background_color
-     * - **Documentation**: https://prismic.io/docs/core-concepts/color
-     *
-     */
-    background_color: prismicT.ColorField;
-    /**
-     * text color field in *Text → Primary*
-     *
-     * - **Field Type**: Color
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.text_color
-     * - **Documentation**: https://prismic.io/docs/core-concepts/color
-     *
-     */
-    text_color: prismicT.ColorField;
-    /**
-     * text Size field in *Text → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: text.primary.text_size
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    text_size: prismicT.NumberField;
-    /**
-     * margin top field in *Text → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: number of pixels
-     * - **API ID Path**: text.primary.margin_top
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    margin_top: prismicT.NumberField;
-    /**
-     * margin bottom field in *Text → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: number of pixels
-     * - **API ID Path**: text.primary.margin_bottom
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    margin_bottom: prismicT.NumberField;
-    /**
-     * margin left field in *Text → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: number of pixels
-     * - **API ID Path**: text.primary.margin_left
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    margin_left: prismicT.NumberField;
-    /**
-     * margin right field in *Text → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: number of pixels
-     * - **API ID Path**: text.primary.margin_right
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    margin_right: prismicT.NumberField;
-}
-/**
- * Default variation for Text Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Text`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *Text*
- *
- */
-type TextSliceVariation = TextSliceDefault;
-/**
- * Text Shared Slice
- *
- * - **API ID**: `text`
- * - **Description**: `Text`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type TextSlice = prismicT.SharedSlice<"text", TextSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }

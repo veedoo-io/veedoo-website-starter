@@ -82,7 +82,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: ['nuxt-runtime-compiler'],
 
   prismic: {
     endpoint: apiEndpoint,

@@ -1,5 +1,6 @@
 <template>
   <section
+    class="w-screen max-w-[1000px] text-justify"
     :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
   >
     <VeedooText
@@ -8,7 +9,7 @@
       :startIcon="slice.primary.startimage?.url"
       :endIcon="slice.primary.end_image?.url"
       :url="slice.primary.url"
-      :class="getTextClasses()"
+      :classes="getTextClasses()"
       :textSize="textSize"
     />
   </section>
@@ -19,7 +20,7 @@ import { getSliceComponentProps } from '@prismicio/vue/components';
 import tailwindMatcher from '~/assets/js/util/hexToName';
 
 export default {
-  name: 'Text',
+  name: 'RichText',
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
 
