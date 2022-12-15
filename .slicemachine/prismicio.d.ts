@@ -560,6 +560,16 @@ interface HeaderVeedooSliceDefaultPrimary {
      *
      */
     text_color: prismicT.ColorField;
+    /**
+     * menu label field in *HeaderVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header_veedoo.primary.menu_label
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    menu_label: prismicT.KeyTextField;
 }
 /**
  * Item in HeaderVeedoo → Items

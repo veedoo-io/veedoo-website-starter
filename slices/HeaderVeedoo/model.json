@@ -47,6 +47,13 @@
             "label": "text color",
             "placeholder": ""
           }
+        },
+        "menu_label": {
+          "type": "Text",
+          "config": {
+            "label": "menu label",
+            "placeholder": ""
+          }
         }
       },
       "items": {

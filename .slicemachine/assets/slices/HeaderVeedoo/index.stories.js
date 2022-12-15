@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"menu_item_type":"Menu","menu_text":"discover","menu_link":{"link_type":"Web","url":"http://twitter.com"}}],"primary":{"logo":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1600861194802-a2b11076bc51"},"main_link_text":"ear","main_link_url":{"link_type":"Web","url":"https://prismic.io"},"background_color":"#957d0c","text_color":"#30e627"},"slice_type":"header_veedoo","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"menu_item_type":"Contacts","menu_text":"nervous","menu_link":{"link_type":"Web","url":"https://slicemachine.dev"}}],"primary":{"logo":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"},"main_link_text":"around","main_link_url":{"link_type":"Web","url":"https://prismic.io"},"background_color":"#685ea1","text_color":"#6b0b35","menu_label":"cotton"},"slice_type":"header_veedoo","id":"_Default"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

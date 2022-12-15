@@ -213,12 +213,45 @@
               {
                 "footer_flag": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 34,
+                    "height": 33
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/795e220f-6a3b-4883-8c07-1fe68bd0f7f2_ukraine.svg"
+                }
+              },
+              {
+                "footer_flag": {
+                  "dimensions": {
+                    "width": 34,
+                    "height": 33
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/66c258be-7109-4844-9fce-9e2740103f53_united-kingdom.svg"
+                }
+              },
+              {
+                "footer_flag": {
+                  "dimensions": {
+                    "width": 34,
+                    "height": 33
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/3b6c48e7-55f2-4977-a1c5-93a8a460d804_european-union.svg"
+                }
+              },
+              {
+                "footer_flag": {
+                  "dimensions": {
+                    "width": 34,
+                    "height": 33
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bfd85b38-d3b1-4ee8-9fe0-df4a22b84e1b_estonia.svg"
                 }
               }
             ],
@@ -230,17 +263,17 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
+                "url": "https://images.prismic.io/veedoo-website-starter/3abdd01e-d606-4a76-b847-c8c9e367fa1e_541685a5-d448-46ee-8037-88b965a20c20_footer-logo.png?auto=compress,format"
               },
               "footer_text": [
                 {
                   "type": "paragraph",
-                  "text": "Nisi quis est ut ut consectetur eiusmod consequat non proident nostrud in aliqua do.",
+                  "text": "@2022 Veedoo. All Rights Reserved",
                   "spans": []
                 }
               ],
-              "background_color": "#e03f06",
-              "text_color": "#520731"
+              "background_color": "#F2F2F2",
+              "text_color": "#777E85"
             },
             "slice_type": "footer_veedoo"
           }
@@ -311,6 +344,13 @@
                     "label": "text color",
                     "placeholder": ""
                   }
+                },
+                "menu_label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "menu label",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -353,11 +393,11 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "menu_item_type": "Menu",
-                "menu_text": "discover",
+                "menu_item_type": "Contacts",
+                "menu_text": "nervous",
                 "menu_link": {
                   "link_type": "Web",
-                  "url": "http://twitter.com"
+                  "url": "https://slicemachine.dev"
                 }
               }
             ],
@@ -369,15 +409,16 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"
               },
-              "main_link_text": "ear",
+              "main_link_text": "around",
               "main_link_url": {
                 "link_type": "Web",
                 "url": "https://prismic.io"
               },
-              "background_color": "#957d0c",
-              "text_color": "#30e627"
+              "background_color": "#685ea1",
+              "text_color": "#6b0b35",
+              "menu_label": "cotton"
             },
             "slice_type": "header_veedoo"
           }
