@@ -427,7 +427,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/HeaderVeedoo/default/preview.png",
+            "width": 1500,
+            "height": 731
+          }
+        }
       },
       "partners_logo_slider": {
         "library": "slices",
