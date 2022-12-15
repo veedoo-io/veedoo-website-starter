@@ -4,8 +4,32 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
+        "menu_item_type": "Get in touch!",
+        "menu_text": "hello@veedoo.io",
+        "menu_link": {
+          "link_type": "Web",
+          "url": "mailto:hello@veedoo.io"
+        }
+      },
+      {
         "menu_item_type": "Contacts",
-        "menu_text": "nervous",
+        "menu_text": "LinkedIn",
+        "menu_link": {
+          "link_type": "Web",
+          "url": "https://www.linkedin.com/company/veedoo/"
+        }
+      },
+      {
+        "menu_item_type": "Menu",
+        "menu_text": "Home",
+        "menu_link": {
+          "link_type": "Web",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      {
+        "menu_item_type": "Menu",
+        "menu_text": "Portals & Project Sites",
         "menu_link": {
           "link_type": "Web",
           "url": "https://slicemachine.dev"
@@ -18,18 +42,18 @@
           "width": 900,
           "height": 500
         },
-        "alt": null,
+        "alt": "Veedoo logo",
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8"
+        "url": "https://images.prismic.io/veedoo-website-starter/703b1700-ecab-4f2e-aa23-5be8df20a7de_f4b8bf33-ee64-4e52-b077-6d69d033e415_veedoo-logo+%282%29.png?auto=compress,format"
       },
-      "main_link_text": "around",
+      "main_link_text": "Contacts",
       "main_link_url": {
         "link_type": "Web",
         "url": "https://prismic.io"
       },
-      "background_color": "#685ea1",
-      "text_color": "#6b0b35",
-      "menu_label": "cotton"
+      "background_color": null,
+      "text_color": null,
+      "menu_label": "Menu"
     },
     "slice_type": "header_veedoo"
   }
