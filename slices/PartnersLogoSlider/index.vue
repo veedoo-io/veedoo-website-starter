@@ -235,7 +235,7 @@ export default {
     //console.log('slice ', this.slice.items);
     let numberOfSlides = this.slice?.items?.length ?? 0;
 
-    console.log('this.slice?.items', this.slice?.items);
+    //console.log('this.slice?.items', this.slice?.items);
     let myOption = {
       navButtons: false,
       slidesToShow: 1,

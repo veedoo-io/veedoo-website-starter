@@ -6,6 +6,7 @@ import HeaderVeedoo from './HeaderVeedoo';
 import PartnersLogoSlider from './PartnersLogoSlider';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
+import Text from './Text';
 
 export {
 	CallToActionWithImage,
@@ -14,6 +15,7 @@ export {
 	PartnersLogoSlider,
 	Tags,
 	Testimonial,
+	Text,
 };
 
 export const components = {
@@ -23,4 +25,5 @@ export const components = {
 	partners_logo_slider: PartnersLogoSlider,
 	tags: Tags,
 	testimonial: Testimonial,
+	text: Text,
 };

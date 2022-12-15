@@ -149,13 +149,13 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
-    console.log('header ', this.slice);
+    //console.log('header ', this.slice);
     let getContainerClasses = function () {
       let classes =
         'fixed left-0 z-50 bg-blue-300 top-0 h-20 w-screen flex justify-between items-center px-8 ';
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
-        console.log('colorName ', colorName);
+        //console.log('colorName ', colorName);
         classes = classes + ` bg-${colorName} `;
       } else {
         classes = classes + ` bg-[#FFFFFF] `;
@@ -167,7 +167,7 @@ export default {
       let classes = ' flex gap-10 items-center ';
       if (this?.slice?.primary?.text_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.text_color);
-        console.log('colorName ', colorName);
+        //console.log('colorName ', colorName);
         classes = classes + ` text-${colorName} `;
       } else {
         classes = classes + ` text-[#353C47] `;
@@ -180,7 +180,7 @@ export default {
 
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
-        console.log('colorName ', colorName);
+        //console.log('colorName ', colorName);
         classes = classes + ` bg-${colorName} `;
       } else {
         classes = classes + ` bg-[#FFFFFF] `;

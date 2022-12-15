@@ -41,13 +41,13 @@ export const actions = {
       let header = promises[1];
       let footer = promises[2];
 
-      console.log('footer', footer);
+      //console.log('footer', footer);
 
       commit('setSettings', settings || null);
       commit('setHeader', header || null);
       commit('setFooter', footer || null);
     } catch (error) {
-      console.log('nuxtServerInit error');
+      //console.log('nuxtServerInit error');
       console.log(error);
     }
   },

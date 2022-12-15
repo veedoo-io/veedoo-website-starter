@@ -393,8 +393,32 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
+                "menu_item_type": "Get in touch!",
+                "menu_text": "hello@veedoo.io",
+                "menu_link": {
+                  "link_type": "Web",
+                  "url": "mailto:hello@veedoo.io"
+                }
+              },
+              {
                 "menu_item_type": "Contacts",
-                "menu_text": "nervous",
+                "menu_text": "LinkedIn",
+                "menu_link": {
+                  "link_type": "Web",
+                  "url": "https://www.linkedin.com/company/veedoo/"
+                }
+              },
+              {
+                "menu_item_type": "Menu",
+                "menu_text": "Home",
+                "menu_link": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              },
+              {
+                "menu_item_type": "Menu",
+                "menu_text": "Portals & Project Sites",
                 "menu_link": {
                   "link_type": "Web",
                   "url": "https://slicemachine.dev"
@@ -998,6 +1022,151 @@
           "extension": "vue"
         },
         "screenshotPaths": {}
+      },
+      "text": {
+        "library": "slices",
+        "id": "text",
+        "name": "Text",
+        "description": "Text",
+        "model": {
+          "id": "text",
+          "type": "SharedSlice",
+          "name": "Text",
+          "description": "Text",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Text",
+              "primary": {
+                "htmltag": {
+                  "type": "Select",
+                  "config": {
+                    "label": "htmlTag",
+                    "placeholder": "",
+                    "options": [
+                      "p",
+                      "h1",
+                      "h2",
+                      "h3",
+                      "h4",
+                      "h5",
+                      "h6"
+                    ],
+                    "default_value": "p"
+                  }
+                },
+                "text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "text",
+                    "placeholder": ""
+                  }
+                },
+                "startimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "start Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "end_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "end Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "url",
+                    "placeholder": "Only Web Urls",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                },
+                "text_size": {
+                  "type": "Number",
+                  "config": {
+                    "label": "text Size",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "htmltag": "p",
+              "text": "green",
+              "startimage": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+              },
+              "end_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+              },
+              "url": {
+                "link_type": "Web",
+                "url": "https://slicemachine.dev"
+              },
+              "background_color": "#51a4e8",
+              "text_color": "#06316e",
+              "text_size": 42
+            },
+            "slice_type": "text"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/Text/default/preview.png",
+            "width": 2886,
+            "height": 216
+          }
+        }
       }
     }
   }

@@ -21,6 +21,9 @@
             },
             "testimonial": {
               "type": "SharedSlice"
+            },
+            "text": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -10,10 +10,10 @@ export default {
     const document = await $prismic.api.getByUID('page', params.uid);
 
     if (document) {
-      console.log('document ', document);
+      //console.log('document ', document);
       return { page: document };
     } else {
-      console.log('document not found');
+      //console.log('document not found');
       error({ statusCode: 404, message: 'Page not found' });
     }
   },

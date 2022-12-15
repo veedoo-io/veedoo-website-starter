@@ -32,6 +32,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Text": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

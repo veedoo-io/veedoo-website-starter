@@ -16,19 +16,19 @@ export default {
     class: { type: String, default: '' },
     startIcon: { type: String, default: '' },
     endIcon: { type: String, default: '' },
-    url: { type: String, default: '' },
-    iconClass: { type: String, default: 'h-[1em] w-[1em]' },
+    url: { type: Object, default: null },
+    iconClass: { type: String, default: 'h-[1.5em] w-[1.5em]' },
+    textSize: { type: String, default: '16px' },
   },
   render(h) {
     return h({
       template: `
 
 
-  <${this.htmlTag} ${
-        this.url != '' ? "href='" + this.url + "'" : ''
-      } class="flex items-center justify-center w-fit h-fit gap-2  ${
-        this.class
-      }" >
+  <${this.url ? `a href="${this.url.url}" ` : this.htmlTag}
+    class="flex items-center justify-center w-fit h-fit gap-2 ${
+      this.class
+    }" style='font-size:${this.textSize}'  >
       ${
         this.startIcon != ''
           ? "<img class='" +
@@ -48,7 +48,7 @@ export default {
             "' alt='Start Icon' />"
           : ''
       }
-      </${this.htmlTag}>
+      </${this.url ? 'PrismicLink' : this.htmlTag}>
 
 
 `,

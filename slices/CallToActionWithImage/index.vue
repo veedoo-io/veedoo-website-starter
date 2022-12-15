@@ -54,15 +54,14 @@ export default {
         classNames = classNames + ' bg-[#2F80ED]';
       }
 
-      console.log('textcolor', this.slice.primary.button_text_color);
+      //console.log('textcolor', this.slice.primary.button_text_color);
       if (
         this.slice.primary.button_text_color &&
         this.slice.primary.button_text_color != ''
       ) {
         let colorName = tailwindMatcher(this.slice.primary.button_text_color);
 
-        classNames =
-          classNames + ` text-${colorName} `;
+        classNames = classNames + ` text-${colorName} `;
       } else {
         classNames = classNames + ' text-white ';
       }
