@@ -26,7 +26,7 @@ export default {
   target: 'static',
   generate: {
     routes: async () => {
-      const client = Prismic.client(sm.apiEndpoint, {
+      const client = Prismic.client(apiEndpoint, {
         routes: routes,
       });
       const pages = await client.query(
