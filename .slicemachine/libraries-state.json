@@ -1110,6 +1110,34 @@
                     "label": "text Size",
                     "placeholder": ""
                   }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {},
@@ -1126,7 +1154,7 @@
             ],
             "primary": {
               "htmltag": "p",
-              "text": "green",
+              "text": "bet",
               "startimage": {
                 "dimensions": {
                   "width": 900,
@@ -1134,7 +1162,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+                "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
               },
               "end_image": {
                 "dimensions": {
@@ -1143,15 +1171,19 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
               },
               "url": {
                 "link_type": "Web",
-                "url": "https://slicemachine.dev"
+                "url": "http://twitter.com"
               },
-              "background_color": "#51a4e8",
-              "text_color": "#06316e",
-              "text_size": 42
+              "background_color": "#f469f3",
+              "text_color": "#0917ef",
+              "text_size": 65,
+              "margin_top": 49,
+              "margin_bottom": 66,
+              "margin_left": 52,
+              "margin_right": 65
             },
             "slice_type": "text"
           }

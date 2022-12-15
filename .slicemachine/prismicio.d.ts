@@ -951,6 +951,46 @@ interface TextSliceDefaultPrimary {
      *
      */
     text_size: prismicT.NumberField;
+    /**
+     * margin top field in *Text → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin bottom field in *Text → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
+    /**
+     * margin left field in *Text → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.margin_left
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_left: prismicT.NumberField;
+    /**
+     * margin right field in *Text → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: text.primary.margin_right
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_right: prismicT.NumberField;
 }
 /**
  * Default variation for Text Slice

@@ -1,5 +1,7 @@
 <template>
-  <section class="">
+  <section
+    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
+  >
     <VeedooText
       :text="slice.primary.text"
       :htmlTag="slice.primary.htmltag"
@@ -47,10 +49,34 @@ export default {
         ? this.slice.primary.text_size + 'px'
         : '16px';
 
+    let marginTop =
+      this.slice.primary.margin_top && this.slice.primary.margin_top >= 12
+        ? this.slice.primary.margin_top + 'px'
+        : '0px';
+
+    let marginBottom =
+      this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 12
+        ? this.slice.primary.margin_bottom + 'px'
+        : '0px';
+
+    let marginLeft =
+      this.slice.primary.margin_left && this.slice.primary.margin_left >= 12
+        ? this.slice.primary.margin_left + 'px'
+        : '0px';
+
+    let marginRight =
+      this.slice.primary.margin_right && this.slice.primary.margin_right >= 12
+        ? this.slice.primary.margin_right + 'px'
+        : '0px';
+
     return {
       getTextClasses,
       getContainerClasses,
       textSize,
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight,
     };
   },
 };
