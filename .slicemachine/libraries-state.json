@@ -464,6 +464,145 @@
           }
         }
       },
+      "clients_slider": {
+        "library": "slices",
+        "id": "clients_slider",
+        "name": "ClientsSlider",
+        "description": "ClientsSlider",
+        "model": {
+          "id": "clients_slider",
+          "type": "SharedSlice",
+          "name": "ClientsSlider",
+          "description": "ClientsSlider",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ClientsSlider",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "title_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "title image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "primary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "primary text color",
+                    "placeholder": ""
+                  }
+                },
+                "description_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "description text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "url",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+                },
+                "url": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
+            ],
+            "primary": {
+              "title": "airplane",
+              "title_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118"
+              },
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Nisi officia ipsum dolore non consequat est nisi ipsum adipisicing cillum.",
+                  "spans": []
+                }
+              ],
+              "background_color": "#050d0d",
+              "primary_text_color": "#aefbae",
+              "description_text_color": "#6a94bf"
+            },
+            "slice_type": "clients_slider"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "footer_veedoo": {
         "library": "slices",
         "id": "footer_veedoo",

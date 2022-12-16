@@ -40,6 +40,9 @@
             },
             "atom_tags": {
               "type": "SharedSlice"
+            },
+            "clients_slider": {
+              "type": "SharedSlice"
             }
           }
         }

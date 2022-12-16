@@ -52,6 +52,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "ClientsSlider": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {

@@ -3,6 +3,7 @@
 import AlternateGrid from './AlternateGrid';
 import AtomTags from './AtomTags';
 import CallToActionWithImage from './CallToActionWithImage';
+import ClientsSlider from './ClientsSlider';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
@@ -15,6 +16,7 @@ export {
 	AlternateGrid,
 	AtomTags,
 	CallToActionWithImage,
+	ClientsSlider,
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
@@ -28,6 +30,7 @@ export const components = {
 	alternate_grid: AlternateGrid,
 	atom_tags: AtomTags,
 	call_to_action_with_image: CallToActionWithImage,
+	clients_slider: ClientsSlider,
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
