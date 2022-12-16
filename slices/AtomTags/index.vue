@@ -1,55 +1,31 @@
 <template>
   <section
-    class="w-full max-w-[1000px]"
+    :class="getContainerClasses()"
     :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
   >
-    <VeedooText
-      :text="slice.primary.text"
-      :htmlTag="slice.primary.htmltag ? slice.primary.htmltag : 'p'"
-      :startIcon="slice.primary.startimage?.url"
-      :endIcon="slice.primary.end_image?.url"
-      :url="slice.primary.url"
-      :classes="getTextClasses()"
-      :textSize="textSize"
-    />
+    <div
+      v-if="slice?.items?.length > 0"
+      v-for="(item, i) in slice.items"
+      :key="`slice-item-${i}`"
+    >
+      <Tag
+        :title="item.tag_label"
+        :image="item.tag_image?.url"
+        :imageAlt="item.tag_image?.alt"
+      />
+    </div>
   </section>
 </template>
 
 <script>
 import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from '~/assets/js/util/hexToName';
 
 export default {
-  name: 'RichText',
+  name: 'AtomTags',
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
 
   data() {
-    console.log('slice ', this.slice);
-
-    let getContainerClasses = function () {};
-
-    let getTextClasses = function () {
-      let classes = ' ';
-
-      if (this.slice.primary.background_color) {
-        let colorName = tailwindMatcher(this.slice.primary.background_color);
-        classes = classes + ` bg-${colorName} `;
-      }
-
-      if (this.slice.primary.text_color) {
-        let colorName = tailwindMatcher(this.slice.primary.text_color);
-        classes = classes + ` text-${colorName} `;
-      }
-
-      return classes;
-    };
-
-    let textSize =
-      this.slice.primary.text_size && this.slice.primary.text_size >= 12
-        ? this.slice.primary.text_size + 'px'
-        : '16px';
-
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
         ? this.slice.primary.margin_top + 'px'
@@ -70,14 +46,18 @@ export default {
         ? this.slice.primary.margin_right + 'px'
         : '0px';
 
+    let getContainerClasses = function () {
+      let classes = 'flex gap-[32px] flex-wrap';
+
+      return classes;
+    };
+
     return {
-      getTextClasses,
-      getContainerClasses,
-      textSize,
       marginTop,
       marginBottom,
       marginLeft,
       marginRight,
+      getContainerClasses,
     };
   },
 };

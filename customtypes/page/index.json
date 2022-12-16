@@ -37,6 +37,9 @@
             },
             "hero_veedoo": {
               "type": "SharedSlice"
+            },
+            "atom_tags": {
+              "type": "SharedSlice"
             }
           }
         }

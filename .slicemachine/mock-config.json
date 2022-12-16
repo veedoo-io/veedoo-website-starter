@@ -47,6 +47,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "AtomTags": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

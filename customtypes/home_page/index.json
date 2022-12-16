@@ -30,6 +30,9 @@
             },
             "alternate_grid": {
               "type": "SharedSlice"
+            },
+            "atom_tags": {
+              "type": "SharedSlice"
             }
           }
         }

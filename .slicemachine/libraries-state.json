@@ -197,6 +197,133 @@
           }
         }
       },
+      "atom_tags": {
+        "library": "slices",
+        "id": "atom_tags",
+        "name": "AtomTags",
+        "description": "AtomTags",
+        "model": {
+          "id": "atom_tags",
+          "type": "SharedSlice",
+          "name": "AtomTags",
+          "description": "AtomTags",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AtomTags",
+              "primary": {
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "tag_label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "tag label",
+                    "placeholder": ""
+                  }
+                },
+                "tag_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "tag Image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "tag_label": "Simplicity",
+                "tag_image": null
+              },
+              {
+                "tag_label": "Creativity",
+                "tag_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+                }
+              },
+              {
+                "tag_label": "Responsibility",
+                "tag_image": null
+              },
+              {
+                "tag_label": "Impact",
+                "tag_image": null
+              },
+              {
+                "tag_label": "Curiosity",
+                "tag_image": null
+              },
+              {
+                "tag_label": "Open-minded",
+                "tag_image": null
+              }
+            ],
+            "primary": {
+              "margin_top": 40,
+              "margin_right": 40,
+              "margin_bottom": 40,
+              "margin_left": 40
+            },
+            "slice_type": "atom_tags"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/AtomTags/default/preview.png",
+            "width": 2600,
+            "height": 250
+          }
+        }
+      },
       "call_to_action_with_image": {
         "library": "slices",
         "id": "call_to_action_with_image",
