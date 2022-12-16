@@ -45,7 +45,14 @@
                 "text_color": {
                   "type": "Color",
                   "config": {
-                    "label": "text color",
+                    "label": "primary text color",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "secondary text color",
                     "placeholder": ""
                   }
                 }
@@ -93,29 +100,30 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
                 },
-                "feature_title": "sound",
+                "feature_title": "remove",
                 "feature_description": [
                   {
                     "type": "paragraph",
-                    "text": "Pariatur Lorem proident ullamco sunt tempor magna magna et nostrud elit Lorem elit in consectetur.",
+                    "text": "Do anim elit est tempor laboris nostrud voluptate anim. Et nulla nulla consectetur laborum.",
                     "spans": []
                   }
                 ]
               }
             ],
             "primary": {
-              "title": "society",
+              "title": "political",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Non enim pariatur deserunt aute ut sit amet cupidatat ut officia enim cillum.",
+                  "text": "Proident dolor consequat ipsum sint aliquip ut id voluptate labore eiusmod dolor eu.",
                   "spans": []
                 }
               ],
-              "background_color": "#1a05c2",
-              "text_color": "#e47d66"
+              "background_color": "#ef0719",
+              "text_color": "#cd842b",
+              "secondary_text_color": "#9011aa"
             },
             "slice_type": "alternate_grid"
           }

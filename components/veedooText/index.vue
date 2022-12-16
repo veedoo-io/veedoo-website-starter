@@ -26,7 +26,7 @@ export default {
 
 
   <${
-    this.url?.url || this.url.link_type != 'Any'
+    this.url?.url || this.url?.link_type != 'Any'
       ? `a href="${this.url?.url}" `
       : this.htmlTag
   }

@@ -37,7 +37,14 @@
         "text_color": {
           "type": "Color",
           "config": {
-            "label": "text color",
+            "label": "primary text color",
+            "placeholder": ""
+          }
+        },
+        "secondary_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "secondary text color",
             "placeholder": ""
           }
         }

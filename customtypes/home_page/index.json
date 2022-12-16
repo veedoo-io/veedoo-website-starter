@@ -27,6 +27,9 @@
             },
             "hero_veedoo": {
               "type": "SharedSlice"
+            },
+            "alternate_grid": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -115,7 +115,7 @@ interface HomePageDocumentData {
  * Slice for *Home Page → Slice Zone*
  *
  */
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice;
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice;
 /**
  * Home Page document from Prismic
  *
@@ -177,7 +177,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | HeroVeedooSlice;
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice;
 /**
  * Page document from Prismic
  *
@@ -347,7 +347,7 @@ interface AlternateGridSliceDefaultPrimary {
      */
     background_color: prismicT.ColorField;
     /**
-     * text color field in *AlternateGrid → Primary*
+     * primary text color field in *AlternateGrid → Primary*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*
@@ -356,6 +356,16 @@ interface AlternateGridSliceDefaultPrimary {
      *
      */
     text_color: prismicT.ColorField;
+    /**
+     * secondary text color field in *AlternateGrid → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: alternate_grid.primary.secondary_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    secondary_text_color: prismicT.ColorField;
 }
 /**
  * Item in AlternateGrid → Items
