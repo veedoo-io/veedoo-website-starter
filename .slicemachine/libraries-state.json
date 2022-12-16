@@ -100,30 +100,87 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
                 },
-                "feature_title": "remove",
+                "feature_title": "Feature 1",
                 "feature_description": [
                   {
                     "type": "paragraph",
-                    "text": "Do anim elit est tempor laboris nostrud voluptate anim. Et nulla nulla consectetur laborum.",
+                    "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "feature_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
+                },
+                "feature_title": "Feature 2",
+                "feature_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "feature_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
+                },
+                "feature_title": "Feature 3",
+                "feature_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                    "spans": []
+                  }
+                ]
+              },
+              {
+                "feature_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
+                },
+                "feature_title": "Feature 4",
+                "feature_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
                     "spans": []
                   }
                 ]
               }
             ],
             "primary": {
-              "title": "political",
+              "title": "Why we",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Proident dolor consequat ipsum sint aliquip ut id voluptate labore eiusmod dolor eu.",
+                  "text": "A predesigned AlternateGrid component, that you can use tolist your skills or features of a product.",
                   "spans": []
                 }
               ],
-              "background_color": "#ef0719",
-              "text_color": "#cd842b",
-              "secondary_text_color": "#9011aa"
+              "background_color": null,
+              "text_color": null,
+              "secondary_text_color": null
             },
             "slice_type": "alternate_grid"
           }
@@ -132,7 +189,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/AlternateGrid/default/preview.png",
+            "width": 3356,
+            "height": 1328
+          }
+        }
       },
       "call_to_action_with_image": {
         "library": "slices",

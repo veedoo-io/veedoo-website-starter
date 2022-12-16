@@ -1,12 +1,12 @@
 <template>
   <section :class="getContainerClass()">
-    <div>
+    <div v-if="slice.primary.image?.url">
       <PrismicImage
         class="h-[250px] object-contain"
         :field="slice.primary.image"
       />
     </div>
-    <PrismicRichText :field="slice.primary.title" />
+    <PrismicRichText :class="getTitleClasses()" :field="slice.primary.title" />
     <PrismicRichText :field="slice.primary.description" />
     <PrismicLink :class="getButtonClass()" :field="slice.primary.button_url">{{
       slice.primary.button_text
@@ -25,7 +25,7 @@ export default {
   data() {
     let getContainerClass = function () {
       let classNames =
-        'flex flex-col w-full h-fit gap-[40px] overflow-hidden p-4 md:p-8 lg:p-16 xl:p-40 ';
+        'flex flex-col w-full min-h-screen justify-center gap-[40px] overflow-hidden  ';
 
       if (
         this.slice.primary.backgroundcolor &&
@@ -69,9 +69,28 @@ export default {
       return classNames;
     };
 
+    let getTitleClasses = function () {
+      let colorName = tailwindMatcher('#353C47');
+
+      let classes = 'text-[28px] lg:text-[45px] ' + ` text-${colorName} `;
+
+      return classes;
+    };
+
+    let getDescriptionClasses = function () {
+      let colorName = tailwindMatcher('#48525F');
+
+      let classes = 'text-[18px] lg:text-[20px] ' + ` text-${colorName} `;
+
+      return classes;
+    };
+
+    //console.log('cta slice ', this.slice);
+
     return {
       getContainerClass,
       getButtonClass,
+      getTitleClasses,
     };
   },
 };

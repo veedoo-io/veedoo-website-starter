@@ -28,7 +28,7 @@ export default {
   <${
     this.url?.url || this.url?.link_type != 'Any'
       ? `a href="${this.url?.url}" `
-      : this.htmlTag
+      : `div`
   }
     class="flex items-center justify-center w-fit h-fit gap-2 ${
       this.classes
@@ -42,7 +42,7 @@ export default {
             "' alt='Start Icon' />"
           : ''
       }
-      ${this.text}
+      <${this.htmlTag}>${this.text}</${this.htmlTag}>
       ${
         this.endIcon != ''
           ? "<img class='" +
@@ -52,7 +52,7 @@ export default {
             "' alt='Start Icon' />"
           : ''
       }
-      </${this.url?.url ? `a href="${this.url?.url}" ` : this.htmlTag}>
+      </${this.url?.url ? `a` : `div`}>
 
 
 `,

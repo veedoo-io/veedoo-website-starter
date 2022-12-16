@@ -5,7 +5,7 @@
   >
     <VeedooText
       :text="slice.primary.text"
-      :htmlTag="slice.primary.htmltag"
+      :htmlTag="slice.primary.htmltag ? slice.primary.htmltag:'p'"
       :startIcon="slice.primary.startimage?.url"
       :endIcon="slice.primary.end_image?.url"
       :url="slice.primary.url"
