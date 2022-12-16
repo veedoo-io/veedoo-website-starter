@@ -5,7 +5,7 @@
     </h2>
     <h1
       v-if="slice.primary.title"
-      class="b-page__home-title"
+      :class="getTitleClasses()"
       :style="getTitleStyle"
     >
       {{ slice.primary.title }}
@@ -23,7 +23,7 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
     let getContainerClasses = function () {
-      let classes = 'w-screen h-screen  flex flex-col justify-center ';
+      let classes = 'w-full h-screen  flex flex-col justify-center ';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -47,9 +47,17 @@ export default {
       return classes;
     };
 
+    let getTitleClasses = function () {
+      let classes =
+        'b-page__home-title text-[45px] w-full sm:text-[80px] xl:text-[102px]';
+
+      return classes;
+    };
+
     return {
       getContainerClasses,
       getIntroClasses,
+      getTitleClasses,
       mousePosX: 0,
     };
   },
@@ -80,7 +88,6 @@ export default {
 <style scoped>
 .b-page__home-title {
   font-weight: 600;
-  font-size: 102px;
   line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: 5.1px;

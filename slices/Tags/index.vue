@@ -3,7 +3,7 @@
     class="
       relative
       w-full
-      h-screen
+      min-h-screen
       flex flex-col
       justify-center
       py-4

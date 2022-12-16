@@ -1,12 +1,14 @@
 <template>
-  <div :class="getContainerClasses()">
+  <header :class="getContainerClasses()">
     <NuxtLink to="/">
       <PrismicImage class="h-10" :field="slice.primary.logo" />
     </NuxtLink>
     <div :class="getMenuContainerClasses()">
-      <PrismicLink :field="slice.primary.main_link_url">{{
-        slice.primary.main_link_text
-      }}</PrismicLink>
+      <PrismicLink
+        class="hidden sm:flex"
+        :field="slice.primary.main_link_url"
+        >{{ slice.primary.main_link_text }}</PrismicLink
+      >
 
       <div
         @click="toggleMobileMenu"
@@ -82,7 +84,7 @@
         top-20
         left-0
         h-full
-        w-screen
+        w-full
         bg-[#353C47]/60
         flex
         justify-end
@@ -137,7 +139,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -152,7 +154,7 @@ export default {
     //console.log('header ', this.slice);
     let getContainerClasses = function () {
       let classes =
-        'fixed left-0 z-50 bg-blue-300 top-0 h-20 w-screen flex justify-between items-center px-8 ';
+        'fixed left-0 z-50 top-0 h-20 w-screen flex justify-between items-center px-1 lg:px-8 ';
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
         //console.log('colorName ', colorName);
@@ -164,7 +166,7 @@ export default {
     };
 
     let getMenuContainerClasses = function () {
-      let classes = ' flex gap-10 items-center ';
+      let classes = 'flex gap-10 items-center ';
       if (this?.slice?.primary?.text_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.text_color);
         //console.log('colorName ', colorName);

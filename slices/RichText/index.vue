@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-screen max-w-[1000px] text-justify"
+    class="w-full max-w-[1000px] "
     :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
   >
     <VeedooText

@@ -1,6 +1,131 @@
 {
   "slices": {
     "components": {
+      "alternate_grid": {
+        "library": "slices",
+        "id": "alternate_grid",
+        "name": "AlternateGrid",
+        "description": "AlternateGrid",
+        "model": {
+          "id": "alternate_grid",
+          "type": "SharedSlice",
+          "name": "AlternateGrid",
+          "description": "AlternateGrid",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AlternateGrid",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "feature_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "Feature image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "feature_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Feature title",
+                    "placeholder": ""
+                  }
+                },
+                "feature_description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Feature description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "feature_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+                },
+                "feature_title": "sound",
+                "feature_description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Pariatur Lorem proident ullamco sunt tempor magna magna et nostrud elit Lorem elit in consectetur.",
+                    "spans": []
+                  }
+                ]
+              }
+            ],
+            "primary": {
+              "title": "society",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Non enim pariatur deserunt aute ut sit amet cupidatat ut officia enim cillum.",
+                  "spans": []
+                }
+              ],
+              "background_color": "#1a05c2",
+              "text_color": "#e47d66"
+            },
+            "slice_type": "alternate_grid"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "call_to_action_with_image": {
         "library": "slices",
         "id": "call_to_action_with_image",

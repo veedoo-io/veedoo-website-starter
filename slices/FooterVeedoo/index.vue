@@ -1,5 +1,5 @@
 <template>
-  <section :class="getContainerClasses()">
+  <footer :class="getContainerClasses()">
     <PrismicImage class="h-10" :field="slice.primary.footer_logo" />
     <PrismicRichText
       :class="getFooterTextClasses()"
@@ -10,7 +10,7 @@
         <PrismicImage class="h-8" :field="item.footer_flag" />
       </div>
     </div>
-  </section>
+  </footer>
 </template>
 
 <script>

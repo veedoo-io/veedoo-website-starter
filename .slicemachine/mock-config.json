@@ -42,6 +42,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "AlternateGrid": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
