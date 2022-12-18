@@ -46,5 +46,8 @@ module.exports = {
     {
       pattern: /^text-/,
     },
+    {
+      pattern: /^font-/,
+    },
   ],
 };

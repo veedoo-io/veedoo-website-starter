@@ -30,7 +30,7 @@
         "slice_background_color": {
           "type": "Color",
           "config": {
-            "label": "slice background color",
+            "label": "background color",
             "placeholder": ""
           }
         }

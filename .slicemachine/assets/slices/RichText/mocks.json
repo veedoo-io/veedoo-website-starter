@@ -6,8 +6,8 @@
       {}
     ],
     "primary": {
-      "htmltag": "h2",
-      "text": "particularly",
+      "htmltag": "p",
+      "text": "adventure",
       "startimage": {
         "dimensions": {
           "width": 900,
@@ -15,7 +15,7 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+        "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
       },
       "end_image": {
         "dimensions": {
@@ -24,19 +24,20 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+        "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
       },
       "url": {
         "link_type": "Web",
-        "url": "https://slicemachine.dev"
+        "url": "https://prismic.io"
       },
-      "background_color": "#6a4a3c",
-      "text_color": "#22010c",
-      "text_size": 93,
-      "margin_top": 52,
-      "margin_bottom": 31,
-      "margin_left": 98,
-      "margin_right": 90
+      "background_color": "#6535d8",
+      "text_color": "#7cfaf0",
+      "text_size": 6,
+      "margin_top": 0,
+      "margin_bottom": 34,
+      "margin_left": 66,
+      "margin_right": 28,
+      "font_weight": "bold"
     },
     "slice_type": "text"
   }

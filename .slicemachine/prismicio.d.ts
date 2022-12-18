@@ -1245,6 +1245,17 @@ interface TextSliceDefaultPrimary {
      *
      */
     margin_right: prismicT.NumberField;
+    /**
+     * font weight  field in *RichText → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: normal
+     * - **API ID Path**: text.primary.font_weight
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    font_weight: prismicT.SelectField<"normal" | "medium" | "semibold	" | "bold", "filled">;
 }
 /**
  * Default variation for RichText Slice
@@ -1360,7 +1371,7 @@ interface TestimonialSliceDefaultPrimary {
      */
     title_color: prismicT.ColorField;
     /**
-     * slice background color field in *Testimonial → Primary*
+     * background color field in *Testimonial → Primary*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*

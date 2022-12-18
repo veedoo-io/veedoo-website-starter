@@ -108,6 +108,20 @@
             "label": "margin right",
             "placeholder": "number of pixels"
           }
+        },
+        "font_weight": {
+          "type": "Select",
+          "config": {
+            "label": "font weight ",
+            "placeholder": "",
+            "options": [
+              "normal",
+              "medium",
+              "semibold\t",
+              "bold"
+            ],
+            "default_value": "normal"
+          }
         }
       },
       "items": {},

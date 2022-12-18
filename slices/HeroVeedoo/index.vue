@@ -49,7 +49,7 @@ export default {
 
     let getTitleClasses = function () {
       let classes =
-        'b-page__home-title text-[45px] w-full sm:text-[80px] xl:text-[102px]';
+        'b-page__home-title text-[40px] w-full sm:text-[60px] xl:text-[102px]';
 
       return classes;
     };

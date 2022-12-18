@@ -42,6 +42,22 @@ export default {
         classes = classes + ` text-${colorName} `;
       }
 
+      switch (this.slice.primary.font_weight) {
+        case 'medium':
+          classes = classes + ` font-medium		`;
+          break;
+        case 'semibold':
+          classes = classes + ` font-semibold			`;
+          break;
+        case 'bold':
+          classes = classes + ` font-bold		`;
+          break;
+
+        default:
+          classes = classes + ` font-normal	`;
+          break;
+      }
+
       return classes;
     };
 

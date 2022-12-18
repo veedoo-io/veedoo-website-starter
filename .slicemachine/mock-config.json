@@ -58,6 +58,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "RichText": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
