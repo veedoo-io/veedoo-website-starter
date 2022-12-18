@@ -201,7 +201,7 @@ export default {
       ],
     };
 
-    console.log('currentSlider', this.slice);
+    // console.log('currentSlider', this.slice);
 
     return {
       mySliderOption,

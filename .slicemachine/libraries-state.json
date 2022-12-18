@@ -1814,7 +1814,7 @@
                 "title_color": {
                   "type": "Color",
                   "config": {
-                    "label": "title color",
+                    "label": "primary text color",
                     "placeholder": ""
                   }
                 },
@@ -1849,6 +1849,14 @@
                     "allowTargetBlank": true,
                     "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
+                },
+                "picture": {
+                  "type": "Image",
+                  "config": {
+                    "label": "picture",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -1861,27 +1869,36 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "full_name": "importance",
-                "job_position": "loud",
+                "full_name": "luck",
+                "job_position": "movie",
                 "testimonial": [
                   {
                     "type": "paragraph",
-                    "text": "Ipsum esse minim mollit anim magna dolor enim est qui consectetur tempor voluptate deserunt culpa. Veniam amet qui commodo in fugiat ad aute deserunt commodo cupidatat irure do nostrud eiusmod nulla.",
+                    "text": "Officia laboris culpa consequat occaecat officia nostrud nostrud nostrud. Labore nisi nostrud velit. Exercitation commodo amet duis tempor eiusmod mollit aliquip excepteur.",
                     "spans": []
                   }
-                ]
+                ],
+                "picture": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+                }
               }
             ],
             "primary": {
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Voluptate reprehenderit dolor eiusmod ut. Proident tempor laboris in eiusmod commodo voluptate. Amet qui sint dolore laborum sunt laboris velit deserunt labore magna minim dolore minim.",
+                  "text": "Enim nisi anim esse excepteur. Cupidatat officia laborum mollit in consectetur voluptate quis ad officia duis commodo. Officia laboris laboris ad ea occaecat reprehenderit pariatur irure aute cillum veniam culpa in do.",
                   "spans": []
                 }
               ],
-              "title_color": "#4742fc",
-              "slice_background_color": "#6914be"
+              "title_color": "#041b59",
+              "slice_background_color": "#11e4f7"
             },
             "slice_type": "testimonial"
           }
@@ -1890,7 +1907,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/Testimonial/default/preview.png",
+            "width": 3000,
+            "height": 1212
+          }
+        }
       }
     }
   }

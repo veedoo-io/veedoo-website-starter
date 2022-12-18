@@ -1361,7 +1361,7 @@ interface TestimonialSliceDefaultPrimary {
      */
     title: prismicT.RichTextField;
     /**
-     * title color field in *Testimonial → Primary*
+     * primary text color field in *Testimonial → Primary*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*
@@ -1416,6 +1416,16 @@ export interface TestimonialSliceDefaultItem {
      *
      */
     testimonial: prismicT.RichTextField;
+    /**
+     * picture field in *Testimonial → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: testimonial.items[].picture
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    picture: prismicT.ImageField<never>;
 }
 /**
  * Default variation for Testimonial Slice
