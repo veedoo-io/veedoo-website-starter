@@ -36,6 +36,9 @@
             },
             "clients_slider": {
               "type": "SharedSlice"
+            },
+            "faq_accordion": {
+              "type": "SharedSlice"
             }
           }
         }

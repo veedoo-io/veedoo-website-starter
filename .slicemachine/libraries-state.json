@@ -722,6 +722,146 @@
           }
         }
       },
+      "faq_accordion": {
+        "library": "slices",
+        "id": "faq_accordion",
+        "name": "FaqAccordion",
+        "description": "FaqAccordion",
+        "model": {
+          "id": "faq_accordion",
+          "type": "SharedSlice",
+          "name": "FaqAccordion",
+          "description": "FaqAccordion",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FaqAccordion",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "primary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "primary text color",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "secondary text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Anim excepteur ea magna occaecat anim duis excepteur minim pariatur ipsum elit.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Veniam mollit ea dolore minim deserunt cupidatat aliqua. Ad incididunt aliquip do irure labore nulla. Fugiat pariatur ipsum voluptate laborum laboris voluptate ipsum ad.",
+                    "spans": []
+                  }
+                ],
+                "background_color": "#efd867",
+                "text_color": "#59a34a"
+              }
+            ],
+            "primary": {
+              "title": "friend",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Et amet enim eu elit enim ullamco culpa dolor duis ex.",
+                  "spans": []
+                }
+              ],
+              "background_color": "#3323a4",
+              "primary_text_color": "#1b1685",
+              "secondary_text_color": "#7f1ec9"
+            },
+            "slice_type": "faq_accordion"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "footer_veedoo": {
         "library": "slices",
         "id": "footer_veedoo",
@@ -1869,23 +2009,83 @@
             "version": "sktwi1xtmkfgx8626",
             "items": [
               {
-                "full_name": "luck",
-                "job_position": "movie",
+                "full_name": "Jasmine Smith 1",
+                "job_position": "CEO at ABCD",
                 "testimonial": [
                   {
                     "type": "paragraph",
-                    "text": "Officia laboris culpa consequat occaecat officia nostrud nostrud nostrud. Labore nisi nostrud velit. Exercitation commodo amet duis tempor eiusmod mollit aliquip excepteur.",
+                    "text": "Ac faucibus orci id quis consectetur laoreet sed. Enim congue molestie nam odio pulvinar ac ultricies. Elementum ut pellentesque volutpat mi. ",
                     "spans": []
                   }
                 ],
                 "picture": {
                   "dimensions": {
-                    "width": 900,
-                    "height": 500
+                    "width": 34,
+                    "height": 33
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/795e220f-6a3b-4883-8c07-1fe68bd0f7f2_ukraine.svg"
+                }
+              },
+              {
+                "full_name": "Jasmine Smith 2",
+                "job_position": "Product owner at ABCD",
+                "testimonial": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ac faucibus orci id quis consectetur laoreet sed. Enim congue molestie nam odio pulvinar ac ultricies. Elementum ut pellentesque volutpat mi. Faucibus sit posuere nisi aenean ultrices. Suscipit malesuada aenean nullam et sit dapibus eget a eu. Nisl tortor arcu et. ",
+                    "spans": []
+                  }
+                ],
+                "picture": {
+                  "dimensions": {
+                    "width": 183,
+                    "height": 275
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/veedoo-website-starter/da2135ff-877d-434f-ab37-c2f66249aa38_download.jpeg?auto=compress,format"
+                }
+              },
+              {
+                "full_name": "Jasmine Smith 3",
+                "job_position": "PM at ABCD",
+                "testimonial": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ac faucibus orci id quis consectetur laoreet sed. Enim congue molestie nam odio pulvinar ac ultricies. Elementum ut pellentesque volutpat mi. Faucibus sit posuere nisi aenean ultrices. Suscipit malesuada aenean nullam et sit dapibus eget a eu. Nisl tortor arcu et. ",
+                    "spans": []
+                  }
+                ],
+                "picture": {
+                  "dimensions": {
+                    "width": 183,
+                    "height": 275
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.prismic.io/veedoo-website-starter/e14056cb-2c9a-41df-8c15-9f47965279a8_images.jpeg?auto=compress,format"
+                }
+              },
+              {
+                "full_name": "Jasmine Smith 4",
+                "job_position": "Product owner at ABCD",
+                "testimonial": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ac faucibus orci id quis consectetur laoreet sed. Enim congue molestie nam odio pulvinar ac ultricies. Elementum ut pellentesque volutpat mi. ",
+                    "spans": []
+                  }
+                ],
+                "picture": {
+                  "dimensions": {
+                    "width": 56,
+                    "height": 56
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/2039555a-f153-49f6-9ed3-2e59e34af5dd_Vision+Icon.svg"
                 }
               }
             ],
@@ -1893,12 +2093,12 @@
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Enim nisi anim esse excepteur. Cupidatat officia laborum mollit in consectetur voluptate quis ad officia duis commodo. Officia laboris laboris ad ea occaecat reprehenderit pariatur irure aute cillum veniam culpa in do.",
+                  "text": "What they say",
                   "spans": []
                 }
               ],
-              "title_color": "#041b59",
-              "slice_background_color": "#11e4f7"
+              "title_color": null,
+              "slice_background_color": null
             },
             "slice_type": "testimonial"
           }

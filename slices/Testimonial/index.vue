@@ -215,7 +215,7 @@ export default {
       ],
     };
 
-    console.log('Testimonial', this.slice);
+    //console.log('Testimonial', this.slice);
 
     return {
       getContainerClasses,

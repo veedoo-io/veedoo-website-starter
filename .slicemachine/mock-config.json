@@ -63,6 +63,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "FaqAccordion": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
