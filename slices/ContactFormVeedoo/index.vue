@@ -165,22 +165,24 @@ export default {
       let defaultMailTo = this.getSettings.data.default_email_mailto;
       let formMailTo = this.slice.primary.mailto_email;
 
-
       try {
-        let request = await fetch('http://localhost:3001/api/sendEmail', {
-          method: 'POST',
-          body: JSON.stringify({
-            email: formMailTo ?? defaultMailTo,
-            type: 'htmlEmail',
-            name: window?.location?.href ?? 'Unknown',
-            subject: 'Contact Form Message',
-            HTMLPart: `<div><h1>New Message from ${
-              window ? window.location?.href : ''
-            } Website </h1><h3>Name:${this.name}</h3><h3>Email:${
-              this.email
-            }</h3><h3>Message:${this.message}</h3></div>`,
-          }),
-        });
+        let request = await fetch(
+          'https://veedoo-website-starter-api.vercel.app/api/sendEmail',
+          {
+            method: 'POST',
+            body: JSON.stringify({
+              email: formMailTo ?? defaultMailTo,
+              type: 'htmlEmail',
+              name: window?.location?.href ?? 'Unknown',
+              subject: 'Contact Form Message',
+              HTMLPart: `<div><h1>New Message from ${
+                window ? window.location?.href : ''
+              } Website </h1><h3>Name:${this.name}</h3><h3>Email:${
+                this.email
+              }</h3><h3>Message:${this.message}</h3></div>`,
+            }),
+          }
+        );
 
         console.log('request', request);
         let result = await request.json();
@@ -194,10 +196,10 @@ export default {
         alert('there was an error sending your email try again later');
         console.log('there was an error sending your email');
         console.log(error);
-      } finally{
+      } finally {
         this.name = '';
-        this.email= '';
-        this.message ='';
+        this.email = '';
+        this.message = '';
       }
     },
   },
