@@ -39,7 +39,7 @@ module.exports = {
   },
   plugins: [],
   safelist: [
-    //{pattern: /./, },// uncomment this before deploying
+    {pattern: /./, },// uncomment this before deploying
     {
       pattern: /^bg-/,
     },
