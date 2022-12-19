@@ -52,5 +52,11 @@ module.exports = {
     {
       pattern: /^max-w-/,
     },
+    {
+      pattern: /^drop-shadow-/,
+    },
+    {
+      pattern: /^rounded-/,
+    },
   ],
 };
