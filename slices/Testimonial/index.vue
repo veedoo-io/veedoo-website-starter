@@ -24,6 +24,8 @@
             flex-col
             justify-between
             gap-6
+            max-w-[326px]
+            mx-auto
           "
           :style="{
             filter:
@@ -109,7 +111,6 @@
           bg-white
           w-8
           h-8
-
           active:scale-125
           rounded
           flex
