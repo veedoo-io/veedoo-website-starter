@@ -969,6 +969,55 @@ type ContactFormVeedooSliceVariation = ContactFormVeedooSliceDefault;
  */
 export type ContactFormVeedooSlice = prismicT.SharedSlice<"contact_form_veedoo", ContactFormVeedooSliceVariation>;
 /**
+ * Primary content in ContactInfo → Primary
+ *
+ */
+interface ContactInfoSliceDefaultPrimary {
+    /**
+     * Title field in *ContactInfo → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: contact_info.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *ContactInfo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your product
+     * - **API ID Path**: contact_info.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for ContactInfo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ContactInfo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactInfoSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ContactInfoSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *ContactInfo*
+ *
+ */
+type ContactInfoSliceVariation = ContactInfoSliceDefault;
+/**
+ * ContactInfo Shared Slice
+ *
+ * - **API ID**: `contact_info`
+ * - **Description**: `ContactInfo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactInfoSlice = prismicT.SharedSlice<"contact_info", ContactInfoSliceVariation>;
+/**
  * Primary content in FaqAccordion → Primary
  *
  */
@@ -1939,6 +1988,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceVariation, FaqAccordionSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceVariation, FaqAccordionSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }
