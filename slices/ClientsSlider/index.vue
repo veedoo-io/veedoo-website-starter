@@ -57,7 +57,7 @@
           bg-white
           w-8
           h-8
-          drop-shadow-lg
+
           active:scale-125
           rounded
           flex
@@ -65,6 +65,10 @@
           items-center
         "
         @click="$refs.carousel.goToPrev()"
+        :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -96,7 +100,6 @@
           bg-white
           w-8
           h-8
-          drop-shadow-lg
           active:scale-125
           rounded
           flex
@@ -104,6 +107,10 @@
           items-center
         "
         @click="$refs.carousel.goToNext()"
+        :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -276,7 +276,7 @@ export default {
 
       if (this.slice.variation == 'partnersLogoSlider2') {
         classNames =
-          'w-[250px] h-[111px] rounded bg-white drop-shadow-lg mx-auto flex justify-center items-center';
+          'w-[250px] h-[111px] rounded bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center';
       }
 
       return classNames;
@@ -296,7 +296,7 @@ export default {
       let classNames = '';
 
       if (this.slice.variation == 'partnersLogoSlider2') {
-        classNames = 'bg-white drop-shadow-lg';
+        classNames = 'bg-white shadow-[0_5px_10px_0px_#D4D4D4]';
       }
 
       return classNames;

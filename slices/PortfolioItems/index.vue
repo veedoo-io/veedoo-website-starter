@@ -8,7 +8,9 @@
       :class="getItemClassess()"
       :style="`background-color: ${
         item.background_color ? item.background_color : '#FFFFFF'
-      }; color: ${item.text_color ? item.text_color : '#353C47'}`"
+      }; color: ${
+        item.text_color ? item.text_color : '#353C47'
+      }; filter:'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))'`"
     >
       <PrismicLink class="w-full h-full" :field="item.url">
         <PrismicImage
@@ -82,7 +84,7 @@ export default {
 
     let getItemClassess = function () {
       let classes =
-        'relative flex-[0_0_100%] lg:flex-[0_0_48%]  min-h-[220px] w-full h-full rounded-lg overflow-hidden  drop-shadow-lg';
+        'relative flex-[0_0_100%] lg:flex-[0_0_48%]  min-h-[220px] w-full h-full rounded-lg overflow-hidden  ';
 
       return classes;
     };

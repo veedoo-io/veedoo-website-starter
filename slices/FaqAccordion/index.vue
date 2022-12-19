@@ -15,7 +15,8 @@
           @click="toggleFaq(i)"
           :style="`background-color: ${
             item.background_color ? item.background_color : '#FFFFFF'
-          }; `"
+          }; filter:'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))' `"
+
         >
           <div class="flex justify-between w-full">
             <PrismicRichText
@@ -135,7 +136,7 @@ export default {
 
     let getItemClasses = function () {
       let classes =
-        ' flex flex-col drop-shadow-lg justify-between rounded-lg text-start p-6 bg-white ';
+        ' flex flex-col  justify-between rounded-lg text-start p-6 bg-white ';
 
       return classes;
     };

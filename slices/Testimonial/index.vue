@@ -19,13 +19,16 @@
             w-full
             h-full
             bg-white
-            drop-shadow-lg
             flex
             p-6
             flex-col
             justify-between
             gap-6
           "
+          :style="{
+            filter:
+              'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+          }"
         >
           <div class="flex gap-4">
             <PrismicImage
@@ -64,13 +67,16 @@
           bg-white
           w-8
           h-8
-          drop-shadow-lg
           active:scale-125
           rounded
           flex
           justify-center
           items-center
         "
+        :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
         @click="$refs.carousel.goToPrev()"
       >
         <svg
@@ -103,13 +109,17 @@
           bg-white
           w-8
           h-8
-          drop-shadow-lg
+
           active:scale-125
           rounded
           flex
           justify-center
           items-center
         "
+        :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
         @click="$refs.carousel.goToNext()"
       >
         <svg

@@ -1,5 +1,8 @@
 <template>
-  <section :class="getContainerClasses()">
+  <section :class="getContainerClasses()" :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }">
     <PrismicImage class="mb-10" :field="slice.primary.image" />
     <h3 :class="getTitleClasses()">{{ slice.primary.form_title }}</h3>
     <PrismicRichText
@@ -62,7 +65,7 @@ export default {
   data() {
     let getContainerClasses = function () {
       let classes =
-        'w-full my-4 max-w-[872px] min-h-screen flex flex-col items-center  drop-shadow-lg rounded-xl mx-auto px-5 lg:px-[236px] py-[50px] ';
+        'w-full my-4 max-w-[872px] min-h-screen flex flex-col items-center  rounded-xl mx-auto px-5 lg:px-[236px] py-[50px] ';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
