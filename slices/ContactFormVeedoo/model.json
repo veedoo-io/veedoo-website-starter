@@ -1,0 +1,127 @@
+{
+  "id": "contact_form_veedoo",
+  "type": "SharedSlice",
+  "name": "ContactFormVeedoo",
+  "description": "ContactFormVeedoo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ContactFormVeedoo",
+      "primary": {
+        "mailto_email": {
+          "type": "Text",
+          "config": {
+            "label": "mailTo email",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "form_title": {
+          "type": "Text",
+          "config": {
+            "label": "form title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "form description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "name_title": {
+          "type": "Text",
+          "config": {
+            "label": "name title",
+            "placeholder": ""
+          }
+        },
+        "name_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "name placeholder",
+            "placeholder": ""
+          }
+        },
+        "email_title": {
+          "type": "Text",
+          "config": {
+            "label": "email title",
+            "placeholder": ""
+          }
+        },
+        "email_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "email placeholder",
+            "placeholder": ""
+          }
+        },
+        "message_title": {
+          "type": "Text",
+          "config": {
+            "label": "message title",
+            "placeholder": ""
+          }
+        },
+        "message_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "message placeholder",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "button text",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "button_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "button background color",
+            "placeholder": ""
+          }
+        },
+        "text_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "button text color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

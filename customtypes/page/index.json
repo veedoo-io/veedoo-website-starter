@@ -46,6 +46,9 @@
             },
             "faq_accordion": {
               "type": "SharedSlice"
+            },
+            "contact_form_veedoo": {
+              "type": "SharedSlice"
             }
           }
         }

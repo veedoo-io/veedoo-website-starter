@@ -11,17 +11,18 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "google_analytics_code": "brave",
+    "website_name_for_logs": "furniture",
+    "google_analytics_code": "vessels",
     "fibery_settings": [
       {
         "fibery_host_url": {
           "link_type": "Web",
-          "url": "http://twitter.com"
+          "url": "http://google.com"
         },
-        "fibery_token": "below"
+        "fibery_token": "needs"
       }
     ],
-    "default_email_mailto": "new",
+    "default_email_mailto": "consonant",
     "website_fav_icon": {
       "dimensions": {
         "width": 900,
@@ -29,12 +30,12 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
+      "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
     },
-    "default_background_color": "#be6f07",
+    "default_background_color": "#2143bd",
     "slices": [],
-    "title": "feel",
-    "description": "occur",
+    "title": "do",
+    "description": "attention",
     "image": {
       "dimensions": {
         "width": 900,
@@ -42,7 +43,7 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
+      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
     }
   }
 }

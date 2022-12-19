@@ -49,5 +49,8 @@ module.exports = {
     {
       pattern: /^font-/,
     },
+    {
+      pattern: /^max-w-/,
+    },
   ],
 };

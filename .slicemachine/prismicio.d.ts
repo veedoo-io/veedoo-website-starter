@@ -115,7 +115,7 @@ interface HomePageDocumentData {
  * Slice for *Home Page → Slice Zone*
  *
  */
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice;
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice;
 /**
  * Home Page document from Prismic
  *
@@ -177,7 +177,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice;
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice;
 /**
  * Page document from Prismic
  *
@@ -202,6 +202,17 @@ type TagItemDocumentData = Record<string, never>;
 export type TagItemDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<TagItemDocumentData>, "tag_item", Lang>;
 /** Content for Website settings documents */
 interface WebsiteSettingsDocumentData {
+    /**
+     * Website name for logs field in *Website settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.website_name_for_logs
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    website_name_for_logs: prismicT.KeyTextField;
     /**
      * Google Analytics Code  field in *Website settings*
      *
@@ -779,6 +790,185 @@ type ClientsSliderSliceVariation = ClientsSliderSliceDefault;
  */
 export type ClientsSliderSlice = prismicT.SharedSlice<"clients_slider", ClientsSliderSliceVariation>;
 /**
+ * Primary content in ContactFormVeedoo → Primary
+ *
+ */
+interface ContactFormVeedooSliceDefaultPrimary {
+    /**
+     * mailTo email field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.mailto_email
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    mailto_email: prismicT.KeyTextField;
+    /**
+     * image field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * form title field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.form_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    form_title: prismicT.KeyTextField;
+    /**
+     * form description field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * name title field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.name_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name_title: prismicT.KeyTextField;
+    /**
+     * name placeholder field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.name_placeholder
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    name_placeholder: prismicT.KeyTextField;
+    /**
+     * email title field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.email_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    email_title: prismicT.KeyTextField;
+    /**
+     * email placeholder field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.email_placeholder
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    email_placeholder: prismicT.KeyTextField;
+    /**
+     * message title field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.message_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    message_title: prismicT.KeyTextField;
+    /**
+     * message placeholder field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.message_placeholder
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    message_placeholder: prismicT.KeyTextField;
+    /**
+     * button text field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    button_text: prismicT.KeyTextField;
+    /**
+     * text color field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+    /**
+     * background color field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * button background color field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.button_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    button_background_color: prismicT.ColorField;
+    /**
+     * button text color field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.text_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_background_color: prismicT.ColorField;
+}
+/**
+ * Default variation for ContactFormVeedoo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `ContactFormVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactFormVeedooSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ContactFormVeedooSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *ContactFormVeedoo*
+ *
+ */
+type ContactFormVeedooSliceVariation = ContactFormVeedooSliceDefault;
+/**
+ * ContactFormVeedoo Shared Slice
+ *
+ * - **API ID**: `contact_form_veedoo`
+ * - **Description**: `ContactFormVeedoo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ContactFormVeedooSlice = prismicT.SharedSlice<"contact_form_veedoo", ContactFormVeedooSliceVariation>;
+/**
  * Primary content in FaqAccordion → Primary
  *
  */
@@ -833,6 +1023,16 @@ interface FaqAccordionSliceDefaultPrimary {
      *
      */
     secondary_text_color: prismicT.ColorField;
+    /**
+     * max width field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.max_width
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    max_width: prismicT.NumberField;
 }
 /**
  * Item in FaqAccordion → Items
@@ -870,7 +1070,7 @@ export interface FaqAccordionSliceDefaultItem {
      */
     background_color: prismicT.ColorField;
     /**
-     * text color field in *FaqAccordion → Items*
+     * Question text color field in *FaqAccordion → Items*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*
@@ -879,6 +1079,16 @@ export interface FaqAccordionSliceDefaultItem {
      *
      */
     text_color: prismicT.ColorField;
+    /**
+     * answer text color field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].answer_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    answer_text_color: prismicT.ColorField;
 }
 /**
  * Default variation for FaqAccordion Slice
@@ -1364,6 +1574,28 @@ interface TextSliceDefaultPrimary {
      */
     text_size: prismicT.NumberField;
     /**
+     * slice type field in *RichText → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: center Mode
+     * - **API ID Path**: text.primary.slice_type
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    slice_type: prismicT.SelectField<"center Mode" | "free Mode", "filled">;
+    /**
+     * font weight  field in *RichText → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: normal
+     * - **API ID Path**: text.primary.font_weight
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    font_weight: prismicT.SelectField<"normal" | "medium" | "semibold	" | "bold", "filled">;
+    /**
      * margin top field in *RichText → Primary*
      *
      * - **Field Type**: Number
@@ -1403,17 +1635,6 @@ interface TextSliceDefaultPrimary {
      *
      */
     margin_right: prismicT.NumberField;
-    /**
-     * font weight  field in *RichText → Primary*
-     *
-     * - **Field Type**: Select
-     * - **Placeholder**: *None*
-     * - **Default Value**: normal
-     * - **API ID Path**: text.primary.font_weight
-     * - **Documentation**: https://prismic.io/docs/core-concepts/select
-     *
-     */
-    font_weight: prismicT.SelectField<"normal" | "medium" | "semibold	" | "bold", "filled">;
 }
 /**
  * Default variation for RichText Slice
@@ -1613,6 +1834,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceVariation, FaqAccordionSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceVariation, FaqAccordionSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }

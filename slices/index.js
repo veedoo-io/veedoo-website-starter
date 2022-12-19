@@ -4,6 +4,7 @@ import AlternateGrid from './AlternateGrid';
 import AtomTags from './AtomTags';
 import CallToActionWithImage from './CallToActionWithImage';
 import ClientsSlider from './ClientsSlider';
+import ContactFormVeedoo from './ContactFormVeedoo';
 import FaqAccordion from './FaqAccordion';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
@@ -18,6 +19,7 @@ export {
 	AtomTags,
 	CallToActionWithImage,
 	ClientsSlider,
+	ContactFormVeedoo,
 	FaqAccordion,
 	FooterVeedoo,
 	HeaderVeedoo,
@@ -33,6 +35,7 @@ export const components = {
 	atom_tags: AtomTags,
 	call_to_action_with_image: CallToActionWithImage,
 	clients_slider: ClientsSlider,
+	contact_form_veedoo: ContactFormVeedoo,
 	faq_accordion: FaqAccordion,
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,

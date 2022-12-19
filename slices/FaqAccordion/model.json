@@ -47,6 +47,13 @@
             "label": "secondary text color",
             "placeholder": ""
           }
+        },
+        "max_width": {
+          "type": "Number",
+          "config": {
+            "label": "max width",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -78,7 +85,14 @@
         "text_color": {
           "type": "Color",
           "config": {
-            "label": "text color",
+            "label": "Question text color",
+            "placeholder": ""
+          }
+        },
+        "answer_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "answer text color",
             "placeholder": ""
           }
         }

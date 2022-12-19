@@ -722,6 +722,191 @@
           }
         }
       },
+      "contact_form_veedoo": {
+        "library": "slices",
+        "id": "contact_form_veedoo",
+        "name": "ContactFormVeedoo",
+        "description": "ContactFormVeedoo",
+        "model": {
+          "id": "contact_form_veedoo",
+          "type": "SharedSlice",
+          "name": "ContactFormVeedoo",
+          "description": "ContactFormVeedoo",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "ContactFormVeedoo",
+              "primary": {
+                "mailto_email": {
+                  "type": "Text",
+                  "config": {
+                    "label": "mailTo email",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "form_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "form title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "form description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "name_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "name title",
+                    "placeholder": ""
+                  }
+                },
+                "name_placeholder": {
+                  "type": "Text",
+                  "config": {
+                    "label": "name placeholder",
+                    "placeholder": ""
+                  }
+                },
+                "email_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "email title",
+                    "placeholder": ""
+                  }
+                },
+                "email_placeholder": {
+                  "type": "Text",
+                  "config": {
+                    "label": "email placeholder",
+                    "placeholder": ""
+                  }
+                },
+                "message_title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "message title",
+                    "placeholder": ""
+                  }
+                },
+                "message_placeholder": {
+                  "type": "Text",
+                  "config": {
+                    "label": "message placeholder",
+                    "placeholder": ""
+                  }
+                },
+                "button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "button text",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "button_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "button background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "button text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "mailto_email": "taoufiq@veedoo.io",
+              "image": {
+                "dimensions": {
+                  "width": 60,
+                  "height": 60
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/58eb12e7-b170-4fb0-844b-41998d03c252_mail.svg"
+              },
+              "form_title": "Contact us",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "to discuss your next project ",
+                  "spans": []
+                }
+              ],
+              "name_title": null,
+              "name_placeholder": null,
+              "email_title": "Your email",
+              "email_placeholder": "example@gmail.com",
+              "message_title": "Message",
+              "message_placeholder": "Message",
+              "button_text": "Send",
+              "text_color": "#353c47",
+              "background_color": "#ffffff",
+              "button_background_color": "#f2776b",
+              "text_background_color": "#ffffff"
+            },
+            "slice_type": "contact_form_veedoo"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/ContactFormVeedoo/default/preview.png",
+            "width": 1948,
+            "height": 1100
+          }
+        }
+      },
       "faq_accordion": {
         "library": "slices",
         "id": "faq_accordion",
@@ -776,6 +961,13 @@
                     "label": "secondary text color",
                     "placeholder": ""
                   }
+                },
+                "max_width": {
+                  "type": "Number",
+                  "config": {
+                    "label": "max width",
+                    "placeholder": ""
+                  }
                 }
               },
               "items": {
@@ -807,7 +999,14 @@
                 "text_color": {
                   "type": "Color",
                   "config": {
-                    "label": "text color",
+                    "label": "Question text color",
+                    "placeholder": ""
+                  }
+                },
+                "answer_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "answer text color",
                     "placeholder": ""
                   }
                 }
@@ -825,33 +1024,70 @@
                 "question": [
                   {
                     "type": "paragraph",
-                    "text": "Anim excepteur ea magna occaecat anim duis excepteur minim pariatur ipsum elit.",
+                    "text": "Question 1",
                     "spans": []
                   }
                 ],
                 "answer": [
                   {
                     "type": "paragraph",
-                    "text": "Veniam mollit ea dolore minim deserunt cupidatat aliqua. Ad incididunt aliquip do irure labore nulla. Fugiat pariatur ipsum voluptate laborum laboris voluptate ipsum ad.",
+                    "text": "Only use them when the content is appropriate. If the panels are too long, the user will end up scrolling too much (esp. on mobile), which negates the whole purpose of using an accordion. For very long panels, using links to separate pages is preferred.",
                     "spans": []
                   }
                 ],
-                "background_color": "#efd867",
-                "text_color": "#59a34a"
+                "background_color": "#ffffff",
+                "text_color": "#000000"
+              },
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Question 2",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Learn about Prismic by reading questions and answers. It’s almost like talking to a human – and maybe even better.",
+                    "spans": []
+                  }
+                ],
+                "background_color": "#e4fcff",
+                "text_color": "#ff0000"
+              },
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Question 3",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Only use them when the content is appropriate. If the panels are too long, the user will end up scrolling too much (esp. on mobile), which negates the whole purpose of using an accordion. For very long panels, using links to separate pages is preferred.",
+                    "spans": []
+                  }
+                ],
+                "background_color": null,
+                "text_color": null
               }
             ],
             "primary": {
-              "title": "friend",
+              "title": "Answers to common questions",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Et amet enim eu elit enim ullamco culpa dolor duis ex.",
+                  "text": "Learn about Prismic by reading questions and answers.\nIt’s almost like talking to a human – and maybe even\nbetter.",
                   "spans": []
                 }
               ],
-              "background_color": "#3323a4",
-              "primary_text_color": "#1b1685",
-              "secondary_text_color": "#7f1ec9"
+              "background_color": null,
+              "primary_text_color": null,
+              "secondary_text_color": null,
+              "max_width": 652
             },
             "slice_type": "faq_accordion"
           }
@@ -860,7 +1096,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion/default/preview.png",
+            "width": 3210,
+            "height": 1362
+          }
+        }
       },
       "footer_veedoo": {
         "library": "slices",
@@ -1605,6 +1847,32 @@
                     "placeholder": ""
                   }
                 },
+                "slice_type": {
+                  "type": "Select",
+                  "config": {
+                    "label": "slice type",
+                    "placeholder": "",
+                    "options": [
+                      "center Mode",
+                      "free Mode"
+                    ],
+                    "default_value": "center Mode"
+                  }
+                },
+                "font_weight": {
+                  "type": "Select",
+                  "config": {
+                    "label": "font weight ",
+                    "placeholder": "",
+                    "options": [
+                      "normal",
+                      "medium",
+                      "semibold\t",
+                      "bold"
+                    ],
+                    "default_value": "normal"
+                  }
+                },
                 "margin_top": {
                   "type": "Number",
                   "config": {
@@ -1632,20 +1900,6 @@
                     "label": "margin right",
                     "placeholder": "number of pixels"
                   }
-                },
-                "font_weight": {
-                  "type": "Select",
-                  "config": {
-                    "label": "font weight ",
-                    "placeholder": "",
-                    "options": [
-                      "normal",
-                      "medium",
-                      "semibold\t",
-                      "bold"
-                    ],
-                    "default_value": "normal"
-                  }
                 }
               },
               "items": {},
@@ -1661,8 +1915,8 @@
               {}
             ],
             "primary": {
-              "htmltag": "p",
-              "text": "adventure",
+              "htmltag": "h1",
+              "text": "lovely",
               "startimage": {
                 "dimensions": {
                   "width": 900,
@@ -1670,7 +1924,7 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
+                "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
               },
               "end_image": {
                 "dimensions": {
@@ -1679,20 +1933,21 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
               },
               "url": {
                 "link_type": "Web",
-                "url": "https://prismic.io"
+                "url": "https://slicemachine.dev"
               },
-              "background_color": "#6535d8",
-              "text_color": "#7cfaf0",
-              "text_size": 6,
-              "margin_top": 0,
-              "margin_bottom": 34,
-              "margin_left": 66,
-              "margin_right": 28,
-              "font_weight": "bold"
+              "background_color": "#5e4521",
+              "text_color": "#ecb61b",
+              "text_size": 73,
+              "slice_type": "free Mode",
+              "font_weight": "normal",
+              "margin_top": 33,
+              "margin_bottom": 73,
+              "margin_left": 87,
+              "margin_right": 81
             },
             "slice_type": "text"
           }

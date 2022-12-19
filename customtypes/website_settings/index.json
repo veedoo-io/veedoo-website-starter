@@ -5,6 +5,13 @@
   "status": true,
   "json": {
     "Main": {
+      "website_name_for_logs": {
+        "type": "Text",
+        "config": {
+          "label": "Website name for logs",
+          "placeholder": ""
+        }
+      },
       "google_analytics_code": {
         "type": "Text",
         "config": {

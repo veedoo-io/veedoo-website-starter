@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full max-w-[1000px]"
+    :class="getContainerClasses()"
     :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
   >
     <VeedooText
@@ -25,9 +25,20 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
 
   data() {
-    console.log('slice ', this.slice);
+    //console.log('slice_type ', this.slice);
 
-    let getContainerClasses = function () {};
+    let getContainerClasses = function () {
+      let classes = '';
+
+      if (!(this.slice.primary.slice_type == 'free Mode')) {
+        classes =
+          classes + 'w-full min-h-screen flex justify-center items-center ';
+      } else {
+        classes = classes + ' w-full max-w-[1000px] ';
+      }
+
+      return classes;
+    };
 
     let getTextClasses = function () {
       let classes = ' ';
@@ -89,6 +100,7 @@ export default {
     return {
       getTextClasses,
       getContainerClasses,
+
       textSize,
       marginTop,
       marginBottom,
