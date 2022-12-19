@@ -13,6 +13,7 @@
         }}</label>
         <input
           v-model="name"
+          required
           :class="getInputClasses()"
           :placeholder="slice.primary.name_placeholder ?? 'Name'"
         />
@@ -23,6 +24,8 @@
         }}</label>
         <input
           v-model="email"
+          type="email"
+          required
           :class="getInputClasses()"
           :placeholder="slice.primary.email_placeholder ?? 'Joe@mail.com'"
         />
@@ -32,6 +35,7 @@
           slice.primary.message_title ?? 'Message'
         }}</label>
         <textarea
+          required
           class="flex-1"
           v-model="message"
           :class="getInputClasses()"
@@ -157,24 +161,44 @@ export default {
     };
   },
   methods: {
-    onSubmit() {
+    async onSubmit() {
       let defaultMailTo = this.getSettings.data.default_email_mailto;
       let formMailTo = this.slice.primary.mailto_email;
-      let body = {
-        email: formMailTo ?? defaultMailTo,
-        type: 'htmlEmail',
-        name: window?.location?.href ?? 'Unknown',
-        subject: 'Contact Form Message',
-        HTMLPart: `<div><h1>New Message from ${
-          window ? window.location?.href : ''
-        } Website </h1><h3>Name:${this.name}</h3><h3>Email:${
-          this.email
-        }</h3><h3>Message:${this.message}</h3></div>`,
-      };
-      console.log('defaultMailTo ', defaultMailTo);
-      console.log('formMailTo ', formMailTo);
-      console.log('this.slice', this.slice);
-      console.log('body', body);
+
+
+      try {
+        let request = await fetch('http://localhost:3001/api/sendEmail', {
+          method: 'POST',
+          body: JSON.stringify({
+            email: formMailTo ?? defaultMailTo,
+            type: 'htmlEmail',
+            name: window?.location?.href ?? 'Unknown',
+            subject: 'Contact Form Message',
+            HTMLPart: `<div><h1>New Message from ${
+              window ? window.location?.href : ''
+            } Website </h1><h3>Name:${this.name}</h3><h3>Email:${
+              this.email
+            }</h3><h3>Message:${this.message}</h3></div>`,
+          }),
+        });
+
+        console.log('request', request);
+        let result = await request.json();
+        console.log('result', result);
+        if (result.status) {
+          alert('Email Sent');
+        } else {
+          alert('there was an error sending your email try again later');
+        }
+      } catch (error) {
+        alert('there was an error sending your email try again later');
+        console.log('there was an error sending your email');
+        console.log(error);
+      } finally{
+        this.name = '';
+        this.email= '';
+        this.message ='';
+      }
     },
   },
 
