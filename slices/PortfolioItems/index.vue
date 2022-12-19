@@ -10,7 +10,7 @@
         item.background_color ? item.background_color : '#FFFFFF'
       }; color: ${
         item.text_color ? item.text_color : '#353C47'
-      }; filter:'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))'`"
+      }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
     >
       <PrismicLink class="w-full h-full" :field="item.url">
         <PrismicImage
@@ -29,7 +29,7 @@
               width="20"
               height="21"
               viewBox="0 0 20 21"
-              fill="currnetColor"
+              fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
