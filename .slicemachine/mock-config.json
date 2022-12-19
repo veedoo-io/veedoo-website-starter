@@ -81,6 +81,12 @@
           }
         }
       }
+    },
+    "PortfolioItems": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {

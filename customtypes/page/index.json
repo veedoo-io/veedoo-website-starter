@@ -49,6 +49,9 @@
             },
             "contact_form_veedoo": {
               "type": "SharedSlice"
+            },
+            "portfolio_items": {
+              "type": "SharedSlice"
             }
           }
         }

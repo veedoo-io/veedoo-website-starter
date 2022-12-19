@@ -10,6 +10,7 @@ import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
 import PartnersLogoSlider from './PartnersLogoSlider';
+import PortfolioItems from './PortfolioItems';
 import RichText from './RichText';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
@@ -25,6 +26,7 @@ export {
 	HeaderVeedoo,
 	HeroVeedoo,
 	PartnersLogoSlider,
+	PortfolioItems,
 	RichText,
 	Tags,
 	Testimonial,
@@ -41,6 +43,7 @@ export const components = {
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
 	partners_logo_slider: PartnersLogoSlider,
+	portfolio_items: PortfolioItems,
 	text: RichText,
 	tags: Tags,
 	testimonial: Testimonial,

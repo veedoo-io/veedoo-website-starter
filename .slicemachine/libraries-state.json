@@ -1759,6 +1759,127 @@
           }
         }
       },
+      "portfolio_items": {
+        "library": "slices",
+        "id": "portfolio_items",
+        "name": "PortfolioItems",
+        "description": "PortfolioItems",
+        "model": {
+          "id": "portfolio_items",
+          "type": "SharedSlice",
+          "name": "PortfolioItems",
+          "description": "PortfolioItems",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PortfolioItems",
+              "primary": {
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "url_label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "url label",
+                    "placeholder": ""
+                  }
+                },
+                "url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "url",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Amet anim excepteur elit esse minim ullamco eu aliquip eu. Nisi ea incididunt cupidatat ipsum exercitation exercitation nostrud pariatur minim est amet dolore veniam do. Est est adipisicing magna sunt.",
+                    "spans": []
+                  }
+                ],
+                "url_label": "cotton",
+                "url": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                },
+                "background_color": "#604f15",
+                "text_color": "#3152b4"
+              }
+            ],
+            "primary": {
+              "background_color": "#5dc586"
+            },
+            "slice_type": "portfolio_items"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "text": {
         "library": "slices",
         "id": "text",
