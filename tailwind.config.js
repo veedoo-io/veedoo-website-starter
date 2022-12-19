@@ -58,5 +58,6 @@ module.exports = {
     {
       pattern: /^rounded-/,
     },
+    'drop-shadow-lg',
   ],
 };

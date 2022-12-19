@@ -642,3 +642,4 @@ bg-secondaryVariant
 bg-background
 bg-backgroundVariant
 bg-error
+drop-shadow-lg
