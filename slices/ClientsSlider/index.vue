@@ -21,7 +21,6 @@
         class="
           slide
           bg-white
-          drop-shadow-lg
           rounded-lg
           h-[161px]
           flex
@@ -29,7 +28,12 @@
           justify-center
           lg:mr-2
         "
-        :style="{ display: 'flex', width: '90%' }"
+        :style="{
+          display: 'flex',
+          width: '90%',
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
       >
         <PrismicLink :field="item.url">
           <PrismicImage :field="item.logo" />
