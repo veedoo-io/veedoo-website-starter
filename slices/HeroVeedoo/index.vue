@@ -63,7 +63,7 @@ export default {
   },
   mounted() {
     document.addEventListener('mousemove', (event) => {
-      console.log();
+      //console.log();
       this.mousePosX = event.clientX;
     });
   },

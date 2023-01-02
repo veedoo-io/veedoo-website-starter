@@ -269,6 +269,17 @@ interface WebsiteSettingsDocumentData {
      */
     default_background_color: prismicT.ColorField;
     /**
+     * Website Language Code field in *Website settings*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: website_settings.website_language_code
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    website_language_code: prismicT.KeyTextField;
+    /**
      * Slice Zone field in *Website settings*
      *
      * - **Field Type**: Slice Zone

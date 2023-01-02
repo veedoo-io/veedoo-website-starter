@@ -95,7 +95,7 @@ export default {
       return classes;
     };
 
-    console.log('items', this.slice);
+    //console.log('items', this.slice);
 
     return {
       getContaienrClasses,

@@ -64,6 +64,13 @@
           "placeholder": ""
         }
       },
+      "website_language_code": {
+        "type": "Text",
+        "config": {
+          "label": "Website Language Code",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

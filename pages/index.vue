@@ -10,7 +10,7 @@ export default {
     const document = await $prismic.api.getSingle('home_page');
 
     if (document) {
-      console.log('document ', document);
+      //console.log('document ', document);
       return { status: true, page: document };
     } else {
       //console.log('document not found');
@@ -27,27 +27,28 @@ export default {
     };
   },
   head() {
+    console.log('document title ', this.page?.data?.meta_title);
     return {
-      title: this.document?.data?.meta_title,
+      title: this.page?.data?.meta_title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.document?.data?.meta_description,
+          content: this.page?.data?.meta_description,
         },
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.document?.data?.meta_title,
+          content: this.page?.data?.meta_title,
         },
         {
           property: 'og:description',
-          content: this.document?.data?.meta_description,
+          content: this.page?.data?.meta_description,
         },
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.document?.data?.meta_image?.url,
+          content: this.page?.data?.meta_image?.url,
         },
       ],
     };

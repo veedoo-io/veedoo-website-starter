@@ -187,9 +187,9 @@ export default {
           }
         );
 
-        console.log('request', request);
+        //console.log('request', request);
         let result = await request.json();
-        console.log('result', result);
+        //console.log('result', result);
         if (result.status) {
           alert('Email Sent');
         } else {

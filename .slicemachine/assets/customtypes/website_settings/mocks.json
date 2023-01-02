@@ -11,18 +11,18 @@
   "lang": "en-us",
   "alternate_languages": [],
   "data": {
-    "website_name_for_logs": "furniture",
-    "google_analytics_code": "vessels",
+    "website_name_for_logs": "help",
+    "google_analytics_code": "film",
     "fibery_settings": [
       {
         "fibery_host_url": {
           "link_type": "Web",
-          "url": "http://google.com"
+          "url": "http://twitter.com"
         },
-        "fibery_token": "needs"
+        "fibery_token": "did"
       }
     ],
-    "default_email_mailto": "consonant",
+    "default_email_mailto": "bark",
     "website_fav_icon": {
       "dimensions": {
         "width": 900,
@@ -30,12 +30,13 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
     },
-    "default_background_color": "#2143bd",
+    "default_background_color": "#6e3a70",
+    "website_language_code": "total",
     "slices": [],
-    "title": "do",
-    "description": "attention",
+    "title": "tube",
+    "description": "nodded",
     "image": {
       "dimensions": {
         "width": 900,
@@ -43,7 +44,7 @@
       },
       "alt": null,
       "copyright": null,
-      "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
     }
   }
 }
