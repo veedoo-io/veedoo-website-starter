@@ -40,7 +40,7 @@ export default async () => {
     website_language_code,
   } = websiteSettings?.data;
 
-  console.log('ConfigWebsiteSettings', websiteSettings);
+  console.log('google_analytics_code', google_analytics_code);
 
   return {
     target: 'static',
@@ -61,6 +61,28 @@ export default async () => {
       title: title,
       htmlAttrs: {
         lang: website_language_code ?? 'en',
+      },
+      script: [
+        {
+          src:
+            'https://www.googletagmanager.com/gtag/js?id=' +
+            google_analytics_code,
+          async: true,
+        },
+        {
+          hid: 'gtag-content',
+          innerHTML: `
+        window.dataLayer = window.dataLayer || [];
+          function gtag() {
+              dataLayer.push(arguments);
+          }
+          gtag("js", new Date());
+
+          gtag("config", "${google_analytics_code}");`,
+        },
+      ],
+      __dangerouslyDisableSanitizersByTagID: {
+        'gtag-content': ['innerHTML'],
       },
       meta: [
         { charset: 'utf-8' },
