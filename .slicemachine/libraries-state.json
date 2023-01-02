@@ -1961,12 +1961,12 @@
       "text": {
         "library": "slices",
         "id": "text",
-        "name": "RichText",
+        "name": "RichTextAdvanced",
         "description": "Text",
         "model": {
           "id": "text",
           "type": "SharedSlice",
-          "name": "RichText",
+          "name": "RichTextAdvanced",
           "description": "Text",
           "variations": [
             {
@@ -2157,7 +2157,7 @@
         },
         "screenshotPaths": {
           "default": {
-            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/RichText/default/preview.png",
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/RichTextAdvanced/default/preview.png",
             "width": 2886,
             "height": 216
           }

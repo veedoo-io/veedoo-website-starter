@@ -1653,12 +1653,12 @@ type PortfolioItemsSliceVariation = PortfolioItemsSliceDefault;
  */
 export type PortfolioItemsSlice = prismicT.SharedSlice<"portfolio_items", PortfolioItemsSliceVariation>;
 /**
- * Primary content in RichText → Primary
+ * Primary content in RichTextAdvanced → Primary
  *
  */
 interface TextSliceDefaultPrimary {
     /**
-     * htmlTag field in *RichText → Primary*
+     * htmlTag field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Select
      * - **Placeholder**: *None*
@@ -1669,7 +1669,7 @@ interface TextSliceDefaultPrimary {
      */
     htmltag: prismicT.SelectField<"p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6", "filled">;
     /**
-     * text field in *RichText → Primary*
+     * text field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
@@ -1679,7 +1679,7 @@ interface TextSliceDefaultPrimary {
      */
     text: prismicT.KeyTextField;
     /**
-     * start Image field in *RichText → Primary*
+     * start Image field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -1689,7 +1689,7 @@ interface TextSliceDefaultPrimary {
      */
     startimage: prismicT.ImageField<never>;
     /**
-     * end Image field in *RichText → Primary*
+     * end Image field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -1699,7 +1699,7 @@ interface TextSliceDefaultPrimary {
      */
     end_image: prismicT.ImageField<never>;
     /**
-     * url field in *RichText → Primary*
+     * url field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Link
      * - **Placeholder**: Only Web Urls
@@ -1709,7 +1709,7 @@ interface TextSliceDefaultPrimary {
      */
     url: prismicT.LinkField;
     /**
-     * Background Color field in *RichText → Primary*
+     * Background Color field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*
@@ -1719,7 +1719,7 @@ interface TextSliceDefaultPrimary {
      */
     background_color: prismicT.ColorField;
     /**
-     * text color field in *RichText → Primary*
+     * text color field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*
@@ -1729,7 +1729,7 @@ interface TextSliceDefaultPrimary {
      */
     text_color: prismicT.ColorField;
     /**
-     * text Size field in *RichText → Primary*
+     * text Size field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
@@ -1739,7 +1739,7 @@ interface TextSliceDefaultPrimary {
      */
     text_size: prismicT.NumberField;
     /**
-     * slice type field in *RichText → Primary*
+     * slice type field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Select
      * - **Placeholder**: *None*
@@ -1750,7 +1750,7 @@ interface TextSliceDefaultPrimary {
      */
     slice_type: prismicT.SelectField<"center Mode" | "free Mode", "filled">;
     /**
-     * font weight  field in *RichText → Primary*
+     * font weight  field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Select
      * - **Placeholder**: *None*
@@ -1761,7 +1761,7 @@ interface TextSliceDefaultPrimary {
      */
     font_weight: prismicT.SelectField<"normal" | "medium" | "semibold	" | "bold", "filled">;
     /**
-     * margin top field in *RichText → Primary*
+     * margin top field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: number of pixels
@@ -1771,7 +1771,7 @@ interface TextSliceDefaultPrimary {
      */
     margin_top: prismicT.NumberField;
     /**
-     * margin bottom field in *RichText → Primary*
+     * margin bottom field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: number of pixels
@@ -1781,7 +1781,7 @@ interface TextSliceDefaultPrimary {
      */
     margin_bottom: prismicT.NumberField;
     /**
-     * margin left field in *RichText → Primary*
+     * margin left field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: number of pixels
@@ -1791,7 +1791,7 @@ interface TextSliceDefaultPrimary {
      */
     margin_left: prismicT.NumberField;
     /**
-     * margin right field in *RichText → Primary*
+     * margin right field in *RichTextAdvanced → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: number of pixels
@@ -1802,7 +1802,7 @@ interface TextSliceDefaultPrimary {
     margin_right: prismicT.NumberField;
 }
 /**
- * Default variation for RichText Slice
+ * Default variation for RichTextAdvanced Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Text`
@@ -1811,12 +1811,12 @@ interface TextSliceDefaultPrimary {
  */
 export type TextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TextSliceDefaultPrimary>, never>;
 /**
- * Slice variation for *RichText*
+ * Slice variation for *RichTextAdvanced*
  *
  */
 type TextSliceVariation = TextSliceDefault;
 /**
- * RichText Shared Slice
+ * RichTextAdvanced Shared Slice
  *
  * - **API ID**: `text`
  * - **Description**: `Text`
