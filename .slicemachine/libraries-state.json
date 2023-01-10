@@ -979,6 +979,127 @@
         },
         "screenshotPaths": {}
       },
+      "divider": {
+        "library": "slices",
+        "id": "divider",
+        "name": "Divider",
+        "description": "Divider",
+        "model": {
+          "id": "divider",
+          "type": "SharedSlice",
+          "name": "Divider",
+          "description": "Divider",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Divider",
+              "primary": {
+                "type": {
+                  "type": "Select",
+                  "config": {
+                    "label": "Divider type",
+                    "placeholder": "",
+                    "options": [
+                      "solid",
+                      "dashed",
+                      "dotted",
+                      "double"
+                    ],
+                    "default_value": "solid"
+                  }
+                },
+                "color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "color",
+                    "placeholder": ""
+                  }
+                },
+                "divider_height": {
+                  "type": "Number",
+                  "config": {
+                    "label": "divider height",
+                    "placeholder": "defaults to 1px"
+                  }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                },
+                "rounded": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "rounded",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "type": "solid",
+              "color": "#2fedfc",
+              "divider_height": 78,
+              "margin_top": 46,
+              "margin_right": 25,
+              "margin_bottom": 28,
+              "margin_left": 87,
+              "rounded": false
+            },
+            "slice_type": "divider"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/Divider/default/preview.png",
+            "width": 1852,
+            "height": 838
+          }
+        }
+      },
       "faq_accordion": {
         "library": "slices",
         "id": "faq_accordion",
@@ -1957,6 +2078,112 @@
             "height": 1222
           }
         }
+      },
+      "rich_text": {
+        "library": "slices",
+        "id": "rich_text",
+        "name": "RichText",
+        "description": "RichText",
+        "model": {
+          "id": "rich_text",
+          "type": "SharedSlice",
+          "name": "RichText",
+          "description": "RichText",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RichText",
+              "primary": {
+                "rich_text": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "rich text",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "rich_text": [
+                {
+                  "type": "paragraph",
+                  "text": "Labore quis id aute nostrud reprehenderit ex consectetur cillum sit exercitation commodo adipisicing voluptate voluptate. Est exercitation cupidatat in ipsum laboris sunt ut consequat pariatur mollit magna.",
+                  "spans": []
+                }
+              ],
+              "text_color": "#701cef",
+              "background_color": "#30fec6",
+              "margin_top": 85,
+              "margin_right": 35,
+              "margin_bottom": 4,
+              "margin_left": 37
+            },
+            "slice_type": "rich_text"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
       },
       "text": {
         "library": "slices",

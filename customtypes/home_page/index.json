@@ -45,6 +45,12 @@
             },
             "portfolio_items": {
               "type": "SharedSlice"
+            },
+            "divider": {
+              "type": "SharedSlice"
+            },
+            "rich_text": {
+              "type": "SharedSlice"
             }
           }
         }

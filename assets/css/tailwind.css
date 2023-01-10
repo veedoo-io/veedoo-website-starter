@@ -12,3 +12,7 @@ body {
 .agile__slides {
   margin: 12px 0px;
 }
+
+section {
+  padding: 8px 0px;
+}

@@ -6,12 +6,14 @@ import CallToActionWithImage from './CallToActionWithImage';
 import ClientsSlider from './ClientsSlider';
 import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactInfo from './ContactInfo';
+import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
 import PartnersLogoSlider from './PartnersLogoSlider';
 import PortfolioItems from './PortfolioItems';
+import RichText from './RichText';
 import RichTextAdvanced from './RichTextAdvanced';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
@@ -23,12 +25,14 @@ export {
 	ClientsSlider,
 	ContactFormVeedoo,
 	ContactInfo,
+	Divider,
 	FaqAccordion,
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
 	PartnersLogoSlider,
 	PortfolioItems,
+	RichText,
 	RichTextAdvanced,
 	Tags,
 	Testimonial,
@@ -41,12 +45,14 @@ export const components = {
 	clients_slider: ClientsSlider,
 	contact_form_veedoo: ContactFormVeedoo,
 	contact_info: ContactInfo,
+	divider: Divider,
 	faq_accordion: FaqAccordion,
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
 	partners_logo_slider: PartnersLogoSlider,
 	portfolio_items: PortfolioItems,
+	rich_text: RichText,
 	text: RichTextAdvanced,
 	tags: Tags,
 	testimonial: Testimonial,
