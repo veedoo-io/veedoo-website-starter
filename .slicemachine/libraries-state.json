@@ -1205,6 +1205,109 @@
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "withImage",
+              "name": "With image",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FaqAccordion",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "primary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "primary text color",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "secondary text color",
+                    "placeholder": ""
+                  }
+                },
+                "max_width": {
+                  "type": "Number",
+                  "config": {
+                    "label": "max width",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Question text color",
+                    "placeholder": ""
+                  }
+                },
+                "answer_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "answer text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1217,70 +1320,84 @@
                 "question": [
                   {
                     "type": "paragraph",
-                    "text": "Question 1",
+                    "text": "Reprehenderit aliqua cillum est. Quis esse et veniam ea nulla ipsum aute cillum veniam excepteur anim consectetur minim amet.",
                     "spans": []
                   }
                 ],
                 "answer": [
                   {
                     "type": "paragraph",
-                    "text": "Only use them when the content is appropriate. If the panels are too long, the user will end up scrolling too much (esp. on mobile), which negates the whole purpose of using an accordion. For very long panels, using links to separate pages is preferred.",
+                    "text": "Adipisicing sint Lorem commodo irure ad ea sint duis anim ipsum incididunt ea quis magna ullamco.",
                     "spans": []
                   }
                 ],
-                "background_color": "#ffffff",
-                "text_color": "#000000"
-              },
-              {
-                "question": [
-                  {
-                    "type": "paragraph",
-                    "text": "Question 2",
-                    "spans": []
-                  }
-                ],
-                "answer": [
-                  {
-                    "type": "paragraph",
-                    "text": "Learn about Prismic by reading questions and answers. It’s almost like talking to a human – and maybe even better.",
-                    "spans": []
-                  }
-                ],
-                "background_color": "#e4fcff",
-                "text_color": "#ff0000"
-              },
-              {
-                "question": [
-                  {
-                    "type": "paragraph",
-                    "text": "Question 3",
-                    "spans": []
-                  }
-                ],
-                "answer": [
-                  {
-                    "type": "paragraph",
-                    "text": "Only use them when the content is appropriate. If the panels are too long, the user will end up scrolling too much (esp. on mobile), which negates the whole purpose of using an accordion. For very long panels, using links to separate pages is preferred.",
-                    "spans": []
-                  }
-                ],
-                "background_color": null,
-                "text_color": null
+                "background_color": "#532249",
+                "text_color": "#47da50",
+                "answer_text_color": "#0c2aab"
               }
             ],
             "primary": {
-              "title": "Answers to common questions",
+              "title": "direction",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Learn about Prismic by reading questions and answers.\nIt’s almost like talking to a human – and maybe even\nbetter.",
+                  "text": "Eiusmod elit sint magna excepteur excepteur proident esse irure.",
                   "spans": []
                 }
               ],
-              "background_color": null,
-              "primary_text_color": null,
-              "secondary_text_color": null,
-              "max_width": 652
+              "background_color": "#912407",
+              "primary_text_color": "#e76c5d",
+              "secondary_text_color": "#c2549e",
+              "max_width": 99
+            },
+            "slice_type": "faq_accordion"
+          },
+          "withImage": {
+            "variation": "withImage",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Consectetur dolore eiusmod do magna laboris duis sunt labore elit adipisicing nulla sint ad laborum.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Qui cillum commodo laboris proident proident exercitation ullamco tempor. Ea do ad proident tempor ipsum laborum occaecat. Aliquip ipsum deserunt cupidatat aliquip duis officia consectetur eiusmod irure ad officia.",
+                    "spans": []
+                  }
+                ],
+                "background_color": "#768bf3",
+                "text_color": "#b718d8",
+                "answer_text_color": "#b74e54"
+              }
+            ],
+            "primary": {
+              "title": "crack",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Mollit nostrud cillum dolor irure dolore qui consectetur cillum pariatur anim sunt ea id. Enim ipsum id elit quis cillum dolor in adipisicing.",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+              },
+              "background_color": "#eff733",
+              "primary_text_color": "#95d47e",
+              "secondary_text_color": "#7c46d4",
+              "max_width": 73
             },
             "slice_type": "faq_accordion"
           }
@@ -1294,6 +1411,11 @@
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion/default/preview.png",
             "width": 3210,
             "height": 1362
+          },
+          "withImage": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion/withImage/preview.png",
+            "width": 1884,
+            "height": 960
           }
         }
       },
@@ -2165,16 +2287,16 @@
               "rich_text": [
                 {
                   "type": "paragraph",
-                  "text": "Labore quis id aute nostrud reprehenderit ex consectetur cillum sit exercitation commodo adipisicing voluptate voluptate. Est exercitation cupidatat in ipsum laboris sunt ut consequat pariatur mollit magna.",
+                  "text": "Nisi proident proident elit elit sint aute ipsum ipsum amet quis culpa dolore mollit esse. Est esse elit eu aliquip occaecat aliquip ullamco labore ullamco exercitation adipisicing velit excepteur.",
                   "spans": []
                 }
               ],
-              "text_color": "#701cef",
-              "background_color": "#30fec6",
-              "margin_top": 85,
+              "text_color": "#4f12d6",
+              "background_color": "#f2417e",
+              "margin_top": 84,
               "margin_right": 35,
-              "margin_bottom": 4,
-              "margin_left": 37
+              "margin_bottom": 9,
+              "margin_left": 83
             },
             "slice_type": "rich_text"
           }
@@ -2183,7 +2305,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/RichText/default/preview.png",
+            "width": 1840,
+            "height": 196
+          }
+        }
       },
       "text": {
         "library": "slices",

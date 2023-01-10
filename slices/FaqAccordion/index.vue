@@ -1,69 +1,82 @@
 <template>
   <section :class="getContainerClasses()">
-    <div :class="getChildContainerClasses()" :style="{ maxWidth: width }">
-      <h2 :class="getTitleClasses()">{{ slice.primary.title }}</h2>
+    <div :class="getChildContainerClasses()">
+      <h2 :class="getTitleClasses()" :style="{ maxWidth: width }">
+        {{ slice.primary.title }}
+      </h2>
       <PrismicRichText
+        :style="{ maxWidth: width }"
         :class="getDescriptionClasses()"
         :field="slice.primary.description"
       />
-      <div class="flex-1 flex flex-col gap-6 mt-[54px] w-full">
+      <div :class="getQuestionsContainer()">
+        <div :style="{ maxWidth: width }" :class="getImageContainer()">
+          <PrismicImage :field="slice.primary.image" class="" />
+        </div>
         <div
-          v-if="slice.items?.length > 0"
-          v-for="(item, i) in slice.items"
-          :key="`slice-item-${i}`"
-          :class="getItemClasses()"
-          @click="toggleFaq(i)"
-          :style="`background-color: ${
-            item.background_color ? item.background_color : '#FFFFFF'
-          }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
+          :style="{ maxWidth: width }"
+          class="flex-1 flex flex-col gap-6 w-full"
         >
-          <div class="flex justify-between w-full">
-            <PrismicRichText
-              :style="`color: ${item.text_color ? item.text_color : '#353C47'}`"
-              :field="item.question"
-            />
-            <svg
-              v-if="selectedIndexes != i"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="{1.5}"
-              stroke="currentColor"
-              className="w-6 h-6"
-              width="24px"
-              height="24px"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          <div
+            v-if="slice.items?.length > 0"
+            v-for="(item, i) in slice.items"
+            :key="`slice-item-${i}`"
+            :class="getItemClasses()"
+            @click="toggleFaq(i)"
+            :style="`background-color: ${
+              item.background_color ? item.background_color : '#FFFFFF'
+            }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
+          >
+            <div class="flex justify-between w-full">
+              <PrismicRichText
+                :style="`color: ${
+                  item.text_color ? item.text_color : '#353C47'
+                }`"
+                :field="item.question"
               />
-            </svg>
-            <svg
-              v-else
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="{1.5}"
-              stroke="currentColor"
-              className="w-6 h-6"
-              width="24px"
-              height="24px"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4.5 15.75l7.5-7.5 7.5 7.5"
+              <svg
+                v-if="selectedIndexes != i"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                className="w-6 h-6"
+                width="24px"
+                height="24px"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                />
+              </svg>
+              <svg
+                v-else
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="{1.5}"
+                stroke="currentColor"
+                className="w-6 h-6"
+                width="24px"
+                height="24px"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M4.5 15.75l7.5-7.5 7.5 7.5"
+                />
+              </svg>
+            </div>
+            <div v-if="selectedIndexes == i" class="mt-6">
+              <PrismicRichText
+                :style="`color: ${
+                  item.answer_text_color ? item.answer_text_color : '#48525F'
+                }`"
+                :field="item.answer"
               />
-            </svg>
-          </div>
-          <div v-if="selectedIndexes == i" class="mt-6">
-            <PrismicRichText
-              :style="`color: ${
-                item.answer_text_color ? item.answer_text_color : '#48525F'
-              }`"
-              :field="item.answer"
-            />
+            </div>
           </div>
         </div>
       </div>
@@ -104,7 +117,7 @@ export default {
 
       if (this.slice.primary.primary_text_color) {
         let colorName = tailwindMatcher(this.slice.primary.primary_text_color);
-        classes = classes` text-${colorName} `;
+        classes = classes + ` text-${colorName} `;
       } else {
         let colorName = tailwindMatcher('#000000');
         classes = classes + ` text-${colorName} `;
@@ -120,7 +133,7 @@ export default {
         let colorName = tailwindMatcher(
           this.slice.primary.secondary_text_color
         );
-        classes = classes` text-${colorName} `;
+        classes = classes + ` text-${colorName} `;
       } else {
         let colorName = tailwindMatcher('#000000');
         classes = classes + ` text-${colorName} `;
@@ -140,6 +153,26 @@ export default {
       return classes;
     };
 
+    let getQuestionsContainer = function () {
+      let classes =
+        'flex flex-col lg:flex-row items-center justify-center gap-10 w-full mt-[54px]';
+
+      if (this.slice.variation == 'withImage') {
+        classes =
+          'flex flex-col lg:flex-row items-center justify-start gap-10 w-full mt-[54px]';
+      }
+
+      return classes;
+    };
+
+    let getImageContainer = function () {
+      let classes = 'hidden';
+      if (this.slice.variation == 'withImage') {
+        classes = 'w-1/2 mx-auto';
+      }
+      return classes;
+    };
+
     //console.log('faq ', this.slice);
 
     return {
@@ -148,6 +181,8 @@ export default {
       getDescriptionClasses,
       getChildContainerClasses,
       getItemClasses,
+      getImageContainer,
+      getQuestionsContainer,
       width,
       selectedIndexes: -1,
     };
