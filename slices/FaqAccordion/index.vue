@@ -69,12 +69,20 @@
                 />
               </svg>
             </div>
-            <div v-if="selectedIndexes == i" class="mt-6">
+            <div
+              v-if="selectedIndexes == i"
+              class="mt-6 flex items-center gap-6"
+            >
+              <PrismicImage
+                v-if="slice.variation == 'withAnswerImage'"
+                :field="item.image"
+              />
               <PrismicRichText
                 :style="`color: ${
                   item.answer_text_color ? item.answer_text_color : '#48525F'
                 }`"
                 :field="item.answer"
+                class="flex-1"
               />
             </div>
           </div>

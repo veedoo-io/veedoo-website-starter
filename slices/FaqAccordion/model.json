@@ -201,6 +201,109 @@
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "withAnswerImage",
+      "name": "with answer image",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "FaqAccordion",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "primary_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "primary text color",
+            "placeholder": ""
+          }
+        },
+        "secondary_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "secondary text color",
+            "placeholder": ""
+          }
+        },
+        "max_width": {
+          "type": "Number",
+          "config": {
+            "label": "max width",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "question": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Question",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "answer": {
+          "type": "StructuredText",
+          "config": {
+            "label": "answer",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Question text color",
+            "placeholder": ""
+          }
+        },
+        "answer_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "answer text color",
+            "placeholder": ""
+          }
+        },
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

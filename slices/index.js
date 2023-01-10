@@ -8,6 +8,7 @@ import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactInfo from './ContactInfo';
 import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
+import FaqAccordion2 from './FaqAccordion2';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
@@ -27,6 +28,7 @@ export {
 	ContactInfo,
 	Divider,
 	FaqAccordion,
+	FaqAccordion2,
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
@@ -47,6 +49,7 @@ export const components = {
 	contact_info: ContactInfo,
 	divider: Divider,
 	faq_accordion: FaqAccordion,
+	faq_accordion2: FaqAccordion2,
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,

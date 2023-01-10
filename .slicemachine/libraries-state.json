@@ -1308,6 +1308,109 @@
                 }
               },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "withAnswerImage",
+              "name": "with answer image",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FaqAccordion",
+              "primary": {
+                "title": {
+                  "type": "Text",
+                  "config": {
+                    "label": "title",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "primary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "primary text color",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "secondary text color",
+                    "placeholder": ""
+                  }
+                },
+                "max_width": {
+                  "type": "Number",
+                  "config": {
+                    "label": "max width",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Question text color",
+                    "placeholder": ""
+                  }
+                },
+                "answer_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "answer text color",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -1320,35 +1423,35 @@
                 "question": [
                   {
                     "type": "paragraph",
-                    "text": "Reprehenderit aliqua cillum est. Quis esse et veniam ea nulla ipsum aute cillum veniam excepteur anim consectetur minim amet.",
+                    "text": "Duis officia minim deserunt cupidatat aliqua magna sit aliquip nulla. Exercitation consequat cillum dolore. Labore aliquip non et enim ea irure dolor in sint consequat non est nulla.",
                     "spans": []
                   }
                 ],
                 "answer": [
                   {
                     "type": "paragraph",
-                    "text": "Adipisicing sint Lorem commodo irure ad ea sint duis anim ipsum incididunt ea quis magna ullamco.",
+                    "text": "Voluptate velit tempor nostrud veniam aute dolor elit. Adipisicing anim amet ad ea dolore adipisicing elit nisi laborum cillum aute nulla. Nostrud mollit mollit sunt Lorem in nostrud duis amet.",
                     "spans": []
                   }
                 ],
-                "background_color": "#532249",
-                "text_color": "#47da50",
-                "answer_text_color": "#0c2aab"
+                "background_color": "#78ace8",
+                "text_color": "#7420e7",
+                "answer_text_color": "#ea5b09"
               }
             ],
             "primary": {
-              "title": "direction",
+              "title": "chamber",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Eiusmod elit sint magna excepteur excepteur proident esse irure.",
+                  "text": "Nisi quis id id sint enim et aliqua.",
                   "spans": []
                 }
               ],
-              "background_color": "#912407",
-              "primary_text_color": "#e76c5d",
-              "secondary_text_color": "#c2549e",
-              "max_width": 99
+              "background_color": "#82c593",
+              "primary_text_color": "#ebde62",
+              "secondary_text_color": "#752246",
+              "max_width": 79
             },
             "slice_type": "faq_accordion"
           },
@@ -1360,28 +1463,28 @@
                 "question": [
                   {
                     "type": "paragraph",
-                    "text": "Consectetur dolore eiusmod do magna laboris duis sunt labore elit adipisicing nulla sint ad laborum.",
+                    "text": "Anim fugiat deserunt reprehenderit adipisicing quis nostrud proident pariatur officia ipsum ipsum velit dolor. Ipsum est qui aliqua sunt incididunt irure do sint in.",
                     "spans": []
                   }
                 ],
                 "answer": [
                   {
                     "type": "paragraph",
-                    "text": "Qui cillum commodo laboris proident proident exercitation ullamco tempor. Ea do ad proident tempor ipsum laborum occaecat. Aliquip ipsum deserunt cupidatat aliquip duis officia consectetur eiusmod irure ad officia.",
+                    "text": "Cupidatat nisi proident laborum nostrud. Cillum ex enim dolore amet nulla minim mollit dolor labore duis est.",
                     "spans": []
                   }
                 ],
-                "background_color": "#768bf3",
-                "text_color": "#b718d8",
-                "answer_text_color": "#b74e54"
+                "background_color": "#cd70d9",
+                "text_color": "#5e61e4",
+                "answer_text_color": "#629dee"
               }
             ],
             "primary": {
-              "title": "crack",
+              "title": "silence",
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Mollit nostrud cillum dolor irure dolore qui consectetur cillum pariatur anim sunt ea id. Enim ipsum id elit quis cillum dolor in adipisicing.",
+                  "text": "Culpa aute exercitation aliquip reprehenderit officia duis est nulla anim dolore nulla anim qui quis ipsum. Qui consectetur reprehenderit Lorem quis officia sint duis. Reprehenderit cillum culpa et dolore adipisicing laboris ea fugiat aute.",
                   "spans": []
                 }
               ],
@@ -1392,12 +1495,61 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
+                "url": "https://images.unsplash.com/photo-1560762484-813fc97650a0"
               },
-              "background_color": "#eff733",
-              "primary_text_color": "#95d47e",
-              "secondary_text_color": "#7c46d4",
-              "max_width": 73
+              "background_color": "#79292e",
+              "primary_text_color": "#6b2d0b",
+              "secondary_text_color": "#d64c1c",
+              "max_width": 32
+            },
+            "slice_type": "faq_accordion"
+          },
+          "withAnswerImage": {
+            "variation": "withAnswerImage",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ipsum consequat aliqua consectetur est deserunt amet non. Sunt dolor minim ipsum esse non amet nostrud consectetur proident aliquip. Enim irure pariatur in dolore adipisicing dolor veniam amet ex commodo deserunt dolore laboris irure id.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Aliqua reprehenderit culpa veniam.",
+                    "spans": []
+                  }
+                ],
+                "background_color": "#61ab38",
+                "text_color": "#0983c7",
+                "answer_text_color": "#19aae5",
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117"
+                }
+              }
+            ],
+            "primary": {
+              "title": "cat",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Amet aliquip culpa exercitation consectetur minim culpa occaecat. Quis tempor sint officia dolor sit ea nulla cillum commodo elit Lorem ullamco pariatur labore.",
+                  "spans": []
+                }
+              ],
+              "background_color": "#35c085",
+              "primary_text_color": "#1e72bd",
+              "secondary_text_color": "#8566dd",
+              "max_width": 13
             },
             "slice_type": "faq_accordion"
           }
@@ -1416,6 +1568,169 @@
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion/withImage/preview.png",
             "width": 1884,
             "height": 960
+          }
+        }
+      },
+      "faq_accordion2": {
+        "library": "slices",
+        "id": "faq_accordion2",
+        "name": "FaqAccordion2",
+        "description": "FaqAccordion2",
+        "model": {
+          "id": "faq_accordion2",
+          "type": "SharedSlice",
+          "name": "FaqAccordion2",
+          "description": "FaqAccordion2",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "FaqAccordion2",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title color",
+                    "placeholder": ""
+                  }
+                },
+                "max_width": {
+                  "type": "Number",
+                  "config": {
+                    "label": "max width",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "question": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Question",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "answer": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "answer",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "question_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Question text color",
+                    "placeholder": ""
+                  }
+                },
+                "answer_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "answer text color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "question": [
+                  {
+                    "type": "paragraph",
+                    "text": "Cupidatat irure pariatur quis ad consequat commodo consequat voluptate. Voluptate labore dolor nostrud et anim.",
+                    "spans": []
+                  }
+                ],
+                "answer": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ipsum occaecat anim sint mollit. Minim nulla officia quis ea exercitation enim minim magna nostrud do. Deserunt dolor fugiat est excepteur proident laboris nisi veniam non magna aliquip voluptate.",
+                    "spans": []
+                  }
+                ],
+                "background_color": "#ffef42",
+                "question_text_color": "#39ea4d",
+                "answer_text_color": "#bd4057"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Ullamco veniam aliquip id incididunt non cupidatat incididunt eiusmod eiusmod. Ex anim ullamco est nostrud proident sunt ipsum nisi consequat laboris mollit minim ea.",
+                  "spans": []
+                }
+              ],
+              "background_color": "#cb5697",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88"
+              },
+              "title_color": "#f04c26",
+              "max_width": 93
+            },
+            "slice_type": "faq_accordion2"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion2/default/preview.png",
+            "width": 2018,
+            "height": 1026
           }
         }
       },

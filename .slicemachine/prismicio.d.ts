@@ -115,7 +115,7 @@ interface HomePageDocumentData {
  * Slice for *Home Page → Slice Zone*
  *
  */
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice;
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice;
 /**
  * Home Page document from Prismic
  *
@@ -1412,10 +1412,151 @@ export interface FaqAccordionSliceWithImageItem {
  */
 export type FaqAccordionSliceWithImage = prismicT.SharedSliceVariation<"withImage", Simplify<FaqAccordionSliceWithImagePrimary>, Simplify<FaqAccordionSliceWithImageItem>>;
 /**
+ * Primary content in FaqAccordion → Primary
+ *
+ */
+interface FaqAccordionSliceWithAnswerImagePrimary {
+    /**
+     * title field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * description field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * background color field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * primary text color field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.primary_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    primary_text_color: prismicT.ColorField;
+    /**
+     * secondary text color field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.secondary_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    secondary_text_color: prismicT.ColorField;
+    /**
+     * max width field in *FaqAccordion → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.primary.max_width
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    max_width: prismicT.NumberField;
+}
+/**
+ * Item in FaqAccordion → Items
+ *
+ */
+export interface FaqAccordionSliceWithAnswerImageItem {
+    /**
+     * Question field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].question
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    question: prismicT.RichTextField;
+    /**
+     * answer field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].answer
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    answer: prismicT.RichTextField;
+    /**
+     * background color field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * Question text color field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+    /**
+     * answer text color field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].answer_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    answer_text_color: prismicT.ColorField;
+    /**
+     * image field in *FaqAccordion → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion.items[].image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+}
+/**
+ * with answer image variation for FaqAccordion Slice
+ *
+ * - **API ID**: `withAnswerImage`
+ * - **Description**: `FaqAccordion`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqAccordionSliceWithAnswerImage = prismicT.SharedSliceVariation<"withAnswerImage", Simplify<FaqAccordionSliceWithAnswerImagePrimary>, Simplify<FaqAccordionSliceWithAnswerImageItem>>;
+/**
  * Slice variation for *FaqAccordion*
  *
  */
-type FaqAccordionSliceVariation = FaqAccordionSliceDefault | FaqAccordionSliceWithImage;
+type FaqAccordionSliceVariation = FaqAccordionSliceDefault | FaqAccordionSliceWithImage | FaqAccordionSliceWithAnswerImage;
 /**
  * FaqAccordion Shared Slice
  *
@@ -1425,6 +1566,141 @@ type FaqAccordionSliceVariation = FaqAccordionSliceDefault | FaqAccordionSliceWi
  *
  */
 export type FaqAccordionSlice = prismicT.SharedSlice<"faq_accordion", FaqAccordionSliceVariation>;
+/**
+ * Primary content in FaqAccordion2 → Primary
+ *
+ */
+interface FaqAccordion2SliceDefaultPrimary {
+    /**
+     * Title field in *FaqAccordion2 → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * background color field in *FaqAccordion2 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * image field in *FaqAccordion2 → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * title color field in *FaqAccordion2 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.primary.title_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    title_color: prismicT.ColorField;
+    /**
+     * max width field in *FaqAccordion2 → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.primary.max_width
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    max_width: prismicT.NumberField;
+}
+/**
+ * Item in FaqAccordion2 → Items
+ *
+ */
+export interface FaqAccordion2SliceDefaultItem {
+    /**
+     * Question field in *FaqAccordion2 → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.items[].question
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    question: prismicT.RichTextField;
+    /**
+     * answer field in *FaqAccordion2 → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.items[].answer
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    answer: prismicT.RichTextField;
+    /**
+     * background color field in *FaqAccordion2 → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.items[].background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * Question text color field in *FaqAccordion2 → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.items[].question_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    question_text_color: prismicT.ColorField;
+    /**
+     * answer text color field in *FaqAccordion2 → Items*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: faq_accordion2.items[].answer_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    answer_text_color: prismicT.ColorField;
+}
+/**
+ * Default variation for FaqAccordion2 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `FaqAccordion2`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqAccordion2SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FaqAccordion2SliceDefaultPrimary>, Simplify<FaqAccordion2SliceDefaultItem>>;
+/**
+ * Slice variation for *FaqAccordion2*
+ *
+ */
+type FaqAccordion2SliceVariation = FaqAccordion2SliceDefault;
+/**
+ * FaqAccordion2 Shared Slice
+ *
+ * - **API ID**: `faq_accordion2`
+ * - **Description**: `FaqAccordion2`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FaqAccordion2Slice = prismicT.SharedSlice<"faq_accordion2", FaqAccordion2SliceVariation>;
 /**
  * Primary content in FooterVeedoo → Primary
  *
@@ -2350,6 +2626,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceVariation, FaqAccordionSlice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
+        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }
