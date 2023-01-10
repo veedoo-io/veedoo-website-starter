@@ -1568,6 +1568,11 @@
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion/withImage/preview.png",
             "width": 1884,
             "height": 960
+          },
+          "withAnswerImage": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/FaqAccordion/withAnswerImage/preview.png",
+            "width": 2128,
+            "height": 1046
           }
         }
       },
