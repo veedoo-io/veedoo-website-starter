@@ -2521,6 +2521,108 @@
           }
         }
       },
+      "post_listing": {
+        "library": "slices",
+        "id": "post_listing",
+        "name": "PostListing",
+        "description": "PostListing",
+        "model": {
+          "id": "post_listing",
+          "type": "SharedSlice",
+          "name": "PostListing",
+          "description": "PostListing",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PostListing",
+              "primary": {
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                },
+                "secondary_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "secondary text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "tags": {
+                  "type": "Link",
+                  "config": {
+                    "label": "tags (leave empty for all )",
+                    "select": "document"
+                  }
+                },
+                "categories": {
+                  "type": "Link",
+                  "config": {
+                    "label": "categories (leave empty for all )",
+                    "select": "document"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "tags": {
+                  "id": "mock_document_id",
+                  "link_type": "Document",
+                  "type": "mock",
+                  "tags": [],
+                  "lang": "en-us",
+                  "slug": null,
+                  "first_publication_date": "1970-01-01T00:00:01+0000",
+                  "last_publication_date": "1970-01-01T01:00:00+0000"
+                },
+                "categories": {
+                  "id": "mock_document_id",
+                  "link_type": "Document",
+                  "type": "mock",
+                  "tags": [],
+                  "lang": "en-us",
+                  "slug": null,
+                  "first_publication_date": "1970-01-01T00:00:01+0000",
+                  "last_publication_date": "1970-01-01T01:00:00+0000"
+                }
+              }
+            ],
+            "primary": {
+              "text_color": "#ffbde9",
+              "secondary_text_color": "#7c4c7d",
+              "background_color": "#56519a"
+            },
+            "slice_type": "post_listing"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "rich_text": {
         "library": "slices",
         "id": "rich_text",
@@ -2589,6 +2691,15 @@
                     "label": "margin left",
                     "placeholder": ""
                   }
+                },
+                "center_text": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "center text",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
                 }
               },
               "items": {},
@@ -2607,16 +2718,17 @@
               "rich_text": [
                 {
                   "type": "paragraph",
-                  "text": "Nisi proident proident elit elit sint aute ipsum ipsum amet quis culpa dolore mollit esse. Est esse elit eu aliquip occaecat aliquip ullamco labore ullamco exercitation adipisicing velit excepteur.",
+                  "text": "Duis qui laboris nisi excepteur deserunt deserunt minim veniam. Mollit laborum fugiat dolor quis deserunt. Aute culpa dolore esse elit sint est mollit aliqua voluptate fugiat.",
                   "spans": []
                 }
               ],
-              "text_color": "#4f12d6",
-              "background_color": "#f2417e",
-              "margin_top": 84,
-              "margin_right": 35,
-              "margin_bottom": 9,
-              "margin_left": 83
+              "text_color": "#820ee2",
+              "background_color": "#98d337",
+              "margin_top": 10,
+              "margin_right": 54,
+              "margin_bottom": 27,
+              "margin_left": 14,
+              "center_text": false
             },
             "slice_type": "rich_text"
           }

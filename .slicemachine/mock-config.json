@@ -99,6 +99,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "PostListing": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
@@ -107,6 +112,10 @@
     "website_settings": {},
     "tag_item": {},
     "header": {},
-    "footer": {}
+    "footer": {},
+    "author": {},
+    "blog_post": {},
+    "post_category": {},
+    "post_tag": {}
   }
 }

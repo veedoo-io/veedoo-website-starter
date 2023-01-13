@@ -3,7 +3,16 @@
     class="section"
     :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
   >
-    <PrismicRichText :field="slice.primary.rich_text" />
+    <PrismicRichText
+      :style="
+        slice.primary.center_text
+          ? {
+              textAlign: 'center',
+            }
+          : {}
+      "
+      :field="slice.primary.rich_text"
+    />
   </section>
 </template>
 

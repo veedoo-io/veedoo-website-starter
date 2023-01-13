@@ -9,16 +9,17 @@
       "rich_text": [
         {
           "type": "paragraph",
-          "text": "Nisi proident proident elit elit sint aute ipsum ipsum amet quis culpa dolore mollit esse. Est esse elit eu aliquip occaecat aliquip ullamco labore ullamco exercitation adipisicing velit excepteur.",
+          "text": "Duis qui laboris nisi excepteur deserunt deserunt minim veniam. Mollit laborum fugiat dolor quis deserunt. Aute culpa dolore esse elit sint est mollit aliqua voluptate fugiat.",
           "spans": []
         }
       ],
-      "text_color": "#4f12d6",
-      "background_color": "#f2417e",
-      "margin_top": 84,
-      "margin_right": 35,
-      "margin_bottom": 9,
-      "margin_left": 83
+      "text_color": "#820ee2",
+      "background_color": "#98d337",
+      "margin_top": 10,
+      "margin_right": 54,
+      "margin_bottom": 27,
+      "margin_left": 14,
+      "center_text": false
     },
     "slice_type": "rich_text"
   }

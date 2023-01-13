@@ -6,6 +6,202 @@ import type * as prismic from "@prismicio/client";
 type Simplify<T> = {
     [KeyType in keyof T]: T[KeyType];
 };
+/** Content for Author documents */
+interface AuthorDocumentData {
+    /**
+     * picture field in *Author*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.picture
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    picture: prismicT.ImageField<never>;
+    /**
+     * full name field in *Author*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.full_name
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    full_name: prismicT.KeyTextField;
+    /**
+     * job field in *Author*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.job
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    job: prismicT.KeyTextField;
+    /**
+     * description field in *Author*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * facebook url field in *Author*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.facebook_url
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    facebook_url: prismicT.LinkField;
+    /**
+     * instagram url field in *Author*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.instagram_url
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    instagram_url: prismicT.LinkField;
+    /**
+     * twitter url field in *Author*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.twitter_url
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    twitter_url: prismicT.LinkField;
+    /**
+     * linkedin url field in *Author*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: author.linkedin_url
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    linkedin_url: prismicT.LinkField;
+}
+/**
+ * Author document from Prismic
+ *
+ * - **API ID**: `author`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type AuthorDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
+/** Content for blog Post documents */
+interface BlogPostDocumentData {
+    /**
+     * title field in *blog Post*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * description field in *blog Post*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    description: prismicT.KeyTextField;
+    /**
+     * image field in *blog Post*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.image
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * author field in *blog Post*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.author
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    author: prismicT.RelationField<"author">;
+    /**
+     * tag field in *blog Post*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.tag
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    tag: prismicT.RelationField<"post_tag">;
+    /**
+     * category field in *blog Post*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.category
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    category: prismicT.RelationField<"post_category">;
+    /**
+     * Slice Zone field in *blog Post*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: blog_post.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<BlogPostDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *blog Post → Slice Zone*
+ *
+ */
+type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice;
+/**
+ * blog Post document from Prismic
+ *
+ * - **API ID**: `blog_post`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogPostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BlogPostDocumentData>, "blog_post", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -115,7 +311,7 @@ interface HomePageDocumentData {
  * Slice for *Home Page → Slice Zone*
  *
  */
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice;
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice | PostListingSlice;
 /**
  * Home Page document from Prismic
  *
@@ -177,7 +373,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice;
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice;
 /**
  * Page document from Prismic
  *
@@ -188,6 +384,65 @@ type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithIma
  * @typeParam Lang - Language API ID of the document.
  */
 export type PageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
+/** Content for post category documents */
+interface PostCategoryDocumentData {
+    /**
+     * title field in *post category*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_category.title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    title: prismicT.KeyTextField;
+    /**
+     * description field in *post category*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_category.description
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * post category document from Prismic
+ *
+ * - **API ID**: `post_category`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostCategoryDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostCategoryDocumentData>, "post_category", Lang>;
+/** Content for post tag documents */
+interface PostTagDocumentData {
+    /**
+     * tag field in *post tag*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_tag.tag
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    tag: prismicT.KeyTextField;
+}
+/**
+ * post tag document from Prismic
+ *
+ * - **API ID**: `post_tag`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PostTagDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<PostTagDocumentData>, "post_tag", Lang>;
 /** Content for [do not use ] Tag item  documents */
 type TagItemDocumentData = Record<string, never>;
 /**
@@ -365,7 +620,7 @@ type WebsiteSettingsDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
-export type AllDocumentTypes = FooterDocument | HeaderDocument | HomePageDocument | PageDocument | TagItemDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = AuthorDocument | BlogPostDocument | FooterDocument | HeaderDocument | HomePageDocument | PageDocument | PostCategoryDocument | PostTagDocument | TagItemDocument | WebsiteSettingsDocument;
 /**
  * Primary content in AlternateGrid → Primary
  *
@@ -2181,6 +2436,91 @@ type PortfolioItemsSliceVariation = PortfolioItemsSliceDefault;
  */
 export type PortfolioItemsSlice = prismicT.SharedSlice<"portfolio_items", PortfolioItemsSliceVariation>;
 /**
+ * Primary content in PostListing → Primary
+ *
+ */
+interface PostListingSliceDefaultPrimary {
+    /**
+     * text color field in *PostListing → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_listing.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+    /**
+     * secondary text color field in *PostListing → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_listing.primary.secondary_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    secondary_text_color: prismicT.ColorField;
+    /**
+     * background color field in *PostListing → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_listing.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+}
+/**
+ * Item in PostListing → Items
+ *
+ */
+export interface PostListingSliceDefaultItem {
+    /**
+     * tags (leave empty for all ) field in *PostListing → Items*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_listing.items[].tags
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    tags: prismicT.RelationField;
+    /**
+     * categories (leave empty for all ) field in *PostListing → Items*
+     *
+     * - **Field Type**: Content Relationship
+     * - **Placeholder**: *None*
+     * - **API ID Path**: post_listing.items[].categories
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    categories: prismicT.RelationField;
+}
+/**
+ * Default variation for PostListing Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `PostListing`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PostListingSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PostListingSliceDefaultPrimary>, Simplify<PostListingSliceDefaultItem>>;
+/**
+ * Slice variation for *PostListing*
+ *
+ */
+type PostListingSliceVariation = PostListingSliceDefault;
+/**
+ * PostListing Shared Slice
+ *
+ * - **API ID**: `post_listing`
+ * - **Description**: `PostListing`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PostListingSlice = prismicT.SharedSlice<"post_listing", PostListingSliceVariation>;
+/**
  * Primary content in RichText → Primary
  *
  */
@@ -2255,6 +2595,17 @@ interface RichTextSliceDefaultPrimary {
      *
      */
     margin_left: prismicT.NumberField;
+    /**
+     * center text field in *RichText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: rich_text.primary.center_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    center_text: prismicT.BooleanField;
 }
 /**
  * Default variation for RichText Slice
@@ -2626,6 +2977,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
+        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice };
     }
 }

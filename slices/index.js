@@ -14,6 +14,7 @@ import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
 import PartnersLogoSlider from './PartnersLogoSlider';
 import PortfolioItems from './PortfolioItems';
+import PostListing from './PostListing';
 import RichText from './RichText';
 import RichTextAdvanced from './RichTextAdvanced';
 import Tags from './Tags';
@@ -34,6 +35,7 @@ export {
 	HeroVeedoo,
 	PartnersLogoSlider,
 	PortfolioItems,
+	PostListing,
 	RichText,
 	RichTextAdvanced,
 	Tags,
@@ -55,6 +57,7 @@ export const components = {
 	hero_veedoo: HeroVeedoo,
 	partners_logo_slider: PartnersLogoSlider,
 	portfolio_items: PortfolioItems,
+	post_listing: PostListing,
 	rich_text: RichText,
 	text: RichTextAdvanced,
 	tags: Tags,

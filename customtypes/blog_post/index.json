@@ -1,0 +1,127 @@
+{
+  "id": "blog_post",
+  "label": "blog Post",
+  "repeatable": true,
+  "status": true,
+  "json": {
+    "Main": {
+      "uid": {
+        "type": "UID",
+        "config": {
+          "label": "uid",
+          "placeholder": ""
+        }
+      },
+      "title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "title",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+        }
+      },
+      "description": {
+        "type": "Text",
+        "config": {
+          "label": "description",
+          "placeholder": ""
+        }
+      },
+      "image": {
+        "type": "Image",
+        "config": {
+          "label": "image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "author": {
+        "type": "Link",
+        "config": {
+          "label": "author",
+          "select": "document",
+          "customtypes": [
+            "author"
+          ]
+        }
+      },
+      "tag": {
+        "type": "Link",
+        "config": {
+          "label": "tag",
+          "select": "document",
+          "customtypes": [
+            "post_tag"
+          ]
+        }
+      },
+      "category": {
+        "type": "Link",
+        "config": {
+          "label": "category",
+          "select": "document",
+          "customtypes": [
+            "post_category"
+          ]
+        }
+      },
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "alternate_grid": {
+              "type": "SharedSlice"
+            },
+            "atom_tags": {
+              "type": "SharedSlice"
+            },
+            "call_to_action_with_image": {
+              "type": "SharedSlice"
+            },
+            "contact_form_veedoo": {
+              "type": "SharedSlice"
+            },
+            "clients_slider": {
+              "type": "SharedSlice"
+            },
+            "divider": {
+              "type": "SharedSlice"
+            },
+            "faq_accordion": {
+              "type": "SharedSlice"
+            },
+            "faq_accordion2": {
+              "type": "SharedSlice"
+            },
+            "hero_veedoo": {
+              "type": "SharedSlice"
+            },
+            "portfolio_items": {
+              "type": "SharedSlice"
+            },
+            "partners_logo_slider": {
+              "type": "SharedSlice"
+            },
+            "post_listing": {
+              "type": "SharedSlice"
+            },
+            "tags": {
+              "type": "SharedSlice"
+            },
+            "text": {
+              "type": "SharedSlice"
+            },
+            "rich_text": {
+              "type": "SharedSlice"
+            },
+            "testimonial": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}

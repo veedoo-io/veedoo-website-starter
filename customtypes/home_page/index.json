@@ -54,6 +54,9 @@
             },
             "faq_accordion2": {
               "type": "SharedSlice"
+            },
+            "post_listing": {
+              "type": "SharedSlice"
             }
           }
         }

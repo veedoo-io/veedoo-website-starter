@@ -20,6 +20,10 @@ const routes = [
     type: 'page',
     path: '/:uid',
   },
+  {
+    type: 'blog_post',
+    path: '/blog/:uid',
+  },
 ];
 
 export default async () => {
