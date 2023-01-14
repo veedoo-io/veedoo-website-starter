@@ -57,6 +57,9 @@
             },
             "post_listing": {
               "type": "SharedSlice"
+            },
+            "contact_info": {
+              "type": "SharedSlice"
             }
           }
         }

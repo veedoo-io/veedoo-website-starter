@@ -1,0 +1,129 @@
+{
+  "id": "contact_info",
+  "type": "SharedSlice",
+  "name": "ContactUsGrid",
+  "description": "ContactInfo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "ContactInfo",
+      "primary": {
+        "center": {
+          "type": "Boolean",
+          "config": {
+            "label": "center",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
+        },
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "title_image": {
+          "type": "Image",
+          "config": {
+            "label": "title image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "email_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "email title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "email_title_image": {
+          "type": "Image",
+          "config": {
+            "label": "email title image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "email_content": {
+          "type": "StructuredText",
+          "config": {
+            "label": "email content",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "social_media_title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "social media title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "social_media_title_image": {
+          "type": "Image",
+          "config": {
+            "label": "social media title image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "social_media_image": {
+          "type": "Image",
+          "config": {
+            "label": "social media image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "social_media_url": {
+          "type": "Link",
+          "config": {
+            "label": "social media url",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

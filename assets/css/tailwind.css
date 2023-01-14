@@ -9,6 +9,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+a {
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .agile__slides {
   margin: 12px 0px;
 }

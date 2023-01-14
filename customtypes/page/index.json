@@ -61,6 +61,9 @@
             },
             "divider": {
               "type": "SharedSlice"
+            },
+            "contact_info": {
+              "type": "SharedSlice"
             }
           }
         }

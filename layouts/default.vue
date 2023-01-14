@@ -5,7 +5,7 @@
       class="
         pt-20
         first-letter:w-full
-        px-2
+        px-4
         sm:px-4
         lg:px-8
         xl:px-[104px]

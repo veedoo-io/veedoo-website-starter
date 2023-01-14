@@ -910,12 +910,12 @@
       "contact_info": {
         "library": "slices",
         "id": "contact_info",
-        "name": "ContactInfo",
+        "name": "ContactUsGrid",
         "description": "ContactInfo",
         "model": {
           "id": "contact_info",
           "type": "SharedSlice",
-          "name": "ContactInfo",
+          "name": "ContactUsGrid",
           "description": "ContactInfo",
           "variations": [
             {
@@ -925,25 +925,119 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "ContactInfo",
               "primary": {
+                "center": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "center",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
+                  }
+                },
                 "title": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "title_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "title image",
+                    "constraint": {},
+                    "thumbnails": []
                   }
                 },
                 "description": {
                   "type": "StructuredText",
                   "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your product"
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "email_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "email title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "email_title_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "email title image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "email_content": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "email content",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "social_media_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "social media title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "social_media_title_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "social media title image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
                   }
                 }
               },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
-              "items": {}
+              "items": {
+                "social_media_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "social media image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "social_media_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "social media url",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -952,23 +1046,88 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "social_media_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+                },
+                "social_media_url": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
             ],
             "primary": {
+              "center": false,
               "title": [
                 {
-                  "type": "heading1",
-                  "text": "Arrow",
+                  "type": "paragraph",
+                  "text": "Tempor dolor consequat eiusmod sint ut do tempor sit consectetur officia. Officia sit commodo pariatur culpa sunt fugiat ex aliqua irure.",
                   "spans": []
                 }
               ],
+              "title_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+              },
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Pariatur pariatur id ullamco ex pariatur fugiat voluptate do reprehenderit et amet qui irure. Adipisicing duis consectetur ipsum consectetur sit amet ipsum nulla non est minim.",
+                  "text": "Consequat sit ut cupidatat ipsum deserunt et irure labore non velit fugiat commodo eu sint. Quis ex qui excepteur nisi. Ea officia ea mollit sit mollit commodo eiusmod incididunt laboris laboris est.",
                   "spans": []
                 }
-              ]
+              ],
+              "email_title": [
+                {
+                  "type": "paragraph",
+                  "text": "Adipisicing duis excepteur amet ut ut et occaecat fugiat do culpa laborum consectetur. Ex aliquip commodo qui anim reprehenderit nostrud adipisicing nostrud. Laborum elit incididunt reprehenderit adipisicing nostrud sunt irure consequat dolor ex incididunt laboris.",
+                  "spans": []
+                }
+              ],
+              "email_title_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+              },
+              "email_content": [
+                {
+                  "type": "paragraph",
+                  "text": "Voluptate proident tempor consequat reprehenderit aliquip exercitation id quis sit proident incididunt. Esse sit voluptate commodo ut non nostrud aliqua duis. Deserunt esse ut elit ullamco.",
+                  "spans": []
+                }
+              ],
+              "social_media_title": [
+                {
+                  "type": "paragraph",
+                  "text": "Est culpa elit non.",
+                  "spans": []
+                }
+              ],
+              "social_media_title_image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+              },
+              "background_color": "#5c1c97",
+              "text_color": "#b54bd7"
             },
             "slice_type": "contact_info"
           }
