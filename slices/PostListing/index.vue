@@ -40,26 +40,15 @@
       v-if="!loading && !error && posts.length > 0"
       class="w-full h-fit py-10 flex flex-col justify-center items-center"
     >
-      <div
-        class="
-          w-full
-          max-sm:bg-red-300
-          py-10
-          flex flex-wrap
-          gap-x-[72px] gap-y-[72px]
-        "
-      >
+      <div class="w-full py-10 flex flex-wrap gap-x-[72px] gap-y-[72px]">
         <div
           class="
             max-sm:flex-[0_0_99%]
             md:flex-[0_0_45%]
-            lg:flex-[0_0_30%]
+            lg:flex-[0_0_45%]
+            xl:flex-[0_0_30%]
             max-sm:w-[80vw]
             mx-auto
-            bg-white
-            rounded-xl
-            shadow-xl
-            flex flex-col
           "
           v-for="(item, i) in posts?.slice(
             page * numberOfItemPerPage,
@@ -67,9 +56,31 @@
           )"
           :key="`post-item-${i}`"
         >
-          <PrismicLink class="w-full" :field="item">
+          <PrismicLink
+            class="
+              w-full
+              max-w-[450px]
+              mx-auto
+              bg-white
+              rounded-xl
+              shadow-xl
+              flex flex-col
+              h-full
+              overflow-hidden
+              group
+            "
+            :field="item"
+          >
             <PrismicImage
-              class="text-[#353C47] w-full h-[273px]"
+              class="
+                text-[#353C47]
+                ease-in
+                duration-500
+                hover:cursor-pointer
+                hover:scale-110
+                w-full
+                h-[273px]
+              "
               :field="item.data.image"
             />
             <div class="p-2 flex-1">
@@ -91,15 +102,20 @@
           </PrismicLink>
         </div>
       </div>
-      <div class="flex">
-        <div class="w-6 h-6">
+      <div class="flex py-10 items-center justify-center gap-10">
+        <div
+          :class="`w-8 h-8 ${page != 0 ? 'cursor-pointer' : ''}`"
+          :disabled="page > 0"
+          :style="`color:${page != 0 ? textColor : secondaryTextColor}`"
+          @click="goToPrev()"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6 text-black"
+            class="w-8 h-8"
           >
             <path
               stroke-linecap="round"
@@ -108,22 +124,37 @@
             />
           </svg>
         </div>
-        <div>
+        <div class="flex gap-10">
           <span
             v-for="(item, i) in getPaginationPages"
             :key="`pageNumber-item-${i}`"
-            class=""
+            :class="`text-[23px] font-medium ${
+              item == page + 1 ? 'cursor-default ' : 'cursor-pointer'
+            } `"
+            :style="`color:${
+              item == page + 1 ? textColor : secondaryTextColor
+            }`"
+            @click="page = item - 1"
             >{{ item }}</span
           >
         </div>
-        <div class="w-6 h-6">
+        <div
+          :class="`w-8 h-8 ${
+            page < posts?.length / 6 - 1 ? 'cursor-pointer' : ''
+          }`"
+          :disabled="page < posts?.length / 6 - 1"
+          :style="`color:${
+            page < posts?.length / 6 - 1 ? textColor : secondaryTextColor
+          }`"
+          @click="goToNext()"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            className="w-6 h-6 text-black"
+            className="w-8 h-8 text-black"
           >
             <path
               strokeLinecap="round"
@@ -204,6 +235,18 @@ export default {
       }
 
       return pageNumbers;
+    },
+  },
+  methods: {
+    goToNext: function () {
+      if (this.page < this.posts?.length / 6 - 1) {
+        this.page = this.page + 1;
+      }
+    },
+    goToPrev: function () {
+      if (this.page > 0) {
+        this.page = this.page - 1;
+      }
     },
   },
 };
