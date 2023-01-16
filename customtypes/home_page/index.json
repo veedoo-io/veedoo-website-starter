@@ -75,6 +75,9 @@
             },
             "title_with_date_and_share_icons": {
               "type": "SharedSlice"
+            },
+            "two_column_text_block": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -139,6 +139,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "TwoColumnTextBlock": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

@@ -24,6 +24,7 @@ import Tags from './Tags';
 import Testimonial from './Testimonial';
 import Title from './Title';
 import TitleWithDateAndShareIcons from './TitleWithDateAndShareIcons';
+import TwoColumnTextBlock from './TwoColumnTextBlock';
 
 export {
 	AlternateGrid,
@@ -50,6 +51,7 @@ export {
 	Testimonial,
 	Title,
 	TitleWithDateAndShareIcons,
+	TwoColumnTextBlock,
 };
 
 export const components = {
@@ -77,4 +79,5 @@ export const components = {
 	testimonial: Testimonial,
 	title: Title,
 	title_with_date_and_share_icons: TitleWithDateAndShareIcons,
+	two_column_text_block: TwoColumnTextBlock,
 };
