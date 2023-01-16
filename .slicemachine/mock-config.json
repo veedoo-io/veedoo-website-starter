@@ -124,6 +124,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "PostCarousel": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

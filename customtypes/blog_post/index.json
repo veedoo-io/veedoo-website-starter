@@ -138,6 +138,18 @@
             },
             "testimonial": {
               "type": "SharedSlice"
+            },
+            "title": {
+              "type": "SharedSlice"
+            },
+            "post_slider": {
+              "type": "SharedSlice"
+            },
+            "post_carousel": {
+              "type": "SharedSlice"
+            },
+            "contact_info": {
+              "type": "SharedSlice"
             }
           }
         }

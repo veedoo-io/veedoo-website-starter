@@ -66,6 +66,9 @@
             },
             "post_slider": {
               "type": "SharedSlice"
+            },
+            "post_carousel": {
+              "type": "SharedSlice"
             }
           }
         }

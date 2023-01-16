@@ -70,6 +70,12 @@
             },
             "post_slider": {
               "type": "SharedSlice"
+            },
+            "post_carousel": {
+              "type": "SharedSlice"
+            },
+            "faq_accordion2": {
+              "type": "SharedSlice"
             }
           }
         }
