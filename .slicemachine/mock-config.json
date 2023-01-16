@@ -119,6 +119,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "PostSlider": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

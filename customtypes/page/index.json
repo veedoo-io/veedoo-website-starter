@@ -67,6 +67,9 @@
             },
             "title": {
               "type": "SharedSlice"
+            },
+            "post_slider": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -211,13 +211,33 @@ export default {
       let request = await this.$prismic.api.query(
         this.$prismic.predicates.at('document.type', 'blog_post'),
         {
-          pageSize: 100,
+          pageSize: 1000,
           orderings: '[document.first_publication_date desc]',
+          fetchLinks: [
+            'author.uid',
+            'author.picture',
+            'author.full_name',
+            'author.job',
+            'author.description',
+            'author.facebook_url',
+            'author.instagram_url',
+            'author.twitter_url',
+            'author.linkedin_url',
+            'tag.uid',
+            'tag.tag',
+            'tag_2.uid',
+            'tag_2.tag',
+            'tag_3.uid',
+            'tag_3.tag',
+            'category.uid',
+            'category.title',
+            'category.description',
+          ],
         }
       );
       let posts = request?.results ?? [];
       this.posts = posts;
-      console.log('this.posts ', this.posts);
+      //console.log('this.posts ', this.posts);
     } catch (error) {
       console.log('error ', error);
       this.error = true;
