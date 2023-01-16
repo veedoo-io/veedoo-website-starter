@@ -49,7 +49,27 @@
       "tag": {
         "type": "Link",
         "config": {
-          "label": "tag",
+          "label": "tag 1",
+          "select": "document",
+          "customtypes": [
+            "post_tag"
+          ]
+        }
+      },
+      "tag_2": {
+        "type": "Link",
+        "config": {
+          "label": "tag 2",
+          "select": "document",
+          "customtypes": [
+            "post_tag"
+          ]
+        }
+      },
+      "tag_3": {
+        "type": "Link",
+        "config": {
+          "label": "tag 3",
           "select": "document",
           "customtypes": [
             "post_tag"

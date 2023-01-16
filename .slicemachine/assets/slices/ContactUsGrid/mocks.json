@@ -11,11 +11,11 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+          "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
         },
         "social_media_url": {
           "link_type": "Web",
-          "url": "https://slicemachine.dev"
+          "url": "http://twitter.com"
         }
       }
     ],
@@ -24,7 +24,7 @@
       "title": [
         {
           "type": "paragraph",
-          "text": "Tempor dolor consequat eiusmod sint ut do tempor sit consectetur officia. Officia sit commodo pariatur culpa sunt fugiat ex aliqua irure.",
+          "text": "Anim minim fugiat eiusmod exercitation esse fugiat sit. Proident tempor laboris laboris aute tempor est. Voluptate eu ut ipsum eu nisi pariatur labore aute consectetur ad consequat sint dolor esse.",
           "spans": []
         }
       ],
@@ -35,19 +35,19 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+        "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
       },
       "description": [
         {
           "type": "paragraph",
-          "text": "Consequat sit ut cupidatat ipsum deserunt et irure labore non velit fugiat commodo eu sint. Quis ex qui excepteur nisi. Ea officia ea mollit sit mollit commodo eiusmod incididunt laboris laboris est.",
+          "text": "Officia sit quis voluptate enim et id dolore magna elit elit ex aliqua veniam elit do. Ullamco non exercitation reprehenderit. Excepteur laborum eiusmod proident ad tempor cillum culpa irure ut.",
           "spans": []
         }
       ],
       "email_title": [
         {
           "type": "paragraph",
-          "text": "Adipisicing duis excepteur amet ut ut et occaecat fugiat do culpa laborum consectetur. Ex aliquip commodo qui anim reprehenderit nostrud adipisicing nostrud. Laborum elit incididunt reprehenderit adipisicing nostrud sunt irure consequat dolor ex incididunt laboris.",
+          "text": "Adipisicing ipsum commodo ut labore mollit commodo sint qui quis ipsum. Velit culpa ipsum aute ullamco aute qui commodo et proident. Irure in occaecat cupidatat cillum sit velit nisi quis adipisicing aute laboris fugiat.",
           "spans": []
         }
       ],
@@ -58,19 +58,19 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+        "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
       },
       "email_content": [
         {
           "type": "paragraph",
-          "text": "Voluptate proident tempor consequat reprehenderit aliquip exercitation id quis sit proident incididunt. Esse sit voluptate commodo ut non nostrud aliqua duis. Deserunt esse ut elit ullamco.",
+          "text": "Do consequat in anim cupidatat ut elit eu. Irure occaecat esse nostrud irure anim. Fugiat proident fugiat eiusmod occaecat et eiusmod est id.",
           "spans": []
         }
       ],
       "social_media_title": [
         {
           "type": "paragraph",
-          "text": "Est culpa elit non.",
+          "text": "Nostrud qui duis dolore consequat id.",
           "spans": []
         }
       ],
@@ -81,10 +81,10 @@
         },
         "alt": null,
         "copyright": null,
-        "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
       },
-      "background_color": "#5c1c97",
-      "text_color": "#b54bd7"
+      "background_color": "#fffba4",
+      "text_color": "#f24965"
     },
     "slice_type": "contact_info"
   }

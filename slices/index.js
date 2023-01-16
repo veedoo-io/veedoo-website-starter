@@ -19,6 +19,7 @@ import RichText from './RichText';
 import RichTextAdvanced from './RichTextAdvanced';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
+import Title from './Title';
 
 export {
 	AlternateGrid,
@@ -40,6 +41,7 @@ export {
 	RichTextAdvanced,
 	Tags,
 	Testimonial,
+	Title,
 };
 
 export const components = {
@@ -62,4 +64,5 @@ export const components = {
 	text: RichTextAdvanced,
 	tags: Tags,
 	testimonial: Testimonial,
+	title: Title,
 };

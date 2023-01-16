@@ -60,6 +60,9 @@
             },
             "contact_info": {
               "type": "SharedSlice"
+            },
+            "title": {
+              "type": "SharedSlice"
             }
           }
         }

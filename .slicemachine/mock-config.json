@@ -114,6 +114,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "Title": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

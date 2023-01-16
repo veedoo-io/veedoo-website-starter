@@ -1054,11 +1054,11 @@
                   },
                   "alt": null,
                   "copyright": null,
-                  "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+                  "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
                 },
                 "social_media_url": {
                   "link_type": "Web",
-                  "url": "https://slicemachine.dev"
+                  "url": "http://twitter.com"
                 }
               }
             ],
@@ -1067,7 +1067,7 @@
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Tempor dolor consequat eiusmod sint ut do tempor sit consectetur officia. Officia sit commodo pariatur culpa sunt fugiat ex aliqua irure.",
+                  "text": "Anim minim fugiat eiusmod exercitation esse fugiat sit. Proident tempor laboris laboris aute tempor est. Voluptate eu ut ipsum eu nisi pariatur labore aute consectetur ad consequat sint dolor esse.",
                   "spans": []
                 }
               ],
@@ -1078,19 +1078,19 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055"
               },
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Consequat sit ut cupidatat ipsum deserunt et irure labore non velit fugiat commodo eu sint. Quis ex qui excepteur nisi. Ea officia ea mollit sit mollit commodo eiusmod incididunt laboris laboris est.",
+                  "text": "Officia sit quis voluptate enim et id dolore magna elit elit ex aliqua veniam elit do. Ullamco non exercitation reprehenderit. Excepteur laborum eiusmod proident ad tempor cillum culpa irure ut.",
                   "spans": []
                 }
               ],
               "email_title": [
                 {
                   "type": "paragraph",
-                  "text": "Adipisicing duis excepteur amet ut ut et occaecat fugiat do culpa laborum consectetur. Ex aliquip commodo qui anim reprehenderit nostrud adipisicing nostrud. Laborum elit incididunt reprehenderit adipisicing nostrud sunt irure consequat dolor ex incididunt laboris.",
+                  "text": "Adipisicing ipsum commodo ut labore mollit commodo sint qui quis ipsum. Velit culpa ipsum aute ullamco aute qui commodo et proident. Irure in occaecat cupidatat cillum sit velit nisi quis adipisicing aute laboris fugiat.",
                   "spans": []
                 }
               ],
@@ -1101,19 +1101,19 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5"
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
               },
               "email_content": [
                 {
                   "type": "paragraph",
-                  "text": "Voluptate proident tempor consequat reprehenderit aliquip exercitation id quis sit proident incididunt. Esse sit voluptate commodo ut non nostrud aliqua duis. Deserunt esse ut elit ullamco.",
+                  "text": "Do consequat in anim cupidatat ut elit eu. Irure occaecat esse nostrud irure anim. Fugiat proident fugiat eiusmod occaecat et eiusmod est id.",
                   "spans": []
                 }
               ],
               "social_media_title": [
                 {
                   "type": "paragraph",
-                  "text": "Est culpa elit non.",
+                  "text": "Nostrud qui duis dolore consequat id.",
                   "spans": []
                 }
               ],
@@ -1124,10 +1124,10 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68"
               },
-              "background_color": "#5c1c97",
-              "text_color": "#b54bd7"
+              "background_color": "#fffba4",
+              "text_color": "#f24965"
             },
             "slice_type": "contact_info"
           }
@@ -1136,7 +1136,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/ContactUsGrid/default/preview.png",
+            "width": 1592,
+            "height": 924
+          }
+        }
       },
       "divider": {
         "library": "slices",
@@ -3520,6 +3526,151 @@
             "height": 1212
           }
         }
+      },
+      "title": {
+        "library": "slices",
+        "id": "title",
+        "name": "Title",
+        "description": "Title",
+        "model": {
+          "id": "title",
+          "type": "SharedSlice",
+          "name": "Title",
+          "description": "Title",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Title",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "text_alignment": {
+                  "type": "Select",
+                  "config": {
+                    "label": "text alignment",
+                    "placeholder": "",
+                    "options": [
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "default_value": "left"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Background Color",
+                    "placeholder": ""
+                  }
+                },
+                "text_size": {
+                  "type": "Number",
+                  "config": {
+                    "label": "text Size",
+                    "placeholder": ""
+                  }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Tempor Lorem veniam proident et voluptate nulla dolor ullamco dolore laborum. Cupidatat est deserunt officia proident consectetur.",
+                  "spans": []
+                }
+              ],
+              "text_alignment": "left",
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"
+              },
+              "text_color": "#f8e0d5",
+              "background_color": "#04018f",
+              "text_size": 10,
+              "margin_top": 34,
+              "margin_right": 37,
+              "margin_bottom": 43,
+              "margin_left": 30
+            },
+            "slice_type": "title"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
       }
     }
   }
