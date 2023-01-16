@@ -69,6 +69,12 @@
             },
             "post_carousel": {
               "type": "SharedSlice"
+            },
+            "audio_player_with_image": {
+              "type": "SharedSlice"
+            },
+            "title_with_date_and_share_icons": {
+              "type": "SharedSlice"
             }
           }
         }

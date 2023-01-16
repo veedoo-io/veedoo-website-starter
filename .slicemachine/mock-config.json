@@ -129,6 +129,16 @@
       "default": {
         "primary": {}
       }
+    },
+    "AudioPlayerWithImage": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "TitleWithDateAndShareIcons": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

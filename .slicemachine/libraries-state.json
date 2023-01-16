@@ -324,6 +324,112 @@
           }
         }
       },
+      "audio_player_with_image": {
+        "library": "slices",
+        "id": "audio_player_with_image",
+        "name": "AudioPlayerWithImage",
+        "description": "AudioPlayerWithImage",
+        "model": {
+          "id": "audio_player_with_image",
+          "type": "SharedSlice",
+          "name": "AudioPlayerWithImage",
+          "description": "AudioPlayerWithImage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "AudioPlayerWithImage",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "mp3_file": {
+                  "type": "Link",
+                  "config": {
+                    "label": "mp3 file",
+                    "placeholder": "",
+                    "select": "media"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Occaecat ipsum id enim ullamco ad. Est cupidatat sit enim.",
+                  "spans": []
+                }
+              ],
+              "name": [
+                {
+                  "type": "paragraph",
+                  "text": "Labore voluptate nulla elit velit magna. Officia id dolore qui eu laborum qui irure aliquip veniam ipsum ea aliqua ullamco nisi enim. Dolore consectetur officia fugiat excepteur eiusmod reprehenderit veniam.",
+                  "spans": []
+                }
+              ],
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea"
+              },
+              "mp3_file": {
+                "link_type": "Media",
+                "name": "mock",
+                "kind": "image",
+                "url": "https://source.unsplash.com/random",
+                "size": "10kB"
+              }
+            },
+            "slice_type": "audio_player_with_image"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "call_to_action_with_image": {
         "library": "slices",
         "id": "call_to_action_with_image",
@@ -3931,6 +4037,134 @@
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/Title/default/preview.png",
             "width": 1438,
             "height": 264
+          }
+        }
+      },
+      "title_with_date_and_share_icons": {
+        "library": "slices",
+        "id": "title_with_date_and_share_icons",
+        "name": "TitleWithDateAndShareIcons",
+        "description": "TitleWithDateAndShareIcons",
+        "model": {
+          "id": "title_with_date_and_share_icons",
+          "type": "SharedSlice",
+          "name": "TitleWithDateAndShareIcons",
+          "description": "TitleWithDateAndShareIcons",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "TitleWithDateAndShareIcons",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "date": {
+                  "type": "Date",
+                  "config": {
+                    "label": "date",
+                    "placeholder": ""
+                  }
+                },
+                "text_size": {
+                  "type": "Number",
+                  "config": {
+                    "label": "text size",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Tempor veniam ullamco do proident voluptate ea exercitation excepteur qui ullamco. Nulla laboris occaecat commodo sunt duis consectetur excepteur est cillum aliqua amet pariatur eiusmod aliquip aute.",
+                  "spans": []
+                }
+              ],
+              "date": "2021-07-30",
+              "text_size": 28,
+              "text_color": "#157deb",
+              "background_color": "#af223a",
+              "margin_top": 31,
+              "margin_right": 2,
+              "margin_bottom": 5,
+              "margin_left": 75
+            },
+            "slice_type": "title_with_date_and_share_icons"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/TitleWithDateAndShareIcons/default/preview.png",
+            "width": 3050,
+            "height": 256
           }
         }
       }

@@ -2,6 +2,7 @@
 
 import AlternateGrid from './AlternateGrid';
 import AtomTags from './AtomTags';
+import AudioPlayerWithImage from './AudioPlayerWithImage';
 import CallToActionWithImage from './CallToActionWithImage';
 import ClientsSlider from './ClientsSlider';
 import ContactFormVeedoo from './ContactFormVeedoo';
@@ -22,10 +23,12 @@ import RichTextAdvanced from './RichTextAdvanced';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
 import Title from './Title';
+import TitleWithDateAndShareIcons from './TitleWithDateAndShareIcons';
 
 export {
 	AlternateGrid,
 	AtomTags,
+	AudioPlayerWithImage,
 	CallToActionWithImage,
 	ClientsSlider,
 	ContactFormVeedoo,
@@ -46,11 +49,13 @@ export {
 	Tags,
 	Testimonial,
 	Title,
+	TitleWithDateAndShareIcons,
 };
 
 export const components = {
 	alternate_grid: AlternateGrid,
 	atom_tags: AtomTags,
+	audio_player_with_image: AudioPlayerWithImage,
 	call_to_action_with_image: CallToActionWithImage,
 	clients_slider: ClientsSlider,
 	contact_form_veedoo: ContactFormVeedoo,
@@ -71,4 +76,5 @@ export const components = {
 	tags: Tags,
 	testimonial: Testimonial,
 	title: Title,
+	title_with_date_and_share_icons: TitleWithDateAndShareIcons,
 };

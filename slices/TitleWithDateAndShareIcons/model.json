@@ -1,0 +1,84 @@
+{
+  "id": "title_with_date_and_share_icons",
+  "type": "SharedSlice",
+  "name": "TitleWithDateAndShareIcons",
+  "description": "TitleWithDateAndShareIcons",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TitleWithDateAndShareIcons",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "date": {
+          "type": "Date",
+          "config": {
+            "label": "date",
+            "placeholder": ""
+          }
+        },
+        "text_size": {
+          "type": "Number",
+          "config": {
+            "label": "text size",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "margin_top": {
+          "type": "Number",
+          "config": {
+            "label": "margin top",
+            "placeholder": ""
+          }
+        },
+        "margin_right": {
+          "type": "Number",
+          "config": {
+            "label": "margin right",
+            "placeholder": ""
+          }
+        },
+        "margin_bottom": {
+          "type": "Number",
+          "config": {
+            "label": "margin bottom",
+            "placeholder": ""
+          }
+        },
+        "margin_left": {
+          "type": "Number",
+          "config": {
+            "label": "margin left",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
