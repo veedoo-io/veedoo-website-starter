@@ -159,6 +159,9 @@
             },
             "two_column_text_block": {
               "type": "SharedSlice"
+            },
+            "cta_with_background_image": {
+              "type": "SharedSlice"
             }
           }
         }

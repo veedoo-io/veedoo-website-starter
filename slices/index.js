@@ -7,6 +7,7 @@ import CallToActionWithImage from './CallToActionWithImage';
 import ClientsSlider from './ClientsSlider';
 import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactUsGrid from './ContactUsGrid';
+import CtaWithBackgroundImage from './CtaWithBackgroundImage';
 import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
 import FaqAccordion2 from './FaqAccordion2';
@@ -34,6 +35,7 @@ export {
 	ClientsSlider,
 	ContactFormVeedoo,
 	ContactUsGrid,
+	CtaWithBackgroundImage,
 	Divider,
 	FaqAccordion,
 	FaqAccordion2,
@@ -62,6 +64,7 @@ export const components = {
 	clients_slider: ClientsSlider,
 	contact_form_veedoo: ContactFormVeedoo,
 	contact_info: ContactUsGrid,
+	cta_with_background_image: CtaWithBackgroundImage,
 	divider: Divider,
 	faq_accordion: FaqAccordion,
 	faq_accordion2: FaqAccordion2,

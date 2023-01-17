@@ -144,6 +144,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "CtaWithBackgroundImage": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
