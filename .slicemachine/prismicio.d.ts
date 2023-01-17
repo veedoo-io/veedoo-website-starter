@@ -213,7 +213,7 @@ interface BlogPostDocumentData {
  * Slice for *blog Post → Slice Zone*
  *
  */
-type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice;
+type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice;
 /**
  * blog Post document from Prismic
  *
@@ -333,7 +333,7 @@ interface HomePageDocumentData {
  * Slice for *Home Page → Slice Zone*
  *
  */
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice;
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice;
 /**
  * Home Page document from Prismic
  *
@@ -395,7 +395,7 @@ interface PageDocumentData {
  * Slice for *Page → Slice Zone*
  *
  */
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | FaqAccordion2Slice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice;
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | ClientsSliderSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | FaqAccordion2Slice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice;
 /**
  * Page document from Prismic
  *
@@ -2574,6 +2574,91 @@ type HeroVeedooSliceVariation = HeroVeedooSliceDefault;
  */
 export type HeroVeedooSlice = prismicT.SharedSlice<"hero_veedoo", HeroVeedooSliceVariation>;
 /**
+ * Primary content in PartnerLogoGridWithDescriptionText → Primary
+ *
+ */
+interface PartnerLogoGridWithDescriptionTextSliceDefaultPrimary {
+    /**
+     * background color field in *PartnerLogoGridWithDescriptionText → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partner_logo_grid_with_description_text.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+}
+/**
+ * Item in PartnerLogoGridWithDescriptionText → Items
+ *
+ */
+export interface PartnerLogoGridWithDescriptionTextSliceDefaultItem {
+    /**
+     * logo field in *PartnerLogoGridWithDescriptionText → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partner_logo_grid_with_description_text.items[].logo
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    logo: prismicT.ImageField<never>;
+    /**
+     * description field in *PartnerLogoGridWithDescriptionText → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partner_logo_grid_with_description_text.items[].description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * link text field in *PartnerLogoGridWithDescriptionText → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partner_logo_grid_with_description_text.items[].link_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    link_text: prismicT.KeyTextField;
+    /**
+     * link field in *PartnerLogoGridWithDescriptionText → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: partner_logo_grid_with_description_text.items[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Default variation for PartnerLogoGridWithDescriptionText Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `PartnerLogoGridWithDescriptionText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PartnerLogoGridWithDescriptionTextSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PartnerLogoGridWithDescriptionTextSliceDefaultPrimary>, Simplify<PartnerLogoGridWithDescriptionTextSliceDefaultItem>>;
+/**
+ * Slice variation for *PartnerLogoGridWithDescriptionText*
+ *
+ */
+type PartnerLogoGridWithDescriptionTextSliceVariation = PartnerLogoGridWithDescriptionTextSliceDefault;
+/**
+ * PartnerLogoGridWithDescriptionText Shared Slice
+ *
+ * - **API ID**: `partner_logo_grid_with_description_text`
+ * - **Description**: `PartnerLogoGridWithDescriptionText`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PartnerLogoGridWithDescriptionTextSlice = prismicT.SharedSlice<"partner_logo_grid_with_description_text", PartnerLogoGridWithDescriptionTextSliceVariation>;
+/**
  * Item in PartnersLogoSlider → Items
  *
  */
@@ -3852,6 +3937,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
+        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
     }
 }

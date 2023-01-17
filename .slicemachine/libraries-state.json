@@ -1348,21 +1348,21 @@
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Excepteur reprehenderit nulla ea eu.",
+                  "text": "Laboris aliqua cillum qui eiusmod qui excepteur esse incididunt proident dolor. Nisi eu irure cillum reprehenderit sint laboris tempor exercitation excepteur. Et ut ea fugiat esse est laboris deserunt ea.",
                   "spans": []
                 }
               ],
               "description": [
                 {
                   "type": "paragraph",
-                  "text": "Dolore veniam et quis laboris aliquip labore quis ad amet. Ut id id magna ea adipisicing nulla irure voluptate in ullamco laborum aliqua.",
+                  "text": "Aliquip irure dolor quis cupidatat esse elit mollit. Do non incididunt duis velit fugiat exercitation adipisicing quis mollit non laborum deserunt.",
                   "spans": []
                 }
               ],
-              "call_to_action": "definition",
+              "call_to_action": "guess",
               "button_url": {
                 "link_type": "Web",
-                "url": "http://google.com"
+                "url": "https://slicemachine.dev"
               },
               "background_image": {
                 "dimensions": {
@@ -1371,11 +1371,11 @@
                 },
                 "alt": null,
                 "copyright": null,
-                "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
               },
-              "text_color": "#32eb14",
-              "button_text_color": "#fb8dc5",
-              "button_background_color": "#5e7bc2"
+              "text_color": "#272f9f",
+              "button_text_color": "#71a44b",
+              "button_background_color": "#ccffab"
             },
             "slice_type": "cta_with_background_image"
           }
@@ -2563,6 +2563,118 @@
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/HeroVeedoo/default/preview.png",
             "width": 2872,
             "height": 1604
+          }
+        }
+      },
+      "partner_logo_grid_with_description_text": {
+        "library": "slices",
+        "id": "partner_logo_grid_with_description_text",
+        "name": "PartnerLogoGridWithDescriptionText",
+        "description": "PartnerLogoGridWithDescriptionText",
+        "model": {
+          "id": "partner_logo_grid_with_description_text",
+          "type": "SharedSlice",
+          "name": "PartnerLogoGridWithDescriptionText",
+          "description": "PartnerLogoGridWithDescriptionText",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PartnerLogoGridWithDescriptionText",
+              "primary": {
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "logo": {
+                  "type": "Image",
+                  "config": {
+                    "label": "logo",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "link_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "link text",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "link",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "logo": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"
+                },
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Reprehenderit tempor mollit minim sit nisi enim eiusmod sint mollit. Id labore enim exercitation sint et anim mollit anim duis pariatur occaecat aute adipisicing.",
+                    "spans": []
+                  }
+                ],
+                "link_text": "morning",
+                "link": {
+                  "link_type": "Web",
+                  "url": "http://twitter.com"
+                }
+              }
+            ],
+            "primary": {
+              "background_color": "#a5f079"
+            },
+            "slice_type": "partner_logo_grid_with_description_text"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/PartnerLogoGridWithDescriptionText/default/preview.png",
+            "width": 2920,
+            "height": 802
           }
         }
       },

@@ -149,6 +149,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "PartnerLogoGridWithDescriptionText": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {

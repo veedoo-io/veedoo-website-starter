@@ -81,6 +81,9 @@
             },
             "cta_with_background_image": {
               "type": "SharedSlice"
+            },
+            "partner_logo_grid_with_description_text": {
+              "type": "SharedSlice"
             }
           }
         }
