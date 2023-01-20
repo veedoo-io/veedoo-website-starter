@@ -3351,7 +3351,7 @@
                     "label": "rich text",
                     "placeholder": "",
                     "allowTargetBlank": true,
-                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,embed,list-item,o-list-item,rtl,image"
+                    "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,rtl"
                   }
                 },
                 "text_color": {
@@ -3366,6 +3366,15 @@
                   "config": {
                     "label": "background color",
                     "placeholder": ""
+                  }
+                },
+                "center_text": {
+                  "type": "Boolean",
+                  "config": {
+                    "label": "center text",
+                    "default_value": false,
+                    "placeholder_true": "true",
+                    "placeholder_false": "false"
                   }
                 },
                 "margin_top": {
@@ -3395,15 +3404,6 @@
                     "label": "margin left",
                     "placeholder": ""
                   }
-                },
-                "center_text": {
-                  "type": "Boolean",
-                  "config": {
-                    "label": "center text",
-                    "default_value": false,
-                    "placeholder_true": "true",
-                    "placeholder_false": "false"
-                  }
                 }
               },
               "items": {},
@@ -3422,17 +3422,17 @@
               "rich_text": [
                 {
                   "type": "paragraph",
-                  "text": "Elit eu in velit quis dolor fugiat dolore id ea irure aliquip. Excepteur commodo veniam incididunt consectetur adipisicing duis. Adipisicing ea excepteur aliqua ut dolore in nostrud consequat consectetur ea in voluptate consectetur culpa.",
+                  "text": "Esse eiusmod non mollit ad ea labore mollit do irure. Enim in dolore aute occaecat excepteur nostrud nulla Lorem Lorem Lorem dolor qui. Anim Lorem labore veniam aliquip duis fugiat ipsum sint cupidatat adipisicing occaecat dolor consectetur cillum deserunt.",
                   "spans": []
                 }
               ],
-              "text_color": "#08cb4f",
-              "background_color": "#a4d727",
-              "margin_top": 47,
-              "margin_right": 85,
-              "margin_bottom": 83,
-              "margin_left": 14,
-              "center_text": false
+              "text_color": "#decd3c",
+              "background_color": "#c37d98",
+              "center_text": false,
+              "margin_top": 93,
+              "margin_right": 37,
+              "margin_bottom": 57,
+              "margin_left": 13
             },
             "slice_type": "rich_text"
           }

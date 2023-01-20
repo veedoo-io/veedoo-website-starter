@@ -3257,6 +3257,17 @@ interface RichTextSliceDefaultPrimary {
      */
     background_color: prismicT.ColorField;
     /**
+     * center text field in *RichText → Primary*
+     *
+     * - **Field Type**: Boolean
+     * - **Placeholder**: *None*
+     * - **Default Value**: false
+     * - **API ID Path**: rich_text.primary.center_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
+     *
+     */
+    center_text: prismicT.BooleanField;
+    /**
      * margin top field in *RichText → Primary*
      *
      * - **Field Type**: Number
@@ -3296,17 +3307,6 @@ interface RichTextSliceDefaultPrimary {
      *
      */
     margin_left: prismicT.NumberField;
-    /**
-     * center text field in *RichText → Primary*
-     *
-     * - **Field Type**: Boolean
-     * - **Placeholder**: *None*
-     * - **Default Value**: false
-     * - **API ID Path**: rich_text.primary.center_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/boolean
-     *
-     */
-    center_text: prismicT.BooleanField;
 }
 /**
  * Default variation for RichText Slice
