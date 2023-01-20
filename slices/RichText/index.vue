@@ -1,7 +1,7 @@
 <template>
   <section
     class="section"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; color:${slice.primary.text_color}`"
   >
     <PrismicRichText
       :style="

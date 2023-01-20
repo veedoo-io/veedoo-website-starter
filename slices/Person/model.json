@@ -1,43 +1,37 @@
 {
-  "id": "title_with_date_and_share_icons",
+  "id": "person",
   "type": "SharedSlice",
-  "name": "TitleWithDateAndShareIcons",
-  "description": "TitleWithDateAndShareIcons",
+  "name": "Person",
+  "description": "Person",
   "variations": [
     {
       "id": "default",
       "name": "Default",
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
-      "description": "TitleWithDateAndShareIcons",
+      "description": "Person",
       "primary": {
-        "title": {
-          "type": "StructuredText",
+        "person": {
+          "type": "Link",
           "config": {
-            "label": "title",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "date": {
-          "type": "Date",
-          "config": {
-            "label": "date",
-            "placeholder": ""
-          }
-        },
-        "text_size": {
-          "type": "Number",
-          "config": {
-            "label": "text size",
-            "placeholder": ""
+            "label": "Person",
+            "select": "document",
+            "customtypes": [
+              "author"
+            ]
           }
         },
         "text_color": {
           "type": "Color",
           "config": {
-            "label": "text color",
+            "label": "primary text color",
+            "placeholder": ""
+          }
+        },
+        "secondary_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "secondary text color",
             "placeholder": ""
           }
         },

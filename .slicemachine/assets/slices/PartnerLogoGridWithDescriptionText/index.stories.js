@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"logo":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1491975474562-1f4e30bc9468"},"description":[{"type":"paragraph","text":"Reprehenderit tempor mollit minim sit nisi enim eiusmod sint mollit. Id labore enim exercitation sint et anim mollit anim duis pariatur occaecat aute adipisicing.","spans":[]}],"link_text":"morning","link":{"link_type":"Web","url":"http://twitter.com"}}],"primary":{"background_color":"#a5f079"},"slice_type":"partner_logo_grid_with_description_text","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"logo":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587653915936-5623ea0b949a"},"description":[{"type":"paragraph","text":"Nostrud voluptate elit anim ipsum reprehenderit in nisi labore. Excepteur nulla aliqua ea et eiusmod veniam duis exercitation adipisicing nulla irure labore quis id. Cupidatat officia laborum ut quis aliquip magna ipsum duis nulla ad labore amet amet.","spans":[]}],"link_text":"face","link":{"link_type":"Web","url":"http://google.com"}}],"primary":{"background_color":"#939efc"},"slice_type":"partner_logo_grid_with_description_text","id":"_Default"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

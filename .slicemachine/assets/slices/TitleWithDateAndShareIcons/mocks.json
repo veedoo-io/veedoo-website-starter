@@ -9,18 +9,18 @@
       "title": [
         {
           "type": "paragraph",
-          "text": "Tempor veniam ullamco do proident voluptate ea exercitation excepteur qui ullamco. Nulla laboris occaecat commodo sunt duis consectetur excepteur est cillum aliqua amet pariatur eiusmod aliquip aute.",
+          "text": "Consectetur commodo anim nisi cillum culpa exercitation pariatur nisi. Occaecat Lorem proident ullamco aliqua excepteur ad cupidatat occaecat sint fugiat consequat enim elit fugiat do.",
           "spans": []
         }
       ],
-      "date": "2021-07-30",
-      "text_size": 28,
-      "text_color": "#157deb",
-      "background_color": "#af223a",
-      "margin_top": 31,
-      "margin_right": 2,
-      "margin_bottom": 5,
-      "margin_left": 75
+      "date": "2020-10-22",
+      "text_size": 63,
+      "text_color": "#dc9dc8",
+      "background_color": "#64a138",
+      "margin_top": 47,
+      "margin_right": 47,
+      "margin_bottom": 71,
+      "margin_left": 45
     },
     "slice_type": "title_with_date_and_share_icons"
   }

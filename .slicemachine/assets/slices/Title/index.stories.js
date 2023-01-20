@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Tempor Lorem veniam proident et voluptate nulla dolor ullamco dolore laborum. Cupidatat est deserunt officia proident consectetur.","spans":[]}],"text_alignment":"left","image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"},"text_color":"#f8e0d5","background_color":"#04018f","text_size":10,"margin_top":34,"margin_right":37,"margin_bottom":43,"margin_left":30},"slice_type":"title","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Irure incididunt consequat et.","spans":[]}],"text_alignment":"left","image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1494173853739-c21f58b16055"},"text_color":"#cbf9b4","background_color":"#b79157","text_size":16,"margin_top":83,"margin_right":86,"margin_bottom":22,"margin_left":4},"slice_type":"title","id":"_Default"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

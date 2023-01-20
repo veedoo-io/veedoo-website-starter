@@ -14,12 +14,40 @@
     },
     "CallToActionWithImage": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "Testimonial": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "testimonial": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "HeaderVeedoo": {
@@ -30,7 +58,14 @@
     },
     "FooterVeedoo": {
       "default": {
-        "primary": {}
+        "primary": {
+          "footer_text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "Text": {
@@ -45,7 +80,14 @@
     },
     "AlternateGrid": {
       "default": {
-        "primary": {}
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "AtomTags": {
@@ -55,19 +97,53 @@
     },
     "ClientsSlider": {
       "default": {
-        "primary": {},
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
     "RichText": {
       "default": {
-        "primary": {}
+        "primary": {
+          "rich_text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "FaqAccordion": {
       "default": {
-        "primary": {},
-        "items": {}
+        "primary": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {
+          "question": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "answer": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "ContactFormVeedoo": {
@@ -85,7 +161,14 @@
     "PortfolioItems": {
       "default": {
         "primary": {},
-        "items": {}
+        "items": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "ContactInfo": {
@@ -100,7 +183,14 @@
     },
     "FaqAccordion2": {
       "default": {
-        "primary": {},
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
@@ -111,13 +201,39 @@
     },
     "ContactUsGrid": {
       "default": {
-        "primary": {},
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "email_title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
         "items": {}
       }
     },
     "Title": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "PostSlider": {
@@ -127,33 +243,110 @@
     },
     "PostCarousel": {
       "default": {
-        "primary": {}
+        "primary": {
+          "subtitle": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "AudioPlayerWithImage": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "name": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "TitleWithDateAndShareIcons": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "TwoColumnTextBlock": {
       "default": {
-        "primary": {}
+        "primary": {
+          "first_column_rich_text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "second_column_rich_text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "CtaWithBackgroundImage": {
       "default": {
-        "primary": {}
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
       }
     },
     "PartnerLogoGridWithDescriptionText": {
       "default": {
         "primary": {},
-        "items": {}
+        "items": {
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Person": {
+      "default": {
+        "primary": {}
       }
     }
   },
@@ -164,9 +357,23 @@
     "tag_item": {},
     "header": {},
     "footer": {},
-    "author": {},
+    "author": {
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "blog_post": {},
-    "post_category": {},
+    "post_category": {
+      "description": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "post_tag": {}
   }
 }

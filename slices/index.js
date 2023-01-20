@@ -16,6 +16,7 @@ import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
 import PartnerLogoGridWithDescriptionText from './PartnerLogoGridWithDescriptionText';
 import PartnersLogoSlider from './PartnersLogoSlider';
+import Person from './Person';
 import PortfolioItems from './PortfolioItems';
 import PostCarousel from './PostCarousel';
 import PostListing from './PostListing';
@@ -45,6 +46,7 @@ export {
 	HeroVeedoo,
 	PartnerLogoGridWithDescriptionText,
 	PartnersLogoSlider,
+	Person,
 	PortfolioItems,
 	PostCarousel,
 	PostListing,
@@ -75,6 +77,7 @@ export const components = {
 	hero_veedoo: HeroVeedoo,
 	partner_logo_grid_with_description_text: PartnerLogoGridWithDescriptionText,
 	partners_logo_slider: PartnersLogoSlider,
+	person: Person,
 	portfolio_items: PortfolioItems,
 	post_carousel: PostCarousel,
 	post_listing: PostListing,
