@@ -1,5 +1,5 @@
 <template>
-  <div >
+  <div>
     <div v-if="getHeader">
       <SliceZone
         :slices="getHeader?.data?.slices?.slice(0, 1)"

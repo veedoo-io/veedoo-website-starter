@@ -35,7 +35,7 @@ export default {
 
         classNames = classNames + ` bg-${colorName} `;
       } else {
-        classNames = classNames + ' bg-white ';
+        classNames = classNames + '  ';
       }
 
       return classNames;

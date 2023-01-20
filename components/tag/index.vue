@@ -21,7 +21,7 @@ export default {
     },
     bgColor: {
       type: String,
-      default: () => 'bg-white',
+      default: () => ' ',
     },
     textColor: {
       type: String,

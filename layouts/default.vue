@@ -1,5 +1,12 @@
 <template>
-  <main class="w-screen flex flex-col min-h-screen">
+  <main
+    :class="`w-screen flex flex-col min-h-screen  `"
+    :style="
+      getSettings?.data?.default_background_color
+        ? { backgroundColor: getSettings?.data?.default_background_color }
+        : { backgroundColor: 'white' }
+    "
+  >
     <Header />
     <div
       class="
@@ -18,3 +25,16 @@
     <Footer />
   </main>
 </template>
+
+<script>
+import { mapGetters } from 'vuex';
+
+export default {
+  data() {
+    return {};
+  },
+  computed: {
+    ...mapGetters(['getSettings']),
+  },
+};
+</script>
