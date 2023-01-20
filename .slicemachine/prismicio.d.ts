@@ -3898,6 +3898,26 @@ interface TitleWithDateAndShareIconsSliceDefaultPrimary {
      *
      */
     margin_left: prismicT.NumberField;
+    /**
+     * share icons background color field in *TitleWithDateAndShareIcons → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: title_with_date_and_share_icons.primary.share_icons_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    share_icons_background_color: prismicT.ColorField;
+    /**
+     * share icon color field in *TitleWithDateAndShareIcons → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: title_with_date_and_share_icons.primary.share_icon_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    share_icon_color: prismicT.ColorField;
 }
 /**
  * Default variation for TitleWithDateAndShareIcons Slice

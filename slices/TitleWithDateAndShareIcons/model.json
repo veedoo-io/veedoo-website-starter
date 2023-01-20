@@ -75,6 +75,20 @@
             "label": "margin left",
             "placeholder": ""
           }
+        },
+        "share_icons_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "share icons background color",
+            "placeholder": ""
+          }
+        },
+        "share_icon_color": {
+          "type": "Color",
+          "config": {
+            "label": "share icon color",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
