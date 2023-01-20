@@ -23,7 +23,7 @@
           }}
         </p>
         <div class="flex items-center gap-2.5">
-          <div>
+          <div class="hover:cursor-pointer active:scale-105">
             <svg
               width="50"
               height="50"
@@ -59,7 +59,7 @@
               </defs>
             </svg>
           </div>
-          <div>
+          <div class="hover:cursor-pointer active:scale-105">
             <svg
               width="50"
               height="50"
@@ -107,7 +107,7 @@
               </defs>
             </svg>
           </div>
-          <div>
+          <div class="hover:cursor-pointer active:scale-105">
             <svg
               width="50"
               height="50"
@@ -143,7 +143,7 @@
               </defs>
             </svg>
           </div>
-          <div>
+          <div class="hover:cursor-pointer active:scale-105">
             <svg
               width="50"
               height="50"
