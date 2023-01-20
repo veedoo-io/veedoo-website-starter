@@ -155,6 +155,7 @@ export default async () => {
     prismic: {
       endpoint: apiEndpoint,
       modern: true,
+      preview: '/preview',
       apiOptions: {
         routes: routes,
       },
