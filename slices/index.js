@@ -14,6 +14,7 @@ import FaqAccordion2 from './FaqAccordion2';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
+import PageNotFound1 from './PageNotFound1';
 import PartnerLogoGridWithDescriptionText from './PartnerLogoGridWithDescriptionText';
 import PartnersLogoSlider from './PartnersLogoSlider';
 import Person from './Person';
@@ -23,6 +24,7 @@ import PostListing from './PostListing';
 import PostSlider from './PostSlider';
 import RichText from './RichText';
 import RichTextAdvanced from './RichTextAdvanced';
+import SimpleErrorPage from './SimpleErrorPage';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
 import Title from './Title';
@@ -44,6 +46,7 @@ export {
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
+	PageNotFound1,
 	PartnerLogoGridWithDescriptionText,
 	PartnersLogoSlider,
 	Person,
@@ -53,6 +56,7 @@ export {
 	PostSlider,
 	RichText,
 	RichTextAdvanced,
+	SimpleErrorPage,
 	Tags,
 	Testimonial,
 	Title,
@@ -75,6 +79,7 @@ export const components = {
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
+	page_not_found1: PageNotFound1,
 	partner_logo_grid_with_description_text: PartnerLogoGridWithDescriptionText,
 	partners_logo_slider: PartnersLogoSlider,
 	person: Person,
@@ -84,6 +89,7 @@ export const components = {
 	post_slider: PostSlider,
 	rich_text: RichText,
 	text: RichTextAdvanced,
+	simple_error_page: SimpleErrorPage,
 	tags: Tags,
 	testimonial: Testimonial,
 	title: Title,

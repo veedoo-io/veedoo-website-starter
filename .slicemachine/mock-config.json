@@ -348,6 +348,42 @@
       "default": {
         "primary": {}
       }
+    },
+    "PageNotFound1": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "SimpleErrorPage": {
+      "default": {
+        "primary": {
+          "error_title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "message": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
     }
   },
   "_cts": {
@@ -374,6 +410,8 @@
         }
       }
     },
-    "post_tag": {}
+    "post_tag": {},
+    "page_not_found": {},
+    "error_page": {}
   }
 }

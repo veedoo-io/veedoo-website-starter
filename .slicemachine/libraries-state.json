@@ -2365,6 +2365,142 @@
           }
         }
       },
+      "page_not_found1": {
+        "library": "slices",
+        "id": "page_not_found1",
+        "name": "PageNotFound1",
+        "description": "PageNotFound1",
+        "model": {
+          "id": "page_not_found1",
+          "type": "SharedSlice",
+          "name": "PageNotFound1",
+          "description": "PageNotFound1",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "PageNotFound1",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "error title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "title_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title color",
+                    "placeholder": ""
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "message",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "message_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "message text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "go_home_button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Go Home button text",
+                    "placeholder": ""
+                  }
+                },
+                "go_home_button_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Go Home button text color",
+                    "placeholder": ""
+                  }
+                },
+                "go_home_button_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Go Home button background color",
+                    "placeholder": ""
+                  }
+                },
+                "error_code_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "error code color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Exercitation aute cupidatat dolor irure consequat adipisicing pariatur ullamco ullamco pariatur proident sunt occaecat. Excepteur adipisicing laborum quis eu consequat aute pariatur eiusmod quis non Lorem officia tempor consectetur qui.",
+                  "spans": []
+                }
+              ],
+              "title_color": "#0e8560",
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Velit aliqua dolor cupidatat ullamco culpa non fugiat in do occaecat. Non minim amet nisi exercitation duis consectetur sunt aute enim sint nostrud. Amet mollit officia veniam consectetur quis aliqua nulla est eiusmod.",
+                  "spans": []
+                }
+              ],
+              "message_background_color": "#52267f",
+              "background_color": "#bb3570",
+              "go_home_button_text": "largest",
+              "go_home_button_text_color": "#c32525",
+              "go_home_button_background_color": "#8349e7",
+              "error_code_color": "#2ecae5"
+            },
+            "slice_type": "page_not_found1"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/PageNotFound1/default/preview.png",
+            "width": 1398,
+            "height": 610
+          }
+        }
+      },
       "partner_logo_grid_with_description_text": {
         "library": "slices",
         "id": "partner_logo_grid_with_description_text",
@@ -3651,6 +3787,142 @@
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/RichTextAdvanced/default/preview.png",
             "width": 2886,
             "height": 216
+          }
+        }
+      },
+      "simple_error_page": {
+        "library": "slices",
+        "id": "simple_error_page",
+        "name": "SimpleErrorPage",
+        "description": "SimpleErrorPage",
+        "model": {
+          "id": "simple_error_page",
+          "type": "SharedSlice",
+          "name": "SimpleErrorPage",
+          "description": "SimpleErrorPage",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SimpleErrorPage",
+              "primary": {
+                "error_title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "error title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "title_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title color",
+                    "placeholder": ""
+                  }
+                },
+                "message": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "message",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "message_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "message text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "go_home_button_text": {
+                  "type": "Text",
+                  "config": {
+                    "label": "Go Home button text",
+                    "placeholder": ""
+                  }
+                },
+                "go_home_button_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Go Home button text color",
+                    "placeholder": ""
+                  }
+                },
+                "go_home_button_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "Go Home button background color",
+                    "placeholder": ""
+                  }
+                },
+                "error_code_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "error code color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "error_title": [
+                {
+                  "type": "paragraph",
+                  "text": "Consequat id veniam consectetur qui mollit. Nulla aliquip duis mollit minim officia laborum.",
+                  "spans": []
+                }
+              ],
+              "title_color": "#55723e",
+              "message": [
+                {
+                  "type": "paragraph",
+                  "text": "Ullamco est voluptate sunt laborum eiusmod.",
+                  "spans": []
+                }
+              ],
+              "message_text_color": "#3af29c",
+              "background_color": "#297f71",
+              "go_home_button_text": "ate",
+              "go_home_button_text_color": "#f7e544",
+              "go_home_button_background_color": "#18ea89",
+              "error_code_color": "#a43a5c"
+            },
+            "slice_type": "simple_error_page"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/SimpleErrorPage/default/preview.png",
+            "width": 1526,
+            "height": 1126
           }
         }
       },

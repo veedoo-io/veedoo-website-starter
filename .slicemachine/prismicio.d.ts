@@ -224,6 +224,18 @@ type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | Call
  * @typeParam Lang - Language API ID of the document.
  */
 export type BlogPostDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<BlogPostDocumentData>, "blog_post", Lang>;
+/** Content for Error Page documents */
+type ErrorPageDocumentData = Record<string, never>;
+/**
+ * Error Page document from Prismic
+ *
+ * - **API ID**: `error_page`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type ErrorPageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<ErrorPageDocumentData>, "error_page", Lang>;
 /** Content for Footer documents */
 interface FooterDocumentData {
     /**
@@ -344,6 +356,35 @@ type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | Cal
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomePageDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<HomePageDocumentData>, "home_page", Lang>;
+/** Content for Page Not Found documents */
+interface PageNotFoundDocumentData {
+    /**
+     * Slice Zone field in *Page Not Found*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<PageNotFoundDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Page Not Found → Slice Zone*
+ *
+ */
+type PageNotFoundDocumentDataSlicesSlice = PageNotFound1Slice;
+/**
+ * Page Not Found document from Prismic
+ *
+ * - **API ID**: `page_not_found`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type PageNotFoundDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 /** Content for Page documents */
 interface PageDocumentData {
     /**
@@ -642,7 +683,7 @@ type WebsiteSettingsDocumentDataSlicesSlice = never;
  * @typeParam Lang - Language API ID of the document.
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
-export type AllDocumentTypes = AuthorDocument | BlogPostDocument | FooterDocument | HeaderDocument | HomePageDocument | PageDocument | PostCategoryDocument | PostTagDocument | TagItemDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = AuthorDocument | BlogPostDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageNotFoundDocument | PageDocument | PostCategoryDocument | PostTagDocument | TagItemDocument | WebsiteSettingsDocument;
 /**
  * Primary content in AlternateGrid → Primary
  *
@@ -2574,6 +2615,125 @@ type HeroVeedooSliceVariation = HeroVeedooSliceDefault;
  */
 export type HeroVeedooSlice = prismicT.SharedSlice<"hero_veedoo", HeroVeedooSliceVariation>;
 /**
+ * Primary content in PageNotFound1 → Primary
+ *
+ */
+interface PageNotFound1SliceDefaultPrimary {
+    /**
+     * error title field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * title color field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.title_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    title_color: prismicT.ColorField;
+    /**
+     * message field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * message text color field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.message_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    message_background_color: prismicT.ColorField;
+    /**
+     * background color field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * Go Home button text field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.go_home_button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    go_home_button_text: prismicT.KeyTextField;
+    /**
+     * Go Home button text color field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.go_home_button_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    go_home_button_text_color: prismicT.ColorField;
+    /**
+     * Go Home button background color field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.go_home_button_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    go_home_button_background_color: prismicT.ColorField;
+    /**
+     * error code color field in *PageNotFound1 → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: page_not_found1.primary.error_code_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    error_code_color: prismicT.ColorField;
+}
+/**
+ * Default variation for PageNotFound1 Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `PageNotFound1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PageNotFound1SliceDefault = prismicT.SharedSliceVariation<"default", Simplify<PageNotFound1SliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *PageNotFound1*
+ *
+ */
+type PageNotFound1SliceVariation = PageNotFound1SliceDefault;
+/**
+ * PageNotFound1 Shared Slice
+ *
+ * - **API ID**: `page_not_found1`
+ * - **Description**: `PageNotFound1`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type PageNotFound1Slice = prismicT.SharedSlice<"page_not_found1", PageNotFound1SliceVariation>;
+/**
  * Primary content in PartnerLogoGridWithDescriptionText → Primary
  *
  */
@@ -3504,6 +3664,125 @@ type TextSliceVariation = TextSliceDefault;
  */
 export type TextSlice = prismicT.SharedSlice<"text", TextSliceVariation>;
 /**
+ * Primary content in SimpleErrorPage → Primary
+ *
+ */
+interface SimpleErrorPageSliceDefaultPrimary {
+    /**
+     * error title field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.error_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    error_title: prismicT.RichTextField;
+    /**
+     * title color field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.title_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    title_color: prismicT.ColorField;
+    /**
+     * message field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.message
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    message: prismicT.RichTextField;
+    /**
+     * message text color field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.message_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    message_text_color: prismicT.ColorField;
+    /**
+     * background color field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * Go Home button text field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.go_home_button_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    go_home_button_text: prismicT.KeyTextField;
+    /**
+     * Go Home button text color field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.go_home_button_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    go_home_button_text_color: prismicT.ColorField;
+    /**
+     * Go Home button background color field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.go_home_button_background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    go_home_button_background_color: prismicT.ColorField;
+    /**
+     * error code color field in *SimpleErrorPage → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: simple_error_page.primary.error_code_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    error_code_color: prismicT.ColorField;
+}
+/**
+ * Default variation for SimpleErrorPage Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SimpleErrorPage`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SimpleErrorPageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SimpleErrorPageSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *SimpleErrorPage*
+ *
+ */
+type SimpleErrorPageSliceVariation = SimpleErrorPageSliceDefault;
+/**
+ * SimpleErrorPage Shared Slice
+ *
+ * - **API ID**: `simple_error_page`
+ * - **Description**: `SimpleErrorPage`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SimpleErrorPageSlice = prismicT.SharedSlice<"simple_error_page", SimpleErrorPageSliceVariation>;
+/**
  * Primary content in Tags → Primary
  *
  */
@@ -4066,6 +4345,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PersonSliceDefaultPrimary, PersonSliceDefault, PersonSliceVariation, PersonSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
+        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, ErrorPageDocumentData, ErrorPageDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageNotFoundDocumentData, PageNotFoundDocumentDataSlicesSlice, PageNotFoundDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PageNotFound1SliceDefaultPrimary, PageNotFound1SliceDefault, PageNotFound1SliceVariation, PageNotFound1Slice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PersonSliceDefaultPrimary, PersonSliceDefault, PersonSliceVariation, PersonSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, SimpleErrorPageSliceDefaultPrimary, SimpleErrorPageSliceDefault, SimpleErrorPageSliceVariation, SimpleErrorPageSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
     }
 }

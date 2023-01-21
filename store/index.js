@@ -2,6 +2,8 @@ export const state = () => ({
   settings: null,
   header: null,
   footer: null,
+  notFoundPage: null,
+  errorPage: null,
 });
 
 export const getters = {
@@ -13,6 +15,12 @@ export const getters = {
   },
   getFooter(state) {
     return state.footer;
+  },
+  getNotFoundPage(state) {
+    return state.notFoundPage;
+  },
+  getErrorPage(state) {
+    return state.errorPage;
   },
 };
 
@@ -26,6 +34,12 @@ export const mutations = {
   setFooter(state, footer) {
     state.footer = footer;
   },
+  setNotFoundPage(state, notFoundPage) {
+    state.notFoundPage = notFoundPage;
+  },
+  setErrorPage(state, errorPage) {
+    state.errorPage = errorPage;
+  },
 };
 
 export const actions = {
@@ -35,17 +49,23 @@ export const actions = {
         $prismic.api.getSingle('website_settings'),
         $prismic.api.getSingle('header'),
         $prismic.api.getSingle('footer'),
+        $prismic.api.getSingle('page_not_found'),
+        $prismic.api.getSingle('error_page'),
       ]);
 
       let settings = promises[0];
       let header = promises[1];
       let footer = promises[2];
+      let page_not_found = promises[3];
+      let errorPage = promises[4];
 
       //console.log('footer', footer);
 
       commit('setSettings', settings || null);
       commit('setHeader', header || null);
       commit('setFooter', footer || null);
+      commit('setNotFoundPage', page_not_found || null);
+      commit('setErrorPage', errorPage || null);
     } catch (error) {
       //console.log('nuxtServerInit error');
       console.log(error);

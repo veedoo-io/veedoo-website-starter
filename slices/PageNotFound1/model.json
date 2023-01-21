@@ -1,0 +1,86 @@
+{
+  "id": "page_not_found1",
+  "type": "SharedSlice",
+  "name": "PageNotFound1",
+  "description": "PageNotFound1",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PageNotFound1",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "error title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "title color",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "message",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "message_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "message text color",
+            "placeholder": ""
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "go_home_button_text": {
+          "type": "Text",
+          "config": {
+            "label": "Go Home button text",
+            "placeholder": ""
+          }
+        },
+        "go_home_button_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "Go Home button text color",
+            "placeholder": ""
+          }
+        },
+        "go_home_button_background_color": {
+          "type": "Color",
+          "config": {
+            "label": "Go Home button background color",
+            "placeholder": ""
+          }
+        },
+        "error_code_color": {
+          "type": "Color",
+          "config": {
+            "label": "error code color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}
