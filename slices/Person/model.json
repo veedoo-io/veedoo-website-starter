@@ -11,34 +11,45 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Person",
       "primary": {
-        "person": {
-          "type": "Link",
-          "config": {
-            "label": "Person",
-            "select": "document",
-            "customtypes": [
-              "author"
-            ]
-          }
-        },
-        "text_color": {
-          "type": "Color",
-          "config": {
-            "label": "primary text color",
-            "placeholder": ""
-          }
-        },
-        "secondary_text_color": {
-          "type": "Color",
-          "config": {
-            "label": "secondary text color",
-            "placeholder": ""
-          }
-        },
         "background_color": {
           "type": "Color",
           "config": {
             "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "card_backgroundcolor": {
+          "type": "Color",
+          "config": {
+            "label": "card backgroundcolor",
+            "placeholder": ""
+          }
+        },
+        "name_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "name text color",
+            "placeholder": ""
+          }
+        },
+        "job_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "job text color",
+            "placeholder": ""
+          }
+        },
+        "description_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "description text color",
+            "placeholder": ""
+          }
+        },
+        "social_icons_color": {
+          "type": "Color",
+          "config": {
+            "label": "social icons color",
             "placeholder": ""
           }
         },
@@ -71,7 +82,18 @@
           }
         }
       },
-      "items": {},
+      "items": {
+        "person": {
+          "type": "Link",
+          "config": {
+            "label": "Person",
+            "select": "document",
+            "customtypes": [
+              "author"
+            ]
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

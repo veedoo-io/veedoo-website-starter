@@ -2872,34 +2872,45 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "Person",
               "primary": {
-                "person": {
-                  "type": "Link",
-                  "config": {
-                    "label": "Person",
-                    "select": "document",
-                    "customtypes": [
-                      "author"
-                    ]
-                  }
-                },
-                "text_color": {
-                  "type": "Color",
-                  "config": {
-                    "label": "primary text color",
-                    "placeholder": ""
-                  }
-                },
-                "secondary_text_color": {
-                  "type": "Color",
-                  "config": {
-                    "label": "secondary text color",
-                    "placeholder": ""
-                  }
-                },
                 "background_color": {
                   "type": "Color",
                   "config": {
                     "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "card_backgroundcolor": {
+                  "type": "Color",
+                  "config": {
+                    "label": "card backgroundcolor",
+                    "placeholder": ""
+                  }
+                },
+                "name_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "name text color",
+                    "placeholder": ""
+                  }
+                },
+                "job_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "job text color",
+                    "placeholder": ""
+                  }
+                },
+                "description_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "description text color",
+                    "placeholder": ""
+                  }
+                },
+                "social_icons_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "social icons color",
                     "placeholder": ""
                   }
                 },
@@ -2932,7 +2943,18 @@
                   }
                 }
               },
-              "items": {},
+              "items": {
+                "person": {
+                  "type": "Link",
+                  "config": {
+                    "label": "Person",
+                    "select": "document",
+                    "customtypes": [
+                      "author"
+                    ]
+                  }
+                }
+              },
               "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
@@ -2942,26 +2964,30 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "person": {
+                  "id": "mock_document_id",
+                  "link_type": "Document",
+                  "type": "author",
+                  "tags": [],
+                  "lang": "en-us",
+                  "slug": null,
+                  "first_publication_date": "1970-01-01T00:00:01+0000",
+                  "last_publication_date": "1970-01-01T01:00:00+0000"
+                }
+              }
             ],
             "primary": {
-              "person": {
-                "id": "mock_document_id",
-                "link_type": "Document",
-                "type": "author",
-                "tags": [],
-                "lang": "en-us",
-                "slug": null,
-                "first_publication_date": "1970-01-01T00:00:01+0000",
-                "last_publication_date": "1970-01-01T01:00:00+0000"
-              },
-              "text_color": "#cd3ad3",
-              "secondary_text_color": "#17c344",
-              "background_color": "#8c3277",
-              "margin_top": 80,
-              "margin_right": 1,
-              "margin_bottom": 13,
-              "margin_left": 76
+              "background_color": "#814fb7",
+              "card_backgroundcolor": "#bd61a9",
+              "name_text_color": "#7c168e",
+              "job_text_color": "#ce8e01",
+              "description_text_color": "#5e7ac8",
+              "social_icons_color": "#460946",
+              "margin_top": 70,
+              "margin_right": 60,
+              "margin_bottom": 24,
+              "margin_left": 47
             },
             "slice_type": "person"
           }
@@ -2970,7 +2996,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/Person/default/preview.png",
+            "width": 2154,
+            "height": 950
+          }
+        }
       },
       "portfolio_items": {
         "library": "slices",

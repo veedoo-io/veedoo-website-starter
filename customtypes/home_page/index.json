@@ -84,6 +84,9 @@
             },
             "partner_logo_grid_with_description_text": {
               "type": "SharedSlice"
+            },
+            "person": {
+              "type": "SharedSlice"
             }
           }
         }

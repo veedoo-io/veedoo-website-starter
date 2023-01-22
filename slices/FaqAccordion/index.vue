@@ -9,14 +9,11 @@
         :class="getDescriptionClasses()"
         :field="slice.primary.description"
       />
-      <div :class="getQuestionsContainer()">
-        <div :style="{ maxWidth: width }" :class="getImageContainer()">
+      <div :class="getQuestionsContainer()" :style="{ maxWidth: width }">
+        <div :class="getImageContainer()">
           <PrismicImage :field="slice.primary.image" class="" />
         </div>
-        <div
-          :style="{ maxWidth: width }"
-          class="flex-1 flex flex-col gap-6 w-full"
-        >
+        <div class="w-fit flex-1 flex flex-col gap-6">
           <div
             v-if="slice.items?.length > 0"
             v-for="(item, i) in slice.items"
@@ -176,7 +173,7 @@ export default {
     let getImageContainer = function () {
       let classes = 'hidden';
       if (this.slice.variation == 'withImage') {
-        classes = 'w-1/2 mx-auto';
+        classes = 'mx-auto flex justify-end';
       }
       return classes;
     };

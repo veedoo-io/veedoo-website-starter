@@ -346,7 +346,8 @@
     },
     "Person": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "PageNotFound1": {
