@@ -385,6 +385,15 @@
           }
         }
       }
+    },
+    "Blurb": {},
+    "BlurbHorizontal": {
+      "blurbVertical": {
+        "primary": {}
+      },
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

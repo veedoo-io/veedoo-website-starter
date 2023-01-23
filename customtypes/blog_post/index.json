@@ -168,6 +168,9 @@
             },
             "person": {
               "type": "SharedSlice"
+            },
+            "blurb": {
+              "type": "SharedSlice"
             }
           }
         }

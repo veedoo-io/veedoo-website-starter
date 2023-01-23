@@ -15,14 +15,26 @@
     :style="`background-color: ${backgroundColor}`"
   >
     <div
-      class="flex-[0_0_98%] lg:flex-[0_0_48%] flex max-lg:justify-center gap-10"
+      class="
+        flex-[0_0_98%]
+        lg:flex-[0_0_48%]
+        flex
+        max-sm:flex-col max-sm:items-center max-lg:justify-center
+        gap-10
+        items-center
+      "
       v-for="(item, i) in slice.items"
       :key="`slice-item-${i}`"
     >
       <PrismicImage class="w-[195px] h-fit" :field="item.logo" />
-      <div class="flex flex-col max-w-[320px]">
+      <div
+        class="
+          flex flex-col
+          max-w-[320px] max-sm:items-center max-sm:justify-center
+        "
+      >
         <PrismicRichText
-          class="text-[14px] text-black/60 mb-2"
+          class="text-[14px] text-black/60 mb-2 max-sm:text-center"
           :field="item.description"
         />
         <PrismicLink class="underline text-[#2060b7]/60" :field="item.link">{{

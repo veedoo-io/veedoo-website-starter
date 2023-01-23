@@ -373,6 +373,310 @@
         },
         "screenshotPaths": {}
       },
+      "blurb": {
+        "library": "slices",
+        "id": "blurb",
+        "name": "BlurbHorizontal",
+        "description": "Blurb",
+        "model": {
+          "id": "blurb",
+          "type": "SharedSlice",
+          "name": "BlurbHorizontal",
+          "description": "Blurb",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Blurb",
+              "primary": {
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "title_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title color",
+                    "placeholder": ""
+                  }
+                },
+                "description_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "description color",
+                    "placeholder": ""
+                  }
+                },
+                "blurb_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "blurb background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "vertical",
+              "name": "vertical",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Blurb",
+              "primary": {
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "title_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title color",
+                    "placeholder": ""
+                  }
+                },
+                "description_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "description color",
+                    "placeholder": ""
+                  }
+                },
+                "blurb_background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "blurb background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2"
+                },
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Veniam in anim labore occaecat aliquip reprehenderit.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "In sunt adipisicing ipsum laboris esse mollit. Pariatur laborum voluptate incididunt est aliqua mollit aute enim ea duis. Excepteur irure Lorem nostrud fugiat.",
+                    "spans": []
+                  }
+                ],
+                "title_color": "#3a3d47",
+                "description_color": "#1511be",
+                "blurb_background_color": "#21620d"
+              }
+            ],
+            "primary": {
+              "margin_top": 53,
+              "margin_right": 47,
+              "margin_bottom": 34,
+              "margin_left": 64,
+              "background_color": "#9a6e15"
+            },
+            "slice_type": "blurb"
+          },
+          "vertical": {
+            "variation": "vertical",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+                },
+                "title": [
+                  {
+                    "type": "paragraph",
+                    "text": "Deserunt aliqua mollit sit ullamco id aute occaecat laboris duis ad do cupidatat ea consectetur amet. Magna consectetur ullamco anim nulla minim et sunt duis. Mollit nulla laboris consectetur eiusmod in ullamco voluptate id veniam cupidatat sunt labore consectetur.",
+                    "spans": []
+                  }
+                ],
+                "description": [
+                  {
+                    "type": "paragraph",
+                    "text": "Irure dolor id elit occaecat dolore commodo amet sunt consequat minim officia ex fugiat culpa. Dolor cillum deserunt ex esse et id qui culpa adipisicing velit labore minim excepteur excepteur.",
+                    "spans": []
+                  }
+                ],
+                "title_color": "#c99fed",
+                "description_color": "#10031c",
+                "blurb_background_color": "#00e22c"
+              }
+            ],
+            "primary": {
+              "margin_top": 9,
+              "margin_right": 58,
+              "margin_bottom": 61,
+              "margin_left": 40,
+              "background_color": "#75bf99"
+            },
+            "slice_type": "blurb"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/BlurbHorizontal/default/preview.png",
+            "width": 1720,
+            "height": 694
+          },
+          "vertical": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/BlurbHorizontal/vertical/preview.png",
+            "width": 2378,
+            "height": 988
+          }
+        }
+      },
       "call_to_action_with_image": {
         "library": "slices",
         "id": "call_to_action_with_image",

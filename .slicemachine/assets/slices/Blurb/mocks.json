@@ -1,0 +1,26 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Weather",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Dolor est excepteur laboris minim tempor nostrud occaecat duis dolor. Mollit reprehenderit Lorem ea mollit laboris proident est non officia laborum dolore mollit proident esse.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "blurb"
+  }
+]

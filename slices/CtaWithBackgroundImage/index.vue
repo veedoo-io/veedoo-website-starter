@@ -1,12 +1,12 @@
 <template>
   <section
-    class="w-full h-fit my-2.5 md:p-10 xl:p-40 flex flex-col gap-10"
+    class="w-full h-fit my-2.5 p-5 md:p-10 xl:p-40 flex flex-col gap-10"
     :style="
       backgroundImageUrl
         ? {
             backgroundRepeat: 'no-repeat',
             backgroundSize: '100% 100%',
-            backgroundImage: 'url('+backgroundImageUrl+')',
+            backgroundImage: 'url(' + backgroundImageUrl + ')',
           }
         : {}
     "
