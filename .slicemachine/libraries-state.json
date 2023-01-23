@@ -2669,6 +2669,156 @@
           }
         }
       },
+      "image": {
+        "library": "slices",
+        "id": "image",
+        "name": "Image",
+        "description": "Image",
+        "model": {
+          "id": "image",
+          "type": "SharedSlice",
+          "name": "Image",
+          "description": "Image",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Image",
+              "primary": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "rounded": {
+                  "type": "Select",
+                  "config": {
+                    "label": "rounded",
+                    "placeholder": "",
+                    "options": [
+                      "radius 0",
+                      "radius 5",
+                      "radius 20",
+                      "circle"
+                    ],
+                    "default_value": "radius 0"
+                  }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "wdith": {
+                  "type": "Number",
+                  "config": {
+                    "label": "wdith",
+                    "placeholder": "Leave empty for full width"
+                  }
+                },
+                "height": {
+                  "type": "Number",
+                  "config": {
+                    "label": "height",
+                    "placeholder": "leave empty for full height"
+                  }
+                },
+                "alignment": {
+                  "type": "Select",
+                  "config": {
+                    "label": "alignment",
+                    "placeholder": "",
+                    "options": [
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "default_value": "left"
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "image": {
+                "dimensions": {
+                  "width": 900,
+                  "height": 500
+                },
+                "alt": null,
+                "copyright": null,
+                "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+              },
+              "rounded": "radius 0",
+              "margin_top": 27,
+              "margin_right": 54,
+              "margin_bottom": 7,
+              "margin_left": 42,
+              "background_color": "#379e3d",
+              "wdith": 84,
+              "height": 37,
+              "alignment": "center"
+            },
+            "slice_type": "image"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/Image/default/preview.png",
+            "width": 1372,
+            "height": 776
+          }
+        }
+      },
       "page_not_found1": {
         "library": "slices",
         "id": "page_not_found1",
@@ -4262,6 +4412,78 @@
           }
         }
       },
+      "social_follow_icons": {
+        "library": "slices",
+        "id": "social_follow_icons",
+        "name": "SocialFollowIcons",
+        "description": "SocialFollowIcons",
+        "model": {
+          "id": "social_follow_icons",
+          "type": "SharedSlice",
+          "name": "SocialFollowIcons",
+          "description": "SocialFollowIcons",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "SocialFollowIcons",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your product"
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Start",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Non eu ex ad aliquip ipsum enim consequat reprehenderit consectetur dolor reprehenderit sit excepteur sint. Mollit anim ut aliqua aliqua tempor irure ex amet veniam occaecat ipsum aliquip cupidatat in commodo.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "social_follow_icons"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
+      },
       "tags": {
         "library": "slices",
         "id": "tags",
@@ -4786,6 +5008,19 @@
                     "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
                   }
                 },
+                "title_alignment": {
+                  "type": "Select",
+                  "config": {
+                    "label": "title alignment",
+                    "placeholder": "",
+                    "options": [
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "default_value": "left"
+                  }
+                },
                 "date": {
                   "type": "Date",
                   "config": {
@@ -4873,20 +5108,21 @@
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Esse enim adipisicing commodo eiusmod proident dolor do reprehenderit quis laborum eiusmod minim cillum. Ad consectetur duis ad fugiat. Culpa velit incididunt sit reprehenderit sint velit.",
+                  "text": "Et pariatur ut Lorem dolor est mollit irure quis sint voluptate mollit eiusmod sunt eiusmod.",
                   "spans": []
                 }
               ],
-              "date": "2020-01-27",
-              "text_size": 97,
-              "text_color": "#24f3cf",
-              "background_color": "#052df9",
-              "margin_top": 65,
-              "margin_right": 50,
-              "margin_bottom": 41,
-              "margin_left": 76,
-              "share_icons_background_color": "#0f144d",
-              "share_icon_color": "#28aa63"
+              "title_alignment": "left",
+              "date": "2019-04-21",
+              "text_size": 25,
+              "text_color": "#9deec1",
+              "background_color": "#7b6c41",
+              "margin_top": 18,
+              "margin_right": 72,
+              "margin_bottom": 45,
+              "margin_left": 91,
+              "share_icons_background_color": "#0a9021",
+              "share_icon_color": "#f4efe1"
             },
             "slice_type": "title_with_date_and_share_icons"
           }

@@ -1,0 +1,26 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Start",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Non eu ex ad aliquip ipsum enim consequat reprehenderit consectetur dolor reprehenderit sit excepteur sint. Mollit anim ut aliqua aliqua tempor irure ex amet veniam occaecat ipsum aliquip cupidatat in commodo.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "social_follow_icons"
+  }
+]

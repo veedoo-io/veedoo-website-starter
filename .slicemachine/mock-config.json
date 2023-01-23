@@ -394,7 +394,13 @@
       "default": {
         "primary": {}
       }
-    }
+    },
+    "Image": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "SocialFollowIcons": {}
   },
   "_cts": {
     "page": {},

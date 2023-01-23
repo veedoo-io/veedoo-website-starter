@@ -15,6 +15,7 @@ import FaqAccordion2 from './FaqAccordion2';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
+import Image from './Image';
 import PageNotFound1 from './PageNotFound1';
 import PartnerLogoGridWithDescriptionText from './PartnerLogoGridWithDescriptionText';
 import PartnersLogoSlider from './PartnersLogoSlider';
@@ -26,6 +27,7 @@ import PostSlider from './PostSlider';
 import RichText from './RichText';
 import RichTextAdvanced from './RichTextAdvanced';
 import SimpleErrorPage from './SimpleErrorPage';
+import SocialFollowIcons from './SocialFollowIcons';
 import Tags from './Tags';
 import Testimonial from './Testimonial';
 import Title from './Title';
@@ -48,6 +50,7 @@ export {
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
+	Image,
 	PageNotFound1,
 	PartnerLogoGridWithDescriptionText,
 	PartnersLogoSlider,
@@ -59,6 +62,7 @@ export {
 	RichText,
 	RichTextAdvanced,
 	SimpleErrorPage,
+	SocialFollowIcons,
 	Tags,
 	Testimonial,
 	Title,
@@ -82,6 +86,7 @@ export const components = {
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
+	image: Image,
 	page_not_found1: PageNotFound1,
 	partner_logo_grid_with_description_text: PartnerLogoGridWithDescriptionText,
 	partners_logo_slider: PartnersLogoSlider,
@@ -93,6 +98,7 @@ export const components = {
 	rich_text: RichText,
 	text: RichTextAdvanced,
 	simple_error_page: SimpleErrorPage,
+	social_follow_icons: SocialFollowIcons,
 	tags: Tags,
 	testimonial: Testimonial,
 	title: Title,

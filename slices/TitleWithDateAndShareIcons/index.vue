@@ -7,8 +7,19 @@
       <PrismicRichText
         :style="`font-size:${textSize};color:${textColor}; `"
         :field="slice.primary.title"
+        :class="` flex ${aligment} items-center gap-2`"
       />
-      <div class="w-full h-fit mt-5 flex items-center justify-between">
+      <div
+        class="
+          w-full
+          h-fit
+          mt-5
+          flex
+          items-center
+          justify-between
+          max-sm:flex-col max-sm:items-start max-sm:gap-2
+        "
+      >
         <p
           class="text-[16px]"
           :style="`color:${textColor}; `"
@@ -260,6 +271,16 @@ export default {
       ? this.slice.primary.share_icon_color
       : '#FFFFFF';
 
+    let aligment = 'justify-start';
+    switch (this.slice.primary.alignment) {
+      case 'center':
+        aligment = 'justify-center';
+        break;
+      case 'right':
+        aligment = 'justify-end';
+        break;
+    }
+
     return {
       marginTop,
       marginBottom,
@@ -270,6 +291,7 @@ export default {
       backgroundColor,
       shareIconBackgroundColor,
       shareIconColor,
+      aligment,
     };
   },
 };

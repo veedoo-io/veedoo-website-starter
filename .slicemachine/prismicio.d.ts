@@ -213,7 +213,7 @@ interface BlogPostDocumentData {
  * Slice for *blog Post → Slice Zone*
  *
  */
-type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice;
+type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice | ImageSlice;
 /**
  * blog Post document from Prismic
  *
@@ -2908,6 +2908,137 @@ type HeroVeedooSliceVariation = HeroVeedooSliceDefault;
  */
 export type HeroVeedooSlice = prismicT.SharedSlice<"hero_veedoo", HeroVeedooSliceVariation>;
 /**
+ * Primary content in Image → Primary
+ *
+ */
+interface ImageSliceDefaultPrimary {
+    /**
+     * image field in *Image → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
+     * rounded field in *Image → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: radius 0
+     * - **API ID Path**: image.primary.rounded
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    rounded: prismicT.SelectField<"radius 0" | "radius 5" | "radius 20" | "circle", "filled">;
+    /**
+     * margin top field in *Image → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin right field in *Image → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.margin_right
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_right: prismicT.NumberField;
+    /**
+     * margin bottom field in *Image → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
+    /**
+     * margin left field in *Image → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.margin_left
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_left: prismicT.NumberField;
+    /**
+     * background color field in *Image → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: image.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+    /**
+     * wdith field in *Image → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: Leave empty for full width
+     * - **API ID Path**: image.primary.wdith
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    wdith: prismicT.NumberField;
+    /**
+     * height field in *Image → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: leave empty for full height
+     * - **API ID Path**: image.primary.height
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    height: prismicT.NumberField;
+    /**
+     * alignment field in *Image → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: left
+     * - **API ID Path**: image.primary.alignment
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    alignment: prismicT.SelectField<"left" | "center" | "right", "filled">;
+}
+/**
+ * Default variation for Image Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Image`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ImageSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *Image*
+ *
+ */
+type ImageSliceVariation = ImageSliceDefault;
+/**
+ * Image Shared Slice
+ *
+ * - **API ID**: `image`
+ * - **Description**: `Image`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type ImageSlice = prismicT.SharedSlice<"image", ImageSliceVariation>;
+/**
  * Primary content in PageNotFound1 → Primary
  *
  */
@@ -4112,6 +4243,55 @@ type SimpleErrorPageSliceVariation = SimpleErrorPageSliceDefault;
  */
 export type SimpleErrorPageSlice = prismicT.SharedSlice<"simple_error_page", SimpleErrorPageSliceVariation>;
 /**
+ * Primary content in SocialFollowIcons → Primary
+ *
+ */
+interface SocialFollowIconsSliceDefaultPrimary {
+    /**
+     * Title field in *SocialFollowIcons → Primary*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: This is where it all begins...
+     * - **API ID Path**: social_follow_icons.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.TitleField;
+    /**
+     * Description field in *SocialFollowIcons → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: A nice description of your product
+     * - **API ID Path**: social_follow_icons.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+}
+/**
+ * Default variation for SocialFollowIcons Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `SocialFollowIcons`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SocialFollowIconsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SocialFollowIconsSliceDefaultPrimary>, never>;
+/**
+ * Slice variation for *SocialFollowIcons*
+ *
+ */
+type SocialFollowIconsSliceVariation = SocialFollowIconsSliceDefault;
+/**
+ * SocialFollowIcons Shared Slice
+ *
+ * - **API ID**: `social_follow_icons`
+ * - **Description**: `SocialFollowIcons`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type SocialFollowIconsSlice = prismicT.SharedSlice<"social_follow_icons", SocialFollowIconsSliceVariation>;
+/**
  * Primary content in Tags → Primary
  *
  */
@@ -4427,6 +4607,17 @@ interface TitleWithDateAndShareIconsSliceDefaultPrimary {
      */
     title: prismicT.RichTextField;
     /**
+     * title alignment field in *TitleWithDateAndShareIcons → Primary*
+     *
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: left
+     * - **API ID Path**: title_with_date_and_share_icons.primary.title_alignment
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
+     *
+     */
+    title_alignment: prismicT.SelectField<"left" | "center" | "right", "filled">;
+    /**
      * date field in *TitleWithDateAndShareIcons → Primary*
      *
      * - **Field Type**: Date
@@ -4674,6 +4865,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, ErrorPageDocumentData, ErrorPageDocumentDataSlicesSlice, ErrorPageDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageNotFoundDocumentData, PageNotFoundDocumentDataSlicesSlice, PageNotFoundDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, BlurbSliceDefaultPrimary, BlurbSliceDefaultItem, BlurbSliceDefault, BlurbSliceVerticalPrimary, BlurbSliceVerticalItem, BlurbSliceVertical, BlurbSliceVariation, BlurbSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, PageNotFound1SliceDefaultPrimary, PageNotFound1SliceDefault, PageNotFound1SliceVariation, PageNotFound1Slice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PersonSliceDefaultPrimary, PersonSliceDefaultItem, PersonSliceDefault, PersonSliceVariation, PersonSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, SimpleErrorPageSliceDefaultPrimary, SimpleErrorPageSliceDefault, SimpleErrorPageSliceVariation, SimpleErrorPageSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
+        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, ErrorPageDocumentData, ErrorPageDocumentDataSlicesSlice, ErrorPageDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageNotFoundDocumentData, PageNotFoundDocumentDataSlicesSlice, PageNotFoundDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, BlurbSliceDefaultPrimary, BlurbSliceDefaultItem, BlurbSliceDefault, BlurbSliceVerticalPrimary, BlurbSliceVerticalItem, BlurbSliceVertical, BlurbSliceVariation, BlurbSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, PageNotFound1SliceDefaultPrimary, PageNotFound1SliceDefault, PageNotFound1SliceVariation, PageNotFound1Slice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PersonSliceDefaultPrimary, PersonSliceDefaultItem, PersonSliceDefault, PersonSliceVariation, PersonSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, SimpleErrorPageSliceDefaultPrimary, SimpleErrorPageSliceDefault, SimpleErrorPageSliceVariation, SimpleErrorPageSlice, SocialFollowIconsSliceDefaultPrimary, SocialFollowIconsSliceDefault, SocialFollowIconsSliceVariation, SocialFollowIconsSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
     }
 }

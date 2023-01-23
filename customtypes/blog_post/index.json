@@ -171,6 +171,9 @@
             },
             "blurb": {
               "type": "SharedSlice"
+            },
+            "image": {
+              "type": "SharedSlice"
             }
           }
         }
