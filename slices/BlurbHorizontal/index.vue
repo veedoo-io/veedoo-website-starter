@@ -9,7 +9,7 @@
         ${
           slice.variation == 'vertical'
             ? ' justify-between  flex-wrap'
-            : ' gap-[46px] max-[980px]:justify-center flex-col sm:flex-wrap'
+            : ' gap-[46px] max-[980px]:justify-center flex-col sm:flex-row sm:flex-wrap'
         }
 
 
