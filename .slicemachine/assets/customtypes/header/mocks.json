@@ -1,16 +1,98 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "header",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "slices": []
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "header_veedoo$566ee516-58d9-4077-b15d-0fd2f4c97656",
+        "name": "header_veedoo",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "logo": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+                "width": 4000,
+                "height": 4000
+              },
+              "url": "https://images.unsplash.com/photo-1606248897732-2c5ffe759c04",
+              "width": 4000,
+              "height": 4000,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "main_link_text": {
+              "__TYPE__": "FieldContent",
+              "value": "careful",
+              "type": "Text"
+            },
+            "main_link_url": {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://slicemachine.dev"
+              }
+            },
+            "background_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#e44587",
+              "type": "Color"
+            },
+            "text_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#c4edb4",
+              "type": "Color"
+            },
+            "menu_label": {
+              "__TYPE__": "FieldContent",
+              "value": "dog",
+              "type": "Text"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": [
+                [
+                  "menu_item_type",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "Menu",
+                    "type": "Select"
+                  }
+                ],
+                [
+                  "menu_text",
+                  {
+                    "__TYPE__": "FieldContent",
+                    "value": "sheet",
+                    "type": "Text"
+                  }
+                ],
+                [
+                  "menu_link",
+                  {
+                    "__TYPE__": "LinkContent",
+                    "value": {
+                      "__TYPE__": "ExternalLink",
+                      "url": "http://google.com"
+                    }
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      }
+    ]
   }
 }

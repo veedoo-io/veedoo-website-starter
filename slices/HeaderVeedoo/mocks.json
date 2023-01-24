@@ -1,0 +1,89 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "logo": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+          "width": 3810,
+          "height": 5715
+        },
+        "url": "https://images.unsplash.com/photo-1587614295999-6c1c13675117",
+        "width": 3810,
+        "height": 5715,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "main_link_text": {
+        "__TYPE__": "FieldContent",
+        "value": "tail",
+        "type": "Text"
+      },
+      "main_link_url": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#8a497c",
+        "type": "Color"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#0e89a9",
+        "type": "Color"
+      },
+      "menu_label": {
+        "__TYPE__": "FieldContent",
+        "value": "sunlight",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "menu_item_type",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "Menu",
+              "type": "Select"
+            }
+          ],
+          [
+            "menu_text",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "laid",
+              "type": "Text"
+            }
+          ],
+          [
+            "menu_link",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "https://prismic.io"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

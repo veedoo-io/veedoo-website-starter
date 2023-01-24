@@ -1,0 +1,80 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Culpa ipsum non elit deserunt. Tempor aute velit eu irure in voluptate ipsum sint voluptate eiusmod cupidatat."
+            }
+          }
+        ]
+      },
+      "title_alignment": {
+        "__TYPE__": "FieldContent",
+        "value": "left",
+        "type": "Select"
+      },
+      "date": {
+        "__TYPE__": "FieldContent",
+        "type": "Date",
+        "value": "2012-06-15"
+      },
+      "text_size": {
+        "__TYPE__": "FieldContent",
+        "value": "39",
+        "type": "Number"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#1851a8",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#22df64",
+        "type": "Color"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "86",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "20",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "82",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "35",
+        "type": "Number"
+      },
+      "share_icons_background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#c9d251",
+        "type": "Color"
+      },
+      "share_icon_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#600155",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

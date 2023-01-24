@@ -1,0 +1,230 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "71",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "85",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "31",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "22",
+        "type": "Number"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#32b613",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+                "width": 3424,
+                "height": 3424
+              },
+              "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
+              "width": 3424,
+              "height": 3424,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Aute amet in ullamco deserunt cupidatat ad voluptate anim laboris id. Velit non nisi eiusmod magna."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "description",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Lorem magna dolore irure eiusmod laboris eu incididunt fugiat ullamco fugiat. Quis exercitation cillum tempor sit ullamco nisi incididunt qui culpa laborum elit. Et veniam mollit reprehenderit commodo aute ex proident."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "title_color",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "#643ec4",
+              "type": "Color"
+            }
+          ],
+          [
+            "description_color",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "#e88e2f",
+              "type": "Color"
+            }
+          ],
+          [
+            "blurb_background_color",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "#d679e7",
+              "type": "Color"
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "vertical",
+    "primary": {
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "34",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "18",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "57",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "44",
+        "type": "Number"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#43075c",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "image",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+                "width": 3648,
+                "height": 4560
+              },
+              "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
+              "width": 3648,
+              "height": 4560,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ],
+          [
+            "title",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Pariatur Lorem ex esse enim culpa ullamco qui excepteur do nisi dolor proident velit fugiat dolore."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "description",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Labore commodo sunt magna aliquip officia exercitation. Eu nisi reprehenderit adipisicing magna ipsum officia enim amet commodo cupidatat. Est ea incididunt voluptate enim laborum ullamco in Lorem voluptate culpa ex anim."
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "title_color",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "#d2810e",
+              "type": "Color"
+            }
+          ],
+          [
+            "description_color",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "#43239c",
+              "type": "Color"
+            }
+          ],
+          [
+            "blurb_background_color",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "#6ddee0",
+              "type": "Color"
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,71 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "first_column_rich_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Eu do amet duis quis irure laboris fugiat labore culpa. Magna do dolore reprehenderit proident excepteur aliqua proident irure irure consectetur sint commodo incididunt ipsum."
+            }
+          }
+        ]
+      },
+      "second_column_rich_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Cupidatat dolor minim anim excepteur."
+            }
+          }
+        ]
+      },
+      "text_size": {
+        "__TYPE__": "FieldContent",
+        "value": "76",
+        "type": "Number"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#0cb8db",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#57b9d1",
+        "type": "Color"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "90",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "89",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "96",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "26",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

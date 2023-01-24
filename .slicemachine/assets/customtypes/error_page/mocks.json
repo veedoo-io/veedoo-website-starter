@@ -1,16 +1,80 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "error_page",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "slices": []
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "simple_error_page$b4c99eec-9b17-43f2-b9f2-c058cbadb51a",
+        "name": "simple_error_page",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "error_title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ad cupidatat ipsum anim officia excepteur labore veniam enim id laborum ullamco consequat."
+                  }
+                }
+              ]
+            },
+            "title_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#a45d26",
+              "type": "Color"
+            },
+            "message": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Tempor aliqua reprehenderit proident anim ad adipisicing esse adipisicing sit non laborum. Qui cupidatat ex aute occaecat culpa quis consequat officia do. Veniam dolor amet exercitation proident sint voluptate dolor aliqua quis sit elit dolor."
+                  }
+                }
+              ]
+            },
+            "message_text_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#5c5f81",
+              "type": "Color"
+            },
+            "background_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#858563",
+              "type": "Color"
+            },
+            "go_home_button_text": {
+              "__TYPE__": "FieldContent",
+              "value": "frequently",
+              "type": "Text"
+            },
+            "go_home_button_text_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#383deb",
+              "type": "Color"
+            },
+            "go_home_button_background_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#a42a12",
+              "type": "Color"
+            },
+            "error_code_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#5fe44b",
+              "type": "Color"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
   }
 }

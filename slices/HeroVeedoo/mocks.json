@@ -1,0 +1,44 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "FieldContent",
+        "value": "service",
+        "type": "Text"
+      },
+      "intro": {
+        "__TYPE__": "FieldContent",
+        "value": "piano",
+        "type": "Text"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#77c747",
+        "type": "Color"
+      },
+      "intro_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#9b81aa",
+        "type": "Color"
+      },
+      "title_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#5d4f5c",
+        "type": "Color"
+      },
+      "title_animation_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#92e372",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

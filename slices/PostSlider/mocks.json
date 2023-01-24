@@ -1,0 +1,50 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "primary_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#26cf5f",
+        "type": "Color"
+      },
+      "secondary_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#3d9947",
+        "type": "Color"
+      },
+      "read_more_text": {
+        "__TYPE__": "FieldContent",
+        "value": "location",
+        "type": "Text"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "tags",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ],
+          [
+            "categories",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

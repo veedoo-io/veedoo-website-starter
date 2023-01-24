@@ -1,0 +1,111 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "mailto_email": {
+        "__TYPE__": "FieldContent",
+        "value": "represent",
+        "type": "Text"
+      },
+      "image": {
+        "__TYPE__": "ImageContent",
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+          "width": 3168,
+          "height": 4752
+        },
+        "url": "https://images.unsplash.com/photo-1589321578146-4c1ba445cc88",
+        "width": 3168,
+        "height": 4752,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "thumbnails": {}
+      },
+      "form_title": {
+        "__TYPE__": "FieldContent",
+        "value": "entirely",
+        "type": "Text"
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Et in incididunt incididunt commodo officia veniam mollit anim incididunt dolore anim consectetur deserunt duis minim."
+            }
+          }
+        ]
+      },
+      "name_title": {
+        "__TYPE__": "FieldContent",
+        "value": "settlers",
+        "type": "Text"
+      },
+      "name_placeholder": {
+        "__TYPE__": "FieldContent",
+        "value": "occur",
+        "type": "Text"
+      },
+      "email_title": {
+        "__TYPE__": "FieldContent",
+        "value": "somebody",
+        "type": "Text"
+      },
+      "email_placeholder": {
+        "__TYPE__": "FieldContent",
+        "value": "where",
+        "type": "Text"
+      },
+      "message_title": {
+        "__TYPE__": "FieldContent",
+        "value": "cave",
+        "type": "Text"
+      },
+      "message_placeholder": {
+        "__TYPE__": "FieldContent",
+        "value": "eleven",
+        "type": "Text"
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "tin",
+        "type": "Text"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#972ecb",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#c345b8",
+        "type": "Color"
+      },
+      "button_background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#31bee2",
+        "type": "Color"
+      },
+      "text_background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#d097d3",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

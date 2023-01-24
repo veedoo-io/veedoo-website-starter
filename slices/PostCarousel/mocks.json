@@ -1,0 +1,78 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "subtitle": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Aliqua velit elit consequat culpa voluptate reprehenderit sint pariatur aliquip exercitation non fugiat cupidatat duis. Dolore ullamco magna enim in dolore officia do eiusmod commodo in minim excepteur."
+            }
+          }
+        ]
+      },
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Fugiat commodo aute consequat laboris magna elit cupidatat pariatur excepteur ea. Anim laborum adipisicing nulla est fugiat ipsum. Mollit cupidatat est incididunt cupidatat sint magna mollit."
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Magna minim qui dolor aute incididunt. Anim magna proident pariatur. Veniam occaecat cupidatat fugiat esse minim do esse culpa."
+            }
+          }
+        ]
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#c49679",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#2eb582",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "tags",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ],
+          [
+            "categories",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

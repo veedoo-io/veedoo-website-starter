@@ -1,0 +1,75 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#1848d0",
+        "type": "Color"
+      },
+      "card_backgroundcolor": {
+        "__TYPE__": "FieldContent",
+        "value": "#9e1b13",
+        "type": "Color"
+      },
+      "name_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#66189a",
+        "type": "Color"
+      },
+      "job_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#b7e02b",
+        "type": "Color"
+      },
+      "description_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#6af761",
+        "type": "Color"
+      },
+      "social_icons_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#625d1a",
+        "type": "Color"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "90",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "79",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "19",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "66",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "person",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "DocumentLink",
+                "id": "mock_document_id"
+              }
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]

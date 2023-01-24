@@ -1,50 +1,111 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "website_settings",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "website_name_for_logs": "help",
-    "google_analytics_code": "film",
-    "fibery_settings": [
+  "website_name_for_logs": {
+    "__TYPE__": "FieldContent",
+    "value": "center",
+    "type": "Text"
+  },
+  "google_analytics_code": {
+    "__TYPE__": "FieldContent",
+    "value": "compound",
+    "type": "Text"
+  },
+  "fibery_settings": {
+    "__TYPE__": "GroupContentType",
+    "value": [
       {
-        "fibery_host_url": {
-          "link_type": "Web",
-          "url": "http://twitter.com"
-        },
-        "fibery_token": "did"
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "fibery_host_url",
+            {
+              "__TYPE__": "LinkContent",
+              "value": {
+                "__TYPE__": "ExternalLink",
+                "url": "http://google.com"
+              }
+            }
+          ],
+          [
+            "fibery_token",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "every",
+              "type": "Text"
+            }
+          ]
+        ]
       }
-    ],
-    "default_email_mailto": "bark",
-    "website_fav_icon": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef"
+    ]
+  },
+  "default_email_mailto": {
+    "__TYPE__": "FieldContent",
+    "value": "pig",
+    "type": "Text"
+  },
+  "website_fav_icon": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+      "width": 2747,
+      "height": 4120
     },
-    "default_background_color": "#6e3a70",
-    "website_language_code": "total",
-    "slices": [],
-    "title": "tube",
-    "description": "nodded",
-    "image": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
+    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
+    "width": 2747,
+    "height": 4120,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
       },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
-    }
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "default_background_color": {
+    "__TYPE__": "FieldContent",
+    "value": "#4452c1",
+    "type": "Color"
+  },
+  "website_language_code": {
+    "__TYPE__": "FieldContent",
+    "value": "easily",
+    "type": "Text"
+  },
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": []
+  },
+  "title": {
+    "__TYPE__": "FieldContent",
+    "value": "oil",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "FieldContent",
+    "value": "roll",
+    "type": "Text"
+  },
+  "image": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+      "width": 4024,
+      "height": 4024
+    },
+    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
+    "width": 4024,
+    "height": 4024,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   }
 }

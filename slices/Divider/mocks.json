@@ -1,0 +1,53 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "type": {
+        "__TYPE__": "FieldContent",
+        "value": "solid",
+        "type": "Select"
+      },
+      "color": {
+        "__TYPE__": "FieldContent",
+        "value": "#1f98a2",
+        "type": "Color"
+      },
+      "divider_height": {
+        "__TYPE__": "FieldContent",
+        "value": "90",
+        "type": "Number"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "40",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "31",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "69",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "7",
+        "type": "Number"
+      },
+      "rounded": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

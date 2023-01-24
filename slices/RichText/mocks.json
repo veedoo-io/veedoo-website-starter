@@ -1,0 +1,59 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "rich_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Pariatur exercitation anim proident et esse eu anim Lorem aliquip nostrud magna non reprehenderit exercitation aliquip. Minim do ad ex tempor velit duis occaecat mollit occaecat laboris ad laboris."
+            }
+          }
+        ]
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#585f88",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#1f1d57",
+        "type": "Color"
+      },
+      "center_text": {
+        "__TYPE__": "BooleanContent",
+        "value": true
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "93",
+        "type": "Number"
+      },
+      "margin_right": {
+        "__TYPE__": "FieldContent",
+        "value": "64",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "19",
+        "type": "Number"
+      },
+      "margin_left": {
+        "__TYPE__": "FieldContent",
+        "value": "71",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

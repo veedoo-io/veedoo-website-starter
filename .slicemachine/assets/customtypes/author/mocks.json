@@ -1,49 +1,76 @@
 {
-  "id": "mock-doc-id",
-  "url": null,
-  "type": "author",
-  "href": null,
-  "tags": [],
-  "first_publication_date": "1970-01-01T00:00:01+0000",
-  "last_publication_date": "1970-01-01T00:00:01+0000",
-  "slugs": [],
-  "linked_documents": [],
-  "lang": "en-us",
-  "alternate_languages": [],
-  "data": {
-    "picture": {
-      "dimensions": {
-        "width": 900,
-        "height": 500
-      },
-      "alt": null,
-      "copyright": null,
-      "url": "https://images.unsplash.com/photo-1551739440-5dd934d3a94a"
+  "uid": {
+    "__TYPE__": "UIDContent",
+    "value": "obtain"
+  },
+  "picture": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+      "width": 4480,
+      "height": 4480
     },
-    "full_name": "already",
-    "job": "establish",
-    "description": [
+    "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+    "width": 4480,
+    "height": 4480,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
+  },
+  "full_name": {
+    "__TYPE__": "FieldContent",
+    "value": "hearing",
+    "type": "Text"
+  },
+  "job": {
+    "__TYPE__": "FieldContent",
+    "value": "whose",
+    "type": "Text"
+  },
+  "description": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
       {
         "type": "paragraph",
-        "text": "Quis aliquip sit id aliquip sunt eu irure laborum tempor esse quis minim. Sint laborum excepteur sunt sint et ea fugiat sunt sit ea. Ullamco aliqua Lorem aliqua et pariatur adipisicing ipsum.",
-        "spans": []
+        "content": {
+          "text": "Proident irure tempor deserunt irure. Magna ut ex commodo deserunt non id sint labore ullamco occaecat nisi dolor. Labore consectetur sunt aute veniam labore eu consequat mollit eu esse exercitation laborum sit."
+        }
       }
-    ],
-    "facebook_url": {
-      "link_type": "Web",
-      "url": "http://google.com"
-    },
-    "instagram_url": {
-      "link_type": "Web",
+    ]
+  },
+  "facebook_url": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://twitter.com"
+    }
+  },
+  "instagram_url": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
       "url": "https://slicemachine.dev"
-    },
-    "twitter_url": {
-      "link_type": "Web",
-      "url": "http://google.com"
-    },
-    "linkedin_url": {
-      "link_type": "Web",
-      "url": "https://prismic.io"
+    }
+  },
+  "twitter_url": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "https://slicemachine.dev"
+    }
+  },
+  "linkedin_url": {
+    "__TYPE__": "LinkContent",
+    "value": {
+      "__TYPE__": "ExternalLink",
+      "url": "http://twitter.com"
     }
   }
 }

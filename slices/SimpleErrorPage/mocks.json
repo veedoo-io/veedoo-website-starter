@@ -1,0 +1,71 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "error_title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sit tempor dolor cupidatat. Eiusmod magna officia consequat officia adipisicing quis voluptate consectetur excepteur."
+            }
+          }
+        ]
+      },
+      "title_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#b862c1",
+        "type": "Color"
+      },
+      "message": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sunt officia laborum non aliquip pariatur magna eu non. Cupidatat veniam est ex ut consectetur adipisicing eiusmod. Officia cupidatat Lorem fugiat non et nisi consequat deserunt anim cillum commodo mollit irure."
+            }
+          }
+        ]
+      },
+      "message_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#bc8da6",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#891f38",
+        "type": "Color"
+      },
+      "go_home_button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "do",
+        "type": "Text"
+      },
+      "go_home_button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#404f78",
+        "type": "Color"
+      },
+      "go_home_button_background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#36b66d",
+        "type": "Color"
+      },
+      "error_code_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#3728ae",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

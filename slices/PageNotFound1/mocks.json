@@ -1,0 +1,71 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Veniam adipisicing minim do veniam nulla enim cillum deserunt veniam sit."
+            }
+          }
+        ]
+      },
+      "title_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#d5f764",
+        "type": "Color"
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Duis incididunt magna elit pariatur. Aliquip adipisicing eu irure eiusmod deserunt laborum cillum mollit."
+            }
+          }
+        ]
+      },
+      "message_background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#b91fc9",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#895dc1",
+        "type": "Color"
+      },
+      "go_home_button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "scientific",
+        "type": "Text"
+      },
+      "go_home_button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#200c67",
+        "type": "Color"
+      },
+      "go_home_button_background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#8ac256",
+        "type": "Color"
+      },
+      "error_code_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#00612c",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
