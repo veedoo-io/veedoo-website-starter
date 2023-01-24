@@ -33,6 +33,7 @@ import Testimonial from './Testimonial';
 import Title from './Title';
 import TitleWithDateAndShareIcons from './TitleWithDateAndShareIcons';
 import TwoColumnTextBlock from './TwoColumnTextBlock';
+import YoutubeVideo from './YoutubeVideo';
 
 export {
 	AlternateGrid,
@@ -68,6 +69,7 @@ export {
 	Title,
 	TitleWithDateAndShareIcons,
 	TwoColumnTextBlock,
+	YoutubeVideo,
 };
 
 export const components = {
@@ -104,4 +106,5 @@ export const components = {
 	title: Title,
 	title_with_date_and_share_icons: TitleWithDateAndShareIcons,
 	two_column_text_block: TwoColumnTextBlock,
+	youtube_video: YoutubeVideo,
 };

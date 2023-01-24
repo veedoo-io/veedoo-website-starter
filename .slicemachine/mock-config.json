@@ -400,7 +400,17 @@
         "primary": {}
       }
     },
-    "SocialFollowIcons": {}
+    "SocialFollowIcons": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "YoutubeVideo": {
+      "default": {
+        "primary": {}
+      }
+    }
   },
   "_cts": {
     "page": {},

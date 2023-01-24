@@ -213,7 +213,7 @@ interface BlogPostDocumentData {
  * Slice for *blog Post → Slice Zone*
  *
  */
-type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice | ImageSlice;
+type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ClientsSliderSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice | ImageSlice | SocialFollowIconsSlice | YoutubeVideoSlice;
 /**
  * blog Post document from Prismic
  *
@@ -4248,25 +4248,92 @@ export type SimpleErrorPageSlice = prismicT.SharedSlice<"simple_error_page", Sim
  */
 interface SocialFollowIconsSliceDefaultPrimary {
     /**
-     * Title field in *SocialFollowIcons → Primary*
+     * alignment field in *SocialFollowIcons → Primary*
      *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: social_follow_icons.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Field Type**: Select
+     * - **Placeholder**: *None*
+     * - **Default Value**: left
+     * - **API ID Path**: social_follow_icons.primary.alignment
+     * - **Documentation**: https://prismic.io/docs/core-concepts/select
      *
      */
-    title: prismicT.TitleField;
+    alignment: prismicT.SelectField<"left" | "center" | "right", "filled">;
     /**
-     * Description field in *SocialFollowIcons → Primary*
+     * background color field in *SocialFollowIcons → Primary*
      *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your product
-     * - **API ID Path**: social_follow_icons.primary.description
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
      *
      */
-    description: prismicT.RichTextField;
+    background_color: prismicT.ColorField;
+    /**
+     * margin top field in *SocialFollowIcons → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin right field in *SocialFollowIcons → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.primary.margin_right
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_right: prismicT.NumberField;
+    /**
+     * margin bottom field in *SocialFollowIcons → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
+    /**
+     * margin left field in *SocialFollowIcons → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.primary.margin_left
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_left: prismicT.NumberField;
+}
+/**
+ * Item in SocialFollowIcons → Items
+ *
+ */
+export interface SocialFollowIconsSliceDefaultItem {
+    /**
+     * social icon image field in *SocialFollowIcons → Items*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.items[].social_icon_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    social_icon_image: prismicT.ImageField<never>;
+    /**
+     * social url field in *SocialFollowIcons → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: social_follow_icons.items[].social_url
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    social_url: prismicT.LinkField;
 }
 /**
  * Default variation for SocialFollowIcons Slice
@@ -4276,7 +4343,7 @@ interface SocialFollowIconsSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type SocialFollowIconsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SocialFollowIconsSliceDefaultPrimary>, never>;
+export type SocialFollowIconsSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<SocialFollowIconsSliceDefaultPrimary>, Simplify<SocialFollowIconsSliceDefaultItem>>;
 /**
  * Slice variation for *SocialFollowIcons*
  *
@@ -4860,11 +4927,175 @@ type TwoColumnTextBlockSliceVariation = TwoColumnTextBlockSliceDefault;
  *
  */
 export type TwoColumnTextBlockSlice = prismicT.SharedSlice<"two_column_text_block", TwoColumnTextBlockSliceVariation>;
+/**
+ * Primary content in YoutubeVideo → Primary
+ *
+ */
+interface YoutubeVideoSliceDefaultPrimary {
+    /**
+     * title field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * description field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * video id field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.video_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    video_id: prismicT.KeyTextField;
+    /**
+     * title text color field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+    /**
+     * description text color field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.description_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    description_text_color: prismicT.ColorField;
+    /**
+     * background color field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+}
+/**
+ * Default variation for YoutubeVideo Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `YoutubeVideo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type YoutubeVideoSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<YoutubeVideoSliceDefaultPrimary>, never>;
+/**
+ * Primary content in YoutubeVideo → Primary
+ *
+ */
+interface YoutubeVideoSliceHorizontalPrimary {
+    /**
+     * title field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    title: prismicT.RichTextField;
+    /**
+     * description field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.description
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    description: prismicT.RichTextField;
+    /**
+     * video id field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.video_id
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    video_id: prismicT.KeyTextField;
+    /**
+     * title text color field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    text_color: prismicT.ColorField;
+    /**
+     * description text color field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.description_text_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    description_text_color: prismicT.ColorField;
+    /**
+     * background color field in *YoutubeVideo → Primary*
+     *
+     * - **Field Type**: Color
+     * - **Placeholder**: *None*
+     * - **API ID Path**: youtube_video.primary.background_color
+     * - **Documentation**: https://prismic.io/docs/core-concepts/color
+     *
+     */
+    background_color: prismicT.ColorField;
+}
+/**
+ * horizontal variation for YoutubeVideo Slice
+ *
+ * - **API ID**: `horizontal`
+ * - **Description**: `YoutubeVideo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type YoutubeVideoSliceHorizontal = prismicT.SharedSliceVariation<"horizontal", Simplify<YoutubeVideoSliceHorizontalPrimary>, never>;
+/**
+ * Slice variation for *YoutubeVideo*
+ *
+ */
+type YoutubeVideoSliceVariation = YoutubeVideoSliceDefault | YoutubeVideoSliceHorizontal;
+/**
+ * YoutubeVideo Shared Slice
+ *
+ * - **API ID**: `youtube_video`
+ * - **Description**: `YoutubeVideo`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type YoutubeVideoSlice = prismicT.SharedSlice<"youtube_video", YoutubeVideoSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, ErrorPageDocumentData, ErrorPageDocumentDataSlicesSlice, ErrorPageDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageNotFoundDocumentData, PageNotFoundDocumentDataSlicesSlice, PageNotFoundDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, BlurbSliceDefaultPrimary, BlurbSliceDefaultItem, BlurbSliceDefault, BlurbSliceVerticalPrimary, BlurbSliceVerticalItem, BlurbSliceVertical, BlurbSliceVariation, BlurbSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, PageNotFound1SliceDefaultPrimary, PageNotFound1SliceDefault, PageNotFound1SliceVariation, PageNotFound1Slice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PersonSliceDefaultPrimary, PersonSliceDefaultItem, PersonSliceDefault, PersonSliceVariation, PersonSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, SimpleErrorPageSliceDefaultPrimary, SimpleErrorPageSliceDefault, SimpleErrorPageSliceVariation, SimpleErrorPageSlice, SocialFollowIconsSliceDefaultPrimary, SocialFollowIconsSliceDefault, SocialFollowIconsSliceVariation, SocialFollowIconsSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice };
+        export type { AuthorDocumentData, AuthorDocument, BlogPostDocumentData, BlogPostDocumentDataSlicesSlice, BlogPostDocument, ErrorPageDocumentData, ErrorPageDocumentDataSlicesSlice, ErrorPageDocument, FooterDocumentData, FooterDocumentDataSlicesSlice, FooterDocument, HeaderDocumentData, HeaderDocumentDataSlicesSlice, HeaderDocument, HomePageDocumentData, HomePageDocumentDataSlicesSlice, HomePageDocument, PageNotFoundDocumentData, PageNotFoundDocumentDataSlicesSlice, PageNotFoundDocument, PageDocumentData, PageDocumentDataSlicesSlice, PageDocument, PostCategoryDocumentData, PostCategoryDocument, PostTagDocumentData, PostTagDocument, TagItemDocumentData, TagItemDocument, WebsiteSettingsDocumentData, WebsiteSettingsDocumentDataFiberySettingsItem, WebsiteSettingsDocumentDataSlicesSlice, WebsiteSettingsDocument, AllDocumentTypes, AlternateGridSliceDefaultPrimary, AlternateGridSliceDefaultItem, AlternateGridSliceDefault, AlternateGridSliceVariation, AlternateGridSlice, AtomTagsSliceDefaultPrimary, AtomTagsSliceDefaultItem, AtomTagsSliceDefault, AtomTagsSliceVariation, AtomTagsSlice, AudioPlayerWithImageSliceDefaultPrimary, AudioPlayerWithImageSliceDefault, AudioPlayerWithImageSliceVariation, AudioPlayerWithImageSlice, BlurbSliceDefaultPrimary, BlurbSliceDefaultItem, BlurbSliceDefault, BlurbSliceVerticalPrimary, BlurbSliceVerticalItem, BlurbSliceVertical, BlurbSliceVariation, BlurbSlice, CallToActionWithImageSliceDefaultPrimary, CallToActionWithImageSliceDefault, CallToActionWithImageSliceVariation, CallToActionWithImageSlice, ClientsSliderSliceDefaultPrimary, ClientsSliderSliceDefaultItem, ClientsSliderSliceDefault, ClientsSliderSliceVariation, ClientsSliderSlice, ContactFormVeedooSliceDefaultPrimary, ContactFormVeedooSliceDefault, ContactFormVeedooSliceVariation, ContactFormVeedooSlice, ContactInfoSliceDefaultPrimary, ContactInfoSliceDefaultItem, ContactInfoSliceDefault, ContactInfoSliceVariation, ContactInfoSlice, CtaWithBackgroundImageSliceDefaultPrimary, CtaWithBackgroundImageSliceDefault, CtaWithBackgroundImageSliceVariation, CtaWithBackgroundImageSlice, DividerSliceDefaultPrimary, DividerSliceDefault, DividerSliceVariation, DividerSlice, FaqAccordionSliceDefaultPrimary, FaqAccordionSliceDefaultItem, FaqAccordionSliceDefault, FaqAccordionSliceWithImagePrimary, FaqAccordionSliceWithImageItem, FaqAccordionSliceWithImage, FaqAccordionSliceWithAnswerImagePrimary, FaqAccordionSliceWithAnswerImageItem, FaqAccordionSliceWithAnswerImage, FaqAccordionSliceVariation, FaqAccordionSlice, FaqAccordion2SliceDefaultPrimary, FaqAccordion2SliceDefaultItem, FaqAccordion2SliceDefault, FaqAccordion2SliceVariation, FaqAccordion2Slice, FooterVeedooSliceDefaultPrimary, FooterVeedooSliceDefaultItem, FooterVeedooSliceDefault, FooterVeedooSliceVariation, FooterVeedooSlice, HeaderVeedooSliceDefaultPrimary, HeaderVeedooSliceDefaultItem, HeaderVeedooSliceDefault, HeaderVeedooSliceVariation, HeaderVeedooSlice, HeroVeedooSliceDefaultPrimary, HeroVeedooSliceDefault, HeroVeedooSliceVariation, HeroVeedooSlice, ImageSliceDefaultPrimary, ImageSliceDefault, ImageSliceVariation, ImageSlice, PageNotFound1SliceDefaultPrimary, PageNotFound1SliceDefault, PageNotFound1SliceVariation, PageNotFound1Slice, PartnerLogoGridWithDescriptionTextSliceDefaultPrimary, PartnerLogoGridWithDescriptionTextSliceDefaultItem, PartnerLogoGridWithDescriptionTextSliceDefault, PartnerLogoGridWithDescriptionTextSliceVariation, PartnerLogoGridWithDescriptionTextSlice, PartnersLogoSliderSliceDefaultItem, PartnersLogoSliderSliceDefault, PartnersLogoSliderSlicePartnersLogoSlider2Item, PartnersLogoSliderSlicePartnersLogoSlider2, PartnersLogoSliderSliceVariation, PartnersLogoSliderSlice, PersonSliceDefaultPrimary, PersonSliceDefaultItem, PersonSliceDefault, PersonSliceVariation, PersonSlice, PortfolioItemsSliceDefaultPrimary, PortfolioItemsSliceDefaultItem, PortfolioItemsSliceDefault, PortfolioItemsSliceVariation, PortfolioItemsSlice, PostCarouselSliceDefaultPrimary, PostCarouselSliceDefaultItem, PostCarouselSliceDefault, PostCarouselSliceVariation, PostCarouselSlice, PostListingSliceDefaultPrimary, PostListingSliceDefaultItem, PostListingSliceDefault, PostListingSliceVariation, PostListingSlice, PostSliderSliceDefaultPrimary, PostSliderSliceDefaultItem, PostSliderSliceDefault, PostSliderSliceVariation, PostSliderSlice, RichTextSliceDefaultPrimary, RichTextSliceDefault, RichTextSliceVariation, RichTextSlice, TextSliceDefaultPrimary, TextSliceDefault, TextSliceVariation, TextSlice, SimpleErrorPageSliceDefaultPrimary, SimpleErrorPageSliceDefault, SimpleErrorPageSliceVariation, SimpleErrorPageSlice, SocialFollowIconsSliceDefaultPrimary, SocialFollowIconsSliceDefaultItem, SocialFollowIconsSliceDefault, SocialFollowIconsSliceVariation, SocialFollowIconsSlice, TagsSliceDefaultPrimary, TagsSliceDefaultItem, TagsSliceDefault, TagsSliceVariation, TagsSlice, TestimonialSliceDefaultPrimary, TestimonialSliceDefaultItem, TestimonialSliceDefault, TestimonialSliceVariation, TestimonialSlice, TitleSliceDefaultPrimary, TitleSliceDefault, TitleSliceVariation, TitleSlice, TitleWithDateAndShareIconsSliceDefaultPrimary, TitleWithDateAndShareIconsSliceDefault, TitleWithDateAndShareIconsSliceVariation, TitleWithDateAndShareIconsSlice, TwoColumnTextBlockSliceDefaultPrimary, TwoColumnTextBlockSliceDefault, TwoColumnTextBlockSliceVariation, TwoColumnTextBlockSlice, YoutubeVideoSliceDefaultPrimary, YoutubeVideoSliceDefault, YoutubeVideoSliceHorizontalPrimary, YoutubeVideoSliceHorizontal, YoutubeVideoSliceVariation, YoutubeVideoSlice };
     }
 }

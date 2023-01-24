@@ -4430,25 +4430,75 @@
               "version": "sktwi1xtmkfgx8626",
               "description": "SocialFollowIcons",
               "primary": {
-                "title": {
-                  "type": "StructuredText",
+                "alignment": {
+                  "type": "Select",
                   "config": {
-                    "single": "heading1",
-                    "label": "Title",
-                    "placeholder": "This is where it all begins..."
+                    "label": "alignment",
+                    "placeholder": "",
+                    "options": [
+                      "left",
+                      "center",
+                      "right"
+                    ],
+                    "default_value": "left"
                   }
                 },
-                "description": {
-                  "type": "StructuredText",
+                "background_color": {
+                  "type": "Color",
                   "config": {
-                    "single": "paragraph",
-                    "label": "Description",
-                    "placeholder": "A nice description of your product"
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                },
+                "margin_top": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin top",
+                    "placeholder": ""
+                  }
+                },
+                "margin_right": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin right",
+                    "placeholder": ""
+                  }
+                },
+                "margin_bottom": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin bottom",
+                    "placeholder": ""
+                  }
+                },
+                "margin_left": {
+                  "type": "Number",
+                  "config": {
+                    "label": "margin left",
+                    "placeholder": ""
                   }
                 }
               },
-              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format",
-              "items": {}
+              "items": {
+                "social_icon_image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "social icon image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "social_url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "social url",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
             }
           ]
         },
@@ -4457,23 +4507,29 @@
             "variation": "default",
             "version": "sktwi1xtmkfgx8626",
             "items": [
-              {}
+              {
+                "social_icon_image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"
+                },
+                "social_url": {
+                  "link_type": "Web",
+                  "url": "https://slicemachine.dev"
+                }
+              }
             ],
             "primary": {
-              "title": [
-                {
-                  "type": "heading1",
-                  "text": "Start",
-                  "spans": []
-                }
-              ],
-              "description": [
-                {
-                  "type": "paragraph",
-                  "text": "Non eu ex ad aliquip ipsum enim consequat reprehenderit consectetur dolor reprehenderit sit excepteur sint. Mollit anim ut aliqua aliqua tempor irure ex amet veniam occaecat ipsum aliquip cupidatat in commodo.",
-                  "spans": []
-                }
-              ]
+              "alignment": "center",
+              "background_color": "#250034",
+              "margin_top": 85,
+              "margin_right": 78,
+              "margin_bottom": 4,
+              "margin_left": 36
             },
             "slice_type": "social_follow_icons"
           }
@@ -4482,7 +4538,13 @@
           "fileName": "index",
           "extension": "vue"
         },
-        "screenshotPaths": {}
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/SocialFollowIcons/default/preview.png",
+            "width": 900,
+            "height": 1020
+          }
+        }
       },
       "tags": {
         "library": "slices",
@@ -5108,21 +5170,21 @@
               "title": [
                 {
                   "type": "paragraph",
-                  "text": "Et pariatur ut Lorem dolor est mollit irure quis sint voluptate mollit eiusmod sunt eiusmod.",
+                  "text": "Commodo elit cupidatat anim et in pariatur Lorem sint quis. Ipsum tempor eu aute sunt nisi pariatur consectetur est. Culpa id in cupidatat.",
                   "spans": []
                 }
               ],
-              "title_alignment": "left",
-              "date": "2019-04-21",
-              "text_size": 25,
-              "text_color": "#9deec1",
-              "background_color": "#7b6c41",
-              "margin_top": 18,
-              "margin_right": 72,
-              "margin_bottom": 45,
-              "margin_left": 91,
-              "share_icons_background_color": "#0a9021",
-              "share_icon_color": "#f4efe1"
+              "title_alignment": "center",
+              "date": "2016-09-30",
+              "text_size": 15,
+              "text_color": "#3a1a58",
+              "background_color": "#0710da",
+              "margin_top": 35,
+              "margin_right": 90,
+              "margin_bottom": 59,
+              "margin_left": 59,
+              "share_icons_background_color": "#5864fb",
+              "share_icon_color": "#e044d9"
             },
             "slice_type": "title_with_date_and_share_icons"
           }
@@ -5134,8 +5196,8 @@
         "screenshotPaths": {
           "default": {
             "path": "/Users/taoufiqlotfi/Documents/GitHub/veedoo-website-starter/slices/TitleWithDateAndShareIcons/default/preview.png",
-            "width": 3050,
-            "height": 256
+            "width": 3056,
+            "height": 368
           }
         }
       },
@@ -5274,6 +5336,197 @@
             "height": 516
           }
         }
+      },
+      "youtube_video": {
+        "library": "slices",
+        "id": "youtube_video",
+        "name": "YoutubeVideo",
+        "description": "YoutubeVideo",
+        "model": {
+          "id": "youtube_video",
+          "type": "SharedSlice",
+          "name": "YoutubeVideo",
+          "description": "YoutubeVideo",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "YoutubeVideo",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "video_id": {
+                  "type": "Text",
+                  "config": {
+                    "label": "video id",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title text color",
+                    "placeholder": ""
+                  }
+                },
+                "description_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "description text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            },
+            {
+              "id": "horizontal",
+              "name": "horizontal",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "YoutubeVideo",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "title",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "video_id": {
+                  "type": "Text",
+                  "config": {
+                    "label": "video id",
+                    "placeholder": ""
+                  }
+                },
+                "text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "title text color",
+                    "placeholder": ""
+                  }
+                },
+                "description_text_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "description text color",
+                    "placeholder": ""
+                  }
+                },
+                "background_color": {
+                  "type": "Color",
+                  "config": {
+                    "label": "background color",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "items": {},
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Commodo et dolore sint tempor consequat. Deserunt occaecat aliqua reprehenderit fugiat ullamco amet laborum ad cupidatat cillum dolore culpa.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Duis consequat deserunt ad consequat ullamco ullamco amet irure.",
+                  "spans": []
+                }
+              ],
+              "video_id": "firm",
+              "text_color": "#15722c",
+              "description_text_color": "#14a96b",
+              "background_color": "#1ceb9f"
+            },
+            "slice_type": "youtube_video"
+          },
+          "horizontal": {
+            "variation": "horizontal",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {}
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Occaecat exercitation mollit consectetur reprehenderit. Anim velit pariatur adipisicing pariatur sunt adipisicing proident exercitation fugiat ipsum qui consectetur. Voluptate dolor velit tempor voluptate eiusmod deserunt dolor magna ullamco ad duis fugiat reprehenderit.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Ut quis laborum quis eiusmod pariatur dolor ex officia duis. Enim fugiat enim consequat sunt aute veniam laboris minim laboris ad.",
+                  "spans": []
+                }
+              ],
+              "video_id": "after",
+              "text_color": "#b934a3",
+              "description_text_color": "#0267f7",
+              "background_color": "#7d0334"
+            },
+            "slice_type": "youtube_video"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "vue"
+        },
+        "screenshotPaths": {}
       }
     }
   }

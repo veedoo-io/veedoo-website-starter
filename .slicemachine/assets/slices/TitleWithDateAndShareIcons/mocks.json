@@ -9,21 +9,21 @@
       "title": [
         {
           "type": "paragraph",
-          "text": "Et pariatur ut Lorem dolor est mollit irure quis sint voluptate mollit eiusmod sunt eiusmod.",
+          "text": "Commodo elit cupidatat anim et in pariatur Lorem sint quis. Ipsum tempor eu aute sunt nisi pariatur consectetur est. Culpa id in cupidatat.",
           "spans": []
         }
       ],
-      "title_alignment": "left",
-      "date": "2019-04-21",
-      "text_size": 25,
-      "text_color": "#9deec1",
-      "background_color": "#7b6c41",
-      "margin_top": 18,
-      "margin_right": 72,
-      "margin_bottom": 45,
-      "margin_left": 91,
-      "share_icons_background_color": "#0a9021",
-      "share_icon_color": "#f4efe1"
+      "title_alignment": "center",
+      "date": "2016-09-30",
+      "text_size": 15,
+      "text_color": "#3a1a58",
+      "background_color": "#0710da",
+      "margin_top": 35,
+      "margin_right": 90,
+      "margin_bottom": 59,
+      "margin_left": 59,
+      "share_icons_background_color": "#5864fb",
+      "share_icon_color": "#e044d9"
     },
     "slice_type": "title_with_date_and_share_icons"
   }
