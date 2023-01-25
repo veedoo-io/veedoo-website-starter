@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Commodo et dolore sint tempor consequat. Deserunt occaecat aliqua reprehenderit fugiat ullamco amet laborum ad cupidatat cillum dolore culpa.","spans":[]}],"description":[{"type":"paragraph","text":"Duis consequat deserunt ad consequat ullamco ullamco amet irure.","spans":[]}],"video_id":"firm","text_color":"#15722c","description_text_color":"#14a96b","background_color":"#1ceb9f"},"slice_type":"youtube_video","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Est non do voluptate ut nulla proident non laboris. Enim aliqua velit quis est deserunt ipsum duis. Laboris consectetur et dolor dolore consequat aute duis magna sint id.","spans":[]}],"description":[{"type":"paragraph","text":"Velit sunt voluptate pariatur velit elit duis ipsum aute cupidatat ex excepteur consequat proident.","spans":[]}],"video_id":"hay","text_color":"#ed73bd","description_text_color":"#277231","background_color":"#5df249"},"id":"_Default","slice_type":"youtube_video"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -37,7 +37,7 @@ export const _Horizontal = () => ({
   },
   data() {
     return {
-      mock: {"variation":"horizontal","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Occaecat exercitation mollit consectetur reprehenderit. Anim velit pariatur adipisicing pariatur sunt adipisicing proident exercitation fugiat ipsum qui consectetur. Voluptate dolor velit tempor voluptate eiusmod deserunt dolor magna ullamco ad duis fugiat reprehenderit.","spans":[]}],"description":[{"type":"paragraph","text":"Ut quis laborum quis eiusmod pariatur dolor ex officia duis. Enim fugiat enim consequat sunt aute veniam laboris minim laboris ad.","spans":[]}],"video_id":"after","text_color":"#b934a3","description_text_color":"#0267f7","background_color":"#7d0334"},"slice_type":"youtube_video","id":"_Horizontal"}
+      mock: {"variation":"horizontal","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Pariatur exercitation cupidatat mollit cupidatat aliquip et excepteur magna. Cillum nulla sint aliquip aliqua laborum do anim sunt dolore.","spans":[]}],"description":[{"type":"paragraph","text":"Aute quis nostrud nostrud exercitation anim nostrud reprehenderit ex adipisicing consequat velit ut ad aliqua. Labore anim adipisicing consectetur dolor anim.","spans":[]}],"video_id":"share","text_color":"#770ad3","description_text_color":"#1e10b3","background_color":"#685d3f"},"id":"_Horizontal","slice_type":"youtube_video"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -26,7 +26,8 @@
     "vue-agile": "^2.0.0",
     "vue-server-renderer": "^2.7.10",
     "vue-slicezone": "^0.1.6",
-    "vue-template-compiler": "^2.7.10"
+    "vue-template-compiler": "^2.7.10",
+    "vue-youtube-embed": "^2.2.2"
   },
   "devDependencies": {
     "@nuxt/postcss8": "^1.1.3",

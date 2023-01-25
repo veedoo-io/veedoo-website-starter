@@ -27,7 +27,7 @@
       },
       "video_id": {
         "__TYPE__": "FieldContent",
-        "value": "day",
+        "value": "hay",
         "type": "Text"
       },
       "text_color": {

@@ -4956,7 +4956,7 @@ interface YoutubeVideoSliceDefaultPrimary {
      * video id field in *YoutubeVideo → Primary*
      *
      * - **Field Type**: Text
-     * - **Placeholder**: *None*
+     * - **Placeholder**: youtube video id
      * - **API ID Path**: youtube_video.primary.video_id
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *

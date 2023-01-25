@@ -33,7 +33,7 @@
           "type": "Text",
           "config": {
             "label": "video id",
-            "placeholder": ""
+            "placeholder": "youtube video id "
           }
         },
         "text_color": {
