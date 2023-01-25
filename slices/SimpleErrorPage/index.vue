@@ -49,6 +49,9 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
+    //console.log('this ', this);
+    console.log('errorCode ', errorCode);
+
     let errorCodeColor = this.slice.primary.error_code_color
       ? this.slice.primary.error_code_color
       : '#000000';

@@ -87,6 +87,15 @@
             },
             "person": {
               "type": "SharedSlice"
+            },
+            "youtube_video": {
+              "type": "SharedSlice"
+            },
+            "social_follow_icons": {
+              "type": "SharedSlice"
+            },
+            "image": {
+              "type": "SharedSlice"
             }
           }
         }

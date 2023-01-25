@@ -10,15 +10,7 @@
         :class="` flex ${aligment} items-center gap-2`"
       />
       <div
-        class="
-          w-full
-          h-fit
-          mt-5
-          flex
-          items-center
-          justify-between
-          max-sm:flex-col max-sm:items-start max-sm:gap-2
-        "
+        class="w-full h-fit mt-5 flex items-center justify-between max-sm:flex-col max-sm:items-start max-sm:gap-2"
       >
         <p
           class="text-[16px]"
@@ -34,7 +26,10 @@
           }}
         </p>
         <div class="flex items-center gap-2.5">
-          <div class="hover:cursor-pointer active:scale-105">
+          <div
+            @click="onFacebookShare()"
+            class="hover:cursor-pointer active:scale-105"
+          >
             <svg
               width="50"
               height="50"
@@ -293,6 +288,18 @@ export default {
       shareIconColor,
       aligment,
     };
+  },
+  methods: {
+    onFacebookShare() {
+      //console.log('onFacebookShare');
+      let url =
+        'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href;
+
+      //console.log('url ', url);
+      //options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
+      //window.open(url, 'sharer', options);
+      window.open(url, '_blank').focus();
+    },
   },
 };
 </script>

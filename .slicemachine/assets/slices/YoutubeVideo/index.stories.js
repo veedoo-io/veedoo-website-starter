@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Est non do voluptate ut nulla proident non laboris. Enim aliqua velit quis est deserunt ipsum duis. Laboris consectetur et dolor dolore consequat aute duis magna sint id.","spans":[]}],"description":[{"type":"paragraph","text":"Velit sunt voluptate pariatur velit elit duis ipsum aute cupidatat ex excepteur consequat proident.","spans":[]}],"video_id":"hay","text_color":"#ed73bd","description_text_color":"#277231","background_color":"#5df249"},"id":"_Default","slice_type":"youtube_video"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Et laboris magna in reprehenderit exercitation cupidatat excepteur ipsum.","spans":[]}],"description":[{"type":"paragraph","text":"Id consectetur eu incididunt tempor id reprehenderit labore labore ad reprehenderit aliquip nostrud cupidatat. Laboris irure Lorem commodo Lorem aliquip proident commodo ullamco incididunt ullamco veniam aute ut commodo duis. Dolor fugiat sint irure occaecat ex labore eu velit eu velit occaecat consequat eu.","spans":[]}],"video_id":"easy","text_color":"#7eabd8","description_text_color":"#d9ff60","background_color":"#97189e"},"id":"_Default","slice_type":"youtube_video"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
@@ -37,7 +37,7 @@ export const _Horizontal = () => ({
   },
   data() {
     return {
-      mock: {"variation":"horizontal","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Pariatur exercitation cupidatat mollit cupidatat aliquip et excepteur magna. Cillum nulla sint aliquip aliqua laborum do anim sunt dolore.","spans":[]}],"description":[{"type":"paragraph","text":"Aute quis nostrud nostrud exercitation anim nostrud reprehenderit ex adipisicing consequat velit ut ad aliqua. Labore anim adipisicing consectetur dolor anim.","spans":[]}],"video_id":"share","text_color":"#770ad3","description_text_color":"#1e10b3","background_color":"#685d3f"},"id":"_Horizontal","slice_type":"youtube_video"}
+      mock: {"variation":"horizontal","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Culpa proident nulla aliqua eu esse. Cupidatat exercitation sit reprehenderit minim. Proident ut consequat laborum nisi aliqua et elit quis nostrud do esse deserunt.","spans":[]}],"description":[{"type":"paragraph","text":"Sunt exercitation incididunt mollit reprehenderit sit excepteur quis sit dolore ea ea eiusmod nulla deserunt.","spans":[]}],"video_id":"save","text_color":"#e80fe4","description_text_color":"#b279e3","background_color":"#844724"},"id":"_Horizontal","slice_type":"youtube_video"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
