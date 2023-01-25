@@ -24,26 +24,26 @@ export default {
   },
   head() {
     return {
-      title: this.page?.data?.meta_title,
+      title: this.page?.data?.title,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content: this.page?.data?.meta_description,
+          content: this.page?.data?.description,
         },
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.page?.data?.meta_title,
+          content: this.page?.data?.title,
         },
         {
           property: 'og:description',
-          content: this.page?.data?.meta_description,
+          content: this.page?.data?.description,
         },
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.page?.data?.meta_image?.url,
+          content: this.page?.data?.image?.url,
         },
       ],
     };
