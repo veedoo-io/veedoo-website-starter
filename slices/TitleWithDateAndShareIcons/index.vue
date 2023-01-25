@@ -65,55 +65,10 @@
               </defs>
             </svg>
           </div>
-          <div class="hover:cursor-pointer active:scale-105">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 25 25"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="25"
-                height="25"
-                rx="12.5"
-                :fill="shareIconBackgroundColor"
-              />
-              <g clip-path="url(#clip0_842_59)">
-                <path
-                  d="M15 7.5H10C8.61929 7.5 7.5 8.61929 7.5 10V15C7.5 16.3807 8.61929 17.5 10 17.5H15C16.3807 17.5 17.5 16.3807 17.5 15V10C17.5 8.61929 16.3807 7.5 15 7.5Z"
-                  :stroke="shareIconColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M12.5 14.375C13.5355 14.375 14.375 13.5355 14.375 12.5C14.375 11.4645 13.5355 10.625 12.5 10.625C11.4645 10.625 10.625 11.4645 10.625 12.5C10.625 13.5355 11.4645 14.375 12.5 14.375Z"
-                  :stroke="shareIconColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M15.3125 9.6875V9.6885"
-                  :stroke="shareIconColor"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_842_59">
-                  <rect
-                    x="5"
-                    y="5"
-                    width="15"
-                    height="15"
-                    rx="1.33333"
-                    :fill="shareIconColor"
-                  />
-                </clipPath>
-              </defs>
-            </svg>
-          </div>
-          <div class="hover:cursor-pointer active:scale-105">
+          <div
+            @click="onTwitterShare()"
+            class="hover:cursor-pointer active:scale-105"
+          >
             <svg
               width="50"
               height="50"
@@ -149,7 +104,10 @@
               </defs>
             </svg>
           </div>
-          <div class="hover:cursor-pointer active:scale-105">
+          <div
+            @click="onLinkdinShare()"
+            class="hover:cursor-pointer active:scale-105"
+          >
             <svg
               width="50"
               height="50"
@@ -298,6 +256,18 @@ export default {
       //console.log('url ', url);
       //options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
       //window.open(url, 'sharer', options);
+      window.open(url, '_blank').focus();
+    },
+    onTwitterShare() {
+      let url = 'https://twitter.com/intent/tweet?text=' + window.location.href;
+
+      window.open(url, '_blank').focus();
+    },
+    onLinkdinShare() {
+      let url =
+        'https://www.linkedin.com/sharing/share-offsite/?url=' +
+        window.location.href;
+
       window.open(url, '_blank').focus();
     },
   },
