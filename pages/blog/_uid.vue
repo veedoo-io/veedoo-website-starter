@@ -22,9 +22,13 @@ export default {
       components,
     };
   },
-  head() {
+  head({ $prismic }) {
+    let title = this.page?.data?.title
+      ? $prismic.asText(this.page?.data?.title)
+      : null;
+
     return {
-      title: this.page?.data?.title,
+      title: title,
       meta: [
         {
           hid: 'description',
@@ -34,7 +38,7 @@ export default {
         {
           hid: 'og:title',
           name: 'og:title',
-          content: this.page?.data?.title,
+          content: title,
         },
         {
           property: 'og:description',
