@@ -318,7 +318,7 @@ export default {
         let persons = await Promise.all(promises);
         this.persons = persons;
 
-        console.log('personsDoc ', persons);
+        //console.log('personsDoc ', persons);
       }
     } catch (error) {
       console.log('error ', error);

@@ -2908,12 +2908,12 @@ type HeroVeedooSliceVariation = HeroVeedooSliceDefault;
  */
 export type HeroVeedooSlice = prismicT.SharedSlice<"hero_veedoo", HeroVeedooSliceVariation>;
 /**
- * Primary content in Image → Primary
+ * Primary content in ImageSlice → Primary
  *
  */
 interface ImageSliceDefaultPrimary {
     /**
-     * image field in *Image → Primary*
+     * image field in *ImageSlice → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -2923,7 +2923,7 @@ interface ImageSliceDefaultPrimary {
      */
     image: prismicT.ImageField<never>;
     /**
-     * rounded field in *Image → Primary*
+     * rounded field in *ImageSlice → Primary*
      *
      * - **Field Type**: Select
      * - **Placeholder**: *None*
@@ -2934,7 +2934,7 @@ interface ImageSliceDefaultPrimary {
      */
     rounded: prismicT.SelectField<"radius 0" | "radius 5" | "radius 20" | "circle", "filled">;
     /**
-     * margin top field in *Image → Primary*
+     * margin top field in *ImageSlice → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
@@ -2944,7 +2944,7 @@ interface ImageSliceDefaultPrimary {
      */
     margin_top: prismicT.NumberField;
     /**
-     * margin right field in *Image → Primary*
+     * margin right field in *ImageSlice → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
@@ -2954,7 +2954,7 @@ interface ImageSliceDefaultPrimary {
      */
     margin_right: prismicT.NumberField;
     /**
-     * margin bottom field in *Image → Primary*
+     * margin bottom field in *ImageSlice → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
@@ -2964,7 +2964,7 @@ interface ImageSliceDefaultPrimary {
      */
     margin_bottom: prismicT.NumberField;
     /**
-     * margin left field in *Image → Primary*
+     * margin left field in *ImageSlice → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
@@ -2974,7 +2974,7 @@ interface ImageSliceDefaultPrimary {
      */
     margin_left: prismicT.NumberField;
     /**
-     * background color field in *Image → Primary*
+     * background color field in *ImageSlice → Primary*
      *
      * - **Field Type**: Color
      * - **Placeholder**: *None*
@@ -2984,7 +2984,7 @@ interface ImageSliceDefaultPrimary {
      */
     background_color: prismicT.ColorField;
     /**
-     * wdith field in *Image → Primary*
+     * wdith field in *ImageSlice → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: Leave empty for full width
@@ -2994,7 +2994,7 @@ interface ImageSliceDefaultPrimary {
      */
     wdith: prismicT.NumberField;
     /**
-     * height field in *Image → Primary*
+     * height field in *ImageSlice → Primary*
      *
      * - **Field Type**: Number
      * - **Placeholder**: leave empty for full height
@@ -3004,7 +3004,7 @@ interface ImageSliceDefaultPrimary {
      */
     height: prismicT.NumberField;
     /**
-     * alignment field in *Image → Primary*
+     * alignment field in *ImageSlice → Primary*
      *
      * - **Field Type**: Select
      * - **Placeholder**: *None*
@@ -3016,7 +3016,7 @@ interface ImageSliceDefaultPrimary {
     alignment: prismicT.SelectField<"left" | "center" | "right", "filled">;
 }
 /**
- * Default variation for Image Slice
+ * Default variation for ImageSlice Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Image`
@@ -3025,12 +3025,12 @@ interface ImageSliceDefaultPrimary {
  */
 export type ImageSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<ImageSliceDefaultPrimary>, never>;
 /**
- * Slice variation for *Image*
+ * Slice variation for *ImageSlice*
  *
  */
 type ImageSliceVariation = ImageSliceDefault;
 /**
- * Image Shared Slice
+ * ImageSlice Shared Slice
  *
  * - **API ID**: `image`
  * - **Description**: `Image`

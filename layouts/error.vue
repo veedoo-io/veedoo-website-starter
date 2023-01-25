@@ -4,7 +4,7 @@
       <notFoundPage />
     </div>
     <div v-else>
-      <errorPage :errorCode="error.statusCode" />
+      <errorPage  />
     </div>
   </div>
 </template>

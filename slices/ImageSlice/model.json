@@ -1,7 +1,7 @@
 {
   "id": "image",
   "type": "SharedSlice",
-  "name": "Image",
+  "name": "ImageSlice",
   "description": "Image",
   "variations": [
     {

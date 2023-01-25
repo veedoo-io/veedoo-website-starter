@@ -15,7 +15,7 @@ import FaqAccordion2 from './FaqAccordion2';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
-import Image from './Image';
+import ImageSlice from './ImageSlice';
 import PageNotFound1 from './PageNotFound1';
 import PartnerLogoGridWithDescriptionText from './PartnerLogoGridWithDescriptionText';
 import PartnersLogoSlider from './PartnersLogoSlider';
@@ -51,7 +51,7 @@ export {
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
-	Image,
+	ImageSlice,
 	PageNotFound1,
 	PartnerLogoGridWithDescriptionText,
 	PartnersLogoSlider,
@@ -88,7 +88,7 @@ export const components = {
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
-	image: Image,
+	image: ImageSlice,
 	page_not_found1: PageNotFound1,
 	partner_logo_grid_with_description_text: PartnerLogoGridWithDescriptionText,
 	partners_logo_slider: PartnersLogoSlider,
