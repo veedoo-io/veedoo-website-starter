@@ -8,9 +8,10 @@
         :style="{ maxWidth: width }"
         :class="getDescriptionClasses()"
         :field="slice.primary.description"
+        v-if="slice.primary.description"
       />
       <div :class="getQuestionsContainer()" :style="{ maxWidth: width }">
-        <div :class="getImageContainer()">
+        <div v-if="slice.primary.image" :class="getImageContainer()">
           <PrismicImage :field="slice.primary.image" class="" />
         </div>
         <div class="w-fit flex-1 flex flex-col gap-6">
@@ -30,6 +31,7 @@
                   item.text_color ? item.text_color : '#353C47'
                 }`"
                 :field="item.question"
+                v-if="item.question"
               />
               <svg
                 v-if="selectedIndexes != i"
@@ -71,7 +73,7 @@
               class="mt-6 flex items-center gap-6"
             >
               <PrismicImage
-                v-if="slice.variation == 'withAnswerImage'"
+                v-if="slice.variation == 'withAnswerImage' && item.image"
                 :field="item.image"
               />
               <PrismicRichText
@@ -79,6 +81,7 @@
                   item.answer_text_color ? item.answer_text_color : '#48525F'
                 }`"
                 :field="item.answer"
+                v-if="item.answer"
                 class="flex-1"
               />
             </div>
