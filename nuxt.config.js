@@ -166,9 +166,9 @@ export default async () => {
       /* see configuration for more */
     },
 
-    // storybook: {
-    //   stories: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
-    // },
+    storybook: {
+      stories: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
+    },
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
