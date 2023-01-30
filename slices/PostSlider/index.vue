@@ -1,28 +1,13 @@
 <template>
   <section
-    class="
-      w-full
-      mx-auto
-      max-w-[700px]
-      h-fit
-      min-h-[376px]
-      flex flex-col
-      justify-center
-    "
+    class="w-full mx-auto max-w-[700px] h-fit min-h-[376px] flex flex-col justify-center"
   >
     <div
       v-if="loading && !error"
       class="w-full h-fit flex justify-center items-center"
     >
       <div
-        class="
-          loader
-          ease-linear
-          rounded-full
-          border-4 border-t-4 border-gray-200
-          h-12
-          w-12
-        "
+        class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"
         :style="{ borderTopColor: '#353C47' }"
       ></div>
     </div>
@@ -42,15 +27,7 @@
     </div>
     <div
       v-if="!loading && !error && posts.length > 0"
-      class="
-        w-full
-        h-full
-        flex
-        gap-x-[30px]
-        justify-center
-        items-center
-        relative
-      "
+      class="w-full h-full flex gap-x-[30px] justify-center items-center relative"
     >
       <div
         class="absolute left-0 h-[60px] z-40"
@@ -172,15 +149,7 @@
             </p>
             <PrismicLink
               :field="item"
-              class="
-                w-fit
-                min-w-[129px]
-                text-center
-                rounded-[4px]
-                py-2.5
-                px-5
-                text-white
-              "
+              class="w-fit min-w-[129px] text-center rounded-[4px] py-2.5 px-5 text-white"
               :style="{ backgroundColor: secondaryColor }"
             >
               {{ ReadMoreText }}
@@ -341,8 +310,8 @@ export default {
       //console.log(request.results[0]);
       let posts = request?.results ?? [];
       this.posts = posts;
-      console.log('posts 0 ', posts[0]);
-      console.log('category ', posts[0].data);
+      //console.log('posts 0 ', posts[0]);
+      //console.log('category ', posts[0].data);
     } catch (error) {
       console.log('error ', error);
       this.error = true;

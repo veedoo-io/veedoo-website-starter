@@ -4,7 +4,11 @@ const flatten = require('flat'); // Used to flatten the Tailwind colors object
 delete colors.inherit;
 delete colors.current;
 delete colors.transparent;
-delete colors.transparent;
+delete colors.warmGray;
+delete colors.lightBlue;
+delete colors.trueGray;
+delete colors.coolGray;
+delete colors.blueGray;
 
 // Flattens the color object and adds a "-" delimiter for exact TailwindCSS match
 const tailwindReference = flatten(colors, { delimiter: '-' });

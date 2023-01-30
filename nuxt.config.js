@@ -44,7 +44,7 @@ export default async () => {
     website_language_code,
   } = websiteSettings?.data;
 
-  console.log('google_analytics_code', google_analytics_code);
+  //console.log('google_analytics_code', google_analytics_code);
 
   return {
     target: 'static',
