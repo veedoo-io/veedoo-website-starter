@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "concurrently \"npm:nuxt:dev\" \"npm:slicemachine\" --names \"nuxt,slicemachine\"",
+    "dev": "concurrently \"npm:nuxt:dev\" \"npm:slicemachine\" \"npm:storybook\" --names \"nuxt,slicemachine,storybook\"",
     "nuxt:dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "test": "jest",
-    "slicemachine": "start-slicemachine"
+    "slicemachine": "start-slicemachine",
+    "storybook": "nuxt storybook"
   },
   "dependencies": {
     "@nuxtjs/prismic": "^1.4.2",
