@@ -1,6 +1,5 @@
 import { apiEndpoint } from './sm.json';
 import Prismic from '@prismicio/client';
-import { Link } from '@prismicio/helpers';
 
 const glob = require('glob');
 
