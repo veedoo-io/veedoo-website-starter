@@ -4,6 +4,8 @@ import { Link } from '@prismicio/helpers';
 
 const glob = require('glob');
 
+//the current  getStoriesPaths provied by prismic doesn't work
+//so we use this one to get a list of all the slice and custom type stories
 const getStoriesPaths = () => {
   return [
     '.slicemachine/assets/**/*.stories.@(js|jsx|ts|tsx|svelte)',
@@ -11,6 +13,9 @@ const getStoriesPaths = () => {
   ].reduce((acc, p) => (glob.sync(p).length ? [...acc, `../${p}`] : acc), []);
 };
 
+//list of types and thier routes
+//for example if the type is home_page Prismic link should route it to the path '/'
+//and if it's blog_post it should rout it to '/blog/uid' where uid the is the uid of the blog
 const routes = [
   {
     type: 'home_page',
