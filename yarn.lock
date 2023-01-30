@@ -6886,6 +6886,15 @@
   "resolved" "https://registry.npmjs.org/hex-color-regex/-/hex-color-regex-1.1.0.tgz"
   "version" "1.1.0"
 
+"hex2tailwind@^1.0.3":
+  "integrity" "sha512-oJqq0gTGUDMaAFB7gZomQQfZbWpmFRV8CFIrR49Am7N7XjGwypiH9pah213d8yh0pvtfNxvHM1I71YwnMHhOgg=="
+  "resolved" "https://registry.npmjs.org/hex2tailwind/-/hex2tailwind-1.0.3.tgz"
+  "version" "1.0.3"
+  dependencies:
+    "flat" "^5.0.2"
+    "nearest-color" "^0.4.4"
+    "tailwindcss" "latest"
+
 "hmac-drbg@^1.0.1":
   "integrity" "sha512-Tti3gMqLdZfhOQY1Mzf/AanLiqh1WTiJgEj26ZuYQ9fbkLomzGchCws4FyrSd4VkpBfiNhaE1On+lOz894jvXg=="
   "resolved" "https://registry.npmjs.org/hmac-drbg/-/hmac-drbg-1.0.1.tgz"
@@ -12602,7 +12611,7 @@
   "resolved" "https://registry.npmjs.org/symbol-tree/-/symbol-tree-3.2.4.tgz"
   "version" "3.2.4"
 
-"tailwindcss@^3.2.4":
+"tailwindcss@^3.2.4", "tailwindcss@latest":
   "integrity" "sha512-AhwtHCKMtR71JgeYDaswmZXhPcW9iuI9Sp2LvZPo9upDZ7231ZJ7eA9RaURbhpXGVlrjX4cFNlB4ieTetEb7hQ=="
   "resolved" "https://registry.npmjs.org/tailwindcss/-/tailwindcss-3.2.4.tgz"
   "version" "3.2.4"

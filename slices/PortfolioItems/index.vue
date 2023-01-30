@@ -64,7 +64,7 @@
 <script>
 import { getSliceComponentProps } from '@prismicio/vue/components';
 import { tail } from 'lodash';
-import tailwindMatcher from '~/assets/js/util/hexToName';
+import tailwindMatcher from 'hex2tailwind';
 
 export default {
   name: 'PortfolioItems',

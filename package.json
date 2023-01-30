@@ -19,6 +19,7 @@
     "core-js": "^3.25.3",
     "flat": "^5.0.2",
     "glob": "^8.0.3",
+    "hex2tailwind": "^1.0.3",
     "nearest-color": "^0.4.4",
     "nuxt": "^2.15.8",
     "nuxt-runtime-compiler": "^1.1.0",

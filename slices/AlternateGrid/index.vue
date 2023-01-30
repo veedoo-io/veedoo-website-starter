@@ -6,15 +6,7 @@
       :field="slice.primary.description"
     />
     <div
-      class="
-        mt-[78px]
-        flex
-        gap-x-[2%] gap-y-[25px]
-        flex-wrap
-        w-full
-        justify-around
-        md:justify-start
-      "
+      class="mt-[78px] flex gap-x-[2%] gap-y-[25px] flex-wrap w-full justify-around md:justify-start"
     >
       <div
         class="flex-[0_0_98%] md:flex-[0_0_48%] lg:flex-[0_0_23%]"
@@ -34,7 +26,7 @@
 
 <script>
 import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from '~/assets/js/util/hexToName';
+import tailwindMatcher from 'hex2tailwind';
 
 export default {
   name: 'AlternateGrid',
@@ -42,8 +34,7 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
     let getContainerClasses = function () {
-      let classes =
-        'w-full min-h-screen flex flex-col justify-center	';
+      let classes = 'w-full min-h-screen flex flex-col justify-center	';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);

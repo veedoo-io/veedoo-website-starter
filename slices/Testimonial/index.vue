@@ -14,19 +14,7 @@
         class="slide bg-transparent px-12 h-full"
       >
         <div
-          class="
-            rounded
-            w-full
-            h-full
-            bg-white
-            flex
-            p-6
-            flex-col
-            justify-between
-            gap-6
-            max-w-[326px]
-            mx-auto
-          "
+          class="rounded w-full h-full bg-white flex p-6 flex-col justify-between gap-6 max-w-[326px] mx-auto"
           :style="{
             filter:
               'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
@@ -53,28 +41,10 @@
       </div>
     </agile>
     <div
-      class="
-        w-fit
-        mx-auto
-        mt-10
-        flex
-        items-center
-        max-w-screen
-        justify-between
-        gap-5
-      "
+      class="w-fit mx-auto mt-10 flex items-center max-w-screen justify-between gap-5"
     >
       <div
-        class="
-          bg-white
-          w-8
-          h-8
-          active:scale-125
-          rounded
-          flex
-          justify-center
-          items-center
-        "
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center"
         :style="{
           filter:
             'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
@@ -107,16 +77,7 @@
         ></div>
       </div>
       <div
-        class="
-          bg-white
-          w-8
-          h-8
-          active:scale-125
-          rounded
-          flex
-          justify-center
-          items-center
-        "
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center"
         :style="{
           filter:
             'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
@@ -144,7 +105,7 @@
 
 <script>
 import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from '~/assets/js/util/hexToName';
+import tailwindMatcher from 'hex2tailwind';
 
 export default {
   name: 'Testimonial',
