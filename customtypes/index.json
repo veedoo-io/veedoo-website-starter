@@ -3,12 +3,12 @@
     "id": "author",
     "name": "Author",
     "repeatable": true,
-    "value": "author"
+    "value": "./author/index.json"
   },
   {
     "id": "blog_post",
     "name": "blog Post",
     "repeatable": true,
-    "value": "blog_post"
+    "value": "./blog_post/index.json"
   }
 ]
