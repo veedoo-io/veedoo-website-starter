@@ -11,7 +11,7 @@
       }"
       class="text-5xl lg:text-[96px] mb-6 font-bold"
     >
-      404
+      500
     </p>
     <PrismicRichText
       :style="{
