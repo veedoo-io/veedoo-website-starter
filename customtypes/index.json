@@ -1,0 +1,14 @@
+[
+  {
+    "id": "author",
+    "name": "Author",
+    "repeatable": true,
+    "value": "author.json"
+  },
+  {
+    "id": "blog_post",
+    "name": "blog Post",
+    "repeatable": true,
+    "value": "blog_post.json"
+  }
+]
