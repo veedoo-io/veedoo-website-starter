@@ -2,6 +2,9 @@
   "name": "veedoo-website-starter",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "dev": "concurrently \"npm:nuxt:dev\" \"npm:slicemachine\" \"npm:storybook\" --names \"nuxt,slicemachine,storybook\"",
     "nuxt:dev": "nuxt",
