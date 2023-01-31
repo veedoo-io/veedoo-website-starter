@@ -1,4 +1,4 @@
-# your-repo-name
+# veedoo-website-starter
 
 ## Build Setup
 
