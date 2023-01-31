@@ -1,5 +1,4 @@
 {
-  "apiEndpoint": "https://veedoo-website-starter.prismic.io/api/v2",
   "libraries": ["@/slices"],
   "localSliceSimulatorURL": "http://localhost:3000/slice-simulator",
   "_latest": "0.5.2",

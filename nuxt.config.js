@@ -1,4 +1,4 @@
-import { apiEndpoint } from './sm.json';
+import { apiEndpoint } from './prismic-configuration';
 import Prismic from '@prismicio/client';
 
 const glob = require('glob');
