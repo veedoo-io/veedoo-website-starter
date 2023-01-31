@@ -28,30 +28,38 @@ export default {
   },
   head() {
     console.log('document title ', this.page?.data?.meta_title);
-    return {
-      title: this.page?.data?.meta_title,
-      meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.page?.data?.meta_description,
-        },
-        {
-          hid: 'og:title',
-          name: 'og:title',
-          content: this.page?.data?.meta_title,
-        },
-        {
-          property: 'og:description',
-          content: this.page?.data?.meta_description,
-        },
-        {
-          hid: 'og:image',
-          name: 'og:image',
-          content: this.page?.data?.meta_image?.url,
-        },
-      ],
-    };
+    let obj = {};
+    let meta = [];
+    if (this.page?.data?.meta_title) {
+      obj.title = this.page?.data?.meta_title;
+      meta.push({
+        hid: 'og:title',
+        name: 'og:title',
+        content: this.page?.data?.meta_title,
+      });
+    }
+
+    if (this.page?.data?.meta_description) {
+      meta.push({
+        hid: 'description',
+        name: 'description',
+        content: this.page?.data?.meta_description,
+      });
+      meta.push({
+        property: 'og:description',
+        content: this.page?.data?.meta_description,
+      });
+    }
+    if (this.page?.data?.meta_image?.url) {
+      meta.push({
+        hid: 'og:image',
+        name: 'og:image',
+        content: this.page?.data?.meta_image?.url,
+      });
+    }
+    obj.meta = meta;
+
+    return obj;
   },
 };
 </script>
