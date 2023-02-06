@@ -74,6 +74,8 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
+    console.log('slice ', this.slice);
+
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
         ? this.slice.primary.margin_top + 'px'

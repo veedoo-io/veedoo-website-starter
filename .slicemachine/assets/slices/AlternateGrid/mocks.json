@@ -4,38 +4,94 @@
     "version": "sktwi1xtmkfgx8626",
     "items": [
       {
-        "feature_image": {
-          "dimensions": {
-            "width": 900,
-            "height": 500
+          "feature_image": {
+              "dimensions": {
+                  "width": 24,
+                  "height": 24
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
           },
-          "alt": null,
-          "copyright": null,
-          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
-        },
-        "feature_title": "canal",
-        "feature_description": [
-          {
-            "type": "paragraph",
-            "text": "Ipsum occaecat commodo labore laborum mollit aliqua pariatur sunt elit labore aliqua enim in cillum.",
-            "spans": []
-          }
-        ]
+          "feature_title": "Feature 1",
+          "feature_description": [
+              {
+                  "type": "paragraph",
+                  "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                  "spans": []
+              }
+          ]
+      },
+      {
+          "feature_image": {
+              "dimensions": {
+                  "width": 24,
+                  "height": 24
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
+          },
+          "feature_title": "Feature 2",
+          "feature_description": [
+              {
+                  "type": "paragraph",
+                  "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.\nThis component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                  "spans": []
+              }
+          ]
+      },
+      {
+          "feature_image": {
+              "dimensions": {
+                  "width": 24,
+                  "height": 24
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/55bdd073-4af9-447f-a0f6-269c11456f06_user+icon.svg"
+          },
+          "feature_title": "Feature 3",
+          "feature_description": [
+              {
+                  "type": "paragraph",
+                  "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                  "spans": []
+              }
+          ]
+      },
+      {
+          "feature_image": {
+              "dimensions": {
+                  "width": 24,
+                  "height": 24
+              },
+              "alt": null,
+              "copyright": null,
+              "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/bca69568-e415-4eea-b892-5bc1cef7ab0d_monitor+icon.svg"
+          },
+          "feature_title": "Feature 4",
+          "feature_description": [
+              {
+                  "type": "paragraph",
+                  "text": "This component has been matched by the SliceZone. Its model has been fetched from vue-essential-slices.",
+                  "spans": []
+              }
+          ]
       }
-    ],
+  ],
     "primary": {
-      "title": "solid",
+      "title": "Why we",
       "description": [
-        {
-          "type": "paragraph",
-          "text": "Laboris enim in qui aliquip aliqua dolore est. Sint quis sit nisi.",
-          "spans": []
-        }
+          {
+              "type": "paragraph",
+              "text": "A predesigned AlternateGrid component, that you can use to\nlist your skills or features of a product.",
+              "spans": []
+          }
       ],
-      "background_color": "#3b5d13",
-      "text_color": "#70cbe5",
-      "secondary_text_color": "#a27507"
-    },
-    "slice_type": "alternate_grid"
+      "background_color": "#ff2323",
+      "text_color": null,
+      "secondary_text_color": null
   }
+}
 ]

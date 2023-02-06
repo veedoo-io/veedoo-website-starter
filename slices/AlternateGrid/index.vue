@@ -4,6 +4,7 @@
     <PrismicRichText
       :class="getDescriptionClasses()"
       :field="slice.primary.description"
+      class="flex flex-wrap items-center gap-2.5"
     />
     <div
       class="mt-[78px] flex gap-x-[2%] gap-y-[25px] flex-wrap w-full justify-around md:justify-start"
@@ -33,6 +34,7 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
+    // console.log('slice props ', this.slice);
     let getContainerClasses = function () {
       let classes = 'w-full min-h-screen flex flex-col justify-center	';
 
