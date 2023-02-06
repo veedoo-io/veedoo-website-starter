@@ -27,7 +27,7 @@ export default {
     };
   },
   head() {
-    console.log('document title ', this.page?.data?.meta_title);
+    //console.log('document title ', this.page?.data?.meta_title);
     let obj = {};
     let meta = [];
     if (this.page?.data?.meta_title) {

@@ -31,8 +31,7 @@ const routes = [
 ];
 
 export default async () => {
-
-  console.log(`using prismic repo ${apiEndpoint}`)
+  //console.log(`using prismic repo ${apiEndpoint}`)
 
   let client = Prismic.client(apiEndpoint, {
     routes: routes,

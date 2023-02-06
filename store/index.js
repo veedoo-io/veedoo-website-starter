@@ -59,7 +59,7 @@ export const actions = {
       let page_not_found = promises[3];
       let errorPage = promises[4];
 
-      //console.log('footer', footer);
+      //console.log('footer', JSON.stringify(footer.data.slices));
 
       commit('setSettings', settings || null);
       commit('setHeader', header || null);
