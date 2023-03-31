@@ -68,7 +68,7 @@ export default {
   data() {
     let getContainerClasses = function () {
       let classes =
-        'w-full my-4 max-w-[872px] min-h-screen flex flex-col items-center  rounded-xl mx-auto px-5 lg:px-[236px] py-[50px] ';
+        'w-full my-4 max-w-[872px] h-full flex flex-col items-center  rounded-xl mx-auto px-5 lg:px-[236px] py-[50px] ';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
