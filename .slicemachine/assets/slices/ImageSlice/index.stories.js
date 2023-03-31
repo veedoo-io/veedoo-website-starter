@@ -18,28 +18,32 @@ export const _Default = () => ({
   data() {
     return {
       mock: {
-        variation: 'default',
-        version: 'sktwi1xtmkfgx8626',
-        items: [{}],
-        primary: {
-          image: {
-            dimensions: { width: 900, height: 500 },
-            alt: null,
-            copyright: null,
-            url: 'https://images.unsplash.com/photo-1600861194802-a2b11076bc51',
+        "variation": "default",
+        "version": "sktwi1xtmkfgx8626",
+        "items": [
+          {}
+        ],
+        "primary": {
+          "image": {
+            "dimensions": {
+              "width": 900,
+              "height": 500
+            },
+            "alt": null,
+            "copyright": null,
+            "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
           },
-          rounded: 'radius 0',
-          margin_top: 27,
-          margin_right: 54,
-          margin_bottom: 7,
-          margin_left: 42,
-          background_color: '#379e3d',
-          wdith: 84,
-          height: 37,
-          alignment: 'center',
+          "rounded": "radius 0",
+          "margin_top": 100,
+          "margin_right": 0,
+          "margin_bottom": 100,
+          "margin_left": 0,
+          "background_color": "#ffffff",
+          "wdith": 600,
+          "height": 600,
+          "alignment": "center"
         },
-        slice_type: 'image',
-        id: '_Default',
+        "slice_type": "image"
       },
     };
   },

@@ -1,5 +1,8 @@
 <template>
-  <section :class="getContainerClasses()">
+  <section
+    :class="getContainerClasses()"
+    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom};`"
+  >
     <h2 v-if="slice.primary.intro" :class="getIntroClasses()">
       {{ slice.primary.intro }}
     </h2>
@@ -23,7 +26,7 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
     let getContainerClasses = function () {
-      let classes = 'w-full h-screen  flex flex-col justify-center ';
+      let classes = 'w-full py-10 flex flex-col justify-center ';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -54,11 +57,23 @@ export default {
       return classes;
     };
 
+    let marginTop =
+      this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
+        ? this.slice.primary.margin_top + 'px'
+        : '0px';
+
+    let marginBottom =
+      this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
+        ? this.slice.primary.margin_bottom + 'px'
+        : '0px';
+
     return {
       getContainerClasses,
       getIntroClasses,
       getTitleClasses,
       mousePosX: 0,
+      marginTop,
+      marginBottom
     };
   },
   mounted() {

@@ -2876,6 +2876,26 @@ interface HeroVeedooSliceDefaultPrimary {
      *
      */
     title_animation_color: prismicT.ColorField;
+    /**
+     * margin top field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin bottom field in *HeroVeedoo → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: hero_veedoo.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
 }
 /**
  * Default variation for HeroVeedoo Slice

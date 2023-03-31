@@ -9,7 +9,9 @@
       "background_color": null,
       "intro_text_color": null,
       "title_text_color": null,
-      "title_animation_color": null
+      "title_animation_color": null,
+      "margin_top":35,
+       "margin_bottom":2
     },
     "slice_type": "hero_veedoo"
   }

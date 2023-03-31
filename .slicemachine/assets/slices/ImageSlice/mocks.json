@@ -16,13 +16,13 @@
         "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
       },
       "rounded": "radius 0",
-      "margin_top": 27,
-      "margin_right": 54,
-      "margin_bottom": 7,
-      "margin_left": 42,
-      "background_color": "#379e3d",
-      "wdith": 84,
-      "height": 37,
+      "margin_top": 100,
+      "margin_right": 0,
+      "margin_bottom": 100,
+      "margin_left": 0,
+      "background_color": "#ffffff",
+      "wdith": 300,
+      "height": 300,
       "alignment": "center"
     },
     "slice_type": "image"

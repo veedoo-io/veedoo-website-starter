@@ -78,17 +78,7 @@
     </div>
     <div
       v-if="isMenuOpen"
-      class="
-        fixed
-        z-50
-        top-20
-        left-0
-        h-full
-        w-full
-        bg-[#353C47]/60
-        flex
-        justify-end
-      "
+      class="fixed z-50 top-20 left-0 h-full w-full bg-[#353C47]/60 flex justify-end"
     >
       <div :class="getMenuClasses()">
         <div class="flex gap-9 w-full h-fit justify-between">

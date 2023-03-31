@@ -1,7 +1,13 @@
 <template>
   <section :class="getSectionContainer()">
-    <PrismicImage :field="slice.primary.image" />
-    <div :class="getContentContainer()" :style="{ maxWidth: width }">
+    <div class="">
+      <PrismicImage
+        class="w-full max-w-[370px] object-contain"
+        :field="slice.primary.image"
+        :style="{ maxWidth: width / 2 }"
+      />
+    </div>
+    <div :class="getContentContainer()" :style="{ maxWidth: width  }">
       <PrismicRichText
         :class="getTitleClasses()"
         :field="slice.primary.title"
@@ -62,11 +68,11 @@
             </div>
           </div>
           <PrismicRichText
-          :style="`${
-                item.answer_text_color
-                  ? 'color:' + item.answer_text_color + '; '
-                  : ''
-              }`"
+            :style="`${
+              item.answer_text_color
+                ? 'color:' + item.answer_text_color + '; '
+                : ''
+            }`"
             v-if="selectedIndexes == i"
             class="mt-6"
             :field="item.answer"
@@ -89,7 +95,7 @@ export default {
   data() {
     let getSectionContainer = function () {
       let classes =
-        'w-full min-h-screen  flex max-md:flex-col justify-center items-center gap-4 lg:gap-16	';
+        'w-screen h-full py-10 flex max-md:flex-col justify-center items-center gap-4 lg:gap-16	';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -123,12 +129,12 @@ export default {
     };
 
     let getContentContainer = function () {
-      let classes = 'flex flex-col ';
+      let classes = 'flex flex-1 flex-col ';
 
       return classes;
     };
 
-    let width = this.slice.primary.max_width
+    let width = this.slice.primary.max_width && this.slice.primary.max_width > 150
       ? this.slice.primary.max_width + 'px'
       : '435px';
 
