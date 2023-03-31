@@ -51,8 +51,8 @@
         "menu_label": {
           "type": "Text",
           "config": {
-            "label": "menu label",
-            "placeholder": ""
+            "label": "open menu label",
+            "placeholder": "The label to open menu"
           }
         }
       },
@@ -73,15 +73,16 @@
         "menu_text": {
           "type": "Text",
           "config": {
-            "label": "menu text",
-            "placeholder": ""
+            "label": "menu item text",
+            "placeholder": "Link text"
           }
         },
         "menu_link": {
           "type": "Link",
           "config": {
-            "label": "menu link",
-            "placeholder": "",
+            "label": "menu item link",
+            "placeholder": "link url",
+            "allowTargetBlank": true,
             "select": null
           }
         }

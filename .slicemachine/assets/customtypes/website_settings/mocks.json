@@ -1,12 +1,12 @@
 {
   "website_name_for_logs": {
     "__TYPE__": "FieldContent",
-    "value": "center",
+    "value": "setting",
     "type": "Text"
   },
   "google_analytics_code": {
     "__TYPE__": "FieldContent",
-    "value": "compound",
+    "value": "prove",
     "type": "Text"
   },
   "fibery_settings": {
@@ -29,7 +29,7 @@
             "fibery_token",
             {
               "__TYPE__": "FieldContent",
-              "value": "every",
+              "value": "lungs",
               "type": "Text"
             }
           ]
@@ -39,20 +39,20 @@
   },
   "default_email_mailto": {
     "__TYPE__": "FieldContent",
-    "value": "pig",
+    "value": "nearly",
     "type": "Text"
   },
   "website_fav_icon": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
-      "width": 2747,
-      "height": 4120
+      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+      "width": 3500,
+      "height": 2338
     },
-    "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
-    "width": 2747,
-    "height": 4120,
+    "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+    "width": 3500,
+    "height": 2338,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -65,12 +65,12 @@
   },
   "default_background_color": {
     "__TYPE__": "FieldContent",
-    "value": "#4452c1",
+    "value": "#74ba9c",
     "type": "Color"
   },
   "website_language_code": {
     "__TYPE__": "FieldContent",
-    "value": "easily",
+    "value": "blew",
     "type": "Text"
   },
   "slices": {
@@ -79,25 +79,25 @@
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "oil",
+    "value": "doll",
     "type": "Text"
   },
   "description": {
     "__TYPE__": "FieldContent",
-    "value": "roll",
+    "value": "obtain",
     "type": "Text"
   },
   "image": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
-      "width": 4024,
-      "height": 4024
+      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+      "width": 3456,
+      "height": 3456
     },
-    "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
-    "width": 4024,
-    "height": 4024,
+    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
+    "width": 3456,
+    "height": 3456,
     "edit": {
       "zoom": 1,
       "crop": {

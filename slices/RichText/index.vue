@@ -3,7 +3,7 @@
     :class="`w-full h-fit flex items-center ${
       slice.primary.center_text ? 'justify-center' : ''
     }`"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; color:${slice.primary.text_color}`"
+    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
   >
     <PrismicRichText
       :style="
@@ -14,7 +14,7 @@
           : {}
       "
       :field="slice.primary.rich_text"
-      :class="`w-fit h-fit flex items-center gap-2.5 `"
+      :class="`richText w-fit h-fit flex flex-col  gap-2.5  `"
     />
   </section>
 </template>

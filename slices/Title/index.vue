@@ -14,7 +14,7 @@
       :style="`font-size:${textSize}`"
       :field="slice.primary.title"
     />
-    <PrismicImage class="h-fit" :field="slice.primary.image" />
+    <PrismicImage class="h-fit " :field="slice.primary.image" />
   </section>
 </template>
 

@@ -12,7 +12,7 @@
         item.text_color ? item.text_color : '#353C47'
       }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
     >
-      <PrismicLink class="w-full h-full" :field="item.url">
+      <PrismicLink class="w-full h-full " :field="item.url">
         <PrismicImage
           class="w-full group-hover:invisible"
           :field="item.image"
@@ -72,7 +72,7 @@ export default {
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
     let getContaienrClasses = function () {
-      let classes = 'w-full min-h-screen gap-x-6 gap-y-6 flex flex-wrap';
+      let classes = 'w-full w-full gap-x-6 gap-y-6 flex flex-wrap';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);

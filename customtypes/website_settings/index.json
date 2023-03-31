@@ -15,7 +15,7 @@
       "google_analytics_code": {
         "type": "Text",
         "config": {
-          "label": "Google Analytics Code ",
+          "label": "Google Analytics Code V4 (GA 4)",
           "placeholder": ""
         }
       },

@@ -1,82 +1,26 @@
 import MyComponent from '../../../../slices/HeaderVeedoo';
-import SliceZone from 'vue-slicezone';
+import SliceZone from 'vue-slicezone'
 
 export default {
-  title: 'Headers/Header Veedoo',
-};
+  title: 'slices/HeaderVeedoo'
+}
+
 
 export const _Default = () => ({
   components: {
     MyComponent,
-    SliceZone,
+    SliceZone
   },
   methods: {
     resolve() {
-      return MyComponent;
-    },
+      return MyComponent
+    }
   },
   data() {
     return {
-      mock: {
-        variation: 'default',
-        version: 'sktwi1xtmkfgx8626',
-        items: [
-          {
-            menu_item_type: 'Get in touch!',
-            menu_text: 'hello@veedoo.io',
-            menu_link: {
-              link_type: 'Web',
-              url: 'mailto:hello@veedoo.io',
-            },
-          },
-          {
-            menu_item_type: 'Contacts',
-            menu_text: 'LinkedIn',
-            menu_link: {
-              link_type: 'Web',
-              url: 'https://www.linkedin.com/company/veedoo/',
-            },
-          },
-          {
-            menu_item_type: 'Menu',
-            menu_text: 'Home',
-            menu_link: {
-              link_type: 'Web',
-              url: 'https://slicemachine.dev',
-            },
-          },
-          {
-            menu_item_type: 'Menu',
-            menu_text: 'Portals & Project Sites',
-            menu_link: {
-              link_type: 'Web',
-              url: 'https://slicemachine.dev',
-            },
-          },
-        ],
-        primary: {
-          logo: {
-            dimensions: {
-              width: 900,
-              height: 500,
-            },
-            alt: 'Veedoo logo',
-            copyright: null,
-            url: 'https://images.prismic.io/veedoo-website-starter/703b1700-ecab-4f2e-aa23-5be8df20a7de_f4b8bf33-ee64-4e52-b077-6d69d033e415_veedoo-logo+%282%29.png?auto=compress,format',
-          },
-          main_link_text: 'Contacts',
-          main_link_url: {
-            link_type: 'Web',
-            url: 'https://prismic.io',
-          },
-          background_color: null,
-          text_color: null,
-          menu_label: 'Menu',
-        },
-        slice_type: 'header_veedoo',
-      },
-    };
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"menu_item_type":"Menu","menu_text":"grown","menu_link":{"link_type":"Web","url":"https://slicemachine.dev"}}],"primary":{"logo":{"dimensions":{"width":3810,"height":5715},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1587614295999-6c1c13675117"},"main_link_text":"tail","main_link_url":{"link_type":"Web","url":"https://prismic.io"},"background_color":"#8a497c","text_color":"#0e89a9","menu_label":"fewer"},"id":"_Default","slice_type":"header_veedoo"}
+    }
   },
-  template: '<SliceZone :slices="[mock]" :resolver="resolve" />',
-});
-_Default.storyName = '';
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_Default.storyName = ''

@@ -29,6 +29,20 @@ section {
   animation: spinner 1.5s linear infinite;
 }
 
+.richText ol {
+  list-style: unset;
+  margin: unset;
+  padding: unset;
+  margin-left: 20px;
+
+}
+.richText ul {
+  list-style: unset;
+  margin: unset;
+  padding: unset;
+
+}
+
 @-webkit-keyframes spinner {
   0% {
     -webkit-transform: rotate(0deg);

@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"rich_text":[{"type":"paragraph","text":"Esse eiusmod non mollit ad ea labore mollit do irure. Enim in dolore aute occaecat excepteur nostrud nulla Lorem Lorem Lorem dolor qui. Anim Lorem labore veniam aliquip duis fugiat ipsum sint cupidatat adipisicing occaecat dolor consectetur cillum deserunt.","spans":[]}],"text_color":"#decd3c","background_color":"#c37d98","center_text":false,"margin_top":93,"margin_right":37,"margin_bottom":57,"margin_left":13},"slice_type":"rich_text","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"rich_text":[{"type":"paragraph","text":"Ullamco eiusmod amet ullamco qui minim sunt. Amet laborum proident aliquip commodo adipisicing ipsum quis in et. Incididunt occaecat ex culpa proident ipsum commodo Lorem amet.","spans":[]}],"text_color":"#585f88","background_color":"#1f1d57","center_text":true,"margin_top":93,"margin_right":64,"margin_bottom":19,"margin_left":71},"id":"_Default","slice_type":"rich_text"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
