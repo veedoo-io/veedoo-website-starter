@@ -11,16 +11,85 @@
           },
           "alt": null,
           "copyright": null,
-          "url": "https://images.unsplash.com/photo-1587653915936-5623ea0b949a"
+          "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/59f40801-5eeb-41c0-bab2-7c3a65f4a2d8_Ertico.svg"
         },
         "description": [
           {
             "type": "paragraph",
-            "text": "Nostrud voluptate elit anim ipsum reprehenderit in nisi labore. Excepteur nulla aliqua ea et eiusmod veniam duis exercitation adipisicing nulla irure labore quis id. Cupidatat officia laborum ut quis aliquip magna ipsum duis nulla ad labore amet amet.",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt odio consectetur commodo pulvinar placerat accumsan, accumsan. Sem tellus risus tellus sit.",
             "spans": []
           }
         ],
-        "link_text": "face",
+        "link_text": "Link to website",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/ecd8ec3d-2c3e-4a52-805d-b719d6b70484_Everyrun.svg"
+        },
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt odio consectetur commodo pulvinar placerat accumsan, accumsan. Sem tellus risus tellus sit.",
+            "spans": []
+          }
+        ],
+        "link_text": "Link to website",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/c727ff7a-2624-4ec2-8779-5d5c209c3977_ACC.svg"
+        },
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt odio consectetur commodo pulvinar placerat accumsan, accumsan. Sem tellus risus tellus sit.",
+            "spans": []
+          }
+        ],
+        "link_text": "Link to website",
+        "link": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      },
+      {
+        "logo": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://veedoo-website-starter.cdn.prismic.io/veedoo-website-starter/f0b31b0c-5571-406d-abb7-91c6bdc4e865_EEAS.svg"
+        },
+        "description": [
+          {
+            "type": "paragraph",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt odio consectetur commodo pulvinar placerat accumsan, accumsan. Sem tellus risus tellus sit.",
+            "spans": []
+          }
+        ],
+        "link_text": "Link to website",
         "link": {
           "link_type": "Web",
           "url": "http://google.com"
@@ -28,7 +97,7 @@
       }
     ],
     "primary": {
-      "background_color": "#939efc"
+      "background_color": "#ffffff"
     },
     "slice_type": "partner_logo_grid_with_description_text"
   }

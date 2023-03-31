@@ -7,6 +7,16 @@
         "__TYPE__": "FieldContent",
         "value": "#e03120",
         "type": "Color"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "56",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "53",
+        "type": "Number"
       }
     },
     "items": [
@@ -16,7 +26,6 @@
           [
             "image",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869",
@@ -34,6 +43,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],

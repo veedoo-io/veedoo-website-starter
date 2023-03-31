@@ -3489,6 +3489,26 @@ interface PortfolioItemsSliceDefaultPrimary {
      *
      */
     background_color: prismicT.ColorField;
+    /**
+     * margin top field in *PortfolioItems → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: portfolio_items.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin bottom field in *PortfolioItems → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: portfolio_items.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
 }
 /**
  * Item in PortfolioItems → Items

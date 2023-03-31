@@ -17,6 +17,20 @@
             "label": "background color",
             "placeholder": ""
           }
+        },
+        "margin_top": {
+          "type": "Number",
+          "config": {
+            "label": "margin top",
+            "placeholder": ""
+          }
+        },
+        "margin_bottom": {
+          "type": "Number",
+          "config": {
+            "label": "margin bottom",
+            "placeholder": ""
+          }
         }
       },
       "items": {

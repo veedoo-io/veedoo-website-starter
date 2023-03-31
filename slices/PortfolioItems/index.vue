@@ -1,5 +1,8 @@
 <template>
-  <section :class="getContaienrClasses()">
+  <section
+    :class="getContaienrClasses()"
+    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom};`"
+  >
     <div
       v-if="slice.items?.length > 0"
       v-for="(item, i) in slice.items"
@@ -12,7 +15,7 @@
         item.text_color ? item.text_color : '#353C47'
       }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
     >
-      <PrismicLink class="w-full h-full " :field="item.url">
+      <PrismicLink class="w-full h-full" :field="item.url">
         <PrismicImage
           class="w-full group-hover:invisible"
           :field="item.image"
@@ -71,8 +74,10 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
   data() {
+    console.log(this.slice);
     let getContaienrClasses = function () {
-      let classes = 'w-full w-full gap-x-6 gap-y-6 flex flex-wrap';
+      console.log;
+      let classes = 'w-full py-10 w-full gap-x-6 gap-y-6 flex flex-wrap';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -94,6 +99,15 @@ export default {
         'absolute top-0 left-0 hidden group-hover:flex w-full h-full bg-transparent flex flex-col justify-center py-[16px] px-[16px] lg:px-[70px]';
       return classes;
     };
+    let marginTop =
+      this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
+        ? this.slice.primary.margin_top + 'px'
+        : '0px';
+
+    let marginBottom =
+      this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
+        ? this.slice.primary.margin_bottom + 'px'
+        : '0px';
 
     //console.log('items', this.slice);
 
@@ -101,6 +115,8 @@ export default {
       getContaienrClasses,
       getItemClassess,
       getItemContextClasses,
+      marginTop,
+      marginBottom,
     };
   },
 };
