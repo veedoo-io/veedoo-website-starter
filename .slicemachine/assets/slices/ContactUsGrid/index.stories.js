@@ -180,7 +180,8 @@ export const _Default = () => ({
         "id": "contact_info$8f35226e-ccdd-47fc-bbe6-a3207fac4e3f",
         "slice_type": "contact_info",
         "slice_label": null
-    }}
+    },
+    }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })

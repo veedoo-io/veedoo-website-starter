@@ -12,7 +12,7 @@
       />
       <div :class="getQuestionsContainer()" :style="{ maxWidth: width }">
         <div v-if="slice.primary.image" :class="getImageContainer()">
-          <PrismicImage :field="slice.primary.image" class="" />
+          <PrismicImage :field="slice.primary.image" class="w-full" />
         </div>
         <div class="w-fit flex-1 flex flex-col gap-6">
           <div
@@ -75,6 +75,7 @@
               <PrismicImage
                 v-if="slice.variation == 'withAnswerImage' && item.image"
                 :field="item.image"
+                class="max-w-[120px]"
               />
               <PrismicRichText
                 :style="`color: ${
@@ -103,7 +104,7 @@ export default {
 
   data() {
     let getContainerClasses = function () {
-      let classes = 'w-full min-h-screen  flex flex-col justify-center';
+      let classes = 'w-full h-full py-10 flex flex-col justify-center';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -150,9 +151,10 @@ export default {
       return classes;
     };
 
-    let width = this.slice.primary.max_width
-      ? this.slice.primary.max_width + 'px'
-      : 'unset';
+    let width =
+      this.slice.primary.max_width && this.slice.primary.max_width > 150
+        ? this.slice.primary.max_width + 'px'
+        : 'unset';
 
     let getItemClasses = function () {
       let classes =
@@ -176,7 +178,7 @@ export default {
     let getImageContainer = function () {
       let classes = 'hidden';
       if (this.slice.variation == 'withImage') {
-        classes = 'mx-auto flex justify-end';
+        classes = 'mx-auto flex flex-1 justify-end';
       }
       return classes;
     };

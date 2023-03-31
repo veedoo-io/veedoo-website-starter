@@ -18,8 +18,24 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"type":"solid","color":"#2fedfc","divider_height":78,"margin_top":46,"margin_right":25,"margin_bottom":28,"margin_left":87,"rounded":false},"slice_type":"divider","id":"_Default"}
-    }
+      mock: {
+        "variation": "default",
+        "version": "sktwi1xtmkfgx8626",
+        "items": [
+          {}
+        ],
+        "primary": {
+          "type": "solid",
+          "color": "#333",
+          "divider_height": 1,
+          "margin_top": 46,
+          "margin_right": 0,
+          "margin_bottom": 46,
+          "margin_left": 0,
+          "rounded": false
+        },
+        "slice_type": "divider"
+      }, }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
