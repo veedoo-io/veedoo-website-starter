@@ -2,7 +2,7 @@ import MyComponent from '../../../../slices/ContactFormVeedoo';
 import SliceZone from 'vue-slicezone'
 
 export default {
-  title: 'slices/ContactFormVeedoo'
+  title: 'slices/ContactForms/ContactFormVeedoo'
 }
 
 
@@ -57,12 +57,12 @@ export const _Default = () => ({
            "text_color":"#353C47",
            "background_color":"#FFFFFF",
            "button_background_color":"#F2776B",
-           "text_background_color":"#FFFFFF"
+           "text_background_color":"#FFFFFF",
+           "margin_top":242,"margin_bottom":24,
         },
         "slice_type":"contact_form_veedoo",
         "id":"_Default"
      }
-
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

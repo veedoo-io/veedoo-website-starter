@@ -38,7 +38,8 @@
        "text_color":"#353C47",
        "background_color":"#FFFFFF",
        "button_background_color":"#F2776B",
-       "text_background_color":"#FFFFFF"
+       "text_background_color":"#FFFFFF",
+       "margin_top":42,"margin_bottom":24,
     },
     "slice_type":"contact_form_veedoo",
     "id":"_Default"

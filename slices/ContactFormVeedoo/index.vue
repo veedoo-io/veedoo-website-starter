@@ -2,6 +2,8 @@
   <section
     :class="getContainerClasses()"
     :style="{
+      marginTop: `${marginTop} `,
+      marginBottom: `${marginBottom} `,
       filter:
         'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
     }"
@@ -151,6 +153,16 @@ export default {
 
       return classes;
     };
+    let marginTop =
+      this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
+        ? this.slice.primary.margin_top + 'px'
+        : '0px';
+
+    let marginBottom =
+      this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
+        ? this.slice.primary.margin_bottom + 'px'
+        : '0px';
+
 
     return {
       getContainerClasses,
@@ -164,6 +176,9 @@ export default {
       name: '',
       email: '',
       message: '',
+      marginTop,
+      marginBottom,
+
     };
   },
   methods: {

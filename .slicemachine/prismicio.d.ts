@@ -1548,6 +1548,26 @@ interface ContactFormVeedooSliceDefaultPrimary {
      *
      */
     text_background_color: prismicT.ColorField;
+    /**
+     * margin top field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin bottom field in *ContactFormVeedoo → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_form_veedoo.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
 }
 /**
  * Default variation for ContactFormVeedoo Slice
@@ -1619,7 +1639,7 @@ interface ContactInfoSliceDefaultPrimary {
      */
     description: prismicT.RichTextField;
     /**
-     * email title field in *ContactUsGrid → Primary*
+     * first section title field in *ContactUsGrid → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -1629,7 +1649,7 @@ interface ContactInfoSliceDefaultPrimary {
      */
     email_title: prismicT.RichTextField;
     /**
-     * email title image field in *ContactUsGrid → Primary*
+     * first section title image field in *ContactUsGrid → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
@@ -1639,7 +1659,7 @@ interface ContactInfoSliceDefaultPrimary {
      */
     email_title_image: prismicT.ImageField<never>;
     /**
-     * email content field in *ContactUsGrid → Primary*
+     * first section content field in *ContactUsGrid → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
@@ -1648,6 +1668,66 @@ interface ContactInfoSliceDefaultPrimary {
      *
      */
     email_content: prismicT.RichTextField;
+    /**
+     * second section title field in *ContactUsGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_info.primary.second_section_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    second_section_title: prismicT.KeyTextField;
+    /**
+     * second section title image field in *ContactUsGrid → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_info.primary.second_section_title_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    second_section_title_image: prismicT.ImageField<never>;
+    /**
+     * second section content field in *ContactUsGrid → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_info.primary.second_section_content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    second_section_content: prismicT.RichTextField;
+    /**
+     * third section title field in *ContactUsGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_info.primary.third_section_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    third_section_title: prismicT.KeyTextField;
+    /**
+     * third section title image field in *ContactUsGrid → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_info.primary.third_section_title_image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    third_section_title_image: prismicT.ImageField<never>;
+    /**
+     * third section content field in *ContactUsGrid → Primary*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: contact_info.primary.third_section_content
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    third_section_content: prismicT.RichTextField;
     /**
      * social media title field in *ContactUsGrid → Primary*
      *

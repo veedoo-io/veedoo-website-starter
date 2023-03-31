@@ -109,6 +109,16 @@
         "__TYPE__": "FieldContent",
         "value": "#d097d3",
         "type": "Color"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "42",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "24",
+        "type": "Number"
       }
     },
     "items": [
