@@ -5,7 +5,6 @@ import AtomTags from './AtomTags';
 import AudioPlayerWithImage from './AudioPlayerWithImage';
 import BlurbHorizontal from './BlurbHorizontal';
 import CallToActionWithImage from './CallToActionWithImage';
-import ClientsSlider from './ClientsSlider';
 import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactUsGrid from './ContactUsGrid';
 import CtaWithBackgroundImage from './CtaWithBackgroundImage';
@@ -41,7 +40,6 @@ export {
 	AudioPlayerWithImage,
 	BlurbHorizontal,
 	CallToActionWithImage,
-	ClientsSlider,
 	ContactFormVeedoo,
 	ContactUsGrid,
 	CtaWithBackgroundImage,
@@ -78,7 +76,6 @@ export const components = {
 	audio_player_with_image: AudioPlayerWithImage,
 	blurb: BlurbHorizontal,
 	call_to_action_with_image: CallToActionWithImage,
-	clients_slider: ClientsSlider,
 	contact_form_veedoo: ContactFormVeedoo,
 	contact_info: ContactUsGrid,
 	cta_with_background_image: CtaWithBackgroundImage,

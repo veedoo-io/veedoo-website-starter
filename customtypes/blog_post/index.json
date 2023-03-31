@@ -41,7 +41,9 @@
         "config": {
           "label": "author",
           "select": "document",
-          "customtypes": ["author"]
+          "customtypes": [
+            "author"
+          ]
         }
       },
       "tag": {
@@ -49,7 +51,9 @@
         "config": {
           "label": "tag 1",
           "select": "document",
-          "customtypes": ["post_tag"]
+          "customtypes": [
+            "post_tag"
+          ]
         }
       },
       "tag_2": {
@@ -57,7 +61,9 @@
         "config": {
           "label": "tag 2",
           "select": "document",
-          "customtypes": ["post_tag"]
+          "customtypes": [
+            "post_tag"
+          ]
         }
       },
       "tag_3": {
@@ -65,7 +71,9 @@
         "config": {
           "label": "tag 3",
           "select": "document",
-          "customtypes": ["post_tag"]
+          "customtypes": [
+            "post_tag"
+          ]
         }
       },
       "category": {
@@ -73,7 +81,9 @@
         "config": {
           "label": "category",
           "select": "document",
-          "customtypes": ["post_category"]
+          "customtypes": [
+            "post_category"
+          ]
         }
       },
       "slices": {
@@ -91,9 +101,6 @@
               "type": "SharedSlice"
             },
             "contact_form_veedoo": {
-              "type": "SharedSlice"
-            },
-            "clients_slider": {
               "type": "SharedSlice"
             },
             "divider": {

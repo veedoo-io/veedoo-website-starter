@@ -95,19 +95,6 @@
         "primary": {}
       }
     },
-    "ClientsSlider": {
-      "default": {
-        "primary": {
-          "description": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
-        "items": {}
-      }
-    },
     "RichText": {
       "default": {
         "primary": {

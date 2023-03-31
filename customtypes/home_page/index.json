@@ -34,9 +34,6 @@
             "atom_tags": {
               "type": "SharedSlice"
             },
-            "clients_slider": {
-              "type": "SharedSlice"
-            },
             "faq_accordion": {
               "type": "SharedSlice"
             },
