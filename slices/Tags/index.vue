@@ -1,25 +1,10 @@
 <template>
   <section
-    class="
-      relative
-      w-full
-      min-h-screen
-      flex flex-col
-      justify-center
-      py-4
-      lg:py-[64px]
-    "
+    class="relative w-full h-full flex flex-col justify-center py-4 lg:py-[64px]"
   >
     <h2
       v-if="slice.primary.title"
-      class="
-        text-[23px]
-        md:text-[36px]
-        lg:text-[40px]
-        text-[#353C47]
-        font-medium
-        mb-[64px]
-      "
+      class="text-[23px] md:text-[36px] lg:text-[40px] text-[#353C47] font-medium mb-[64px]"
     >
       {{ slice.primary.title }}
     </h2>

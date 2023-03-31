@@ -30,26 +30,26 @@
       "subtitle": [
         {
           "type": "paragraph",
-          "text": "Anim ut eiusmod minim veniam commodo fugiat cupidatat. Aliqua Lorem nisi minim anim fugiat voluptate adipisicing ut deserunt consectetur ea sint ex.",
+          "text": "The Carousel",
           "spans": []
         }
       ],
       "title": [
         {
           "type": "paragraph",
-          "text": "Consequat reprehenderit voluptate cupidatat labore mollit consequat. Nulla dolore labore nulla exercitation amet tempor.",
+          "text": "It’s more than a budget manager.",
           "spans": []
         }
       ],
       "description": [
         {
           "type": "paragraph",
-          "text": "Sunt ut consectetur laboris nostrud commodo dolore velit reprehenderit duis labore occaecat occaecat dolore. Sint magna qui qui sunt magna amet ullamco laborum ut nostrud ipsum sit et. Ullamco nostrud voluptate labore est laborum aliqua officia irure proident eu laboris minim est.",
+          "text": "This carousel moves by one card at a time when the next and previous arrows are clicked.",
           "spans": []
         }
       ],
-      "text_color": "#fe2247",
-      "background_color": "#4abd98"
+      "text_color": "#000000",
+      "background_color": "#ffffff"
     },
     "slice_type": "post_carousel"
   }
