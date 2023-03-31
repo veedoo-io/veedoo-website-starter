@@ -1250,6 +1250,16 @@ export type BlurbSlice = prismicT.SharedSlice<"blurb", BlurbSliceVariation>;
  */
 interface CallToActionWithImageSliceDefaultPrimary {
     /**
+     * image field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.image
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    image: prismicT.ImageField<never>;
+    /**
      * Title field in *CallToActionWithImage → Primary*
      *
      * - **Field Type**: Rich Text
@@ -1279,16 +1289,6 @@ interface CallToActionWithImageSliceDefaultPrimary {
      *
      */
     backgroundcolor: prismicT.ColorField;
-    /**
-     * image field in *CallToActionWithImage → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: call_to_action_with_image.primary.image
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    image: prismicT.ImageField<never>;
     /**
      * button text field in *CallToActionWithImage → Primary*
      *
@@ -1329,6 +1329,46 @@ interface CallToActionWithImageSliceDefaultPrimary {
      *
      */
     button_text_color: prismicT.ColorField;
+    /**
+     * margin top field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.margin_top
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_top: prismicT.NumberField;
+    /**
+     * margin right field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.margin_right
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_right: prismicT.NumberField;
+    /**
+     * margin bottom field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.margin_bottom
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_bottom: prismicT.NumberField;
+    /**
+     * margin left field in *CallToActionWithImage → Primary*
+     *
+     * - **Field Type**: Number
+     * - **Placeholder**: *None*
+     * - **API ID Path**: call_to_action_with_image.primary.margin_left
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
+     *
+     */
+    margin_left: prismicT.NumberField;
 }
 /**
  * Default variation for CallToActionWithImage Slice

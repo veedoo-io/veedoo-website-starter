@@ -1,7 +1,7 @@
 <template>
   <section
     :class="`w-full h-fit my-2.5 flex ${aligment}`"
-    :style="`background-color:${backgroundColor}; margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; `"
+    :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; `"
   >
     <PrismicImage
       class="w-full"

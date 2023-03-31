@@ -11,6 +11,14 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "CallToActionWithImage",
       "primary": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
         "title": {
           "type": "StructuredText",
           "config": {
@@ -34,14 +42,6 @@
           "config": {
             "label": "backgroundColor",
             "placeholder": "Slice BackgroundColor"
-          }
-        },
-        "image": {
-          "type": "Image",
-          "config": {
-            "label": "image",
-            "constraint": {},
-            "thumbnails": []
           }
         },
         "button_text": {
@@ -71,6 +71,34 @@
           "type": "Color",
           "config": {
             "label": "button text color",
+            "placeholder": ""
+          }
+        },
+        "margin_top": {
+          "type": "Number",
+          "config": {
+            "label": "margin top",
+            "placeholder": ""
+          }
+        },
+        "margin_right": {
+          "type": "Number",
+          "config": {
+            "label": "margin right",
+            "placeholder": ""
+          }
+        },
+        "margin_bottom": {
+          "type": "Number",
+          "config": {
+            "label": "margin bottom",
+            "placeholder": ""
+          }
+        },
+        "margin_left": {
+          "type": "Number",
+          "config": {
+            "label": "margin left",
             "placeholder": ""
           }
         }

@@ -3,7 +3,7 @@
     :class="`w-full h-fit flex items-center ${
       slice.primary.center_text ? 'justify-center' : ''
     }`"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
+    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
   >
     <PrismicRichText
       :style="

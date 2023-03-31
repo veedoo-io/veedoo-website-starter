@@ -2,7 +2,10 @@
   <section :class="getContainerClasses()">
     <div :class="getTitleClasses()">
       <h2>{{ slice.primary.title }}</h2>
-      <PrismicImage :field="slice.primary.title_image" />
+      <PrismicImage
+        class="h-fit max-h-[150px] object-cover"
+        :field="slice.primary.title_image"
+      />
     </div>
     <PrismicRichText
       :class="getDescriptionClasses()"
@@ -18,16 +21,7 @@
       <div
         v-for="(item, i) in slice.items"
         :key="`slice-item-${i}`"
-        class="
-          slide
-          bg-white
-          rounded-lg
-          h-[161px]
-          flex
-          items-center
-          justify-center
-          lg:mr-2
-        "
+        class="slide bg-white rounded-lg h-[161px] flex items-center justify-center lg:mr-2"
         :style="{
           display: 'flex',
           width: '90%',
@@ -41,29 +35,10 @@
       </div>
     </agile>
     <div
-      class="
-        w-fit
-        mx-auto
-        mt-5
-        flex
-        items-center
-        max-w-screen
-        justify-between
-        gap-5
-      "
+      class="w-fit mx-auto mt-5 flex items-center max-w-screen justify-between gap-5"
     >
       <div
-        class="
-          bg-white
-          w-8
-          h-8
-
-          active:scale-125
-          rounded
-          flex
-          justify-center
-          items-center
-        "
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center"
         @click="$refs.carousel.goToPrev()"
         :style="{
           filter:
@@ -96,16 +71,7 @@
         ></div>
       </div>
       <div
-        class="
-          bg-white
-          w-8
-          h-8
-          active:scale-125
-          rounded
-          flex
-          justify-center
-          items-center
-        "
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center"
         @click="$refs.carousel.goToNext()"
         :style="{
           filter:
@@ -142,7 +108,7 @@ export default {
 
   data() {
     let getContainerClasses = function () {
-      let classes = 'flex flex-col justify-center marker:w-full min-h-screen ';
+      let classes = 'w-full h-full flex flex-col justify-center  ';
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -154,7 +120,7 @@ export default {
 
     let getTitleClasses = function () {
       let classes =
-        'flex gap-4 items-center mb-4 text-[32px] font-medium	 lg:text-[48px] ';
+        'flex h-fit gap-4 items-center mb-4 text-[32px] font-medium	 lg:text-[48px] ';
 
       if (this.slice.primary.primary_text_color) {
         let colorName = tailwindMatcher(this.slice.primary.primary_text_color);

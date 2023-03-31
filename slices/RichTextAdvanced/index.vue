@@ -1,7 +1,7 @@
 <template>
   <section
     :class="getContainerClasses()"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
+    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
   >
     <VeedooText
       :text="slice.primary.text"

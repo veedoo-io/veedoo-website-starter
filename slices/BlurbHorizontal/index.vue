@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full my-2.5"
-    :style="`background-color:${backgroundColor}; margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
   >
     <div
       :class="`flex

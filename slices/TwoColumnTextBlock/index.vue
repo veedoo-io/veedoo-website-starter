@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full h-fit flex max-md:flex-col gap-[72px]"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; background-color:${backgroundColor}; font-size:${textSize};color:${textColor}`"
+    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; background-color:${backgroundColor}; font-size:${textSize};color:${textColor}`"
   >
     <PrismicRichText :field="slice.primary.first_column_rich_text" />
     <PrismicRichText :field="slice.primary.second_column_rich_text" />

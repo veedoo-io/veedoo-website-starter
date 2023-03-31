@@ -1,7 +1,7 @@
 <template>
   <div
     :class="getContainerClasses()"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};border-color:${colorName}; border-bottom-width:${borderWidth}px`"
+    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};border-color:${colorName}; border-bottom-width:${borderWidth}px`"
   ></div>
 </template>
 

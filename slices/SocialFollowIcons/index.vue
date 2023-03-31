@@ -1,7 +1,7 @@
 <template>
   <section
     :class="`w-full h-fit flex my-2.5 ${aligment} gap-[9px] items-center`"
-    :style="`background-color:${backgroundColor}; margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
   >
     <div
       class=""

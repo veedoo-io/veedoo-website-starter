@@ -1,5 +1,8 @@
 <template>
-  <section :class="getContainerClass()">
+  <section
+    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :class="getContainerClass()"
+  >
     <div v-if="slice.primary?.image?.url">
       <PrismicImage
         class="h-[250px] object-contain"
@@ -30,7 +33,7 @@ export default {
 
     let getContainerClass = function () {
       let classNames =
-        'flex flex-col w-full min-h-screen justify-center gap-[40px] overflow-hidden  ';
+        'flex flex-col w-full h-full justify-center gap-[40px] overflow-hidden  ';
 
       if (
         this.slice.primary?.backgroundcolor &&
@@ -90,12 +93,36 @@ export default {
       return classes;
     };
 
+    let marginTop =
+      this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
+        ? this.slice.primary.margin_top + 'px'
+        : '0px';
+
+    let marginBottom =
+      this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
+        ? this.slice.primary.margin_bottom + 'px'
+        : '0px';
+
+    let marginLeft =
+      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
+        ? this.slice.primary.margin_left + 'px'
+        : '0px';
+
+    let marginRight =
+      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
+        ? this.slice.primary.margin_right + 'px'
+        : '0px';
+
     //console.log('cta slice ', this.slice);
 
     return {
       getContainerClass,
       getButtonClass,
       getTitleClasses,
+      marginTop,
+      marginBottom,
+      marginLeft,
+      marginRight,
     };
   },
 };

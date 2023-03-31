@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full flex my-2.5"
-    :style="`background-color: ${sliceBg}; margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :style="`background-color: ${sliceBg}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
   >
     <div
       v-if="loading && !error"

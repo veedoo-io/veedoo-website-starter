@@ -1,7 +1,7 @@
 <template>
   <section
     :class="getContainerClasses()"
-    :style="`margin:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};
+    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};
       color:${slice.primary.text_color ? slice.primary.text_color : '#353C47'};
       background-color:${
         slice.primary.background_color
@@ -14,7 +14,7 @@
       :style="`font-size:${textSize}`"
       :field="slice.primary.title"
     />
-    <PrismicImage class="h-fit " :field="slice.primary.image" />
+    <PrismicImage class="h-fit" :field="slice.primary.image" />
   </section>
 </template>
 
