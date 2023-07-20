@@ -133,18 +133,18 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'HeaderVeedoo',
+  name: "HeaderVeedoo",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     //console.log('header ', this.slice);
     let getContainerClasses = function () {
       let classes =
-        'fixed left-0 z-50 top-0 h-20 w-screen flex justify-between items-center px-1 lg:px-8 ';
+        "fixed left-0 z-50 top-0 h-20 w-full flex justify-between items-center px-1 lg:px-8 ";
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
         //console.log('colorName ', colorName);
@@ -156,7 +156,7 @@ export default {
     };
 
     let getMenuContainerClasses = function () {
-      let classes = 'flex gap-10 items-center ';
+      let classes = "flex gap-10 items-center ";
       if (this?.slice?.primary?.text_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.text_color);
         //console.log('colorName ', colorName);
@@ -168,7 +168,7 @@ export default {
     };
 
     let getMenuClasses = function () {
-      let classes = 'max-w-[530px] w-screen h-full p-5 ';
+      let classes = "max-w-[530px] w-screen h-full p-5 ";
 
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
@@ -186,11 +186,11 @@ export default {
     let getInTouchItems = [];
 
     this?.slice?.items.forEach((item) => {
-      if (item.menu_item_type == 'Get in touch!') {
+      if (item.menu_item_type == "Get in touch!") {
         getInTouchItems.push(item);
-      } else if (item.menu_item_type == 'Contacts') {
+      } else if (item.menu_item_type == "Contacts") {
         contactsItems.push(item);
-      } else if (item.menu_item_type == 'Menu') {
+      } else if (item.menu_item_type == "Menu") {
         menuItems.push(item);
       }
     });
