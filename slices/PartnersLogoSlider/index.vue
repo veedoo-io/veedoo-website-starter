@@ -1,18 +1,7 @@
 <template>
   <section class="relative w-full h-fit overflow-hidden">
     <button
-      class="
-        absolute
-        h-[60px]
-        z-10
-        right-[calc(50%_-_80px)]
-        md:right-[16px]
-        lg:right-[32px]
-        bottom-[72px]
-        md:top-[calc(50%_-_30px)]
-        hover:scale-125
-        active:scale-75
-      "
+      class="absolute h-[60px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[32px] bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToNext()">
@@ -94,18 +83,7 @@
       </div>
     </button>
     <button
-      class="
-        absolute
-        h-[60px]
-        z-10
-        left-[calc(50%_-_80px)]
-        md:left-[16px]
-        lg:left-[32px]
-        bottom-[72px]
-        md:top-[calc(50%_-_30px)]
-        hover:scale-125
-        active:scale-75
-      "
+      class="absolute h-[60px] z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[32px] bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToPrev()">
@@ -188,15 +166,7 @@
     </button>
 
     <agile
-      class="
-        pt-[72px]
-        pb-[172px]
-        md:pb-[72px]
-        px-auto
-        md:px-[72px]
-        bg-white
-        w-full
-      "
+      class="pt-[72px] pb-[172px] md:pb-[72px] px-auto md:px-[72px] bg-white w-full"
       ref="carousel"
       :options="myOption"
     >
@@ -214,6 +184,7 @@
           }"
         >
           <PrismicImage
+            class="object-cover display:block p-2 logo h-auto"
             :class="getSlideImageClass()"
             :field="item.partner_logo"
           />
@@ -224,12 +195,12 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'PartnersLogoSlider',
+  name: "PartnersLogoSlider",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
     //console.log('slice ', this.slice.items);
@@ -272,31 +243,31 @@ export default {
 
     let getSlideClass = function () {
       let classNames =
-        'w-[250px] h-[83px] bg-white mx-auto  flex justify-center items-center';
+        "w-[250px] h-[83px] bg-white mx-auto  flex justify-center items-center";
 
-      if (this.slice.variation == 'partnersLogoSlider2') {
+      if (this.slice.variation == "partnersLogoSlider2") {
         classNames =
-          'w-[250px] h-[111px] rounded bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center';
+          "w-[250px] h-[111px] rounded bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center";
       }
 
       return classNames;
     };
 
     let getSlideImageClass = function () {
-      let classNames = 'object-cover';
+      let classNames = "object-cover";
 
-      if (this.slice.variation == 'partnersLogoSlider2') {
-        classNames = 'w-[194px] h-[83px] object-fill';
+      if (this.slice.variation == "partnersLogoSlider2") {
+        classNames = "w-[194px] h-[83px] object-fill";
       }
 
       return classNames;
     };
 
     let getSliderButtonClass = function () {
-      let classNames = '';
+      let classNames = "";
 
-      if (this.slice.variation == 'partnersLogoSlider2') {
-        classNames = 'bg-white shadow-[0_5px_10px_0px_#D4D4D4]';
+      if (this.slice.variation == "partnersLogoSlider2") {
+        classNames = "bg-white shadow-[0_5px_10px_0px_#D4D4D4]";
       }
 
       return classNames;
@@ -315,5 +286,8 @@ export default {
 <style scoped>
 .agile {
   width: 100%;
+}
+.logo {
+  max-width: initial;
 }
 </style>
