@@ -215,7 +215,7 @@ export default {
       slidesToShow: 1,
       dots: true, // Set the dots option to the calculated maximum
       autoplay: true,
-      infinite: false,
+      infinite: true,
       responsive: [
         {
           breakpoint: 768,
