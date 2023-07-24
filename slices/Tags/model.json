@@ -10,15 +10,7 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Tags",
-      "primary": {
-        "title": {
-          "type": "Text",
-          "config": {
-            "label": "Title",
-            "placeholder": ""
-          }
-        }
-      },
+      "primary": {},
       "items": {
         "tag_label": {
           "type": "Text",
