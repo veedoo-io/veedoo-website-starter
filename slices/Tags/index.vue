@@ -2,13 +2,6 @@
   <section
     class="relative w-full h-full flex flex-col justify-center py-4 lg:py-[64px]"
   >
-    <h2
-      v-if="slice.primary.title"
-      class="text-[23px] md:text-[36px] lg:text-[40px] text-[#353C47] font-medium mb-[64px]"
-    >
-      {{ slice.primary.title }}
-    </h2>
-
     <div v-if="slice?.items?.length > 0" class="flex gap-[32px] flex-wrap">
       <div v-for="(item, i) in slice.items" class="" :key="`slice-item-${i}`">
         <Tag
@@ -22,12 +15,12 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'Tags',
+  name: "Tags",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
     return {};
@@ -37,6 +30,6 @@ export default {
 
 <style scoped>
 .title {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 </style>

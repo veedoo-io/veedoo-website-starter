@@ -1,11 +1,12 @@
 <template>
   <section class="relative w-full h-fit overflow-hidden">
     <button
-      class="absolute h-[60px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[32px] bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[32px] rounded bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToNext()">
         <svg
+          class="errow"
           width="60"
           height="61"
           viewBox="0 0 60 61"
@@ -83,11 +84,12 @@
       </div>
     </button>
     <button
-      class="absolute h-[60px] z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[32px] bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[32px] bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToPrev()">
         <svg
+          class="errow"
           width="60"
           height="61"
           viewBox="0 0 60 61"
@@ -166,7 +168,7 @@
     </button>
 
     <agile
-      class="pt-[72px] pb-[172px] md:pb-[72px] px-auto md:px-[72px] bg-white w-full"
+      class="pt-[72px] pb-[50px] md:pb-[72px] px-auto md:px-[72px] bg-white w-full"
       ref="carousel"
       :options="myOption"
     >
@@ -184,7 +186,7 @@
           }"
         >
           <PrismicImage
-            class="object-cover display:block p-2 logo h-auto"
+            class="object-cover display:block logo h-auto"
             :class="getSlideImageClass()"
             :field="item.partner_logo"
           />
@@ -203,16 +205,17 @@ export default {
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
-    //console.log('slice ', this.slice.items);
     let numberOfSlides = this.slice?.items?.length ?? 0;
+    // Manually calculate the maximum number of dots to show (3 or the number of slides, whichever is smaller)
+    let maxDotsToShow = Math.min(3, this.slice?.items?.length || 0);
 
     //console.log('this.slice?.items', this.slice?.items);
     let myOption = {
       navButtons: false,
       slidesToShow: 1,
-      dots: false,
-      autoplay: false,
-      infinite: true,
+      dots: true, // Set the dots option to the calculated maximum
+      autoplay: true,
+      infinite: false,
       responsive: [
         {
           breakpoint: 768,
@@ -221,7 +224,7 @@ export default {
           },
         },
         {
-          breakpoint: 1024,
+          breakpoint: 1010,
           settings: {
             slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
           },
@@ -229,11 +232,17 @@ export default {
         {
           breakpoint: 1280,
           settings: {
+            slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
+          },
+        },
+        {
+          breakpoint: 1500,
+          settings: {
             slidesToShow: numberOfSlides > 4 ? 4 : numberOfSlides,
           },
         },
         {
-          breakpoint: 1536,
+          breakpoint: 1732,
           settings: {
             slidesToShow: numberOfSlides > 5 ? 5 : numberOfSlides,
           },
@@ -247,7 +256,7 @@ export default {
 
       if (this.slice.variation == "partnersLogoSlider2") {
         classNames =
-          "w-[250px] h-[111px] rounded bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center";
+          "w-[250px] h-[145px] rounded-md bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center";
       }
 
       return classNames;
@@ -257,7 +266,7 @@ export default {
       let classNames = "object-cover";
 
       if (this.slice.variation == "partnersLogoSlider2") {
-        classNames = "w-[194px] h-[83px] object-fill";
+        classNames = "w-[194px] h-[83px]";
       }
 
       return classNames;
@@ -284,10 +293,32 @@ export default {
 </script>
 
 <style scoped>
+::v-deep .agile__dot {
+  background-color: #f2f2f2;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+::v-deep .agile__dot--current {
+  background-color: #cbd1d6;
+}
+
+::v-deep .agile__actions {
+  margin-top: 20px;
+}
+
 .agile {
   width: 100%;
 }
+
 .logo {
   max-width: initial;
+}
+
+.errow {
+  width: 32px;
+  height: 32px;
 }
 </style>
