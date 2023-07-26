@@ -15,7 +15,7 @@
         item.text_color ? item.text_color : '#353C47'
       }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
     >
-      <PrismicLink class="w-full h-full" :field="item.url">
+      <PrismicLink class="w-full h-full" :field="item.url" target="_blank">
         <PrismicImage
           class="w-full group-hover:invisible rounded-2xl"
           :field="item.image"
