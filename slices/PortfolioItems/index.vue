@@ -1,10 +1,10 @@
 <template>
   <section
+    v-if="slice.items?.length > 0"
     :class="getContaienrClasses()"
     :style="`paddingTop:${marginTop};paddingBottom:${marginBottom};`"
   >
     <div
-      v-if="slice.items?.length > 0"
       v-for="(item, i) in slice.items"
       :key="`slice-item-${i}`"
       class="group"
@@ -17,7 +17,7 @@
     >
       <PrismicLink class="w-full h-full" :field="item.url">
         <PrismicImage
-          class="w-full group-hover:invisible"
+          class="w-full group-hover:invisible rounded-2xl"
           :field="item.image"
         />
         <div :class="getItemContextClasses()">
@@ -27,7 +27,7 @@
             :field="item.description"
           />
           <div class="flex w-full gap-2.5 items-center mt-6 font-medium">
-            {{ item.url_label ?? 'Visit website' }}
+            {{ item.url_label ?? "Visit website" }}
             <svg
               width="20"
               height="21"
@@ -65,19 +65,19 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import { tail } from 'lodash';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import { tail } from "lodash";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'PortfolioItems',
+  name: "PortfolioItems",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     console.log(this.slice);
     let getContaienrClasses = function () {
       console.log;
-      let classes = 'w-full py-10 w-full gap-x-6 gap-y-6 flex flex-wrap';
+      let classes = "w-full py-10 w-full gap-x-6 gap-y-6 flex flex-wrap";
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -89,25 +89,25 @@ export default {
 
     let getItemClassess = function () {
       let classes =
-        'relative flex-[0_0_100%] lg:flex-[0_0_48%]  min-h-[220px] w-full h-full rounded-lg overflow-hidden  ';
+        "relative flex-[0_0_100%] lg:flex-[0_0_48%]  min-h-[220px] w-full h-full rounded-2xl overflow-hidden  ";
 
       return classes;
     };
 
     let getItemContextClasses = function () {
       let classes =
-        'absolute top-0 left-0 hidden group-hover:flex w-full h-full bg-transparent flex flex-col justify-center py-[16px] px-[16px] lg:px-[70px]';
+        "absolute top-0 left-0 hidden group-hover:flex w-full h-full bg-transparent flex flex-col justify-center py-[16px] px-[16px] lg:px-[70px]";
       return classes;
     };
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
-        ? this.slice.primary.margin_top + 'px'
-        : '0px';
+        ? this.slice.primary.margin_top + "px"
+        : "0px";
 
     let marginBottom =
       this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
-        ? this.slice.primary.margin_bottom + 'px'
-        : '0px';
+        ? this.slice.primary.margin_bottom + "px"
+        : "0px";
 
     //console.log('items', this.slice);
 
