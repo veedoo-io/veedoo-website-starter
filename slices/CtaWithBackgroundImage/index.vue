@@ -14,10 +14,12 @@
     <PrismicRichText
       class="font-medium text-[47px]"
       :field="slice.primary.title"
+      :style="`color: ${slice.primary.title_color}`"
     />
     <PrismicRichText
       class="max-w-[586px] text-[19px]"
       :field="slice.primary.description"
+      :style="`color: ${slice.primary.text_color}`"
     />
     <PrismicLink
       :field="slice.primary.button_url"
@@ -54,13 +56,16 @@ export default {
         ? this.slice.primary.background_image.url
         : false;
 
-    //console.log('backgroundImageUrl ', backgroundImageUrl);
+    let titleColor = this.slice.primary.title_color
+      ? this.slice.primary.title_color
+      : "#353C47";
 
     return {
       textColor,
       buttonTextColor,
       buttonBackgroundColor,
       backgroundImageUrl,
+      titleColor,
     };
   },
 };

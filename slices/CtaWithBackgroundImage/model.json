@@ -73,6 +73,13 @@
             "label": "button background color",
             "placeholder": ""
           }
+        },
+        "title_color": {
+          "type": "Color",
+          "config": {
+            "label": "title color",
+            "placeholder": ""
+          }
         }
       },
       "items": {},
