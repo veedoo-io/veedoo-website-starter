@@ -980,16 +980,6 @@ export interface BlurbSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *BlurbHorizontal → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: blurb.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *BlurbHorizontal → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -998,16 +988,6 @@ export interface BlurbSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *BlurbHorizontal → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: blurb.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
 	
 	/**
 	 * background color field in *BlurbHorizontal → Primary*

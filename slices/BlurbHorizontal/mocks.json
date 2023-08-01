@@ -8,19 +8,9 @@
         "value": "71",
         "type": "Number"
       },
-      "margin_right": {
-        "__TYPE__": "FieldContent",
-        "value": "85",
-        "type": "Number"
-      },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
         "value": "31",
-        "type": "Number"
-      },
-      "margin_left": {
-        "__TYPE__": "FieldContent",
-        "value": "22",
         "type": "Number"
       },
       "background_color": {
@@ -36,7 +26,6 @@
           [
             "image",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
@@ -54,6 +43,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],
@@ -150,7 +142,6 @@
           [
             "image",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2",
@@ -168,6 +159,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],
