@@ -4,30 +4,14 @@
     :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
   >
     <div
-      :class="`flex
-
-        ${
-          slice.variation == 'vertical'
-            ? ' justify-between  flex-wrap'
-            : ' gap-[46px] max-[980px]:justify-center flex-col sm:flex-row sm:flex-wrap'
-        }
-
-
-        mx-auto
-        max-w-[1000px]
-
-
-        `"
+      class="flex gap-[46px] md:justify-center flex-wrap md:flex-row flex-col content-center max-w-[1000px] mx-auto"
     >
       <div
         :class="`
           rounded-[5px]
-          flex p-6 gap-6
-          ${
-            slice.variation == 'vertical'
-              ? 'flex-[0_0_100%] max-sm:mx-auto sm:flex-[0_0_50%] md:flex-[0_0_33%] my-2.5 flex-col  max-w-[220px]'
-              : 'max-w-[452px] flex-[0_0_50%] max-[980px]:flex-[0_0_100%]  '
-          } `"
+          flex p-6 gap-6 w-11/12 md:w-3/6 lg:w-2/6
+          ${slice.variation == 'vertical' ? 'my-2.5 flex-col' : 'flex-row'}
+         `"
         v-for="(item, i) in slice.items"
         :key="`blurb-item-${i}`"
         :style="{
@@ -38,7 +22,15 @@
             'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
         }"
       >
-        <PrismicImage :field="item.image" class="rounded" />
+        <PrismicImage
+          :field="item.image"
+          class="object-cover"
+          :class="` ${
+            slice.variation == 'vertical'
+              ? '  w-[60px] h-[60px] mx-auto'
+              : ' w-[120px] h-[120px] '
+          }`"
+        />
         <div class="flex flex-col gap-2">
           <PrismicRichText
             :style="`color: ${
@@ -67,44 +59,32 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'Blurb',
+  name: "Blurb",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     //console.log('slice ', this.slice);
 
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
-        ? this.slice.primary.margin_top + 'px'
-        : '0px';
+        ? this.slice.primary.margin_top + "px"
+        : "0px";
 
     let marginBottom =
       this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
-        ? this.slice.primary.margin_bottom + 'px'
-        : '0px';
-
-    let marginLeft =
-      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + 'px'
-        : '0px';
-
-    let marginRight =
-      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + 'px'
-        : '0px';
+        ? this.slice.primary.margin_bottom + "px"
+        : "0px";
 
     let backgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
 
     return {
       marginTop,
       marginBottom,
-      marginLeft,
-      marginRight,
       backgroundColor,
     };
   },
