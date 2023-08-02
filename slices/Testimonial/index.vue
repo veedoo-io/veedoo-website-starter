@@ -44,7 +44,7 @@
       class="w-fit mx-auto mt-10 flex items-center max-w-screen justify-between gap-5"
     >
       <div
-        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center"
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
         :style="{
           filter:
             'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
@@ -77,7 +77,7 @@
         ></div>
       </div>
       <div
-        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center"
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
         :style="{
           filter:
             'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
@@ -104,18 +104,18 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'Testimonial',
+  name: "Testimonial",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
     let getContainerClasses = function () {
       let classNames =
-        'w-full min-h-screen flex flex-col  justify-center items-center ';
+        "w-full min-h-screen flex flex-col  justify-center items-center ";
 
       if (this.slice.primary.slice_background_color) {
         let colorName = tailwindMatcher(
@@ -129,7 +129,7 @@ export default {
 
     let getTitleClasses = function () {
       let classNames =
-        'font-medium	flex justify-center items-center mb-10 text-[32px] text-[47px] ';
+        "font-medium	flex justify-center items-center mb-10 text-[32px] text-[47px] ";
 
       if (this?.slice?.primary?.title_color) {
         let colorName = tailwindMatcher(this.slice.primary.title_color);
@@ -143,14 +143,14 @@ export default {
     };
 
     let getFullNameClasses = function () {
-      let classes = 'font-medium text-[23px] ';
+      let classes = "font-medium text-[23px] ";
 
       if (this?.slice?.primary?.title_color) {
         let colorName = tailwindMatcher(this.slice.primary.title_color);
 
         classes = classes + ` text-${colorName} `;
       } else {
-        let colorName = tailwindMatcher('#353C47');
+        let colorName = tailwindMatcher("#353C47");
 
         classes = classes + ` text-${colorName}`;
       }
@@ -159,7 +159,7 @@ export default {
     };
 
     let getTestimonialClasses = function () {
-      let classes = 'flex-1 text-[16px] text-[#48525F]';
+      let classes = "flex-1 text-[16px] text-[#48525F]";
 
       return classes;
     };

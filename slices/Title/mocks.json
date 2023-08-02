@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Adipisicing sit pariatur consectetur nulla non culpa qui laborum qui mollit."
+              "text": "Velit consequat sunt pariatur fugiat ex consequat cillum nisi eu fugiat."
             }
           }
         ]
@@ -23,13 +23,13 @@
         "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
-          "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-          "width": 8640,
-          "height": 8640
+          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+          "width": 3277,
+          "height": 4092
         },
-        "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
-        "width": 8640,
-        "height": 8640,
+        "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+        "width": 3277,
+        "height": 4092,
         "edit": {
           "zoom": 1,
           "crop": {
@@ -42,37 +42,37 @@
       },
       "text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#17a4fc",
+        "value": "#624f7b",
         "type": "Color"
       },
       "background_color": {
         "__TYPE__": "FieldContent",
-        "value": "#da1427",
+        "value": "#7b349e",
         "type": "Color"
       },
       "text_size": {
         "__TYPE__": "FieldContent",
-        "value": "75",
+        "value": "46",
         "type": "Number"
       },
       "margin_top": {
         "__TYPE__": "FieldContent",
-        "value": "56",
+        "value": "50",
         "type": "Number"
       },
       "margin_right": {
         "__TYPE__": "FieldContent",
-        "value": "58",
+        "value": "43",
         "type": "Number"
       },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
-        "value": "9",
+        "value": "62",
         "type": "Number"
       },
       "margin_left": {
         "__TYPE__": "FieldContent",
-        "value": "49",
+        "value": "33",
         "type": "Number"
       }
     },

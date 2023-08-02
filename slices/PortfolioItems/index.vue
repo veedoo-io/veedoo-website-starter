@@ -17,7 +17,7 @@
     >
       <PrismicLink class="w-full h-full" :field="item.url" target="_blank">
         <PrismicImage
-          class="w-full group-hover:invisible rounded-2xl"
+          class="w-full group-hover:invisible rounded-2xl min-h-[220px] object-cover"
           :field="item.image"
         />
         <div :class="getItemContextClasses()">
@@ -66,7 +66,6 @@
 
 <script>
 import { getSliceComponentProps } from "@prismicio/vue/components";
-import { tail } from "lodash";
 import tailwindMatcher from "hex2tailwind";
 
 export default {
