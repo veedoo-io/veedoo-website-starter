@@ -4559,6 +4559,17 @@ export interface TitleSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_left: prismic.NumberField;
+	
+	/**
+	 * center text field in *Title → Primary*
+	 *
+	 * - **Field Type**: Boolean
+	 * - **Placeholder**: *None*
+	 * - **Default Value**: false
+	 * - **API ID Path**: title.primary.center_text
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
+	 */
+	center_text: prismic.BooleanField;
 }
 
 /**
