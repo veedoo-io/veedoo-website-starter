@@ -1,6 +1,5 @@
 <template>
   <section
-    :class="getContainerClasses()"
     :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};
       color:${slice.primary.text_color ? slice.primary.text_color : '#353C47'};
       background-color:${
@@ -10,8 +9,21 @@
       };
       `"
   >
-    <div class="flex items-center">
-      <PrismicRichText :field="slice.primary.title" />
+    <div
+      :class="`flex items-center ${
+        slice.primary.center_text ? 'justify-center' : ''
+      }`"
+    >
+      <PrismicRichText
+        :field="slice.primary.title"
+        :style="
+          slice.primary.center_text
+            ? {
+                textAlign: 'center',
+              }
+            : {}
+        "
+      />
     </div>
   </section>
 </template>
@@ -32,20 +44,6 @@ export default {
     default: () => "",
   },
   data() {
-    let getContainerClasses = function () {
-      let classes = "flex items-center gap-[20px] ";
-
-      switch (this.slice.primary.text_alignment) {
-        case "center":
-          classes = classes + " justify-center";
-          break;
-        default:
-          classes = classes + " justify-start";
-      }
-
-      return classes;
-    };
-
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
         ? this.slice.primary.margin_top + "px"
@@ -71,22 +69,10 @@ export default {
       marginBottom,
       marginLeft,
       marginRight,
-      getContainerClasses,
     };
   },
 };
 </script>
 
 <style scoped>
-::v-deep img {
-  width: 46px;
-  height: 46px;
-  margin-left: 8px; /* Adjust margin as needed */
-  vertical-align: middle;
-}
-
-/*
-::v-deep h3::after {
-  content: url(slice.primary.image);
-}*/
 </style>

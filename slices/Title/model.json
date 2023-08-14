@@ -74,6 +74,15 @@
             "label": "margin left",
             "placeholder": ""
           }
+        },
+        "center_text": {
+          "type": "Boolean",
+          "config": {
+            "label": "center text",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
+          }
         }
       },
       "items": {},
