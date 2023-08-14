@@ -819,16 +819,6 @@ export interface AtomTagsSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *AtomTags → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: atom_tags.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *AtomTags → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -837,16 +827,6 @@ export interface AtomTagsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *AtomTags → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: atom_tags.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
 }
 
 /**
@@ -1880,6 +1860,16 @@ export interface CtaWithBackgroundImageSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	title_color: prismic.ColorField;
+	
+	/**
+	 * text alignment field in *CtaWithBackgroundImage → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_with_background_image.primary.text_alignment
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	text_alignment: prismic.SelectField<"left" | "center">;
 }
 
 /**
@@ -4511,16 +4501,6 @@ export interface TitleSliceDefaultPrimary {
 	text_alignment: prismic.SelectField<"left" | "center" | "right", "filled">;
 	
 	/**
-	 * image field in *Title → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title.primary.image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	image: prismic.ImageField<never>;
-	
-	/**
 	 * text color field in *Title → Primary*
 	 *
 	 * - **Field Type**: Color
@@ -4539,16 +4519,6 @@ export interface TitleSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	background_color: prismic.ColorField;
-	
-	/**
-	 * text Size field in *Title → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title.primary.text_size
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	text_size: prismic.NumberField;
 	
 	/**
 	 * margin top field in *Title → Primary*

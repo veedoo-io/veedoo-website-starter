@@ -1,7 +1,7 @@
 <template>
   <section
     :class="getContainerClasses()"
-    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}`"
+    :style="`padding:${marginTop} ${marginBottom}`"
   >
     <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
       <Tag
@@ -32,16 +32,6 @@ export default {
         ? this.slice.primary.margin_bottom + "px"
         : "0px";
 
-    let marginLeft =
-      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + "px"
-        : "0px";
-
-    let marginRight =
-      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + "px"
-        : "0px";
-
     let getContainerClasses = function () {
       let classes = "flex gap-[32px] flex-wrap";
 
@@ -51,12 +41,10 @@ export default {
     return {
       marginTop,
       marginBottom,
-      marginLeft,
-      marginRight,
       getContainerClasses,
     };
   },
 };
 </script>
 
-<style scoped></style>
+

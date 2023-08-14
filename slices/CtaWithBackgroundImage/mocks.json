@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Laborum dolor occaecat veniam ex occaecat sunt ut deserunt elit do. Fugiat sit eiusmod laboris commodo sit proident eiusmod do aliquip voluptate tempor anim aliquip commodo aliquip. Est adipisicing deserunt cillum."
+              "text": "Fugiat esse in commodo."
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Irure dolore dolor nisi incididunt elit."
+              "text": "Nulla nisi veniam laboris labore quis sint cupidatat anim anim exercitation. Esse quis adipisicing enim cillum sit laboris in aliquip anim eiusmod magna dolor exercitation."
             }
           }
         ]
@@ -79,6 +79,11 @@
         "__TYPE__": "FieldContent",
         "value": "#7c0684",
         "type": "Color"
+      },
+      "text_alignment": {
+        "__TYPE__": "FieldContent",
+        "value": "center",
+        "type": "Select"
       }
     },
     "items": [
