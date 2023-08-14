@@ -14,11 +14,7 @@
         class="slide bg-transparent px-12 h-full"
       >
         <div
-          class="rounded w-full h-full bg-white flex p-6 flex-col justify-between gap-6 max-w-[326px] mx-auto"
-          :style="{
-            filter:
-              'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
-          }"
+          class="rounded w-full h-full bg-white flex p-6 flex-col justify-between gap-6 max-w-[326px] mx-auto shadow-[0px_4px_6px_0px_rgba(0,0,0,0.10)]"
         >
           <div class="flex gap-4">
             <PrismicImage

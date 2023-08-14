@@ -18,24 +18,10 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
             "label": "margin bottom",
-            "placeholder": ""
-          }
-        },
-        "margin_left": {
-          "type": "Number",
-          "config": {
-            "label": "margin left",
             "placeholder": ""
           }
         }

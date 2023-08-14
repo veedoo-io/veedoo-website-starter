@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Velit consequat sunt pariatur fugiat ex consequat cillum nisi eu fugiat."
+              "text": "Ipsum culpa nostrud ex anim consectetur dolore cillum occaecat dolor consequat laborum officia reprehenderit ad."
             }
           }
         ]
@@ -18,27 +18,6 @@
         "__TYPE__": "FieldContent",
         "value": "left",
         "type": "Select"
-      },
-      "image": {
-        "__TYPE__": "ImageContent",
-        "origin": {
-          "id": "main",
-          "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
-          "width": 3277,
-          "height": 4092
-        },
-        "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
-        "width": 3277,
-        "height": 4092,
-        "edit": {
-          "zoom": 1,
-          "crop": {
-            "x": 0,
-            "y": 0
-          },
-          "background": "transparent"
-        },
-        "thumbnails": {}
       },
       "text_color": {
         "__TYPE__": "FieldContent",
@@ -49,11 +28,6 @@
         "__TYPE__": "FieldContent",
         "value": "#7b349e",
         "type": "Color"
-      },
-      "text_size": {
-        "__TYPE__": "FieldContent",
-        "value": "46",
-        "type": "Number"
       },
       "margin_top": {
         "__TYPE__": "FieldContent",
