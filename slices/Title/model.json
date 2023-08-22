@@ -20,17 +20,13 @@
             "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em"
           }
         },
-        "text_alignment": {
-          "type": "Select",
+        "center_text": {
+          "type": "Boolean",
           "config": {
-            "label": "text alignment",
-            "placeholder": "",
-            "options": [
-              "left",
-              "center",
-              "right"
-            ],
-            "default_value": "left"
+            "label": "center text",
+            "default_value": false,
+            "placeholder_true": "true",
+            "placeholder_false": "false"
           }
         },
         "text_color": {
@@ -54,34 +50,11 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
             "label": "margin bottom",
             "placeholder": ""
-          }
-        },
-        "margin_left": {
-          "type": "Number",
-          "config": {
-            "label": "margin left",
-            "placeholder": ""
-          }
-        },
-        "center_text": {
-          "type": "Boolean",
-          "config": {
-            "label": "center text",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
           }
         }
       },
