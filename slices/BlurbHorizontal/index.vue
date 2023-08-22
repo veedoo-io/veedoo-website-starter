@@ -9,11 +9,11 @@
       <div
         :class="`
           rounded-[5px]
-          flex p-6 gap-6 w-11/12 md:w-3/6 lg:w-2/6 
+          flex p-6 gap-6 w-11/12 md:w-3/6 
           ${
             slice.variation == 'vertical'
               ? 'my-2.5 flex-col lg:w-1/4'
-              : 'flex-row'
+              : 'flex-row  lg:w-2/6'
           }
          `"
         v-for="(item, i) in slice.items"
