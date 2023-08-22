@@ -15,18 +15,18 @@
       <PrismicRichText
         class="font-medium text-[47px]"
         :field="slice.primary.title"
-        :style="`color: ${slice.primary.title_color}`"
+        :style="`color: ${titleColor}`"
       />
       <PrismicRichText
         class="max-w-[586px] text-[19px]"
         :field="slice.primary.description"
-        :style="`color: ${slice.primary.text_color}`"
+        :style="`color: ${textColor}`"
       />
       <PrismicLink
         target="_blank"
         :field="slice.primary.button_url"
         class="text-center w-fit h-fit py-4 px-8 text-[16px] font-medium rounded-[5px] mt-[40px] inline-block hover:ease-linear hover:duration-500"
-        :style="`color: ${slice.primary.button_text_color};background-color: ${slice.primary.button_background_color}; hover: ${slice.primary.button_hover_color}`"
+        :style="`color: ${buttonTextColor}; background-color: ${buttonBackgroundColor};`"
         >{{ slice.primary.call_to_action }}</PrismicLink
       >
     </div>
@@ -46,7 +46,7 @@ export default {
 
       switch (this.slice.primary.text_alignment) {
         case "center":
-          classes = classes + " justify-center items-center mx-auto";
+          classes = classes + " justify-center items-center mx-auto w-5/6";
           break;
         default:
           classes = classes + " justify-start";
@@ -62,12 +62,8 @@ export default {
       ? this.slice.primary.button_text_color
       : "#FFFFFF";
 
-    let buttonBackgroundColor = this.slice.primary.button_text_color
-      ? this.slice.primary.button_text_color
-      : "#F2776B";
-
-    let buttonHoverColor = this.slice.primary.button_hover_color
-      ? this.slice.primary.button_hover_color
+    let buttonBackgroundColor = this.slice.primary.button_background_color
+      ? this.slice.primary.button_background_color
       : "#F2776B";
 
     let backgroundImageUrl =
@@ -84,7 +80,6 @@ export default {
       textColor,
       buttonTextColor,
       buttonBackgroundColor,
-      buttonHoverColor,
       backgroundImageUrl,
       titleColor,
       getContainerClasses,
