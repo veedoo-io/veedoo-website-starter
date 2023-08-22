@@ -4490,15 +4490,15 @@ export interface TitleSliceDefaultPrimary {
 	title: prismic.RichTextField;
 	
 	/**
-	 * text alignment field in *Title → Primary*
+	 * center text field in *Title → Primary*
 	 *
-	 * - **Field Type**: Select
+	 * - **Field Type**: Boolean
 	 * - **Placeholder**: *None*
-	 * - **Default Value**: left
-	 * - **API ID Path**: title.primary.text_alignment
-	 * - **Documentation**: https://prismic.io/docs/field#select
+	 * - **Default Value**: false
+	 * - **API ID Path**: title.primary.center_text
+	 * - **Documentation**: https://prismic.io/docs/field#boolean
 	 */
-	text_alignment: prismic.SelectField<"left" | "center" | "right", "filled">;
+	center_text: prismic.BooleanField;
 	
 	/**
 	 * text color field in *Title → Primary*
@@ -4531,16 +4531,6 @@ export interface TitleSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *Title → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *Title → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -4549,27 +4539,6 @@ export interface TitleSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *Title → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
-	
-	/**
-	 * center text field in *Title → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: title.primary.center_text
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	center_text: prismic.BooleanField;
 }
 
 /**

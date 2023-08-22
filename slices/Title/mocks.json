@@ -9,49 +9,34 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Ipsum culpa nostrud ex anim consectetur dolore cillum occaecat dolor consequat laborum officia reprehenderit ad."
+              "text": "Aliquip labore aliquip culpa aliqua ut adipisicing fugiat eu pariatur nostrud sunt et. Sunt velit do qui consectetur sit qui deserunt exercitation consequat excepteur quis voluptate nisi Lorem. Deserunt est duis sint."
             }
           }
         ]
       },
-      "text_alignment": {
-        "__TYPE__": "FieldContent",
-        "value": "left",
-        "type": "Select"
+      "center_text": {
+        "__TYPE__": "BooleanContent",
+        "value": true
       },
       "text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#624f7b",
+        "value": "#908e2b",
         "type": "Color"
       },
       "background_color": {
         "__TYPE__": "FieldContent",
-        "value": "#7b349e",
+        "value": "#d25748",
         "type": "Color"
       },
       "margin_top": {
         "__TYPE__": "FieldContent",
-        "value": "50",
-        "type": "Number"
-      },
-      "margin_right": {
-        "__TYPE__": "FieldContent",
-        "value": "43",
+        "value": "7",
         "type": "Number"
       },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
-        "value": "62",
+        "value": "20",
         "type": "Number"
-      },
-      "margin_left": {
-        "__TYPE__": "FieldContent",
-        "value": "33",
-        "type": "Number"
-      },
-      "center_text": {
-        "__TYPE__": "BooleanContent",
-        "value": false
       }
     },
     "items": [
