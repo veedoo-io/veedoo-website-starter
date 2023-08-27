@@ -1822,6 +1822,16 @@ export interface CtaWithBackgroundImageSliceDefaultPrimary {
 	background_image: prismic.ImageField<never>;
 	
 	/**
+	 * background color field in *CtaWithBackgroundImage → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_with_background_image.primary.background_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	background_color: prismic.ColorField;
+	
+	/**
 	 * text color field in *CtaWithBackgroundImage → Primary*
 	 *
 	 * - **Field Type**: Color

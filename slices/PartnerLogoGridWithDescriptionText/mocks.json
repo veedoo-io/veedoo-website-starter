@@ -5,7 +5,7 @@
     "primary": {
       "background_color": {
         "__TYPE__": "FieldContent",
-        "value": "#b48d59",
+        "value": "#29d7dc",
         "type": "Color"
       }
     },
@@ -19,13 +19,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-                "width": 6597,
-                "height": 4398
+                "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+                "width": 8640,
+                "height": 8640
               },
-              "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
-              "width": 6597,
-              "height": 4398,
+              "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
+              "width": 8640,
+              "height": 8640,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -45,7 +45,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Laborum id mollit nulla ad. Commodo minim eiusmod consequat ex reprehenderit aliqua exercitation ad labore eiusmod nisi veniam non id sint."
+                    "text": "Minim consectetur voluptate id adipisicing cupidatat in ex eiusmod ea anim exercitation magna irure."
                   }
                 }
               ]
@@ -55,7 +55,7 @@
             "link_text",
             {
               "__TYPE__": "FieldContent",
-              "value": "railroad",
+              "value": "satellites",
               "type": "Text"
             }
           ],
@@ -65,7 +65,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
+                "url": "https://slicemachine.dev"
               }
             }
           ]
