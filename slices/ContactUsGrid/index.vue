@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full flex flex-col py-10"
+    class="w-full flex flex-col py-10 px-4"
     :style="{
       backgroundColor: containerBackgroundColor,
       alignItems: slice.primary?.center ? 'center' : 'start',
@@ -146,27 +146,27 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'ContactInfo',
+  name: "ContactInfo",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     //console.log(this.slice);
     let getContainerClasses = function () {
-      let classes = 'w-full  flex flex-col py-10';
+      let classes = "w-full  flex flex-col py-10";
 
       return classes;
     };
 
     let containerBackgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
 
     let textColor = this.slice.primary.text_color
       ? this.slice.primary.text_color
-      : '#353C47';
+      : "#353C47";
 
     return {
       getContainerClasses,

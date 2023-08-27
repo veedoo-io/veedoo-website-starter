@@ -8,7 +8,7 @@
             backgroundSize: 'cover',
             backgroundImage: 'url(' + backgroundImageUrl + ')',
           }
-        : {}
+        : { backgroundColor }
     "
   >
     <div class="" :class="getContainerClasses()">
@@ -76,7 +76,12 @@ export default {
       ? this.slice.primary.title_color
       : "#353C47";
 
+    let backgroundColor = this.slice.primary.background_color
+      ? this.slice.primary.background_color
+      : "#FFFFFF";
+
     return {
+      backgroundColor,
       textColor,
       buttonTextColor,
       buttonBackgroundColor,
