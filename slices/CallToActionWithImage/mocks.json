@@ -4,7 +4,6 @@
     "variation": "default",
     "primary": {
       "image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43",
@@ -22,6 +21,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "title": {
@@ -78,20 +80,15 @@
         "value": "91",
         "type": "Number"
       },
-      "margin_right": {
-        "__TYPE__": "FieldContent",
-        "value": "7",
-        "type": "Number"
-      },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
         "value": "57",
         "type": "Number"
       },
-      "margin_left": {
+      "text_alignment": {
         "__TYPE__": "FieldContent",
-        "value": "1",
-        "type": "Number"
+        "value": "center",
+        "type": "Select"
       }
     },
     "items": [
