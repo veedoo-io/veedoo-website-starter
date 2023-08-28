@@ -263,7 +263,7 @@ export default {
     };
 
     let getSlideImageClass = function () {
-      let classNames = "object-cover";
+      let classNames = "object-cover w-[194px] h-[48px]";
 
       if (this.slice.variation == "partnersLogoSlider2") {
         classNames = "w-[194px] h-[83px]";
