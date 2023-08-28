@@ -81,13 +81,6 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
@@ -95,11 +88,15 @@
             "placeholder": ""
           }
         },
-        "margin_left": {
-          "type": "Number",
+        "text_alignment": {
+          "type": "Select",
           "config": {
-            "label": "margin left",
-            "placeholder": ""
+            "label": "text alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center"
+            ]
           }
         }
       },

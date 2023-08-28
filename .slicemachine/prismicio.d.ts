@@ -1292,16 +1292,6 @@ export interface CallToActionWithImageSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *CallToActionWithImage → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action_with_image.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *CallToActionWithImage → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -1312,14 +1302,14 @@ export interface CallToActionWithImageSliceDefaultPrimary {
 	margin_bottom: prismic.NumberField;
 	
 	/**
-	 * margin left field in *CallToActionWithImage → Primary*
+	 * text alignment field in *CallToActionWithImage → Primary*
 	 *
-	 * - **Field Type**: Number
+	 * - **Field Type**: Select
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: call_to_action_with_image.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
+	 * - **API ID Path**: call_to_action_with_image.primary.text_alignment
+	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	margin_left: prismic.NumberField;
+	text_alignment: prismic.SelectField<"left" | "center">;
 }
 
 /**
