@@ -5,7 +5,7 @@
   >
     <div v-if="slice.primary?.image?.url">
       <PrismicImage
-        class="h-[250px] w-[250px] object-contain"
+        class="h-[250px] w-[250px] object-cover"
         :field="slice.primary?.image"
       />
     </div>

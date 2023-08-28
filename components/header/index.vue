@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import { components } from '~/slices';
-import { mapGetters } from 'vuex';
+import { components } from "~/slices";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
@@ -23,7 +23,12 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['getHeader']),
+    ...mapGetters(["getHeader"]),
   },
 };
 </script>
+<style scoped>
+a {
+  text-decoration: none;
+}
+</style>

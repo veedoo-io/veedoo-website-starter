@@ -3,18 +3,11 @@
     :class="`w-full h-fit flex items-center ${
       slice.primary.center_text ? 'justify-center' : ''
     }`"
-    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
+    :style="`padding:${marginTop} ${marginBottom}; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
   >
     <PrismicRichText
-      :style="
-        slice.primary.center_text
-          ? {
-              textAlign: 'center',
-            }
-          : {}
-      "
       :field="slice.primary.rich_text"
-      :class="`richText w-fit h-fit flex flex-col  gap-2.5  `"
+      :class="`w-fit h-fit flex flex-col gap-2.5  `"
     />
   </section>
 </template>
@@ -54,25 +47,24 @@ export default {
         ? this.slice.primary.margin_bottom + "px"
         : "0px";
 
-    let marginLeft =
-      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + "px"
-        : "0px";
-
-    let marginRight =
-      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + "px"
-        : "0px";
-
     return {
       getContainerClasses,
       marginTop,
       marginBottom,
-      marginLeft,
-      marginRight,
     };
   },
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+a {
+  color: blue;
+  text-decoration: underline;
+}
+li {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+</style>

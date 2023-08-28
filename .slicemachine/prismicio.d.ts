@@ -109,7 +109,7 @@ interface AuthorDocumentData {
  */
 export type AuthorDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
 
-type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | TextSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice | ImageSlice | SocialFollowIconsSlice | YoutubeVideoSlice
+type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice | ImageSlice | SocialFollowIconsSlice | YoutubeVideoSlice
 
 /**
  * Content for blog Post documents
@@ -313,7 +313,7 @@ interface HeaderDocumentData {
  */
 export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | TextSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice
 
 /**
  * Content for Home Page documents
@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | TextSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | FaqAccordion2Slice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | FaqAccordion2Slice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
 
 /**
  * Content for Page documents
@@ -1538,157 +1538,6 @@ export type ContactFormVeedooSlice = prismic.SharedSlice<"contact_form_veedoo", 
  */
 export interface ContactInfoSliceDefaultPrimary {
 	/**
-	 * center field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: contact_info.primary.center
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	center: prismic.BooleanField;
-	
-	/**
-	 * title field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	title: prismic.RichTextField;
-	
-	/**
-	 * title image field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.title_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	title_image: prismic.ImageField<never>;
-	
-	/**
-	 * description field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.description
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	description: prismic.RichTextField;
-	
-	/**
-	 * first section title field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.email_title
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	email_title: prismic.RichTextField;
-	
-	/**
-	 * first section title image field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.email_title_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	email_title_image: prismic.ImageField<never>;
-	
-	/**
-	 * first section content field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.email_content
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	email_content: prismic.RichTextField;
-	
-	/**
-	 * second section title field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.second_section_title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	second_section_title: prismic.KeyTextField;
-	
-	/**
-	 * second section title image field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.second_section_title_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	second_section_title_image: prismic.ImageField<never>;
-	
-	/**
-	 * second section content field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.second_section_content
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	second_section_content: prismic.RichTextField;
-	
-	/**
-	 * third section title field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.third_section_title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	third_section_title: prismic.KeyTextField;
-	
-	/**
-	 * third section title image field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.third_section_title_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	third_section_title_image: prismic.ImageField<never>;
-	
-	/**
-	 * third section content field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.third_section_content
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	third_section_content: prismic.RichTextField;
-	
-	/**
-	 * social media title field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.social_media_title
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	social_media_title: prismic.RichTextField;
-	
-	/**
-	 * social media title image field in *ContactUsGrid → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.primary.social_media_title_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	social_media_title_image: prismic.ImageField<never>;
-	
-	/**
 	 * background color field in *ContactUsGrid → Primary*
 	 *
 	 * - **Field Type**: Color
@@ -1707,6 +1556,96 @@ export interface ContactInfoSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	text_color: prismic.ColorField;
+	
+	/**
+	 * social media title field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.social_media_title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	social_media_title: prismic.RichTextField;
+	
+	/**
+	 * instagram field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.instagram
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	instagram: prismic.ImageField<never>;
+	
+	/**
+	 * instagram link field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.instagram_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	instagram_link: prismic.LinkField;
+	
+	/**
+	 * facebook field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.facebook
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	facebook: prismic.ImageField<never>;
+	
+	/**
+	 * facebook link field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.facebook_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	facebook_link: prismic.LinkField;
+	
+	/**
+	 * twitter field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.twitter
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	twitter: prismic.ImageField<never>;
+	
+	/**
+	 * twitter link field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.twitter_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	twitter_link: prismic.LinkField;
+	
+	/**
+	 * linkedin field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.linkedin
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	linkedin: prismic.ImageField<never>;
+	
+	/**
+	 * linkedin link field in *ContactUsGrid → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_info.primary.linkedin_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	linkedin_link: prismic.LinkField;
 }
 
 /**
@@ -1714,24 +1653,24 @@ export interface ContactInfoSliceDefaultPrimary {
  */
 export interface ContactInfoSliceDefaultItem {
 	/**
-	 * social media image field in *ContactUsGrid → Items*
+	 * title field in *ContactUsGrid → Items*
 	 *
-	 * - **Field Type**: Image
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.items[].social_media_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
+	 * - **API ID Path**: contact_info.items[].title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	social_media_image: prismic.ImageField<never>;
+	title: prismic.RichTextField;
 	
 	/**
-	 * social media url field in *ContactUsGrid → Items*
+	 * description field in *ContactUsGrid → Items*
 	 *
-	 * - **Field Type**: Link
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: contact_info.items[].social_media_url
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 * - **API ID Path**: contact_info.items[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	social_media_url: prismic.LinkField;
+	description: prismic.RichTextField;
 }
 
 /**
@@ -3847,17 +3786,6 @@ export interface RichTextSliceDefaultPrimary {
 	background_color: prismic.ColorField;
 	
 	/**
-	 * center text field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: rich_text.primary.center_text
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	center_text: prismic.BooleanField;
-	
-	/**
 	 * margin top field in *RichText → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -3868,16 +3796,6 @@ export interface RichTextSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *RichText → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -3886,16 +3804,6 @@ export interface RichTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *RichText → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: rich_text.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
 }
 
 /**
@@ -3920,177 +3828,6 @@ type RichTextSliceVariation = RichTextSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type RichTextSlice = prismic.SharedSlice<"rich_text", RichTextSliceVariation>;
-
-/**
- * Primary content in *RichTextAdvanced → Primary*
- */
-export interface TextSliceDefaultPrimary {
-	/**
-	 * htmlTag field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Select
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: p
-	 * - **API ID Path**: text.primary.htmltag
-	 * - **Documentation**: https://prismic.io/docs/field#select
-	 */
-	htmltag: prismic.SelectField<"p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6", "filled">;
-	
-	/**
-	 * text field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.primary.text
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	text: prismic.KeyTextField;
-	
-	/**
-	 * start Image field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.primary.startimage
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	startimage: prismic.ImageField<never>;
-	
-	/**
-	 * end Image field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.primary.end_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	end_image: prismic.ImageField<never>;
-	
-	/**
-	 * url field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Link
-	 * - **Placeholder**: Only Web Urls
-	 * - **API ID Path**: text.primary.url
-	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
-	 */
-	url: prismic.LinkField;
-	
-	/**
-	 * Background Color field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.primary.background_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	background_color: prismic.ColorField;
-	
-	/**
-	 * text color field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.primary.text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	text_color: prismic.ColorField;
-	
-	/**
-	 * text Size field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: text.primary.text_size
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	text_size: prismic.NumberField;
-	
-	/**
-	 * slice type field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Select
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: center Mode
-	 * - **API ID Path**: text.primary.slice_type
-	 * - **Documentation**: https://prismic.io/docs/field#select
-	 */
-	slice_type: prismic.SelectField<"center Mode" | "free Mode", "filled">;
-	
-	/**
-	 * font weight  field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Select
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: normal
-	 * - **API ID Path**: text.primary.font_weight
-	 * - **Documentation**: https://prismic.io/docs/field#select
-	 */
-	font_weight: prismic.SelectField<"normal" | "medium" | "semibold	" | "bold", "filled">;
-	
-	/**
-	 * margin top field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: number of pixels
-	 * - **API ID Path**: text.primary.margin_top
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_top: prismic.NumberField;
-	
-	/**
-	 * margin bottom field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: number of pixels
-	 * - **API ID Path**: text.primary.margin_bottom
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: number of pixels
-	 * - **API ID Path**: text.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
-	
-	/**
-	 * margin right field in *RichTextAdvanced → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: number of pixels
-	 * - **API ID Path**: text.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-}
-
-/**
- * Default variation for RichTextAdvanced Slice
- *
- * - **API ID**: `default`
- * - **Description**: Text
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TextSliceDefault = prismic.SharedSliceVariation<"default", Simplify<TextSliceDefaultPrimary>, never>;
-
-/**
- * Slice variation for *RichTextAdvanced*
- */
-type TextSliceVariation = TextSliceDefault
-
-/**
- * RichTextAdvanced Shared Slice
- *
- * - **API ID**: `text`
- * - **Description**: Text
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TextSlice = prismic.SharedSlice<"text", TextSliceVariation>;
 
 /**
  * Primary content in *SimpleErrorPage → Primary*
@@ -5099,9 +4836,6 @@ declare module "@prismicio/client" {
 			RichTextSlice,
 			RichTextSliceVariation,
 			RichTextSliceDefault,
-			TextSlice,
-			TextSliceVariation,
-			TextSliceDefault,
 			SimpleErrorPageSlice,
 			SimpleErrorPageSliceVariation,
 			SimpleErrorPageSliceDefault,
