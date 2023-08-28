@@ -29,9 +29,6 @@
             "testimonial": {
               "type": "SharedSlice"
             },
-            "text": {
-              "type": "SharedSlice"
-            },
             "alternate_grid": {
               "type": "SharedSlice"
             },

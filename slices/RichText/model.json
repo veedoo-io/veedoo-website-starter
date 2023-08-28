@@ -17,7 +17,7 @@
             "label": "rich text",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,rtl,preformatted,list-item,o-list-item"
+            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item"
           }
         },
         "text_color": {
@@ -34,15 +34,6 @@
             "placeholder": ""
           }
         },
-        "center_text": {
-          "type": "Boolean",
-          "config": {
-            "label": "center text",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
-          }
-        },
         "margin_top": {
           "type": "Number",
           "config": {
@@ -50,24 +41,10 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
             "label": "margin bottom",
-            "placeholder": ""
-          }
-        },
-        "margin_left": {
-          "type": "Number",
-          "config": {
-            "label": "margin left",
             "placeholder": ""
           }
         }

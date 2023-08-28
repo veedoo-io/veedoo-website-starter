@@ -11,7 +11,7 @@
   >
     <div
       :class="`flex items-center ${
-        slice.primary.center_text ? 'justify-center' : ''
+        slice.primary.center_text ? 'justify-center' : 'px-[24px]'
       }`"
     >
       <PrismicRichText

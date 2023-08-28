@@ -24,7 +24,6 @@ import PostCarousel from './PostCarousel';
 import PostListing from './PostListing';
 import PostSlider from './PostSlider';
 import RichText from './RichText';
-import RichTextAdvanced from './RichTextAdvanced';
 import SimpleErrorPage from './SimpleErrorPage';
 import SocialFollowIcons from './SocialFollowIcons';
 import Tags from './Tags';
@@ -59,7 +58,6 @@ export {
 	PostListing,
 	PostSlider,
 	RichText,
-	RichTextAdvanced,
 	SimpleErrorPage,
 	SocialFollowIcons,
 	Tags,
@@ -95,7 +93,6 @@ export const components = {
 	post_listing: PostListing,
 	post_slider: PostSlider,
 	rich_text: RichText,
-	text: RichTextAdvanced,
 	simple_error_page: SimpleErrorPage,
 	social_follow_icons: SocialFollowIcons,
 	tags: Tags,
