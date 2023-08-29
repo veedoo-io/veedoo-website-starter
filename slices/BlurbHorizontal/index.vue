@@ -27,6 +27,7 @@
         }"
       >
         <PrismicImage
+          v-if="Object.keys(item.image).length"
           :field="item.image"
           class="object-cover"
           :class="` ${

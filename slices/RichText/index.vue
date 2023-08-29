@@ -7,7 +7,8 @@
   >
     <PrismicRichText
       :field="slice.primary.rich_text"
-      :class="`w-fit h-fit flex flex-col gap-2.5  `"
+      :class="`w-fit h-fit flex flex-col gap-2.5 rich-text`"
+      :serializer="richTextSerializer"
     />
   </section>
 </template>
@@ -47,20 +48,27 @@ export default {
         ? this.slice.primary.margin_bottom + "px"
         : "0px";
 
+    const richTextSerializer = {
+      hyperlink: ({ node, children }) => {
+        const target = node.data.target
+          ? `target="${node.data.target}" rel="noopener"`
+          : "";
+        const url = linkResolver(node.data);
+        return `<a ${target} data-test href="${url}">${children}</a>`;
+      },
+    };
+
     return {
       getContainerClasses,
       marginTop,
       marginBottom,
+      richTextSerializer,
     };
   },
 };
 </script>
 
 <style scoped>
-a {
-  color: blue;
-  text-decoration: underline;
-}
 li {
   font-size: 16px;
   font-style: normal;
