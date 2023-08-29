@@ -53,7 +53,10 @@
             class="w-[36px] h-[36px]"
           />
         </PrismicLink>
-        <PrismicLink :field="slice.primary.linkedin_link">
+        <PrismicLink
+          :field="slice.primary.linkedin_link"
+          v-if="Object.keys(slice.primary.linkedin).length"
+        >
           <PrismicImage
             :field="slice.primary.linkedin"
             class="w-[36px] h-[36px]"
