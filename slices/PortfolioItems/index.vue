@@ -17,7 +17,7 @@
     >
       <PrismicLink class="w-full h-full" :field="item.url" target="_blank">
         <PrismicImage
-          class="w-full group-hover:invisible rounded-2xl min-h-[220px] object-cover"
+          class="w-full group-hover:invisible rounded-2xl h-[400px] object-cover"
           :field="item.image"
         />
         <div :class="getItemContextClasses()">
