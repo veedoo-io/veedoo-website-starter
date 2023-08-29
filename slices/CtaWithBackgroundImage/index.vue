@@ -46,7 +46,8 @@ export default {
 
       switch (this.slice.primary.text_alignment) {
         case "center":
-          classes = classes + " justify-center items-center mx-auto w-5/6";
+          classes =
+            classes + " justify-center items-center mx-auto w-5/6 text-center";
           break;
         default:
           classes = classes + " justify-start";
