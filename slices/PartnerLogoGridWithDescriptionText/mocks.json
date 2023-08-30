@@ -16,7 +16,6 @@
           [
             "logo",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1593642532973-d31b6557fa68",
@@ -34,6 +33,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],
@@ -45,7 +47,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Minim consectetur voluptate id adipisicing cupidatat in ex eiusmod ea anim exercitation magna irure."
+                    "text": "Incididunt enim pariatur pariatur amet duis aute Lorem mollit reprehenderit aliqua aliquip nostrud laborum duis. Id ea qui non excepteur nostrud commodo velit Lorem ipsum quis."
                   }
                 }
               ]

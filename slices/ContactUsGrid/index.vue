@@ -17,7 +17,7 @@
         :field="item.title"
       />
       <PrismicRichText
-        class="text-justify my-[24px]"
+        class="text-justify my-[24px] rich-text"
         :style="{
           color: textColor,
         }"
@@ -26,6 +26,7 @@
     </div>
     <div class="md:flex-[0_0_48%] flex-[0_0_98%]">
       <PrismicRichText
+        class="rich-text"
         :style="{
           color: textColor,
         }"

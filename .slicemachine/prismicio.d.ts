@@ -1860,6 +1860,16 @@ export interface DividerSliceDefaultPrimary {
 	color: prismic.ColorField;
 	
 	/**
+	 * divider width field in *Divider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: divider.primary.divider_width
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	divider_width: prismic.NumberField;
+	
+	/**
 	 * divider height field in *Divider → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -1880,16 +1890,6 @@ export interface DividerSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *Divider → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: divider.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *Divider → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -1898,27 +1898,6 @@ export interface DividerSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *Divider → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: divider.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
-	
-	/**
-	 * rounded field in *Divider → Primary*
-	 *
-	 * - **Field Type**: Boolean
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: false
-	 * - **API ID Path**: divider.primary.rounded
-	 * - **Documentation**: https://prismic.io/docs/field#boolean
-	 */
-	rounded: prismic.BooleanField;
 }
 
 /**

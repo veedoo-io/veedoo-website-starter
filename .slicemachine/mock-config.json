@@ -360,7 +360,8 @@
         "primary": {}
       },
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "Image": {

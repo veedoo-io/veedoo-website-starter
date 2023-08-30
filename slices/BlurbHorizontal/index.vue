@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full my-2.5"
-    :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginBottom};`"
   >
     <div
       class="flex gap-[46px] md:justify-center flex-wrap md:flex-row flex-col content-center max-w-[1000px] mx-auto"
@@ -53,7 +53,7 @@
                 : 'rgba(0, 0, 0, 0.6)'
             }`"
             :field="item.description"
-            :class="`text-[14px] ${
+            :class="`text-[14px] rich-text ${
               slice.variation == 'vertical' ? 'text-center' : ''
             } `"
           />

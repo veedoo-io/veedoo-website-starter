@@ -34,7 +34,7 @@
             "label": "description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink"
+            "multi": "paragraph,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,preformatted,rtl"
           }
         },
         "link_text": {

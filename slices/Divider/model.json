@@ -32,6 +32,13 @@
             "placeholder": ""
           }
         },
+        "divider_width": {
+          "type": "Number",
+          "config": {
+            "label": "divider width",
+            "placeholder": ""
+          }
+        },
         "divider_height": {
           "type": "Number",
           "config": {
@@ -46,34 +53,11 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
             "label": "margin bottom",
             "placeholder": ""
-          }
-        },
-        "margin_left": {
-          "type": "Number",
-          "config": {
-            "label": "margin left",
-            "placeholder": ""
-          }
-        },
-        "rounded": {
-          "type": "Boolean",
-          "config": {
-            "label": "rounded",
-            "default_value": false,
-            "placeholder_true": "true",
-            "placeholder_false": "false"
           }
         }
       },
