@@ -32,6 +32,11 @@
         "__TYPE__": "FieldContent",
         "value": "23",
         "type": "Number"
+      },
+      "alignment": {
+        "__TYPE__": "FieldContent",
+        "value": "right",
+        "type": "Select"
       }
     },
     "items": [
