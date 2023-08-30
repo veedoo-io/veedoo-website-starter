@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full my-2.5"
-    :style="`background-color:${backgroundColor}; padding:${marginTop} ${marginBottom};`"
+    :style="`background-color:${backgroundColor}; padding:${marginTop} 24px ${marginBottom} 24px;`"
   >
     <div
       class="flex gap-[46px] md:justify-center flex-wrap md:flex-row flex-col content-center max-w-[1000px] mx-auto"

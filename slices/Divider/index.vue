@@ -1,7 +1,7 @@
 <template>
   <div
     :class="getContainerClasses()"
-    :style="`padding:${marginTop} 24px ${marginBottom} 24px; border-color:${colorName}; border-bottom-width:${borderWidth}px`"
+    :style="`padding:${marginTop} 24px ${marginBottom} 24px; border-color:${colorName}; border-bottom-width:${borderWidth}px; width:${dividerWidth}`"
   ></div>
 </template>
 
@@ -33,6 +33,19 @@ export default {
         default:
           classes = classes + " border-solid	";
       }
+      switch (this.slice.primary.alignment) {
+        case "right":
+          classes = classes + "ml-auto";
+          break;
+        case "center":
+          classes = classes + "mx-auto";
+          break;
+        case "left":
+          classes = classes + "mr-auto";
+          break;
+        default:
+          classes = classes + "mx-auto";
+      }
 
       return classes;
     };
@@ -40,6 +53,10 @@ export default {
     let colorName = this.slice.primary.color
       ? this.slice.primary.color
       : "#48525F";
+
+    let dividerWidth = this.slice.primary.divider_width
+      ? this.slice.primary.divider_width + "%"
+      : "100%";
 
     let borderWidth =
       this.slice.primary.divider_height && this.slice.primary.divider_height > 0
@@ -55,13 +72,14 @@ export default {
       this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
         ? this.slice.primary.margin_bottom + "px"
         : "0px";
-    //console.log(dividerWidth);
+
     return {
       getContainerClasses,
       marginTop,
       marginBottom,
       borderWidth,
       colorName,
+      dividerWidth,
     };
   },
 };

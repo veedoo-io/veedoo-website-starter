@@ -59,6 +59,18 @@
             "label": "margin bottom",
             "placeholder": ""
           }
+        },
+        "alignment": {
+          "type": "Select",
+          "config": {
+            "label": "alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center",
+              "right"
+            ]
+          }
         }
       },
       "items": {},

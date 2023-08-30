@@ -1898,6 +1898,16 @@ export interface DividerSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
+	
+	/**
+	 * alignment field in *Divider → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: divider.primary.alignment
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	alignment: prismic.SelectField<"left" | "center" | "right">;
 }
 
 /**
