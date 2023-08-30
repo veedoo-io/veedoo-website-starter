@@ -5,13 +5,13 @@
   >
     <div v-if="slice.primary?.image?.url">
       <PrismicImage
-        class="h-[250px] w-[250px] object-cover"
+        class="h-[250px] w-[250px] object-contain"
         :field="slice.primary?.image"
       />
     </div>
     <PrismicRichText :class="getTitleClasses()" :field="slice.primary?.title" />
     <PrismicRichText
-      class="flex items-center gap-2.5 flex-wrap"
+      class="flex items-center gap-2.5 flex-wrap rich-text"
       :field="slice.primary?.description"
     />
     <PrismicLink :class="getButtonClass()" :field="slice.primary?.button_url">{{
@@ -48,7 +48,8 @@ export default {
 
       switch (this.slice.primary.text_alignment) {
         case "center":
-          classNames = classNames + " justify-center items-center mx-auto";
+          classNames =
+            classNames + " justify-center items-center mx-auto text-center";
           break;
         default:
           classNames = classNames + " justify-start";

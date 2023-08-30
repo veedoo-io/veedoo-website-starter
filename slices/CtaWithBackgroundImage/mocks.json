@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Ea excepteur consequat occaecat eiusmod amet labore mollit nostrud."
+              "text": "Ad mollit ut incididunt incididunt nulla aute quis irure veniam. Exercitation laboris culpa pariatur laborum."
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Anim sunt fugiat veniam ut mollit eiusmod eiusmod fugiat culpa. Do ex minim amet ut ea cillum in. Esse ipsum nisi ut mollit."
+              "text": "Eu proident ipsum anim cupidatat esse eiusmod mollit. Do nulla ad elit adipisicing proident. Voluptate exercitation ea sit do duis labore."
             }
           }
         ]
@@ -38,7 +38,6 @@
         }
       },
       "background_image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1589652717521-10c0d092dea9",
@@ -56,6 +55,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "background_color": {
