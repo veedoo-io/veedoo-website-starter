@@ -7,6 +7,11 @@
         "__TYPE__": "FieldContent",
         "value": "#29d7dc",
         "type": "Color"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#0c47d5",
+        "type": "Color"
       }
     },
     "items": [
