@@ -13,8 +13,9 @@
         class="flex flex-col max-w-[320px] max-sm:items-center max-sm:justify-center"
       >
         <PrismicRichText
-          class="text-[14px] text-black/60 mb-2 max-sm:text-center rich-text"
+          class="text-[14px] mb-2 max-sm:text-center rich-text"
           :field="item.description"
+          :style="`color: ${textColor}`"
         />
         <PrismicLink class="underline text-[#2060b7]/60" :field="item.link">{{
           item.link_text
@@ -35,8 +36,12 @@ export default {
     let backgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
       : "transparent";
+    let textColor = this.slice.primary.text_color
+      ? this.slice.primary.text_color
+      : "rgba(0, 0, 0, 0.6)";
     return {
       backgroundColor,
+      textColor,
     };
   },
 };

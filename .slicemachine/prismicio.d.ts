@@ -3053,6 +3053,16 @@ export interface PartnerLogoGridWithDescriptionTextSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	background_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *PartnerLogoGridWithDescriptionText → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: partner_logo_grid_with_description_text.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
 }
 
 /**
