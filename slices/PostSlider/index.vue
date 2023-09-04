@@ -132,8 +132,8 @@
               <p v-if="item?.first_publication_date">
                 {{
                   new Date(item?.first_publication_date).toLocaleDateString(
-                    'en-US',
-                    { year: 'numeric', month: 'long', day: 'numeric' }
+                    "en-US",
+                    { year: "numeric", month: "long", day: "numeric" }
                   )
                 }}
               </p>
@@ -149,8 +149,8 @@
             </p>
             <PrismicLink
               :field="item"
-              class="w-fit min-w-[129px] text-center rounded-[4px] py-2.5 px-5 text-white"
-              :style="{ backgroundColor: secondaryColor }"
+              class="w-fit min-w-[129px] text-center rounded-[4px] py-2.5 px-5"
+              :style="{ backgroundColor: buttonColor, color: buttonTextColor }"
             >
               {{ ReadMoreText }}
             </PrismicLink>
@@ -242,24 +242,32 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'PostSlider',
+  name: "PostSlider",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     let primaryColor = this.slice.primary.primary_color
       ? this.slice.primary.primary_color
-      : '#353C47';
+      : "#353C47";
 
     let secondaryColor = this.slice.primary.secondary_color
       ? this.slice.primary.secondary_color
-      : '#F2776B';
+      : "#F2776B";
 
     let ReadMoreText = this.slice.primary.read_more_text
       ? this.slice.primary.read_more_text
-      : 'Read more';
+      : "Read more";
+
+    let buttonColor = this.slice.primary.button_color
+      ? this.slice.primary.button_color
+      : "#F2776B";
+
+    let buttonTextColor = this.slice.primary.button_text_color
+      ? this.slice.primary.button_text_color
+      : "#F1F1F1";
 
     let myOption = {
       navButtons: false,
@@ -278,42 +286,44 @@ export default {
       error: false,
       loading: true,
       myOption,
+      buttonColor,
+      buttonTextColor,
     };
+  },
+  mounted() {
+    // Set the text content and limit it to 200 characters
+    this.setLimitedText();
   },
   async fetch() {
     try {
       let request = await this.$prismic.api.query(
-        this.$prismic.predicates.at('document.type', 'blog_post'),
+        this.$prismic.predicates.at("document.type", "blog_post"),
         {
           pageSize: 1000,
-          orderings: '[document.first_publication_date desc]',
+          orderings: "[document.first_publication_date desc]",
           fetchLinks: [
-            'post_category.uid',
-            'post_category.title',
-            'post_category.description',
-            'author.uid',
-            'author.picture',
-            'author.full_name',
-            'author.job',
-            'author.description',
-            'author.facebook_url',
-            'author.instagram_url',
-            'author.twitter_url',
-            'author.linkedin_url',
-            'post_tag.uid',
-            'post_tag.tag',
+            "post_category.uid",
+            "post_category.title",
+            "post_category.description",
+            "author.uid",
+            "author.picture",
+            "author.full_name",
+            "author.job",
+            "author.description",
+            "author.facebook_url",
+            "author.instagram_url",
+            "author.twitter_url",
+            "author.linkedin_url",
+            "post_tag.uid",
+            "post_tag.tag",
           ],
         }
       );
 
-      //console.log('request ');
-      //console.log(request.results[0]);
       let posts = request?.results ?? [];
       this.posts = posts;
-      //console.log('posts 0 ', posts[0]);
-      //console.log('category ', posts[0].data);
     } catch (error) {
-      console.log('error ', error);
+      console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;

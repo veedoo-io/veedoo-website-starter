@@ -1,52 +1,26 @@
 import MyComponent from '../../../../slices/ImageSlice';
-import SliceZone from 'vue-slicezone';
+import SliceZone from 'vue-slicezone'
 
 export default {
-  title: 'slices/Image',
-};
+  title: 'slices/ImageSlice'
+}
+
 
 export const _Default = () => ({
   components: {
     MyComponent,
-    SliceZone,
+    SliceZone
   },
   methods: {
     resolve() {
-      return MyComponent;
-    },
+      return MyComponent
+    }
   },
   data() {
     return {
-      mock: {
-        "variation": "default",
-        "version": "sktwi1xtmkfgx8626",
-        "items": [
-          {}
-        ],
-        "primary": {
-          "image": {
-            "dimensions": {
-              "width": 900,
-              "height": 500
-            },
-            "alt": null,
-            "copyright": null,
-            "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
-          },
-          "rounded": "radius 0",
-          "margin_top": 100,
-          "margin_right": 0,
-          "margin_bottom": 100,
-          "margin_left": 0,
-          "background_color": "#ffffff",
-          "wdith": 600,
-          "height": 600,
-          "alignment": "center"
-        },
-        "slice_type": "image"
-      },
-    };
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":4000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"},"rounded":"radius 20","margin_top":76,"margin_bottom":58,"background_color":"#b08286","alignment":"left"},"id":"_Default","slice_type":"image"}
+    }
   },
-  template: '<SliceZone :slices="[mock]" :resolver="resolve" />',
-});
-_Default.storyName = '';
+  template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
+})
+_Default.storyName = ''

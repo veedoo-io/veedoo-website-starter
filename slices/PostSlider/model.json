@@ -31,6 +31,20 @@
             "label": "Read more text",
             "placeholder": ""
           }
+        },
+        "button_color": {
+          "type": "Color",
+          "config": {
+            "label": "button color",
+            "placeholder": ""
+          }
+        },
+        "button_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "button text color",
+            "placeholder": ""
+          }
         }
       },
       "items": {
