@@ -2838,16 +2838,6 @@ export interface ImageSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *ImageSlice → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *ImageSlice → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -2858,16 +2848,6 @@ export interface ImageSliceDefaultPrimary {
 	margin_bottom: prismic.NumberField;
 	
 	/**
-	 * margin left field in *ImageSlice → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: image.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
-	
-	/**
 	 * background color field in *ImageSlice → Primary*
 	 *
 	 * - **Field Type**: Color
@@ -2876,26 +2856,6 @@ export interface ImageSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	background_color: prismic.ColorField;
-	
-	/**
-	 * wdith field in *ImageSlice → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: Leave empty for full width
-	 * - **API ID Path**: image.primary.wdith
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	wdith: prismic.NumberField;
-	
-	/**
-	 * height field in *ImageSlice → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: leave empty for full height
-	 * - **API ID Path**: image.primary.height
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	height: prismic.NumberField;
 	
 	/**
 	 * alignment field in *ImageSlice → Primary*
@@ -3700,6 +3660,26 @@ export interface PostSliderSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#key-text
 	 */
 	read_more_text: prismic.KeyTextField;
+	
+	/**
+	 * button color field in *PostSlider → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: post_slider.primary.button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_color: prismic.ColorField;
+	
+	/**
+	 * button text color field in *PostSlider → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: post_slider.primary.button_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_text_color: prismic.ColorField;
 }
 
 /**

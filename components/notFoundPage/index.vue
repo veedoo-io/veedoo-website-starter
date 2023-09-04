@@ -6,15 +6,12 @@
         :components="components"
       />
     </div>
-    <di v-else>
-      <p>You need to add a Not Found Page to prismic</p>
-    </di>
   </div>
 </template>
 
 <script>
-import { components } from '~/slices';
-import { mapGetters } from 'vuex';
+import { components } from "~/slices";
+import { mapGetters } from "vuex";
 
 export default {
   data() {
@@ -23,7 +20,7 @@ export default {
     };
   },
   computed: {
-    ...mapGetters(['getNotFoundPage']),
+    ...mapGetters(["getNotFoundPage"]),
   },
 };
 </script>

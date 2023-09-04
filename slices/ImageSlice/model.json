@@ -40,24 +40,10 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
             "label": "margin bottom",
-            "placeholder": ""
-          }
-        },
-        "margin_left": {
-          "type": "Number",
-          "config": {
-            "label": "margin left",
             "placeholder": ""
           }
         },
@@ -66,20 +52,6 @@
           "config": {
             "label": "background color",
             "placeholder": ""
-          }
-        },
-        "wdith": {
-          "type": "Number",
-          "config": {
-            "label": "wdith",
-            "placeholder": "Leave empty for full width"
-          }
-        },
-        "height": {
-          "type": "Number",
-          "config": {
-            "label": "height",
-            "placeholder": "leave empty for full height"
           }
         },
         "alignment": {

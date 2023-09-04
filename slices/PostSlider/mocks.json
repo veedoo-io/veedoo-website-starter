@@ -17,6 +17,16 @@
         "__TYPE__": "FieldContent",
         "value": "location",
         "type": "Text"
+      },
+      "button_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#dd5f10",
+        "type": "Color"
+      },
+      "button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#65e7f0",
+        "type": "Color"
       }
     },
     "items": [

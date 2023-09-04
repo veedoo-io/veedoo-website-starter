@@ -7,7 +7,7 @@
   >
     <PrismicRichText
       :field="slice.primary.rich_text"
-      :class="`w-fit h-fit flex flex-col gap-2.5 rich-text`"
+      :class="`w-fit h-fit flex flex-col gap-2.5 rich-text rich-text-width`"
       :serializer="richTextSerializer"
     />
   </section>
@@ -74,5 +74,20 @@ li {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+}
+.rich-text-width {
+  width: 60%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .rich-text-width {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  .rich-text-width {
+    width: 100%;
+  }
 }
 </style>
