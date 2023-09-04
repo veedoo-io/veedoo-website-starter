@@ -290,10 +290,7 @@ export default {
       buttonTextColor,
     };
   },
-  mounted() {
-    // Set the text content and limit it to 200 characters
-    this.setLimitedText();
-  },
+
   async fetch() {
     try {
       let request = await this.$prismic.api.query(
