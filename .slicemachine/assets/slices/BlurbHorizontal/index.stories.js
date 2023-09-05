@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"image":{"dimensions":{"width":3424,"height":3424},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1493119508027-2b584f234d6c"},"title":[{"type":"heading1","text":"Clearly","spans":[]}],"description":[{"type":"paragraph","text":"Id proident sint magna voluptate laborum consectetur voluptate et elit nisi. Non deserunt non dolore qui deserunt ea exercitation ipsum cillum enim est ad aliqua excepteur sit.","spans":[]}],"title_color":"#643ec4","description_color":"#e88e2f","blurb_background_color":"#d679e7"}],"primary":{"margin_top":71,"margin_bottom":31,"background_color":"#32b613"},"id":"_Default","slice_type":"blurb"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"image":{"dimensions":{"width":3424,"height":3424},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1493119508027-2b584f234d6c"},"title":[{"type":"paragraph","text":"Aliqua et enim ullamco qui ullamco est laboris eu proident sit fugiat cillum. Ad fugiat anim consequat dolore duis nostrud ut fugiat cupidatat nulla minim nulla.","spans":[]}],"description":[{"type":"paragraph","text":"Ullamco nisi do excepteur est esse pariatur excepteur id minim occaecat do enim enim nisi.","spans":[]}],"title_color":"#643ec4","description_color":"#e88e2f","blurb_background_color":"#d679e7"}],"primary":{"margin_top":71,"margin_bottom":31,"background_color":"#32b613"},"id":"_Default","slice_type":"blurb"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

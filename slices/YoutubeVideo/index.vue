@@ -1,8 +1,8 @@
 <template>
   <section
     :class="`w-full h-fit flex ${
-      slice.variation == 'horizontal' ? 'flex-row' : 'flex-col'
-    }  items-center justify-center  py-[72px] gap-10`"
+      slice.variation == 'horizontal' ? 'lg:flex-row' : 'flex-col'
+    }  items-center justify-center  py-[72px] gap-10 flex-col`"
     :style="{
       backgroundColor: slice.primary.background_color
         ? slice.primary.background_color
@@ -12,7 +12,7 @@
     <div
       :class="`flex flex-col gap-6  justify-center ${
         slice.variation == 'horizontal'
-          ? 'justify-start text-left'
+          ? 'lg:justify-start lg:text-left text-center'
           : 'text-center  justify-center'
       } `"
     >
@@ -39,7 +39,7 @@
     </div>
     <youtube
       v-if="slice.primary.video_id"
-      class="w-full bg-grenn-300 flex-1 max-w-[640px]"
+      class="w-full flex-1 max-w-[760px] max-h-[428px]"
       player-width="100%"
       :video-id="slice.primary.video_id"
     />
@@ -47,12 +47,12 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'YoutubeVideo',
+  name: "YoutubeVideo",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     return {};
   },
@@ -68,5 +68,8 @@ export default {
 }
 .title {
   margin-bottom: 2em;
+}
+.tag {
+  aspect-ratio: auto;
 }
 </style>
