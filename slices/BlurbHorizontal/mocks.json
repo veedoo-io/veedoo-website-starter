@@ -55,9 +55,9 @@
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
-                  "type": "heading1",
+                  "type": "paragraph",
                   "content": {
-                    "text": "Clearly"
+                    "text": "Aliqua et enim ullamco qui ullamco est laboris eu proident sit fugiat cillum. Ad fugiat anim consequat dolore duis nostrud ut fugiat cupidatat nulla minim nulla."
                   }
                 }
               ]
@@ -71,7 +71,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Id proident sint magna voluptate laborum consectetur voluptate et elit nisi. Non deserunt non dolore qui deserunt ea exercitation ipsum cillum enim est ad aliqua excepteur sit."
+                    "text": "Ullamco nisi do excepteur est esse pariatur excepteur id minim occaecat do enim enim nisi."
                   }
                 }
               ]

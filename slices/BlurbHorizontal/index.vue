@@ -4,7 +4,7 @@
     :style="`background-color:${backgroundColor}; padding:${marginTop} 24px ${marginBottom} 24px;`"
   >
     <div
-      class="flex gap-[46px] md:justify-center flex-wrap md:flex-row flex-col content-center max-w-[1000px] mx-auto"
+      class="flex gap-[46px] md:justify-center flex-wrap md:flex-row flex-col content-center mx-auto"
     >
       <div
         :class="`
@@ -96,4 +96,23 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+::v-deep h6 {
+  font-size: 24px;
+}
+::v-deep h5 {
+  font-size: 24px;
+}
+::v-deep h4 {
+  font-size: 24px;
+}
+::v-deep h3 {
+  font-size: 24px;
+}
+::v-deep h2 {
+  font-size: 24px;
+}
+::v-deep p {
+  font-size: 16px;
+}
+</style>
