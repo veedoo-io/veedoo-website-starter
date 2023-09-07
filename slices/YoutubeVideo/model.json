@@ -56,6 +56,17 @@
             "label": "background color",
             "placeholder": ""
           }
+        },
+        "text_alignment": {
+          "type": "Select",
+          "config": {
+            "label": "text alignment",
+            "placeholder": "",
+            "options": [
+              "left",
+              "center"
+            ]
+          }
         }
       },
       "items": {},
