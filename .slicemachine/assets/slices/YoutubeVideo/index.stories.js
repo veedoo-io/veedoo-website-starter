@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Et laboris magna in reprehenderit exercitation cupidatat excepteur ipsum.","spans":[]}],"description":[{"type":"paragraph","text":"Id consectetur eu incididunt tempor id reprehenderit labore labore ad reprehenderit aliquip nostrud cupidatat. Laboris irure Lorem commodo Lorem aliquip proident commodo ullamco incididunt ullamco veniam aute ut commodo duis. Dolor fugiat sint irure occaecat ex labore eu velit eu velit occaecat consequat eu.","spans":[]}],"video_id":"easy","text_color":"#7eabd8","description_text_color":"#d9ff60","background_color":"#97189e"},"id":"_Default","slice_type":"youtube_video"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Et laboris magna in reprehenderit exercitation cupidatat excepteur ipsum.","spans":[]}],"description":[{"type":"paragraph","text":"Id consectetur eu incididunt tempor id reprehenderit labore labore ad reprehenderit aliquip nostrud cupidatat. Laboris irure Lorem commodo Lorem aliquip proident commodo ullamco incididunt ullamco veniam aute ut commodo duis. Dolor fugiat sint irure occaecat ex labore eu velit eu velit occaecat consequat eu.","spans":[]}],"video_id":"easy","text_color":"#7eabd8","description_text_color":"#d9ff60","background_color":"#97189e","text_alignment":"center"},"id":"_Default","slice_type":"youtube_video"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

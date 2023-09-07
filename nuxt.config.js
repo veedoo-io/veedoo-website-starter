@@ -178,7 +178,7 @@ export default async () => {
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
-      transpile: ['@prismicio/vue', 'vue-agile'],
+      transpile: ['@prismicio/vue', 'vue-agile', 'vue-youtube-embed'],
       postcss: {
         plugins: {
           tailwindcss: {},

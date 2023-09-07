@@ -1,6 +1,6 @@
 <template>
   <section
-    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};
+    :style="`padding:${marginTop} 24px ${marginBottom} 24px;
       color:${slice.primary.text_color ? slice.primary.text_color : '#353C47'};
       background-color:${
         slice.primary.background_color
@@ -54,21 +54,9 @@ export default {
         ? this.slice.primary.margin_bottom + "px"
         : "0px";
 
-    let marginLeft =
-      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + "px"
-        : "0px";
-
-    let marginRight =
-      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + "px"
-        : "0px";
-
     return {
       marginTop,
       marginBottom,
-      marginLeft,
-      marginRight,
     };
   },
 };

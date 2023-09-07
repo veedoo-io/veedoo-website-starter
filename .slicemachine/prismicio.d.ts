@@ -4610,6 +4610,16 @@ export interface YoutubeVideoSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	background_color: prismic.ColorField;
+	
+	/**
+	 * text alignment field in *YoutubeVideo → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: youtube_video.primary.text_alignment
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	text_alignment: prismic.SelectField<"left" | "center">;
 }
 
 /**

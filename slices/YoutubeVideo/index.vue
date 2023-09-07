@@ -37,17 +37,21 @@
         }  items-center justify-center`"
       />
     </div>
-    <youtube
-      v-if="slice.primary.video_id"
-      class="w-full flex-1 max-w-[760px] max-h-[428px]"
-      player-width="100%"
-      :video-id="slice.primary.video_id"
-    />
+    <div class="relative overflow-hidden max-w-[760px] max-h-[428px] w-full">
+      <youtube
+        class="max-w-full w-full"
+        style="padding-bottom: 56.25%"
+        v-if="videoURL"
+        player-width="100%"
+        :video-id="videoURL"
+      />
+    </div>
   </section>
 </template>
 
 <script>
 import { getSliceComponentProps } from "@prismicio/vue/components";
+import { getIdFromURL } from "vue-youtube-embed";
 
 export default {
   name: "YoutubeVideo",
@@ -55,6 +59,12 @@ export default {
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     return {};
+  },
+
+  computed: {
+    videoURL() {
+      return getIdFromURL(this.slice.primary.video_id);
+    },
   },
 };
 </script>
@@ -71,5 +81,12 @@ export default {
 }
 .tag {
   aspect-ratio: auto;
+}
+::v-deep iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 </style>
