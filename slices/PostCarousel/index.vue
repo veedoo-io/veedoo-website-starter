@@ -24,14 +24,7 @@
         class="w-full h-full flex justify-center items-center"
       >
         <div
-          class="
-            loader
-            ease-linear
-            rounded-full
-            border-4 border-t-4 border-gray-200
-            h-12
-            w-12
-          "
+          class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12"
           :style="{ borderTopColor: '#353C47' }"
         ></div>
       </div>
@@ -51,26 +44,10 @@
       </div>
       <div
         v-if="!loading && !error && posts.length > 0"
-        class="
-          w-full
-          h-full
-          flex
-          gap-x-[30px]
-          justify-center
-          items-center
-          relative
-        "
+        class="w-full h-full flex gap-x-[30px] justify-center items-center relative"
       >
         <div
-          class="
-            max-md:hidden
-            absolute
-            bg-white
-            shadow-[0_5px_10px_0px_#D4D4D4]
-            left-0
-            h-[60px]
-            z-40
-          "
+          class="max-md:hidden absolute bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40"
           @click="$refs.carousel.goToPrev()"
         >
           <svg
@@ -150,15 +127,7 @@
           </svg>
         </div>
         <div
-          class="
-            max-md:hidden
-            absolute
-            right-0
-            bg-white
-            shadow-[0_5px_10px_0px_#D4D4D4]
-            h-[60px]
-            z-40
-          "
+          class="max-md:hidden absolute right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-[60px] z-40"
           @click="$refs.carousel.goToNext()"
         >
           <svg
@@ -242,57 +211,27 @@
             <div
               v-for="(item, i) in posts"
               :key="`posts-item-${i}`"
-              class="
-                slide
-                my-2
-                h-full
-                justify-center
-                px-[20px]
-                rounded
-                overflow-hidden
-                py-10
-              "
+              class="slide my-2 h-full justify-center px-[20px] rounded overflow-hidden py-10"
             >
               <PrismicLink
                 :field="item"
-                class="
-                  w-full
-                  h-full
-                  bg-white
-                  flex flex-col
-                  items-center
-                  overflow-hidden
-                  rounded-[10px]
-                  shadow-[0_5px_10px_0px_#D4D4D4]
-                "
+                class="w-full h-full bg-white flex flex-col items-center overflow-hidden rounded-[10px] shadow-[0_5px_10px_0px_#D4D4D4]"
               >
                 <PrismicImage
-                  class="
-                    text-[#353C47]
-                    ease-in
-                    duration-500
-                    hover:cursor-pointer
-                    hover:scale-110
-                    w-full
-                    h-fit
-                  "
+                  class="text-[#353C47] ease-in duration-500 hover:cursor-pointer hover:scale-110 w-full h-fit"
                   :field="item.data.image"
                 />
                 <div class="px-10 pt-10">
                   <PrismicRichText
                     class="text-[28px] font-medium w-fit"
-                    :style="{ color: primaryColor }"
+                    :style="`color: ${slice.primary.primary_color}`"
                     :field="item.data.title"
                   />
-                  <span
-                    class="text-[13px]"
-                    :style="{ color: secondaryTextColor }"
-                    >{{
-                      item?.data?.description?.length > 145
-                        ? item?.data?.description.substring(0, 145) + '...'
-                        : item?.data?.description
-                    }}</span
-                  >
+                  <span class="text-[13px]">{{
+                    item?.data?.description?.length > 145
+                      ? item?.data?.description.substring(0, 145) + "..."
+                      : item?.data?.description
+                  }}</span>
                 </div>
               </PrismicLink>
             </div>
@@ -300,13 +239,7 @@
 
           <div class="flex md:hidden justify-center items-center w-full gap-10">
             <div
-              class="
-                bg-white
-                shadow-[0_5px_10px_0px_#D4D4D4]
-                left-0
-                h-[60px]
-                z-40
-              "
+              class="bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40"
               @click="$refs.carousel.goToPrev()"
             >
               <svg
@@ -392,13 +325,7 @@
               </svg>
             </div>
             <div
-              class="
-                right-0
-                bg-white
-                shadow-[0_5px_10px_0px_#D4D4D4]
-                h-[60px]
-                z-40
-              "
+              class="right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-[60px] z-40"
               @click="$refs.carousel.goToNext()"
             >
               <svg
@@ -491,20 +418,20 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'PostCarousel',
+  name: "PostCarousel",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     let textColor = this.slice.primary.text_color
       ? this.slice.primary.text_color
-      : '#353C47';
+      : "#353C47";
 
     let backgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
 
     let myOption = {
       navButtons: false,
@@ -526,29 +453,29 @@ export default {
   async fetch() {
     try {
       let request = await this.$prismic.api.query(
-        this.$prismic.predicates.at('document.type', 'blog_post'),
+        this.$prismic.predicates.at("document.type", "blog_post"),
         {
           pageSize: 1000,
-          orderings: '[document.first_publication_date desc]',
+          orderings: "[document.first_publication_date desc]",
           fetchLinks: [
-            'author.uid',
-            'author.picture',
-            'author.full_name',
-            'author.job',
-            'author.description',
-            'author.facebook_url',
-            'author.instagram_url',
-            'author.twitter_url',
-            'author.linkedin_url',
-            'tag.uid',
-            'tag.tag',
-            'tag_2.uid',
-            'tag_2.tag',
-            'tag_3.uid',
-            'tag_3.tag',
-            'category.uid',
-            'category.title',
-            'category.description',
+            "author.uid",
+            "author.picture",
+            "author.full_name",
+            "author.job",
+            "author.description",
+            "author.facebook_url",
+            "author.instagram_url",
+            "author.twitter_url",
+            "author.linkedin_url",
+            "tag.uid",
+            "tag.tag",
+            "tag_2.uid",
+            "tag_2.tag",
+            "tag_3.uid",
+            "tag_3.tag",
+            "category.uid",
+            "category.title",
+            "category.description",
           ],
         }
       );
@@ -592,7 +519,7 @@ export default {
 
       //console.log('this.posts ', this.posts);
     } catch (error) {
-      console.log('error ', error);
+      console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;

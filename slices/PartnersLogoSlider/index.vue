@@ -186,7 +186,7 @@
           }"
         >
           <PrismicImage
-            class="object-cover display:block logo h-auto"
+            class="object-contain display:block logo w-[194px] h-[83px]"
             :class="getSlideImageClass()"
             :field="item.partner_logo"
           />
@@ -263,7 +263,7 @@ export default {
     };
 
     let getSlideImageClass = function () {
-      let classNames = "object-cover w-[194px] h-[48px]";
+      let classNames = "w-[194px] h-[83px]";
 
       if (this.slice.variation == "partnersLogoSlider2") {
         classNames = "w-[194px] h-[83px]";
