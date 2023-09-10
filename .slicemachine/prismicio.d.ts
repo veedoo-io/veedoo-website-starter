@@ -3962,16 +3962,6 @@ export interface SocialFollowIconsSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *SocialFollowIcons → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: social_follow_icons.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *SocialFollowIcons → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -3982,14 +3972,24 @@ export interface SocialFollowIconsSliceDefaultPrimary {
 	margin_bottom: prismic.NumberField;
 	
 	/**
-	 * margin left field in *SocialFollowIcons → Primary*
+	 * social icon background field in *SocialFollowIcons → Primary*
 	 *
-	 * - **Field Type**: Number
+	 * - **Field Type**: Color
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: social_follow_icons.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
+	 * - **API ID Path**: social_follow_icons.primary.social_icon_background
+	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
-	margin_left: prismic.NumberField;
+	social_icon_background: prismic.ColorField;
+	
+	/**
+	 * radius field in *SocialFollowIcons → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: px
+	 * - **API ID Path**: social_follow_icons.primary.radius
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	radius: prismic.SelectField<"0" | "5" | "20" | "50">;
 }
 
 /**

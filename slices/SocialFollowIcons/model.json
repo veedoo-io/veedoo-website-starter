@@ -38,13 +38,6 @@
             "placeholder": ""
           }
         },
-        "margin_right": {
-          "type": "Number",
-          "config": {
-            "label": "margin right",
-            "placeholder": ""
-          }
-        },
         "margin_bottom": {
           "type": "Number",
           "config": {
@@ -52,11 +45,24 @@
             "placeholder": ""
           }
         },
-        "margin_left": {
-          "type": "Number",
+        "social_icon_background": {
+          "type": "Color",
           "config": {
-            "label": "margin left",
+            "label": "social icon background",
             "placeholder": ""
+          }
+        },
+        "radius": {
+          "type": "Select",
+          "config": {
+            "label": "radius",
+            "placeholder": "px",
+            "options": [
+              "0",
+              "5",
+              "20",
+              "50"
+            ]
           }
         }
       },

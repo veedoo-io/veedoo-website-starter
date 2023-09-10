@@ -18,20 +18,20 @@
         "value": "27",
         "type": "Number"
       },
-      "margin_right": {
-        "__TYPE__": "FieldContent",
-        "value": "40",
-        "type": "Number"
-      },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
         "value": "4",
         "type": "Number"
       },
-      "margin_left": {
+      "social_icon_background": {
         "__TYPE__": "FieldContent",
-        "value": "91",
-        "type": "Number"
+        "value": "#8760a6",
+        "type": "Color"
+      },
+      "radius": {
+        "__TYPE__": "FieldContent",
+        "value": "50",
+        "type": "Select"
       }
     },
     "items": [
@@ -41,7 +41,6 @@
           [
             "social_icon_image",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f",
@@ -59,6 +58,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ],

@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"social_icon_image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1471897488648-5eae4ac6686b"},"social_url":{"link_type":"Web","url":"https://slicemachine.dev"}}],"primary":{"alignment":"center","background_color":"#250034","margin_top":85,"margin_right":78,"margin_bottom":4,"margin_left":36},"slice_type":"social_follow_icons","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"social_icon_image":{"dimensions":{"width":6597,"height":4398},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1601933973783-43cf8a7d4c5f"},"social_url":{"link_type":"Web","url":"http://twitter.com"}}],"primary":{"alignment":"right","background_color":"#e2fb7a","margin_top":27,"margin_bottom":4,"social_icon_background":"#8760a6","radius":"50"},"id":"_Default","slice_type":"social_follow_icons"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

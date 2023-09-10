@@ -38,13 +38,15 @@
       />
     </div>
     <div class="relative overflow-hidden max-w-[760px] max-h-[428px] w-full">
-      <youtube
-        class="max-w-full w-full"
-        style="padding-bottom: 56.25%"
-        v-if="videoURL"
-        player-width="100%"
-        :video-id="videoURL"
-      />
+      <no-ssr>
+        <youtube
+          class="max-w-full w-full"
+          style="padding-bottom: 56.25%"
+          v-if="videoURL"
+          player-width="100%"
+          :video-id="videoURL"
+        />
+      </no-ssr>
     </div>
   </section>
 </template>
@@ -79,10 +81,8 @@ export default {
 .title {
   margin-bottom: 2em;
 }
-.tag {
-  aspect-ratio: auto;
-}
-::v-deep iframe {
+
+iframe {
   position: absolute;
   top: 0;
   left: 0;

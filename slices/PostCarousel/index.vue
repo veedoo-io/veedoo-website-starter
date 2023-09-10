@@ -519,7 +519,6 @@ export default {
 
       //console.log('this.posts ', this.posts);
     } catch (error) {
-      console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;

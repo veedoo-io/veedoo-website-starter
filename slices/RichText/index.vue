@@ -69,6 +69,23 @@ export default {
 </script>
 
 <style scoped>
+/*::v-deep data-oembed {
+  position: relative;
+  padding-bottom: 56.25%;
+}*/
+
+::v-deep iframe {
+  /*position: absolute;
+  top: 0;
+  left: 0;*/
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-height: 525px;
+}
+
 li {
   font-size: 16px;
   font-style: normal;
