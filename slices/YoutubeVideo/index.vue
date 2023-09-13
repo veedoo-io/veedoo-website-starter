@@ -10,7 +10,7 @@
     }"
   >
     <div
-      :class="`flex flex-col gap-6  justify-center ${
+      :class="`flex flex-col gap-6  justify-center max-w-[760px] ${
         slice.variation == 'horizontal'
           ? 'lg:justify-start lg:text-left text-center'
           : 'text-center  justify-center'
@@ -33,8 +33,8 @@
         }"
         :field="slice.primary.description"
         :class="`max-w-[586px] text-[19px] flex flex-col ${
-          slice.variation == 'horizontal' ? '' : 'text-center'
-        }  items-center justify-center`"
+          slice.variation == 'horizontal' ? '' : 'items-center m-auto'
+        }`"
       />
     </div>
     <div class="relative overflow-hidden max-w-[760px] max-h-[428px] w-full">
@@ -82,7 +82,7 @@ export default {
   margin-bottom: 2em;
 }
 
-iframe {
+::v-deep iframe {
   position: absolute;
   top: 0;
   left: 0;
