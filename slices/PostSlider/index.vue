@@ -30,7 +30,7 @@
       class="w-full h-full flex gap-x-[30px] justify-center items-center relative"
     >
       <div
-        class="absolute left-0 h-[60px] z-40"
+        class="absolute left-0 h-[60px] z-40 cursor-pointer"
         @click="$refs.carousel.goToPrev()"
       >
         <svg
@@ -158,7 +158,7 @@
         </div>
       </agile>
       <div
-        class="absolute right-0 h-[60px] z-40"
+        class="absolute right-0 h-[60px] z-40 cursor-pointer"
         @click="$refs.carousel.goToNext()"
       >
         <svg
