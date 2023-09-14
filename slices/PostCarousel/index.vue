@@ -1,17 +1,17 @@
 <template>
   <section
-    class="w-full min-h-screen bg-red-300 flex flex-col items-center"
+    class="w-full min-h-screen flex flex-col items-center px-24px"
     :style="`background-color:${backgroundColor}`"
   >
     <PrismicRichText
       :style="`color:${textColor}`"
       :field="slice.primary.subtitle"
-      class="pt-10 text-[18px] mb-10 font-bold"
+      class="pt-10 text-[18px] font-bold"
     />
     <PrismicRichText
       :style="`color:${textColor}`"
       :field="slice.primary.title"
-      class="font-bold text-[43px] mb-10"
+      class="font-bold text-[43px] my-[40px]"
     />
     <PrismicRichText
       :style="`color:${textColor}`"
@@ -44,10 +44,10 @@
       </div>
       <div
         v-if="!loading && !error && posts.length > 0"
-        class="w-full h-full flex gap-x-[30px] justify-center items-center relative"
+        class="w-full h-full flex justify-center items-center relative"
       >
         <div
-          class="max-md:hidden absolute bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40"
+          class="max-md:hidden absolute bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40 rounded cursor-pointer w-[60px] h-[60px]"
           @click="$refs.carousel.goToPrev()"
         >
           <svg
@@ -127,7 +127,7 @@
           </svg>
         </div>
         <div
-          class="max-md:hidden absolute right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-[60px] z-40"
+          class="max-md:hidden absolute right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-[60px] z-40 rounded cursor-pointer"
           @click="$refs.carousel.goToNext()"
         >
           <svg
@@ -215,15 +215,15 @@
             >
               <PrismicLink
                 :field="item"
-                class="w-full h-full bg-white flex flex-col items-center overflow-hidden rounded-[10px] shadow-[0_5px_10px_0px_#D4D4D4]"
+                class="w-full h-full bg-white flex flex-col items-center overflow-hidden rounded-[10px] shadow-[0_5px_10px_0px_#D4D4D4] card"
               >
                 <PrismicImage
-                  class="text-[#353C47] ease-in duration-500 hover:cursor-pointer hover:scale-110 w-full h-fit"
+                  class="text-[#353C47] hover:cursor-pointer w-full h-[330px] object-cover"
                   :field="item.data.image"
                 />
                 <div class="px-10 pt-10">
                   <PrismicRichText
-                    class="text-[28px] font-medium w-fit"
+                    class="text-[28px] font-medium text-center"
                     :style="`color: ${slice.primary.primary_color}`"
                     :field="item.data.title"
                   />
@@ -239,7 +239,7 @@
 
           <div class="flex md:hidden justify-center items-center w-full gap-10">
             <div
-              class="bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40"
+              class="bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40 rounded cursor-pointer"
               @click="$refs.carousel.goToPrev()"
             >
               <svg
@@ -502,7 +502,7 @@ export default {
             },
           },
           {
-            breakpoint: 1280,
+            breakpoint: 1260,
             settings: {
               slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
             },
@@ -527,4 +527,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card {
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); /* Modify the shadow for hover */
+}
+</style>
