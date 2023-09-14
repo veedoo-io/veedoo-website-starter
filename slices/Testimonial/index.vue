@@ -1,68 +1,101 @@
 <template>
   <section :class="getContainerClasses()">
     <PrismicRichText :class="getTitleClasses()" :field="slice.primary.title" />
-    <agile
-      v-if="slice?.items?.length > 0"
-      @after-change="(e) => (currentSlide = e.currentSlide)"
-      class="w-full mt-7"
-      ref="carousel"
-      :options="mySliderOption"
-    >
-      <div
-        v-for="(item, i) in slice.items"
-        :key="`slice-item-${i}`"
-        class="slide bg-transparent px-12 h-full"
-      >
+    <div>
+      <div class="flex items-center w-full justify-evenly gap-2 md:gap-5">
         <div
-          class="rounded w-full h-full bg-white flex p-6 flex-col justify-between gap-6 max-w-[326px] mx-auto shadow-[0px_4px_6px_0px_rgba(0,0,0,0.10)]"
+          class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
+          :style="{
+            filter:
+              'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+          }"
+          @click="$refs.carousel.goToPrev()"
         >
-          <div class="flex gap-4">
-            <PrismicImage
-              class="w-[56px] h-[56px] rounded-full object-cover"
-              :field="item.picture"
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="currentColor"
+            className="w-6 h-6 text-black"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M15.75 19.5L8.25 12l7.5-7.5"
             />
-
-            <div class="flex flex-col h-full w-full justify-between">
-              <h6 :class="getFullNameClasses()">
-                {{ item.full_name }}
-              </h6>
-              <p class="text-[#777E85] text-[14px]">{{ item.job_position }}</p>
+          </svg>
+        </div>
+        <agile
+          v-if="slice?.items?.length > 0"
+          @after-change="(e) => (currentSlide = e.currentSlide)"
+          class="max-w-[250px] md:max-w-[600px] lg:max-w-[820px] xl:max-w-[950px] mt-7"
+          ref="carousel"
+          :options="mySliderOption"
+        >
+          <div
+            v-for="(item, i) in slice.items"
+            :key="`slice-item-${i}`"
+            class="slide bg-transparent h-full"
+          >
+            <div
+              class="rounded w-full h-full bg-white flex p-6 flex-col justify-between gap-6 max-w-[326px] mx-[25px] shadow-[0px_4px_6px_0px_rgba(0,0,0,0.10)]"
+            >
+              <div class="flex gap-4">
+                <div
+                  class="rounded-full w-[56px] h-[56px] overflow-hidden"
+                  v-if="Object.keys(item.picture).length"
+                >
+                  <PrismicImage
+                    class="rounded-full object-cover w-full h-full"
+                    :field="item.picture"
+                  />
+                </div>
+                <div class="flex flex-col h-full w-full justify-between">
+                  <h6 :class="getFullNameClasses()">
+                    {{ item.full_name }}
+                  </h6>
+                  <p class="text-[#777E85] text-[14px]">
+                    {{ item.job_position }}
+                  </p>
+                </div>
+              </div>
+              <PrismicRichText
+                :class="getTestimonialClasses()"
+                :field="item.testimonial"
+              />
             </div>
           </div>
-          <PrismicRichText
-            :class="getTestimonialClasses()"
-            :field="item.testimonial"
-          />
+        </agile>
+        <div
+          class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
+          :style="{
+            filter:
+              'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+          }"
+          @click="$refs.carousel.goToNext()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="{1.5}"
+            stroke="currentColor"
+            className="w-6 h-6 text-black"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.25 4.5l7.5 7.5-7.5 7.5"
+            />
+          </svg>
         </div>
       </div>
-    </agile>
+    </div>
     <div
       class="w-fit mx-auto mt-10 flex items-center max-w-screen justify-between gap-5"
     >
-      <div
-        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
-        :style="{
-          filter:
-            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
-        }"
-        @click="$refs.carousel.goToPrev()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="{1.5}"
-          stroke="currentColor"
-          className="w-6 h-6 text-black"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M15.75 19.5L8.25 12l7.5-7.5"
-          />
-        </svg>
-      </div>
-      <div class="flex gap-1 items-center">
+      <div class="flex gap-1 items-center mx-auto">
         <div
           :class="`w-4 h-4 rounded-full ${
             currentSlide == i ? 'bg-[#CBD1D6]' : 'bg-[#F2F2F2]'
@@ -71,29 +104,6 @@
           @click="$refs.carousel.goTo(i)"
           :key="`slice-item-${i}`"
         ></div>
-      </div>
-      <div
-        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
-        :style="{
-          filter:
-            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
-        }"
-        @click="$refs.carousel.goToNext()"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="{1.5}"
-          stroke="currentColor"
-          className="w-6 h-6 text-black"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8.25 4.5l7.5 7.5-7.5 7.5"
-          />
-        </svg>
       </div>
     </div>
   </section>
