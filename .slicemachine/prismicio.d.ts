@@ -3577,6 +3577,26 @@ export interface PostListingSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	background_color: prismic.ColorField;
+	
+	/**
+	 * text button field in *PostListing → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: post_listing.primary.text_button
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	text_button: prismic.KeyTextField;
+	
+	/**
+	 * text button color field in *PostListing → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: post_listing.primary.text_button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_button_color: prismic.ColorField;
 }
 
 /**

@@ -10,15 +10,7 @@
       class="w-full h-fit py-10 flex justify-center items-center"
     >
       <div
-        class="
-          loader
-          ease-linear
-          rounded-full
-          border-4 border-t-4 border-gray-200
-          h-12
-          w-12
-          mb-4
-        "
+        class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"
         :style="{ borderTopColor: textColor }"
       ></div>
     </div>
@@ -40,16 +32,11 @@
       v-if="!loading && !error && posts.length > 0"
       class="w-full h-fit py-10 flex flex-col justify-center items-center"
     >
-      <div class="w-full py-10 flex flex-wrap gap-x-[72px] gap-y-[72px]">
+      <div
+        class="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-[20px] gap-x-[20px] gap-y-[40px]"
+      >
         <div
-          class="
-            max-sm:flex-[0_0_99%]
-            md:flex-[0_0_45%]
-            lg:flex-[0_0_45%]
-            xl:flex-[0_0_30%]
-            max-sm:w-[80vw]
-            mx-auto
-          "
+          class="w-full"
           v-for="(item, i) in posts?.slice(
             page * numberOfItemPerPage,
             page * numberOfItemPerPage + numberOfItemPerPage
@@ -57,47 +44,31 @@
           :key="`post-item-${i}`"
         >
           <PrismicLink
-            class="
-              w-full
-              max-w-[450px]
-              mx-auto
-              bg-white
-              rounded-xl
-              shadow-xl
-              flex flex-col
-              h-full
-              overflow-hidden
-              group
-            "
+            class="w-full mx-auto bg-white rounded-xl shadow-xl flex flex-col h-full overflow-hidden group card hover:cursor-pointer"
             :field="item"
           >
             <PrismicImage
-              class="
-                text-[#353C47]
-                ease-in
-                duration-500
-                hover:cursor-pointer
-                hover:scale-110
-                w-full
-                h-[273px]
-              "
+              class="text-[#353C47] w-full h-[273px] object-cover"
               :field="item.data.image"
             />
-            <div class="p-2 flex-1">
+            <div class="py-2 px-4 flex flex-col">
               <PrismicRichText
                 class="text-[19px]"
                 :style="{ color: textColor }"
                 :field="item.data.title"
               />
               <span
-                class="text-[13px]"
+                class="text-[13px] pt-[8px]"
                 :style="{ color: secondaryTextColor }"
                 >{{
                   item?.data?.description?.length > 145
-                    ? item?.data?.description.substring(0, 145) + '...'
+                    ? item?.data?.description.substring(0, 145) + "..."
                     : item?.data?.description
                 }}</span
               >
+              <span :style="{ color: buttonColor }" class="pt-[18px]">{{
+                slice.primary.text_button
+              }}</span>
             </div>
           </PrismicLink>
         </div>
@@ -169,30 +140,34 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'PostListing',
+  name: "PostListing",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     let getContainerClasses = function () {
-      let classes = '';
+      let classes = "";
 
       return classes;
     };
 
     let textColor = this.slice.primary.text_color
       ? this.slice.primary.text_color
-      : '#353C47';
+      : "#353C47";
     let secondaryTextColor = this.slice.primary.secondary_text_color
       ? this.slice.primary.secondary_text_color
-      : '#777E85';
+      : "#777E85";
 
     let backgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
+
+    let buttonColor = this.slice.primary.text_button_color
+      ? this.slice.primary.text_button_color
+      : "#2F80ED";
 
     return {
       getContainerClasses,
@@ -202,6 +177,7 @@ export default {
       textColor,
       secondaryTextColor,
       backgroundColor,
+      buttonColor,
       page: 0,
       numberOfItemPerPage: 6,
     };
@@ -209,29 +185,29 @@ export default {
   async fetch() {
     try {
       let request = await this.$prismic.api.query(
-        this.$prismic.predicates.at('document.type', 'blog_post'),
+        this.$prismic.predicates.at("document.type", "blog_post"),
         {
           pageSize: 1000,
-          orderings: '[document.first_publication_date desc]',
+          orderings: "[document.first_publication_date desc]",
           fetchLinks: [
-            'author.uid',
-            'author.picture',
-            'author.full_name',
-            'author.job',
-            'author.description',
-            'author.facebook_url',
-            'author.instagram_url',
-            'author.twitter_url',
-            'author.linkedin_url',
-            'tag.uid',
-            'tag.tag',
-            'tag_2.uid',
-            'tag_2.tag',
-            'tag_3.uid',
-            'tag_3.tag',
-            'category.uid',
-            'category.title',
-            'category.description',
+            "author.uid",
+            "author.picture",
+            "author.full_name",
+            "author.job",
+            "author.description",
+            "author.facebook_url",
+            "author.instagram_url",
+            "author.twitter_url",
+            "author.linkedin_url",
+            "tag.uid",
+            "tag.tag",
+            "tag_2.uid",
+            "tag_2.tag",
+            "tag_3.uid",
+            "tag_3.tag",
+            "category.uid",
+            "category.title",
+            "category.description",
           ],
         }
       );
@@ -239,7 +215,7 @@ export default {
       this.posts = posts;
       //console.log('this.posts ', this.posts);
     } catch (error) {
-      console.log('error ', error);
+      console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;
@@ -272,4 +248,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.card {
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.4); /* Modify the shadow for hover */
+}
+</style>
