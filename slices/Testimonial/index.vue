@@ -41,17 +41,18 @@
             <div
               class="rounded w-full h-full bg-white flex p-6 flex-col justify-between gap-6 max-w-[326px] mx-[25px] shadow-[0px_4px_6px_0px_rgba(0,0,0,0.10)]"
             >
-              <div class="flex gap-4">
+              <div class="flex">
                 <div
-                  class="rounded-full w-[56px] h-[56px] overflow-hidden"
+                  class="rounded-full w-[56px] h-[56px] overflow-hidden bg-cover bg-center bg-no-repeat mr-[15px]"
                   v-if="Object.keys(item.picture).length"
+                  :style="`background-image: url(${item.picture.url})`"
                 >
-                  <PrismicImage
+                  <!--<PrismicImage
                     class="rounded-full object-cover w-full h-full"
                     :field="item.picture"
-                  />
+                  />-->
                 </div>
-                <div class="flex flex-col h-full w-full justify-between">
+                <div class="flex flex-col justify-between">
                   <h6 :class="getFullNameClasses()">
                     {{ item.full_name }}
                   </h6>
