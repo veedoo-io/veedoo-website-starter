@@ -75,12 +75,20 @@ export default {
   height: 490px;
 }
 
+::v-deep div[data-oembed-type="video"] {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-height: 525px;
+}
+
 ::v-deep iframe {
-  /*position: absolute;
+  position: absolute;
   top: 0;
-  left: 0;*/
+  left: 0;
   width: 100%;
   height: 100%;
+  padding-bottom: 56.25%;
 }
 
 li {
