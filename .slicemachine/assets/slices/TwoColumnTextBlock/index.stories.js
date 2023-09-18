@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"first_column_rich_text":[{"type":"paragraph","text":"Est adipisicing amet duis tempor voluptate occaecat do commodo voluptate et veniam culpa elit sint. Et quis consequat laborum exercitation dolore consectetur ad.","spans":[]}],"second_column_rich_text":[{"type":"paragraph","text":"Sint fugiat aliqua eiusmod sit in est deserunt tempor. Consequat non elit consequat aliqua proident irure ut labore dolore incididunt aliqua esse.","spans":[]}],"text_size":68,"text_color":"#10053c","background_color":"#5ed2cd","margin_top":61,"margin_right":0,"margin_bottom":44,"margin_left":24},"slice_type":"two_column_text_block","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"first_column_rich_text":[{"type":"paragraph","text":"Eu irure id mollit consequat consectetur laboris do ipsum proident aute velit cupidatat cupidatat anim. Ea ut consectetur dolore.","spans":[]}],"second_column_rich_text":[{"type":"paragraph","text":"Aute et culpa elit cillum in est minim.","spans":[]}],"text_color":"#0cb8db","background_color":"#57b9d1","margin_top":90,"margin_bottom":96},"id":"_Default","slice_type":"two_column_text_block"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

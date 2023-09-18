@@ -9,7 +9,7 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Eu do amet duis quis irure laboris fugiat labore culpa. Magna do dolore reprehenderit proident excepteur aliqua proident irure irure consectetur sint commodo incididunt ipsum."
+              "text": "Eu irure id mollit consequat consectetur laboris do ipsum proident aute velit cupidatat cupidatat anim. Ea ut consectetur dolore."
             }
           }
         ]
@@ -20,15 +20,10 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Cupidatat dolor minim anim excepteur."
+              "text": "Aute et culpa elit cillum in est minim."
             }
           }
         ]
-      },
-      "text_size": {
-        "__TYPE__": "FieldContent",
-        "value": "76",
-        "type": "Number"
       },
       "text_color": {
         "__TYPE__": "FieldContent",
@@ -45,19 +40,9 @@
         "value": "90",
         "type": "Number"
       },
-      "margin_right": {
-        "__TYPE__": "FieldContent",
-        "value": "89",
-        "type": "Number"
-      },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
         "value": "96",
-        "type": "Number"
-      },
-      "margin_left": {
-        "__TYPE__": "FieldContent",
-        "value": "26",
         "type": "Number"
       }
     },
