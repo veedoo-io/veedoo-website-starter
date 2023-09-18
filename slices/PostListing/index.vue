@@ -111,11 +111,11 @@
         </div>
         <div
           :class="`w-8 h-8 ${
-            page < posts?.length / 6 - 1 ? 'cursor-pointer' : ''
+            page < posts?.length / 12 - 1 ? 'cursor-pointer' : ''
           }`"
-          :disabled="page < posts?.length / 6 - 1"
+          :disabled="page < posts?.length / 12 - 1"
           :style="`color:${
-            page < posts?.length / 6 - 1 ? textColor : secondaryTextColor
+            page < posts?.length / 12 - 1 ? textColor : secondaryTextColor
           }`"
           @click="goToNext()"
         >
@@ -179,7 +179,7 @@ export default {
       backgroundColor,
       buttonColor,
       page: 0,
-      numberOfItemPerPage: 6,
+      numberOfItemPerPage: 12,
     };
   },
   async fetch() {
@@ -225,7 +225,7 @@ export default {
     getPaginationPages: function () {
       let pageNumbers = [];
       let p = 1;
-      for (let i = 0; i < this.posts?.length; i = i + 6) {
+      for (let i = 0; i < this.posts?.length; i = i + 12) {
         pageNumbers.push(p);
         p = p + 1;
       }
@@ -235,7 +235,7 @@ export default {
   },
   methods: {
     goToNext: function () {
-      if (this.page < this.posts?.length / 6 - 1) {
+      if (this.page < this.posts?.length / 12 - 1) {
         this.page = this.page + 1;
       }
     },

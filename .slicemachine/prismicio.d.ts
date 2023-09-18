@@ -109,7 +109,7 @@ interface AuthorDocumentData {
  */
 export type AuthorDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
 
-type BlogPostDocumentDataSlicesSlice = AlternateGridSlice | AtomTagsSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | DividerSlice | FaqAccordionSlice | FaqAccordion2Slice | HeroVeedooSlice | PortfolioItemsSlice | PartnersLogoSliderSlice | PostListingSlice | TagsSlice | RichTextSlice | TestimonialSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | ContactInfoSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | BlurbSlice | ImageSlice | SocialFollowIconsSlice | YoutubeVideoSlice
+type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordion2Slice
 
 /**
  * Content for blog Post documents

@@ -91,46 +91,7 @@
         "fieldset": "Slice Zone",
         "config": {
           "choices": {
-            "alternate_grid": {
-              "type": "SharedSlice"
-            },
-            "atom_tags": {
-              "type": "SharedSlice"
-            },
-            "call_to_action_with_image": {
-              "type": "SharedSlice"
-            },
-            "contact_form_veedoo": {
-              "type": "SharedSlice"
-            },
-            "divider": {
-              "type": "SharedSlice"
-            },
-            "faq_accordion": {
-              "type": "SharedSlice"
-            },
-            "faq_accordion2": {
-              "type": "SharedSlice"
-            },
-            "hero_veedoo": {
-              "type": "SharedSlice"
-            },
-            "portfolio_items": {
-              "type": "SharedSlice"
-            },
-            "partners_logo_slider": {
-              "type": "SharedSlice"
-            },
-            "post_listing": {
-              "type": "SharedSlice"
-            },
-            "tags": {
-              "type": "SharedSlice"
-            },
             "rich_text": {
-              "type": "SharedSlice"
-            },
-            "testimonial": {
               "type": "SharedSlice"
             },
             "title": {
@@ -142,37 +103,22 @@
             "post_carousel": {
               "type": "SharedSlice"
             },
-            "contact_info": {
-              "type": "SharedSlice"
-            },
-            "audio_player_with_image": {
-              "type": "SharedSlice"
-            },
             "title_with_date_and_share_icons": {
               "type": "SharedSlice"
             },
             "two_column_text_block": {
               "type": "SharedSlice"
             },
-            "cta_with_background_image": {
-              "type": "SharedSlice"
-            },
-            "partner_logo_grid_with_description_text": {
-              "type": "SharedSlice"
-            },
-            "person": {
-              "type": "SharedSlice"
-            },
-            "blurb": {
-              "type": "SharedSlice"
-            },
             "image": {
               "type": "SharedSlice"
             },
-            "social_follow_icons": {
+            "youtube_video": {
               "type": "SharedSlice"
             },
-            "youtube_video": {
+            "divider": {
+              "type": "SharedSlice"
+            },
+            "faq_accordion2": {
               "type": "SharedSlice"
             }
           }
