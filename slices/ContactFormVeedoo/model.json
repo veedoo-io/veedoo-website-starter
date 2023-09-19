@@ -27,10 +27,12 @@
           }
         },
         "form_title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "form title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,rtl"
           }
         },
         "description": {
@@ -39,13 +41,13 @@
             "label": "form description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,rtl"
           }
         },
         "name_title": {
           "type": "Text",
           "config": {
-            "label": "name title",
+            "label": "name label",
             "placeholder": ""
           }
         },
@@ -59,7 +61,7 @@
         "email_title": {
           "type": "Text",
           "config": {
-            "label": "email title",
+            "label": "email label",
             "placeholder": ""
           }
         },
@@ -73,7 +75,7 @@
         "message_title": {
           "type": "Text",
           "config": {
-            "label": "message title",
+            "label": "message label",
             "placeholder": ""
           }
         },

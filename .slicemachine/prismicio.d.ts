@@ -109,7 +109,7 @@ interface AuthorDocumentData {
  */
 export type AuthorDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
 
-type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordion2Slice
+type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordion2Slice | FaqAccordionSlice
 
 /**
  * Content for blog Post documents
@@ -1362,12 +1362,12 @@ export interface ContactFormVeedooSliceDefaultPrimary {
 	/**
 	 * form title field in *ContactFormVeedoo → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: contact_form_veedoo.primary.form_title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	form_title: prismic.KeyTextField;
+	form_title: prismic.RichTextField;
 	
 	/**
 	 * form description field in *ContactFormVeedoo → Primary*
@@ -1380,7 +1380,7 @@ export interface ContactFormVeedooSliceDefaultPrimary {
 	description: prismic.RichTextField;
 	
 	/**
-	 * name title field in *ContactFormVeedoo → Primary*
+	 * name label field in *ContactFormVeedoo → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -1400,7 +1400,7 @@ export interface ContactFormVeedooSliceDefaultPrimary {
 	name_placeholder: prismic.KeyTextField;
 	
 	/**
-	 * email title field in *ContactFormVeedoo → Primary*
+	 * email label field in *ContactFormVeedoo → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
@@ -1420,7 +1420,7 @@ export interface ContactFormVeedooSliceDefaultPrimary {
 	email_placeholder: prismic.KeyTextField;
 	
 	/**
-	 * message title field in *ContactFormVeedoo → Primary*
+	 * message label field in *ContactFormVeedoo → Primary*
 	 *
 	 * - **Field Type**: Text
 	 * - **Placeholder**: *None*
