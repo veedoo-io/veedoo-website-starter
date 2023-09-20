@@ -28,10 +28,13 @@
         }}</label>
         <input
           v-model="name"
-          required
+          required=""
           :class="getInputClasses()"
           :placeholder="slice.primary.name_placeholder ?? 'Name'"
         />
+        <div class="text-sm mt-1" v-if="v$.name?.$error">
+          <p class="font-medium text-red-600">Name is required.</p>
+        </div>
       </div>
       <div class="flex flex-col mb-4">
         <label class="mb-2">{{
@@ -40,22 +43,28 @@
         <input
           v-model="email"
           type="email"
-          required
+          required=""
           :class="getInputClasses()"
           :placeholder="slice.primary.email_placeholder ?? 'Joe@mail.com'"
         />
+        <div class="text-sm mt-1" v-if="v$.email?.$error">
+          <p class="font-medium text-red-600">Enter valid email.</p>
+        </div>
       </div>
       <div class="flex-1 flex-col mb-4">
         <label class="mb-2">{{
           slice.primary.message_title ?? "Message"
         }}</label>
         <textarea
-          required
+          required=""
           class="flex-1"
           v-model="message"
           :class="getInputClasses()"
           :placeholder="slice.primary.message_placeholder ?? 'Message'"
         />
+        <div class="text-sm mt-1" v-if="v$.message?.$error">
+          <p class="font-medium text-red-600">Message is required.</p>
+        </div>
       </div>
       <button type="submit" :class="getButtonClasses()">
         {{ slice.primary.button_text ?? "Send" }}
@@ -68,12 +77,16 @@
 import { getSliceComponentProps } from "@prismicio/vue/components";
 import tailwindMatcher from "hex2tailwind";
 import { mapGetters } from "vuex";
+import { required, email } from "@vuelidate/validators";
+import { useVuelidate } from "@vuelidate/core";
 
 export default {
   name: "ContactFormVeedoo",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
-
+  setup() {
+    return { v$: useVuelidate() };
+  },
   data() {
     let getContainerClasses = function () {
       let classes =
@@ -145,15 +158,41 @@ export default {
       getContainerClasses,
       getInputClasses,
       getButtonClasses,
+      email: null,
       name: "",
-      email: "",
       message: "",
       marginTop,
       marginBottom,
     };
   },
+
+  validations() {
+    return {
+      name: {
+        required,
+        $autoDirty: true,
+        $lazy: true,
+      },
+      email: {
+        required,
+        email,
+        $autoDirty: true,
+        $lazy: true,
+      },
+      message: {
+        required,
+        $autoDirty: true,
+        $lazy: true,
+      },
+    };
+  },
+
   methods: {
     async onSubmit() {
+      const isFormCorrect = await this.v$.$validate();
+      // you can show some extra alert to the user or just leave the each field to show it's `$errors`.
+      if (!isFormCorrect) return;
+
       let defaultMailTo = this.getSettings.data.default_email_mailto;
       let formMailTo = this.slice.primary.mailto_email;
 
@@ -188,10 +227,6 @@ export default {
         alert("there was an error sending your email try again later");
         console.log("there was an error sending your email");
         console.log(error);
-      } finally {
-        this.name = "";
-        this.email = "";
-        this.message = "";
       }
     },
   },
