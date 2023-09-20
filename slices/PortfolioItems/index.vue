@@ -76,7 +76,7 @@ export default {
     console.log(this.slice);
     let getContaienrClasses = function () {
       console.log;
-      let classes = "w-full py-10 w-full gap-x-6 gap-y-6 flex flex-wrap";
+      let classes = "w-full py-10 w-full gap-6 grid lg:grid-cols-2 grid-cols-1";
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
