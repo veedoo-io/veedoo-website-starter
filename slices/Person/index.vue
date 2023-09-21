@@ -8,15 +8,7 @@
       class="w-full h-fit py-10 flex justify-center items-center"
     >
       <div
-        class="
-          loader
-          ease-linear
-          rounded-full
-          border-4 border-t-4 border-gray-200
-          h-12
-          w-12
-          mb-4
-        "
+        class="loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-12 w-12 mb-4"
         :style="{ borderTopColor: nameColor }"
       ></div>
     </div>
@@ -36,19 +28,10 @@
     </div>
     <div
       v-if="!loading && !error && persons.length > 0"
-      class="
-        w-full
-        flex flex-wrap
-        gap-[36px]
-        justify-start
-        items-stretch
-        h-full
-        py-2.5
-
-      "
+      class="w-full flex flex-wrap flex-col lg:flex-row gap-[36px] justify-center h-full py-2.5 px-6 items-center"
     >
       <div
-        :class="`flex-[0_0_100%]
+        :class="`lg:flex-[0_0_50%] flex-[0_0_100%]     
            ${
              persons.length > 1
                ? 'max-w-[643px]  max-[1530px]:max-w-none	 '
@@ -68,15 +51,18 @@
             'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
         }"
       >
-        <div class="w-[160px] h-full flex items-start">
+        <div
+          class="w-[160px] h-full flex items-start self-center sm:self-start"
+        >
           <PrismicImage
-            class="w-[160px] h-fit rounded"
+            class="w-[160px] h-[160px] object-cover"
             :field="person.data.picture"
+            v-if="Object.keys(person.data.picture).length"
           />
         </div>
         <div class="flex-1 h-full flex flex-col">
           <p
-            class="font-medium text-[23px] mb-0.5"
+            class="font-medium text-[23px] mb-0.5 self-center sm:self-start"
             :style="{
               color: nameColor,
             }"
@@ -84,7 +70,7 @@
             {{ person.data.full_name }}
           </p>
           <p
-            class="text-[13px]"
+            class="text-[13px] self-center sm:self-start"
             :style="{
               color: jobColor,
             }"
@@ -235,56 +221,56 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'Person',
+  name: "Person",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
-        ? this.slice.primary.margin_top + 'px'
-        : '0px';
+        ? this.slice.primary.margin_top + "px"
+        : "0px";
 
     let marginBottom =
       this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
-        ? this.slice.primary.margin_bottom + 'px'
-        : '0px';
+        ? this.slice.primary.margin_bottom + "px"
+        : "0px";
 
     let marginLeft =
       this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + 'px'
-        : '0px';
+        ? this.slice.primary.margin_left + "px"
+        : "0px";
 
     let marginRight =
       this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + 'px'
-        : '0px';
+        ? this.slice.primary.margin_right + "px"
+        : "0px";
 
     let socialIconColor = this.slice.primary.social_icons_color
       ? this.slice.primary.social_icons_color
-      : '#48525F';
+      : "#48525F";
 
     let descriptionColor = this.slice.primary.description_text_color
       ? this.slice.primary.description_text_color
-      : '#3C3C43';
+      : "#3C3C43";
 
     let jobColor = this.slice.primary.job_text_color
       ? this.slice.primary.job_text_color
-      : '#666666';
+      : "#666666";
 
     let nameColor = this.slice.primary.name_text_color
       ? this.slice.primary.name_text_color
-      : '#000000';
+      : "#000000";
 
     let cardBg = this.slice.primary.card_backgroundcolor
       ? this.slice.primary.card_backgroundcolor
-      : '#FFFFFF';
+      : "#FFFFFF";
 
     let sliceBg = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
 
     let uids =
       this.slice.items?.length > 0
@@ -314,14 +300,14 @@ export default {
       if (this.uids?.length > 0) {
         //console.log('got in ', this.persons);
         let prismic = this.$prismic.api;
-        let promises = this.uids?.map((uid) => prismic.getByUID('author', uid));
+        let promises = this.uids?.map((uid) => prismic.getByUID("author", uid));
         let persons = await Promise.all(promises);
         this.persons = persons;
 
         //console.log('personsDoc ', persons);
       }
     } catch (error) {
-      console.log('error ', error);
+      console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;
