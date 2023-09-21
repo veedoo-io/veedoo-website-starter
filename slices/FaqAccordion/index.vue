@@ -1,7 +1,7 @@
 <template>
   <section :class="getContainerClasses()">
     <div :class="getWidth()">
-      <PrismicRichText :field="slice.primary.title" />
+      <PrismicRichText :field="slice.primary.title" getDescriptionClasses() />
       <PrismicRichText
         class="w-full"
         :class="getDescriptionClasses()"
@@ -120,10 +120,15 @@ export default {
       return classes;
     };
 
-    let getChildContainerClasses = function () {
-      let classes =
-        "mx-auto w-full  flex flex-col justify-center text-center items-center";
-
+    let getTitleClasses = function () {
+      let classes = "font-bold mb-10";
+      if (this.slice.primary.primary_text_color) {
+        let colorName = tailwindMatcher(this.slice.primary.primary_text_color);
+        classes = classes + ` text-${colorName} `;
+      } else {
+        let colorName = tailwindMatcher("#000000");
+        classes = classes + ` text-${colorName} `;
+      }
       return classes;
     };
 
@@ -176,6 +181,7 @@ export default {
     };
 
     return {
+      getTitleClasses,
       getWidth,
       getContainerClasses,
       getDescriptionClasses,
