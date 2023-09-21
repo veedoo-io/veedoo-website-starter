@@ -127,20 +127,6 @@ export default {
       return classes;
     };
 
-    /* let getTitleClasses = function () {
-      let classes = "font-bold mb-10";
-
-      if (this.slice.primary.primary_text_color) {
-        let colorName = tailwindMatcher(this.slice.primary.primary_text_color);
-        classes = classes + ` text-${colorName} `;
-      } else {
-        let colorName = tailwindMatcher("#000000");
-        classes = classes + ` text-${colorName} `;
-      }
-
-      return classes;
-    };*/
-
     let getDescriptionClasses = function () {
       let classes = " text-center ";
 
@@ -189,16 +175,12 @@ export default {
       return classes;
     };
 
-    //console.log('faq ', this.slice);
-
     return {
       getWidth,
       getContainerClasses,
-      //getTitleClasses,
       getDescriptionClasses,
       getImageContainer,
       getQuestionsContainer,
-      //width,
       selectedIndexes: -1,
     };
   },
