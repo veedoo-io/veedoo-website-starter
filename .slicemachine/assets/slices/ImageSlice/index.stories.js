@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":4000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1606248897732-2c5ffe759c04"},"rounded":"radius 20","margin_top":76,"margin_bottom":58,"background_color":"#b08286","alignment":"left"},"id":"_Default","slice_type":"image"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"image":{"dimensions":{"width":3424,"height":3424},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1493119508027-2b584f234d6c"},"margin_top":5,"margin_bottom":23,"background_color":"#739dc2","rounded":"10","alignment":"center"},"id":"_Default","slice_type":"image"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -19,20 +19,6 @@
             "thumbnails": []
           }
         },
-        "rounded": {
-          "type": "Select",
-          "config": {
-            "label": "rounded",
-            "placeholder": "",
-            "options": [
-              "radius 0",
-              "radius 5",
-              "radius 20",
-              "circle"
-            ],
-            "default_value": "radius 0"
-          }
-        },
         "margin_top": {
           "type": "Number",
           "config": {
@@ -54,17 +40,28 @@
             "placeholder": ""
           }
         },
+        "rounded": {
+          "type": "Select",
+          "config": {
+            "label": "rounded",
+            "placeholder": "radius,px",
+            "options": [
+              "10",
+              "5",
+              "0"
+            ]
+          }
+        },
         "alignment": {
           "type": "Select",
           "config": {
             "label": "alignment",
             "placeholder": "",
             "options": [
-              "left",
               "center",
+              "left",
               "right"
-            ],
-            "default_value": "left"
+            ]
           }
         }
       },

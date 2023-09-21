@@ -2817,17 +2817,6 @@ export interface ImageSliceDefaultPrimary {
 	image: prismic.ImageField<never>;
 	
 	/**
-	 * rounded field in *ImageSlice → Primary*
-	 *
-	 * - **Field Type**: Select
-	 * - **Placeholder**: *None*
-	 * - **Default Value**: radius 0
-	 * - **API ID Path**: image.primary.rounded
-	 * - **Documentation**: https://prismic.io/docs/field#select
-	 */
-	rounded: prismic.SelectField<"radius 0" | "radius 5" | "radius 20" | "circle", "filled">;
-	
-	/**
 	 * margin top field in *ImageSlice → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -2858,15 +2847,24 @@ export interface ImageSliceDefaultPrimary {
 	background_color: prismic.ColorField;
 	
 	/**
+	 * rounded field in *ImageSlice → Primary*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: radius,px
+	 * - **API ID Path**: image.primary.rounded
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	rounded: prismic.SelectField<"10" | "5" | "0">;
+	
+	/**
 	 * alignment field in *ImageSlice → Primary*
 	 *
 	 * - **Field Type**: Select
 	 * - **Placeholder**: *None*
-	 * - **Default Value**: left
 	 * - **API ID Path**: image.primary.alignment
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	alignment: prismic.SelectField<"left" | "center" | "right", "filled">;
+	alignment: prismic.SelectField<"center" | "left" | "right">;
 }
 
 /**

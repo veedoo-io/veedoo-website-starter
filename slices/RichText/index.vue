@@ -73,6 +73,7 @@ export default {
   width: 100%;
   object-fit: cover;
   height: 490px;
+  border-radius: 10px;
 }
 
 ::v-deep div[data-oembed-type="video"] {

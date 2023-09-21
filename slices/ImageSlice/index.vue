@@ -4,7 +4,7 @@
     :style="`background-color:${backgroundColor}; padding:${marginTop} 24px ${marginBottom} 24px; `"
   >
     <PrismicImage
-      class="w-[219px] object-cover h-[219px]"
+      class="lg:w-[60%] w-full object-cover max-h-[525px]"
       :style="`border-radius:${rounded}`"
       :field="slice.primary.image"
     />
@@ -35,16 +35,12 @@ export default {
 
     let rounded = "0px";
     switch (this.slice.primary.rounded) {
-      case "radius 5":
+      case "5":
         rounded = "5px";
         break;
-      case "radius 20":
+      case "10":
         rounded = "10px";
         break;
-      case "circle":
-        rounded = "9999px";
-        break;
-      default:
     }
 
     let aligment = "justify-start";
