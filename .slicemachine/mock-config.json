@@ -131,6 +131,14 @@
             }
           }
         }
+      },
+      "withImage": {
+        "items": {},
+        "primary": {}
+      },
+      "withAnswerImage": {
+        "items": {},
+        "primary": {}
       }
     },
     "ContactFormVeedoo": {
@@ -166,19 +174,6 @@
     "Divider": {
       "default": {
         "primary": {}
-      }
-    },
-    "FaqAccordion2": {
-      "default": {
-        "primary": {
-          "title": {
-            "config": {
-              "patternType": "PARAGRAPH",
-              "blocks": 1
-            }
-          }
-        },
-        "items": {}
       }
     },
     "PostListing": {

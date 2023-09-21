@@ -12,10 +12,12 @@
       "description": "FaqAccordion",
       "primary": {
         "title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "description": {
@@ -24,7 +26,7 @@
             "label": "description",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
         "background_color": {
@@ -48,10 +50,24 @@
             "placeholder": ""
           }
         },
-        "max_width": {
-          "type": "Number",
+        "question_text_color": {
+          "type": "Color",
           "config": {
-            "label": "max width",
+            "label": "question text color",
+            "placeholder": ""
+          }
+        },
+        "answer_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "answer text color",
+            "placeholder": ""
+          }
+        },
+        "question_background": {
+          "type": "Color",
+          "config": {
+            "label": "question background",
             "placeholder": ""
           }
         }
@@ -63,7 +79,7 @@
             "label": "Question",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
           }
         },
         "answer": {
@@ -72,28 +88,7 @@
             "label": "answer",
             "placeholder": "",
             "allowTargetBlank": true,
-            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "background_color": {
-          "type": "Color",
-          "config": {
-            "label": "background color",
-            "placeholder": ""
-          }
-        },
-        "text_color": {
-          "type": "Color",
-          "config": {
-            "label": "Question text color",
-            "placeholder": ""
-          }
-        },
-        "answer_text_color": {
-          "type": "Color",
-          "config": {
-            "label": "answer text color",
-            "placeholder": ""
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
           }
         }
       },
@@ -107,10 +102,12 @@
       "description": "FaqAccordion",
       "primary": {
         "title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,rtl"
           }
         },
         "description": {
@@ -157,6 +154,27 @@
             "label": "max width",
             "placeholder": ""
           }
+        },
+        "answer_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "answer text color",
+            "placeholder": ""
+          }
+        },
+        "question_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "question text color",
+            "placeholder": ""
+          }
+        },
+        "question_background": {
+          "type": "Color",
+          "config": {
+            "label": "question background",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -177,27 +195,6 @@
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
-        },
-        "background_color": {
-          "type": "Color",
-          "config": {
-            "label": "background color",
-            "placeholder": ""
-          }
-        },
-        "text_color": {
-          "type": "Color",
-          "config": {
-            "label": "Question text color",
-            "placeholder": ""
-          }
-        },
-        "answer_text_color": {
-          "type": "Color",
-          "config": {
-            "label": "answer text color",
-            "placeholder": ""
-          }
         }
       },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
@@ -210,10 +207,12 @@
       "description": "FaqAccordion",
       "primary": {
         "title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,rtl"
           }
         },
         "description": {
@@ -252,6 +251,27 @@
             "label": "max width",
             "placeholder": ""
           }
+        },
+        "question_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "question text color",
+            "placeholder": ""
+          }
+        },
+        "answer_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "answer text color",
+            "placeholder": ""
+          }
+        },
+        "question_background": {
+          "type": "Color",
+          "config": {
+            "label": "question background",
+            "placeholder": ""
+          }
         }
       },
       "items": {
@@ -261,7 +281,7 @@
             "label": "Question",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
           }
         },
         "answer": {
@@ -270,28 +290,7 @@
             "label": "answer",
             "placeholder": "",
             "allowTargetBlank": true,
-            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
-          }
-        },
-        "background_color": {
-          "type": "Color",
-          "config": {
-            "label": "background color",
-            "placeholder": ""
-          }
-        },
-        "text_color": {
-          "type": "Color",
-          "config": {
-            "label": "Question text color",
-            "placeholder": ""
-          }
-        },
-        "answer_text_color": {
-          "type": "Color",
-          "config": {
-            "label": "answer text color",
-            "placeholder": ""
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,list-item,o-list-item,rtl"
           }
         },
         "image": {

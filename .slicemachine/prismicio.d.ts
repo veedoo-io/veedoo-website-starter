@@ -109,7 +109,7 @@ interface AuthorDocumentData {
  */
 export type AuthorDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
 
-type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordion2Slice | FaqAccordionSlice
+type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordionSlice
 
 /**
  * Content for blog Post documents
@@ -313,7 +313,7 @@ interface HeaderDocumentData {
  */
 export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | FaqAccordion2Slice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice
 
 /**
  * Content for Home Page documents
@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | FaqAccordion2Slice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
 
 /**
  * Content for Page documents
@@ -1940,12 +1940,12 @@ export interface FaqAccordionSliceDefaultPrimary {
 	/**
 	 * title field in *FaqAccordion → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: faq_accordion.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	title: prismic.KeyTextField;
+	title: prismic.RichTextField;
 	
 	/**
 	 * description field in *FaqAccordion → Primary*
@@ -1988,14 +1988,34 @@ export interface FaqAccordionSliceDefaultPrimary {
 	secondary_text_color: prismic.ColorField;
 	
 	/**
-	 * max width field in *FaqAccordion → Primary*
+	 * question text color field in *FaqAccordion → Primary*
 	 *
-	 * - **Field Type**: Number
+	 * - **Field Type**: Color
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.primary.max_width
-	 * - **Documentation**: https://prismic.io/docs/field#number
+	 * - **API ID Path**: faq_accordion.primary.question_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
-	max_width: prismic.NumberField;
+	question_text_color: prismic.ColorField;
+	
+	/**
+	 * answer text color field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.answer_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	answer_text_color: prismic.ColorField;
+	
+	/**
+	 * question background field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.question_background
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	question_background: prismic.ColorField;
 }
 
 /**
@@ -2021,36 +2041,6 @@ export interface FaqAccordionSliceDefaultItem {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	answer: prismic.RichTextField;
-	
-	/**
-	 * background color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].background_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	background_color: prismic.ColorField;
-	
-	/**
-	 * Question text color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	text_color: prismic.ColorField;
-	
-	/**
-	 * answer text color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].answer_text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	answer_text_color: prismic.ColorField;
 }
 
 /**
@@ -2069,12 +2059,12 @@ export interface FaqAccordionSliceWithImagePrimary {
 	/**
 	 * title field in *FaqAccordion → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: faq_accordion.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	title: prismic.KeyTextField;
+	title: prismic.RichTextField;
 	
 	/**
 	 * description field in *FaqAccordion → Primary*
@@ -2135,6 +2125,36 @@ export interface FaqAccordionSliceWithImagePrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	max_width: prismic.NumberField;
+	
+	/**
+	 * answer text color field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.answer_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	answer_text_color: prismic.ColorField;
+	
+	/**
+	 * question text color field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.question_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	question_text_color: prismic.ColorField;
+	
+	/**
+	 * question background field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.question_background
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	question_background: prismic.ColorField;
 }
 
 /**
@@ -2160,36 +2180,6 @@ export interface FaqAccordionSliceWithImageItem {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	answer: prismic.RichTextField;
-	
-	/**
-	 * background color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].background_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	background_color: prismic.ColorField;
-	
-	/**
-	 * Question text color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	text_color: prismic.ColorField;
-	
-	/**
-	 * answer text color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].answer_text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	answer_text_color: prismic.ColorField;
 }
 
 /**
@@ -2208,12 +2198,12 @@ export interface FaqAccordionSliceWithAnswerImagePrimary {
 	/**
 	 * title field in *FaqAccordion → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: faq_accordion.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	title: prismic.KeyTextField;
+	title: prismic.RichTextField;
 	
 	/**
 	 * description field in *FaqAccordion → Primary*
@@ -2264,6 +2254,36 @@ export interface FaqAccordionSliceWithAnswerImagePrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	max_width: prismic.NumberField;
+	
+	/**
+	 * question text color field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.question_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	question_text_color: prismic.ColorField;
+	
+	/**
+	 * answer text color field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.answer_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	answer_text_color: prismic.ColorField;
+	
+	/**
+	 * question background field in *FaqAccordion → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: faq_accordion.primary.question_background
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	question_background: prismic.ColorField;
 }
 
 /**
@@ -2289,36 +2309,6 @@ export interface FaqAccordionSliceWithAnswerImageItem {
 	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
 	answer: prismic.RichTextField;
-	
-	/**
-	 * background color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].background_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	background_color: prismic.ColorField;
-	
-	/**
-	 * Question text color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	text_color: prismic.ColorField;
-	
-	/**
-	 * answer text color field in *FaqAccordion → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion.items[].answer_text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	answer_text_color: prismic.ColorField;
 	
 	/**
 	 * image field in *FaqAccordion → Items*
@@ -2353,139 +2343,6 @@ type FaqAccordionSliceVariation = FaqAccordionSliceDefault | FaqAccordionSliceWi
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type FaqAccordionSlice = prismic.SharedSlice<"faq_accordion", FaqAccordionSliceVariation>;
-
-/**
- * Primary content in *FaqAccordion2 → Primary*
- */
-export interface FaqAccordion2SliceDefaultPrimary {
-	/**
-	 * Title field in *FaqAccordion2 → Primary*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	title: prismic.RichTextField;
-	
-	/**
-	 * background color field in *FaqAccordion2 → Primary*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.primary.background_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	background_color: prismic.ColorField;
-	
-	/**
-	 * image field in *FaqAccordion2 → Primary*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.primary.image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	image: prismic.ImageField<never>;
-	
-	/**
-	 * title color field in *FaqAccordion2 → Primary*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.primary.title_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	title_color: prismic.ColorField;
-	
-	/**
-	 * max width field in *FaqAccordion2 → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.primary.max_width
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	max_width: prismic.NumberField;
-}
-
-/**
- * Primary content in *FaqAccordion2 → Items*
- */
-export interface FaqAccordion2SliceDefaultItem {
-	/**
-	 * Question field in *FaqAccordion2 → Items*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.items[].question
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	question: prismic.RichTextField;
-	
-	/**
-	 * answer field in *FaqAccordion2 → Items*
-	 *
-	 * - **Field Type**: Rich Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.items[].answer
-	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
-	 */
-	answer: prismic.RichTextField;
-	
-	/**
-	 * background color field in *FaqAccordion2 → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.items[].background_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	background_color: prismic.ColorField;
-	
-	/**
-	 * Question text color field in *FaqAccordion2 → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.items[].question_text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	question_text_color: prismic.ColorField;
-	
-	/**
-	 * answer text color field in *FaqAccordion2 → Items*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: faq_accordion2.items[].answer_text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	answer_text_color: prismic.ColorField;
-}
-
-/**
- * Default variation for FaqAccordion2 Slice
- *
- * - **API ID**: `default`
- * - **Description**: FaqAccordion2
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FaqAccordion2SliceDefault = prismic.SharedSliceVariation<"default", Simplify<FaqAccordion2SliceDefaultPrimary>, Simplify<FaqAccordion2SliceDefaultItem>>;
-
-/**
- * Slice variation for *FaqAccordion2*
- */
-type FaqAccordion2SliceVariation = FaqAccordion2SliceDefault
-
-/**
- * FaqAccordion2 Shared Slice
- *
- * - **API ID**: `faq_accordion2`
- * - **Description**: FaqAccordion2
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type FaqAccordion2Slice = prismic.SharedSlice<"faq_accordion2", FaqAccordion2SliceVariation>;
 
 /**
  * Primary content in *FooterVeedoo → Primary*
@@ -4750,9 +4607,6 @@ declare module "@prismicio/client" {
 			FaqAccordionSliceDefault,
 			FaqAccordionSliceWithImage,
 			FaqAccordionSliceWithAnswerImage,
-			FaqAccordion2Slice,
-			FaqAccordion2SliceVariation,
-			FaqAccordion2SliceDefault,
 			FooterVeedooSlice,
 			FooterVeedooSliceVariation,
 			FooterVeedooSliceDefault,
