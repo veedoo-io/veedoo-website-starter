@@ -1,14 +1,17 @@
 <template>
   <section :class="getContainerClasses()">
     <div :class="getWidth()">
-      <PrismicRichText :field="slice.primary.title" getDescriptionClasses() />
       <PrismicRichText
-        class="w-full"
+        :field="slice.primary.title"
+        :class="getTitleClasses()"
+      />
+      <PrismicRichText
         :class="getDescriptionClasses()"
+        class="w-full"
         :field="slice.primary.description"
         v-if="slice.primary.description"
       />
-      <div :class="getQuestionsContainer()" class="w-full">
+      <div class="w-full" :class="getQuestionsContainer()">
         <div v-if="slice.primary.image" :class="getImageContainer()">
           <PrismicImage :field="slice.primary.image" class="w-full" />
         </div>
