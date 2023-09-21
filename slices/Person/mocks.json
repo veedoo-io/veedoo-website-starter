@@ -38,19 +38,9 @@
         "value": "90",
         "type": "Number"
       },
-      "margin_right": {
-        "__TYPE__": "FieldContent",
-        "value": "79",
-        "type": "Number"
-      },
       "margin_bottom": {
         "__TYPE__": "FieldContent",
         "value": "19",
-        "type": "Number"
-      },
-      "margin_left": {
-        "__TYPE__": "FieldContent",
-        "value": "66",
         "type": "Number"
       }
     },
