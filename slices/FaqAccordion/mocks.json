@@ -4,9 +4,15 @@
     "variation": "default",
     "primary": {
       "title": {
-        "__TYPE__": "FieldContent",
-        "value": "cap",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Pariatur eu incididunt anim consectetur reprehenderit do proident quis aliquip sint consequat pariatur magna. Ad in est Lorem non quis cillum. Dolor est amet nulla ut duis quis ea excepteur est aliquip esse quis Lorem."
+            }
+          }
+        ]
       },
       "description": {
         "__TYPE__": "StructuredTextContent",
@@ -14,30 +20,40 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Cillum enim nisi labore adipisicing nulla esse qui deserunt minim cupidatat nostrud magna sint. Esse occaecat laboris excepteur."
+              "text": "Consectetur ea consectetur ipsum id ut cupidatat non laborum ex irure pariatur."
             }
           }
         ]
       },
       "background_color": {
         "__TYPE__": "FieldContent",
-        "value": "#891aed",
+        "value": "#a0b002",
         "type": "Color"
       },
       "primary_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#aa796b",
+        "value": "#7d31d2",
         "type": "Color"
       },
       "secondary_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#86b761",
+        "value": "#95169e",
         "type": "Color"
       },
-      "max_width": {
+      "question_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "54",
-        "type": "Number"
+        "value": "#415991",
+        "type": "Color"
+      },
+      "answer_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#cfd7c3",
+        "type": "Color"
+      },
+      "question_background": {
+        "__TYPE__": "FieldContent",
+        "value": "#ea79f0",
+        "type": "Color"
       }
     },
     "items": [
@@ -52,7 +68,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Duis deserunt reprehenderit officia consequat laboris amet qui aliquip do laboris pariatur. Non adipisicing consectetur cillum non nisi."
+                    "text": "Incididunt non ipsum reprehenderit ullamco ipsum duis veniam aliqua. In fugiat amet adipisicing aliquip amet est excepteur."
                   }
                 }
               ]
@@ -66,34 +82,10 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Laboris aliqua proident tempor aliquip Lorem incididunt eiusmod qui proident nisi exercitation pariatur non."
+                    "text": "Voluptate pariatur commodo commodo enim et fugiat do magna fugiat irure."
                   }
                 }
               ]
-            }
-          ],
-          [
-            "background_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#41da40",
-              "type": "Color"
-            }
-          ],
-          [
-            "text_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#4d1966",
-              "type": "Color"
-            }
-          ],
-          [
-            "answer_text_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#2908f0",
-              "type": "Color"
             }
           ]
         ]
@@ -105,9 +97,15 @@
     "variation": "withImage",
     "primary": {
       "title": {
-        "__TYPE__": "FieldContent",
-        "value": "turn",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Sit eu magna anim consectetur consequat in elit."
+            }
+          }
+        ]
       },
       "description": {
         "__TYPE__": "StructuredTextContent",
@@ -115,22 +113,21 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Sint reprehenderit nulla ad quis."
+              "text": "Excepteur ullamco magna deserunt eu dolor laboris culpa laboris eiusmod ex deserunt eiusmod aute excepteur sunt. Incididunt magna veniam culpa ad. Ea irure exercitation irure officia voluptate sint pariatur."
             }
           }
         ]
       },
       "image": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
-          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
-          "width": 3958,
-          "height": 3958
+          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+          "width": 4172,
+          "height": 4000
         },
-        "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
-        "width": 3958,
-        "height": 3958,
+        "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+        "width": 4172,
+        "height": 4000,
         "edit": {
           "zoom": 1,
           "crop": {
@@ -139,27 +136,45 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "background_color": {
         "__TYPE__": "FieldContent",
-        "value": "#39ac6d",
+        "value": "#a3606f",
         "type": "Color"
       },
       "primary_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#d6786c",
+        "value": "#f6a647",
         "type": "Color"
       },
       "secondary_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#b7964d",
+        "value": "#0b785d",
         "type": "Color"
       },
       "max_width": {
         "__TYPE__": "FieldContent",
-        "value": "23",
+        "value": "10",
         "type": "Number"
+      },
+      "answer_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#84426e",
+        "type": "Color"
+      },
+      "question_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#90be26",
+        "type": "Color"
+      },
+      "question_background": {
+        "__TYPE__": "FieldContent",
+        "value": "#d554bf",
+        "type": "Color"
       }
     },
     "items": [
@@ -174,7 +189,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Exercitation eu nisi laboris mollit ex id non cillum. Cupidatat enim dolor cillum dolor magna magna in ea excepteur exercitation commodo deserunt ex."
+                    "text": "Nostrud voluptate dolore mollit sunt culpa culpa elit ea ullamco velit eiusmod. Consequat id cupidatat pariatur proident eu velit eu magna excepteur laboris. Lorem irure in esse tempor Lorem anim eiusmod proident aliquip dolor consequat do excepteur laborum."
                   }
                 }
               ]
@@ -188,34 +203,10 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Reprehenderit nisi veniam consequat incididunt. Esse sint non ea dolore magna eu."
+                    "text": "Adipisicing exercitation exercitation consequat id esse ipsum Lorem incididunt nostrud occaecat do aliqua fugiat. Tempor esse velit veniam ex minim ipsum."
                   }
                 }
               ]
-            }
-          ],
-          [
-            "background_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#c0c8c7",
-              "type": "Color"
-            }
-          ],
-          [
-            "text_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#04f9f0",
-              "type": "Color"
-            }
-          ],
-          [
-            "answer_text_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#4fc2e7",
-              "type": "Color"
             }
           ]
         ]
@@ -227,9 +218,15 @@
     "variation": "withAnswerImage",
     "primary": {
       "title": {
-        "__TYPE__": "FieldContent",
-        "value": "purpose",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Eiusmod nulla enim dolore. Ad amet excepteur laborum consectetur ullamco ea deserunt occaecat non enim. Ullamco officia reprehenderit fugiat esse id anim."
+            }
+          }
+        ]
       },
       "description": {
         "__TYPE__": "StructuredTextContent",
@@ -237,30 +234,45 @@
           {
             "type": "paragraph",
             "content": {
-              "text": "Nisi sint veniam nisi in cillum ullamco elit fugiat fugiat aliquip mollit enim eu dolore. Pariatur sint sunt sint Lorem pariatur est est quis adipisicing sunt."
+              "text": "Elit proident velit non labore eu ea culpa magna amet."
             }
           }
         ]
       },
       "background_color": {
         "__TYPE__": "FieldContent",
-        "value": "#f443aa",
+        "value": "#d8e61e",
         "type": "Color"
       },
       "primary_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#ea96b9",
+        "value": "#2eba39",
         "type": "Color"
       },
       "secondary_text_color": {
         "__TYPE__": "FieldContent",
-        "value": "#353df4",
+        "value": "#5b0c09",
         "type": "Color"
       },
       "max_width": {
         "__TYPE__": "FieldContent",
-        "value": "9",
+        "value": "27",
         "type": "Number"
+      },
+      "question_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#f24d33",
+        "type": "Color"
+      },
+      "answer_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#2a8282",
+        "type": "Color"
+      },
+      "question_background": {
+        "__TYPE__": "FieldContent",
+        "value": "#d9bcae",
+        "type": "Color"
       }
     },
     "items": [
@@ -275,7 +287,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Ex fugiat est qui esse sunt deserunt sint dolore."
+                    "text": "Labore pariatur aliquip quis culpa exercitation occaecat et aute magna deserunt ipsum."
                   }
                 }
               ]
@@ -289,49 +301,24 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Nostrud pariatur aute elit anim adipisicing aliquip deserunt excepteur est."
+                    "text": "Reprehenderit est do id magna laboris veniam exercitation velit. Ut magna amet magna aute cillum esse qui Lorem Lorem ea labore nisi elit eu. Aute irure officia est incididunt do id enim est incididunt in nostrud et."
                   }
                 }
               ]
             }
           ],
           [
-            "background_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#6f1ec3",
-              "type": "Color"
-            }
-          ],
-          [
-            "text_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#43d34c",
-              "type": "Color"
-            }
-          ],
-          [
-            "answer_text_color",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "#9b45fd",
-              "type": "Color"
-            }
-          ],
-          [
             "image",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
-                "width": 3424,
-                "height": 3424
+                "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+                "width": 5616,
+                "height": 3744
               },
-              "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c",
-              "width": 3424,
-              "height": 3424,
+              "url": "https://images.unsplash.com/photo-1515378791036-0648a3ef77b2",
+              "width": 5616,
+              "height": 3744,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -340,6 +327,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ]

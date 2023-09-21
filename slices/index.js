@@ -10,7 +10,6 @@ import ContactUsGrid from './ContactUsGrid';
 import CtaWithBackgroundImage from './CtaWithBackgroundImage';
 import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
-import FaqAccordion2 from './FaqAccordion2';
 import FooterVeedoo from './FooterVeedoo';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
@@ -44,7 +43,6 @@ export {
 	CtaWithBackgroundImage,
 	Divider,
 	FaqAccordion,
-	FaqAccordion2,
 	FooterVeedoo,
 	HeaderVeedoo,
 	HeroVeedoo,
@@ -79,7 +77,6 @@ export const components = {
 	cta_with_background_image: CtaWithBackgroundImage,
 	divider: Divider,
 	faq_accordion: FaqAccordion,
-	faq_accordion2: FaqAccordion2,
 	footer_veedoo: FooterVeedoo,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,

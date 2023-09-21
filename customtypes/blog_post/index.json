@@ -118,9 +118,6 @@
             "divider": {
               "type": "SharedSlice"
             },
-            "faq_accordion2": {
-              "type": "SharedSlice"
-            },
             "faq_accordion": {
               "type": "SharedSlice"
             }

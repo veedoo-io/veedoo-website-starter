@@ -1,34 +1,38 @@
 <template>
   <section :class="getContainerClasses()">
-    <div :class="getChildContainerClasses()">
-      <h2 :class="getTitleClasses()" :style="{ maxWidth: width }">
-        {{ slice.primary.title }}
-      </h2>
+    <div :class="getWidth()">
+      <PrismicRichText :field="slice.primary.title" />
       <PrismicRichText
-        :style="{ maxWidth: width }"
+        class="w-full"
         :class="getDescriptionClasses()"
         :field="slice.primary.description"
         v-if="slice.primary.description"
       />
-      <div :class="getQuestionsContainer()" :style="{ maxWidth: width }">
+      <div :class="getQuestionsContainer()" class="w-full">
         <div v-if="slice.primary.image" :class="getImageContainer()">
           <PrismicImage :field="slice.primary.image" class="w-full" />
         </div>
-        <div class="w-fit flex-1 flex flex-col gap-6">
+        <div
+          class="flex-1 flex flex-col gap-6 w-full"
+          v-if="slice.items?.length > 0"
+        >
           <div
-            v-if="slice.items?.length > 0"
             v-for="(item, i) in slice.items"
             :key="`slice-item-${i}`"
-            :class="getItemClasses()"
+            class="flex flex-col justify-between rounded-lg text-start p-6 bg-white"
             @click="toggleFaq(i)"
             :style="`background-color: ${
-              item.background_color ? item.background_color : '#FFFFFF'
+              slice.primary.question_background
+                ? slice.primary.question_background
+                : '#FFFFFF'
             }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
           >
             <div class="flex justify-between w-full">
               <PrismicRichText
                 :style="`color: ${
-                  item.text_color ? item.text_color : '#353C47'
+                  slice.primary.question_text_color
+                    ? slice.primary.question_text_color
+                    : '#353C47'
                 }`"
                 :field="item.question"
                 v-if="item.question"
@@ -79,7 +83,9 @@
               />
               <PrismicRichText
                 :style="`color: ${
-                  item.answer_text_color ? item.answer_text_color : '#48525F'
+                  slice.primary.answer_text_color
+                    ? slice.primary.answer_text_color
+                    : '#48525F'
                 }`"
                 :field="item.answer"
                 v-if="item.answer"
@@ -94,17 +100,17 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'FaqAccordion',
+  name: "FaqAccordion",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
     let getContainerClasses = function () {
-      let classes = 'w-full h-full py-10 flex flex-col justify-center';
+      let classes = "w-full h-full py-10 flex flex-col justify-center";
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -116,27 +122,27 @@ export default {
 
     let getChildContainerClasses = function () {
       let classes =
-        'mx-auto w-full  flex flex-col justify-center text-center items-center';
+        "mx-auto w-full  flex flex-col justify-center text-center items-center";
 
       return classes;
     };
 
-    let getTitleClasses = function () {
-      let classes = 'font-bold	text-[32px] md:text-[43px] mb-10';
+    /* let getTitleClasses = function () {
+      let classes = "font-bold mb-10";
 
       if (this.slice.primary.primary_text_color) {
         let colorName = tailwindMatcher(this.slice.primary.primary_text_color);
         classes = classes + ` text-${colorName} `;
       } else {
-        let colorName = tailwindMatcher('#000000');
+        let colorName = tailwindMatcher("#000000");
         classes = classes + ` text-${colorName} `;
       }
 
       return classes;
-    };
+    };*/
 
     let getDescriptionClasses = function () {
-      let classes = 'mx-[33px] text-[22px] text-center ';
+      let classes = " text-center ";
 
       if (this.slice.primary.secondary_text_color) {
         let colorName = tailwindMatcher(
@@ -144,41 +150,41 @@ export default {
         );
         classes = classes + ` text-${colorName} `;
       } else {
-        let colorName = tailwindMatcher('#000000');
+        let colorName = tailwindMatcher("#000000");
         classes = classes + ` text-${colorName} `;
       }
 
       return classes;
     };
 
-    let width =
-      this.slice.primary.max_width && this.slice.primary.max_width > 150
-        ? this.slice.primary.max_width + 'px'
-        : 'unset';
-
-    let getItemClasses = function () {
+    let getQuestionsContainer = function () {
       let classes =
-        ' flex flex-col  justify-between rounded-lg text-start p-6 bg-white ';
+        "flex flex-col lg:flex-row items-center justify-center gap-10 w-full mt-[54px]";
+
+      if (this.slice.variation == "withImage") {
+        classes =
+          "flex flex-col lg:flex-row items-center justify-start gap-10 w-full mt-[54px]";
+      }
 
       return classes;
     };
 
-    let getQuestionsContainer = function () {
+    let getWidth = function () {
       let classes =
-        'flex flex-col lg:flex-row items-center justify-center gap-10 w-full mt-[54px]';
+        "mx-auto lg:w-[45%] md:w-[65%] w-full flex flex-col justify-center text-center items-center px-6";
 
-      if (this.slice.variation == 'withImage') {
+      if (this.slice.variation == "withImage") {
         classes =
-          'flex flex-col lg:flex-row items-center justify-start gap-10 w-full mt-[54px]';
+          "mx-auto md:w-[65%] w-full flex flex-col justify-center text-center items-center px-6";
       }
 
       return classes;
     };
 
     let getImageContainer = function () {
-      let classes = 'hidden';
-      if (this.slice.variation == 'withImage') {
-        classes = 'mx-auto flex flex-1 justify-end';
+      let classes = "hidden";
+      if (this.slice.variation == "withImage") {
+        classes = "mx-auto flex flex-1 justify-end";
       }
       return classes;
     };
@@ -186,14 +192,13 @@ export default {
     //console.log('faq ', this.slice);
 
     return {
+      getWidth,
       getContainerClasses,
-      getTitleClasses,
+      //getTitleClasses,
       getDescriptionClasses,
-      getChildContainerClasses,
-      getItemClasses,
       getImageContainer,
       getQuestionsContainer,
-      width,
+      //width,
       selectedIndexes: -1,
     };
   },
