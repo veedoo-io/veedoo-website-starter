@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"person":{"id":"mock_document_id","link_type":"Document","type":"author","tags":[],"lang":"en-us","slug":null,"first_publication_date":"1970-01-01T00:00:01+0000","last_publication_date":"1970-01-01T01:00:00+0000"}}],"primary":{"background_color":"#814fb7","card_backgroundcolor":"#bd61a9","name_text_color":"#7c168e","job_text_color":"#ce8e01","description_text_color":"#5e7ac8","social_icons_color":"#460946","margin_top":70,"margin_right":60,"margin_bottom":24,"margin_left":47},"slice_type":"person","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"person":{"id":"mock_document_id","link_type":"Document","type":"author","tags":[],"lang":"en-us","slug":null,"first_publication_date":"1970-01-01T00:00:01+0000","last_publication_date":"1970-01-01T01:00:00+0000"}}],"primary":{"background_color":"#1848d0","card_backgroundcolor":"#9e1b13","name_text_color":"#66189a","job_text_color":"#b7e02b","description_text_color":"#6af761","social_icons_color":"#625d1a","margin_top":90,"margin_bottom":19},"id":"_Default","slice_type":"person"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'

@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full flex my-2.5"
-    :style="`background-color: ${sliceBg}; padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft};`"
+    :style="`background-color: ${sliceBg}; padding-top:${marginTop}; padding-bottom: ${marginBottom};`"
   >
     <div
       v-if="loading && !error"
@@ -238,16 +238,6 @@ export default {
         ? this.slice.primary.margin_bottom + "px"
         : "0px";
 
-    let marginLeft =
-      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + "px"
-        : "0px";
-
-    let marginRight =
-      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + "px"
-        : "0px";
-
     let socialIconColor = this.slice.primary.social_icons_color
       ? this.slice.primary.social_icons_color
       : "#48525F";
@@ -280,8 +270,6 @@ export default {
     return {
       marginTop,
       marginBottom,
-      marginLeft,
-      marginRight,
       socialIconColor,
       descriptionColor,
       jobColor,
@@ -296,15 +284,11 @@ export default {
   },
   async fetch() {
     try {
-      //console.log('uids ', this.persons);
       if (this.uids?.length > 0) {
-        //console.log('got in ', this.persons);
         let prismic = this.$prismic.api;
         let promises = this.uids?.map((uid) => prismic.getByUID("author", uid));
         let persons = await Promise.all(promises);
         this.persons = persons;
-
-        //console.log('personsDoc ', persons);
       }
     } catch (error) {
       console.log("error ", error);
