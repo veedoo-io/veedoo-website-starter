@@ -13,7 +13,10 @@
       />
       <div class="w-full" :class="getQuestionsContainer()">
         <div v-if="slice.primary.image" :class="getImageContainer()">
-          <PrismicImage :field="slice.primary.image" class="w-full" />
+          <PrismicImage
+            :field="slice.primary.image"
+            class="w-full md:h-[580px] h-[400px] object-cover"
+          />
         </div>
         <div
           class="flex-1 flex flex-col gap-6 w-full"
