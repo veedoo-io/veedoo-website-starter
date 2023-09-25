@@ -8,11 +8,6 @@
         "value": "service",
         "type": "Text"
       },
-      "intro": {
-        "__TYPE__": "FieldContent",
-        "value": "piano",
-        "type": "Text"
-      },
       "background_color": {
         "__TYPE__": "FieldContent",
         "value": "#77c747",
@@ -21,16 +16,6 @@
       "intro_text_color": {
         "__TYPE__": "FieldContent",
         "value": "#9b81aa",
-        "type": "Color"
-      },
-      "title_text_color": {
-        "__TYPE__": "FieldContent",
-        "value": "#5d4f5c",
-        "type": "Color"
-      },
-      "title_animation_color": {
-        "__TYPE__": "FieldContent",
-        "value": "#92e372",
         "type": "Color"
       },
       "margin_top": {
@@ -42,6 +27,17 @@
         "__TYPE__": "FieldContent",
         "value": "2",
         "type": "Number"
+      },
+      "intro_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Elit adipisicing duis do adipisicing."
+            }
+          }
+        ]
       }
     },
     "items": [

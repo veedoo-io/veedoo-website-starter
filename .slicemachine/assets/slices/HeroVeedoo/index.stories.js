@@ -18,22 +18,8 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {
-        "variation": "default",
-        "version": "sktwi1xtmkfgx8626",
-        "items": [{}],
-        "primary": {
-          "title": "WEBSITE & SOFTWARE DEVELOPMENT",
-          "intro": "Bring your ideas to life 🚀",
-          "background_color": null,
-          "intro_text_color": null,
-          "title_text_color": null,
-          "title_animation_color": null,
-          "margin_top":100,
-          "margin_bottom":10
-        },
-        "slice_type": "hero_veedoo"
-      } }
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":"service","intro_text":[{"type":"paragraph","text":"Elit adipisicing duis do adipisicing.","spans":[]}],"background_color":"#77c747","intro_text_color":"#9b81aa","margin_top":35,"margin_bottom":2},"id":"_Default","slice_type":"hero_veedoo"}
+    }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
 })
