@@ -4211,16 +4211,6 @@ export interface TitleWithDateAndShareIconsSliceDefaultPrimary {
 	margin_top: prismic.NumberField;
 	
 	/**
-	 * margin right field in *TitleWithDateAndShareIcons → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title_with_date_and_share_icons.primary.margin_right
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_right: prismic.NumberField;
-	
-	/**
 	 * margin bottom field in *TitleWithDateAndShareIcons → Primary*
 	 *
 	 * - **Field Type**: Number
@@ -4229,16 +4219,6 @@ export interface TitleWithDateAndShareIconsSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
-	
-	/**
-	 * margin left field in *TitleWithDateAndShareIcons → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title_with_date_and_share_icons.primary.margin_left
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	margin_left: prismic.NumberField;
 	
 	/**
 	 * share icons background color field in *TitleWithDateAndShareIcons → Primary*
