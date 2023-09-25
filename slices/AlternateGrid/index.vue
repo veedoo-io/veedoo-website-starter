@@ -1,21 +1,30 @@
 <template>
-  <section :class="getContainerClasses()">
-    <h2 :class="getTitleClasses()">{{ slice.primary.title }}</h2>
+  <section
+    :class="getContainerClasses()"
+    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom}; padding-left:24px; padding-right:24px`"
+  >
+    <PrismicRichText :field="slice.primary.title" :class="getTitleClasses()" />
     <PrismicRichText
       :class="getDescriptionClasses()"
       :field="slice.primary.description"
       class="flex flex-wrap items-center gap-2.5"
     />
     <div
-      class="mt-[78px] flex gap-x-[2%] gap-y-[25px] flex-wrap w-full justify-around md:justify-start"
+      class="mt-[78px] grid md:grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-14 w-full"
     >
       <div
         class="flex-[0_0_98%] md:flex-[0_0_48%] lg:flex-[0_0_23%]"
         v-for="(item, i) in slice.items"
         :key="`slice-item-${i}`"
       >
-        <PrismicImage class="h-[100px] mb-6" :field="item.feature_image" />
-        <h6 :class="getItemTitleClasses()">{{ item.feature_title }}</h6>
+        <PrismicImage
+          class="h-[80px] w-[80px] mb-6 object-cover"
+          :field="item.feature_image"
+        />
+        <PrismicRichText
+          :field="item.feature_title"
+          :class="getItemTitleClasses()"
+        />
         <PrismicRichText
           :class="getItemDescriptionClasses()"
           :field="item.feature_description"
@@ -26,17 +35,17 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'AlternateGrid',
+  name: "AlternateGrid",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     // console.log('slice props ', this.slice);
     let getContainerClasses = function () {
-      let classes = 'w-full h-full flex flex-col justify-center	';
+      let classes = "w-full h-full flex flex-col justify-center	";
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -47,13 +56,13 @@ export default {
     };
 
     let getTitleClasses = function () {
-      let classes = 'w-full font-medium text-[32px]	lg:text-[50px] mb-5';
+      let classes = "w-full font-medium mb-5";
 
       if (this.slice.primary.text_color) {
         let colorName = tailwindMatcher(this.slice.primary.text_color);
         classes = classes + ` text-${colorName}  `;
       } else {
-        let colorName = tailwindMatcher('#353C47');
+        let colorName = tailwindMatcher("#353C47");
         classes = classes + ` text-${colorName}  `;
       }
 
@@ -61,7 +70,7 @@ export default {
     };
 
     let getDescriptionClasses = function () {
-      let classes = 'w-full  text-[18px]	lg:text-[20px]';
+      let classes = "w-full  text-[18px]	lg:text-[20px]";
 
       if (this.slice.primary.secondary_text_color) {
         let colorName = tailwindMatcher(
@@ -69,7 +78,7 @@ export default {
         );
         classes = classes + ` text-${colorName}  `;
       } else {
-        let colorName = tailwindMatcher('#48525F');
+        let colorName = tailwindMatcher("#48525F");
         classes = classes + ` text-${colorName}  `;
       }
 
@@ -77,13 +86,13 @@ export default {
     };
 
     let getItemTitleClasses = function () {
-      let classes = 'mb-6 font-medium	text-[20px] lg:text-[23px]  ';
+      let classes = "mb-6 font-medium	text-[20px] lg:text-[23px]  ";
 
       if (this.slice.primary.text_color) {
         let colorName = tailwindMatcher(this.slice.primary.text_color);
         classes = classes + ` text-${colorName}  `;
       } else {
-        let colorName = tailwindMatcher('#353C47');
+        let colorName = tailwindMatcher("#353C47");
         classes = classes + ` text-${colorName}  `;
       }
 
@@ -91,7 +100,7 @@ export default {
     };
 
     let getItemDescriptionClasses = function () {
-      let classes = 'text-[16px]	 ';
+      let classes = "";
 
       if (this.slice.primary.secondary_text_color) {
         let colorName = tailwindMatcher(
@@ -99,12 +108,22 @@ export default {
         );
         classes = classes + ` text-${colorName}  `;
       } else {
-        let colorName = tailwindMatcher('#48525F');
+        let colorName = tailwindMatcher("#48525F");
         classes = classes + ` text-${colorName}  `;
       }
 
       return classes;
     };
+
+    let marginTop =
+      this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
+        ? this.slice.primary.margin_top + "px"
+        : "0px";
+
+    let marginBottom =
+      this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
+        ? this.slice.primary.margin_bottom + "px"
+        : "0px";
 
     return {
       getContainerClasses,
@@ -112,6 +131,8 @@ export default {
       getDescriptionClasses,
       getItemTitleClasses,
       getItemDescriptionClasses,
+      marginTop,
+      marginBottom,
     };
   },
 };

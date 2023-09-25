@@ -39,7 +39,7 @@ export default {
     };
 
     let getIntroClasses = function () {
-      let classes = "text-[20px] mb-2.5 ";
+      let classes = "mb-2.5 ";
 
       if (this.slice.primary.intro_text_color) {
         let colorName = tailwindMatcher(this.slice.primary.intro_text_color);
