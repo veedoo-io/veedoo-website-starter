@@ -1,13 +1,13 @@
 <template>
   <section
     class="w-full h-fit flex flex-col"
-    :style="`padding:${marginTop} ${marginRight} ${marginBottom} ${marginLeft}; background-color:${backgroundColor}`"
+    :style="`padding:${marginTop} 24px ${marginBottom} 24px; background-color:${backgroundColor}`"
   >
     <div class="w-full h-fit font-medium">
       <PrismicRichText
-        :style="`font-size:${textSize};color:${textColor}; `"
+        :style="`color:${textColor}`"
         :field="slice.primary.title"
-        :class="` flex ${aligment} items-center gap-2`"
+        :class="` flex items-center gap-2 ${aligment}`"
       />
       <div
         class="w-full h-fit mt-5 flex items-center justify-between max-sm:flex-col max-sm:items-start max-sm:gap-2"
@@ -18,10 +18,10 @@
           v-if="slice.primary.date"
         >
           {{
-            new Date(slice.primary.date).toLocaleDateString('en-US', {
-              year: 'numeric',
-              month: 'long',
-              day: 'numeric',
+            new Date(slice.primary.date).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
             })
           }}
         </p>
@@ -174,72 +174,54 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'TitleWithDateAndShareIcons',
+  name: "TitleWithDateAndShareIcons",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
-        ? this.slice.primary.margin_top + 'px'
-        : '0px';
+        ? this.slice.primary.margin_top + "px"
+        : "0px";
 
     let marginBottom =
       this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
-        ? this.slice.primary.margin_bottom + 'px'
-        : '0px';
-
-    let marginLeft =
-      this.slice.primary.margin_left && this.slice.primary.margin_left >= 0
-        ? this.slice.primary.margin_left + 'px'
-        : '0px';
-
-    let marginRight =
-      this.slice.primary.margin_right && this.slice.primary.margin_right >= 0
-        ? this.slice.primary.margin_right + 'px'
-        : '0px';
-
-    let textSize =
-      this.slice.primary.text_size && this.slice.primary.text_size > 8
-        ? this.slice.primary.text_size + 'px'
-        : '40px';
+        ? this.slice.primary.margin_bottom + "px"
+        : "0px";
 
     let textColor = this.slice.primary.text_color
       ? this.slice.primary.text_color
-      : '#353C47';
+      : "#353C47";
 
     let backgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
 
     let shareIconBackgroundColor = this.slice?.primary
       ?.share_icons_background_color
       ? this.slice.primary.share_icons_background_color
-      : '#3DC5CC';
+      : "#3DC5CC";
 
     let shareIconColor = this.slice?.primary?.share_icon_color
       ? this.slice.primary.share_icon_color
-      : '#FFFFFF';
+      : "#FFFFFF";
 
-    let aligment = 'justify-start';
-    switch (this.slice.primary.alignment) {
-      case 'center':
-        aligment = 'justify-center';
+    let aligment = "justify-start";
+    switch (this.slice.primary.title_alignment) {
+      case "center":
+        aligment = "justify-center";
         break;
-      case 'right':
-        aligment = 'justify-end';
+      case "right":
+        aligment = "justify-end";
         break;
     }
 
     return {
       marginTop,
       marginBottom,
-      marginLeft,
-      marginRight,
-      textSize,
       textColor,
       backgroundColor,
       shareIconBackgroundColor,
@@ -251,24 +233,24 @@ export default {
     onFacebookShare() {
       //console.log('onFacebookShare');
       let url =
-        'https://www.facebook.com/sharer/sharer.php?u=' + window.location.href;
+        "https://www.facebook.com/sharer/sharer.php?u=" + window.location.href;
 
       //console.log('url ', url);
       //options = 'toolbar=0,status=0,resizable=1,width=626,height=436';
       //window.open(url, 'sharer', options);
-      window.open(url, '_blank').focus();
+      window.open(url, "_blank").focus();
     },
     onTwitterShare() {
-      let url = 'https://twitter.com/intent/tweet?text=' + window.location.href;
+      let url = "https://twitter.com/intent/tweet?text=" + window.location.href;
 
-      window.open(url, '_blank').focus();
+      window.open(url, "_blank").focus();
     },
     onLinkdinShare() {
       let url =
-        'https://www.linkedin.com/sharing/share-offsite/?url=' +
+        "https://www.linkedin.com/sharing/share-offsite/?url=" +
         window.location.href;
 
-      window.open(url, '_blank').focus();
+      window.open(url, "_blank").focus();
     },
   },
 };
