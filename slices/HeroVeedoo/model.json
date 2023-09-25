@@ -18,11 +18,13 @@
             "placeholder": ""
           }
         },
-        "intro": {
-          "type": "Text",
+        "intro_text": {
+          "type": "StructuredText",
           "config": {
             "label": "intro text",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,rtl,hyperlink"
           }
         },
         "background_color": {
@@ -36,20 +38,6 @@
           "type": "Color",
           "config": {
             "label": "intro text color",
-            "placeholder": ""
-          }
-        },
-        "title_text_color": {
-          "type": "Color",
-          "config": {
-            "label": "title text color",
-            "placeholder": ""
-          }
-        },
-        "title_animation_color": {
-          "type": "Color",
-          "config": {
-            "label": "title animation color",
             "placeholder": ""
           }
         },

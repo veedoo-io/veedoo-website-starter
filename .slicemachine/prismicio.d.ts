@@ -2568,12 +2568,12 @@ export interface HeroVeedooSliceDefaultPrimary {
 	/**
 	 * intro text field in *HeroVeedoo → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_veedoo.primary.intro
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **API ID Path**: hero_veedoo.primary.intro_text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	intro: prismic.KeyTextField;
+	intro_text: prismic.RichTextField;
 	
 	/**
 	 * background color field in *HeroVeedoo → Primary*
@@ -2594,26 +2594,6 @@ export interface HeroVeedooSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	intro_text_color: prismic.ColorField;
-	
-	/**
-	 * title text color field in *HeroVeedoo → Primary*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_veedoo.primary.title_text_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	title_text_color: prismic.ColorField;
-	
-	/**
-	 * title animation color field in *HeroVeedoo → Primary*
-	 *
-	 * - **Field Type**: Color
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: hero_veedoo.primary.title_animation_color
-	 * - **Documentation**: https://prismic.io/docs/field#color
-	 */
-	title_animation_color: prismic.ColorField;
 	
 	/**
 	 * margin top field in *HeroVeedoo → Primary*

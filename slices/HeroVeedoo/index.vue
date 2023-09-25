@@ -1,11 +1,13 @@
 <template>
   <section
     :class="getContainerClasses()"
-    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom};`"
+    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom}; padding-left:24px;padding-right:24px`"
   >
-    <h2 v-if="slice.primary.intro" :class="getIntroClasses()">
-      {{ slice.primary.intro }}
-    </h2>
+    <PrismicRichText
+      :field="slice.primary.intro_text"
+      v-if="slice.primary.intro_text"
+      :class="getIntroClasses()"
+    />
     <h1
       v-if="slice.primary.title"
       :class="getTitleClasses()"
@@ -17,16 +19,16 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'HeroVeedoo',
+  name: "HeroVeedoo",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     let getContainerClasses = function () {
-      let classes = 'w-full py-10 flex flex-col justify-center ';
+      let classes = "w-full py-10 flex flex-col justify-center ";
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
@@ -37,13 +39,13 @@ export default {
     };
 
     let getIntroClasses = function () {
-      let classes = 'text-[20px] mb-2.5 ';
+      let classes = "text-[20px] mb-2.5 ";
 
       if (this.slice.primary.intro_text_color) {
         let colorName = tailwindMatcher(this.slice.primary.intro_text_color);
         classes = classes + ` text-${colorName} `;
       } else {
-        let colorName = tailwindMatcher('#353C47');
+        let colorName = tailwindMatcher("#353C47");
         classes = classes + ` text-${colorName} `;
       }
 
@@ -52,20 +54,20 @@ export default {
 
     let getTitleClasses = function () {
       let classes =
-        'b-page__home-title text-[40px] w-full sm:text-[60px] xl:text-[102px]';
+        "b-page__home-title text-[40px] w-full sm:text-[60px] xl:text-[102px]";
 
       return classes;
     };
 
     let marginTop =
       this.slice.primary.margin_top && this.slice.primary.margin_top >= 0
-        ? this.slice.primary.margin_top + 'px'
-        : '0px';
+        ? this.slice.primary.margin_top + "px"
+        : "0px";
 
     let marginBottom =
       this.slice.primary.margin_bottom && this.slice.primary.margin_bottom >= 0
-        ? this.slice.primary.margin_bottom + 'px'
-        : '0px';
+        ? this.slice.primary.margin_bottom + "px"
+        : "0px";
 
     return {
       getContainerClasses,
@@ -73,11 +75,11 @@ export default {
       getTitleClasses,
       mousePosX: 0,
       marginTop,
-      marginBottom
+      marginBottom,
     };
   },
   mounted() {
-    document.addEventListener('mousemove', (event) => {
+    document.addEventListener("mousemove", (event) => {
       //console.log();
       this.mousePosX = event.clientX;
     });
@@ -108,7 +110,7 @@ export default {
   letter-spacing: 5.1px;
   color: transparent;
   background-position: -700px 0;
-  background-image: url('~/assets/images/font_bg.svg');
+  background-image: url("~/assets/images/font_bg.svg");
 
   background-repeat: no-repeat;
   -webkit-background-clip: text;
@@ -116,6 +118,6 @@ export default {
   -webkit-text-stroke: 3px #353c47;
   margin-top: 10px;
   transform: translate3d(0, 0, 0);
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 </style>
