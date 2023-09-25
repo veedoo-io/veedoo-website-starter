@@ -698,12 +698,12 @@ export interface AlternateGridSliceDefaultPrimary {
 	/**
 	 * title field in *AlternateGrid → Primary*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: alternate_grid.primary.title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	title: prismic.KeyTextField;
+	title: prismic.RichTextField;
 	
 	/**
 	 * description field in *AlternateGrid → Primary*
@@ -744,6 +744,26 @@ export interface AlternateGridSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	secondary_text_color: prismic.ColorField;
+	
+	/**
+	 * margin top field in *AlternateGrid → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: alternate_grid.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+	
+	/**
+	 * margin bottom field in *AlternateGrid → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: alternate_grid.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
 }
 
 /**
@@ -761,14 +781,14 @@ export interface AlternateGridSliceDefaultItem {
 	feature_image: prismic.ImageField<never>;
 	
 	/**
-	 * Feature title field in *AlternateGrid → Items*
+	 * feature title field in *AlternateGrid → Items*
 	 *
-	 * - **Field Type**: Text
+	 * - **Field Type**: Rich Text
 	 * - **Placeholder**: *None*
 	 * - **API ID Path**: alternate_grid.items[].feature_title
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
 	 */
-	feature_title: prismic.KeyTextField;
+	feature_title: prismic.RichTextField;
 	
 	/**
 	 * Feature description field in *AlternateGrid → Items*
