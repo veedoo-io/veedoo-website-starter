@@ -313,7 +313,7 @@ interface HeaderDocumentData {
  */
 export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice
 
 /**
  * Content for Home Page documents

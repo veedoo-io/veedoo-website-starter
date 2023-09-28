@@ -1,6 +1,6 @@
 <template>
   <section
-    :style="`padding:${marginTop} 24px ${marginBottom} 24px;
+    :style="`padding:${marginTop} 0 ${marginBottom} 0
       color:${slice.primary.text_color ? slice.primary.text_color : '#353C47'};
       background-color:${
         slice.primary.background_color
@@ -11,7 +11,7 @@
   >
     <div
       :class="`flex items-center ${
-        slice.primary.center_text ? 'justify-center' : 'px-[24px]'
+        slice.primary.center_text ? 'justify-center' : 'justify-start'
       }`"
     >
       <PrismicRichText

@@ -18,7 +18,7 @@ export const _Default = () => ({
   },
   data() {
     return {
-      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Magna sint laborum ex eiusmod. Nisi duis enim culpa laborum cillum aliquip amet occaecat exercitation nostrud incididunt.","spans":[]}],"name":[{"type":"paragraph","text":"Culpa occaecat tempor ullamco adipisicing. Excepteur eiusmod do dolore labore pariatur aute adipisicing proident ullamco ea ullamco aliquip.","spans":[]}],"image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1607582278043-57198ac8da43"},"mp3_file":{"link_type":"Media","name":"mock","kind":"image","url":"https://source.unsplash.com/random","size":"10kB"}},"slice_type":"audio_player_with_image","id":"_Default"}
+      mock: {"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"title":[{"type":"paragraph","text":"Officia in veniam occaecat minim sint. Mollit est ad amet adipisicing officia aute ex esse amet nisi esse sint.","spans":[]}],"name":[{"type":"paragraph","text":"Id duis ex officia laborum aliqua occaecat in. Nisi aliquip dolore sint eu eu. Exercitation in duis cillum cillum fugiat anim tempor.","spans":[]}],"image":{"dimensions":{"width":6000,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1544731612-de7f96afe55f"},"mp3_file":{"link_type":"Media","name":"mock","kind":"image","url":"https://source.unsplash.com/random","size":"10kB"}},"id":"_Default","slice_type":"audio_player_with_image"}
     }
   },
   template: '<SliceZone :slices="[mock]" :resolver="resolve" />'
