@@ -87,6 +87,9 @@
             },
             "image": {
               "type": "SharedSlice"
+            },
+            "blurb": {
+              "type": "SharedSlice"
             }
           }
         }
