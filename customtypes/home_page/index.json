@@ -13,9 +13,6 @@
             "partners_logo_slider": {
               "type": "SharedSlice"
             },
-            "tags": {
-              "type": "SharedSlice"
-            },
             "call_to_action_with_image": {
               "type": "SharedSlice"
             },

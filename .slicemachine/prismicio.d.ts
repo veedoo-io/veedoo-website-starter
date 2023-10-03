@@ -313,7 +313,7 @@ interface HeaderDocumentData {
  */
 export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | TagsSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice
 
 /**
  * Content for Home Page documents
@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TagsSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
 
 /**
  * Content for Page documents
@@ -3896,54 +3896,6 @@ type SocialFollowIconsSliceVariation = SocialFollowIconsSliceDefault
 export type SocialFollowIconsSlice = prismic.SharedSlice<"social_follow_icons", SocialFollowIconsSliceVariation>;
 
 /**
- * Primary content in *Tags → Items*
- */
-export interface TagsSliceDefaultItem {
-	/**
-	 * tag label field in *Tags → Items*
-	 *
-	 * - **Field Type**: Text
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: tags.items[].tag_label
-	 * - **Documentation**: https://prismic.io/docs/field#key-text
-	 */
-	tag_label: prismic.KeyTextField;
-	
-	/**
-	 * tag Image field in *Tags → Items*
-	 *
-	 * - **Field Type**: Image
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: tags.items[].tag_image
-	 * - **Documentation**: https://prismic.io/docs/field#image
-	 */
-	tag_image: prismic.ImageField<never>;
-}
-
-/**
- * Default variation for Tags Slice
- *
- * - **API ID**: `default`
- * - **Description**: Tags
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TagsSliceDefault = prismic.SharedSliceVariation<"default", Record<string, never>, Simplify<TagsSliceDefaultItem>>;
-
-/**
- * Slice variation for *Tags*
- */
-type TagsSliceVariation = TagsSliceDefault
-
-/**
- * Tags Shared Slice
- *
- * - **API ID**: `tags`
- * - **Description**: Tags
- * - **Documentation**: https://prismic.io/docs/slice
- */
-export type TagsSlice = prismic.SharedSlice<"tags", TagsSliceVariation>;
-
-/**
  * Primary content in *Testimonial → Primary*
  */
 export interface TestimonialSliceDefaultPrimary {
@@ -4633,9 +4585,6 @@ declare module "@prismicio/client" {
 			SocialFollowIconsSlice,
 			SocialFollowIconsSliceVariation,
 			SocialFollowIconsSliceDefault,
-			TagsSlice,
-			TagsSliceVariation,
-			TagsSliceDefault,
 			TestimonialSlice,
 			TestimonialSliceVariation,
 			TestimonialSliceDefault,

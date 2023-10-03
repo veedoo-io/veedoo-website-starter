@@ -25,7 +25,6 @@ import PostSlider from './PostSlider';
 import RichText from './RichText';
 import SimpleErrorPage from './SimpleErrorPage';
 import SocialFollowIcons from './SocialFollowIcons';
-import Tags from './Tags';
 import Testimonial from './Testimonial';
 import Title from './Title';
 import TitleWithDateAndShareIcons from './TitleWithDateAndShareIcons';
@@ -58,7 +57,6 @@ export {
 	RichText,
 	SimpleErrorPage,
 	SocialFollowIcons,
-	Tags,
 	Testimonial,
 	Title,
 	TitleWithDateAndShareIcons,
@@ -92,7 +90,6 @@ export const components = {
 	rich_text: RichText,
 	simple_error_page: SimpleErrorPage,
 	social_follow_icons: SocialFollowIcons,
-	tags: Tags,
 	testimonial: Testimonial,
 	title: Title,
 	title_with_date_and_share_icons: TitleWithDateAndShareIcons,
