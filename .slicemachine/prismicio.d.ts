@@ -226,6 +226,35 @@ interface BlogPostDocumentData {
  */
 export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<BlogPostDocumentData>, "blog_post", Lang>;
 
+type CookiesDocumentDataSlicesSlice = CookieBannerSlice
+
+/**
+ * Content for Cookies documents
+ */
+interface CookiesDocumentData {
+	/**
+	 * Slice Zone field in *Cookies*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookies.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<CookiesDocumentDataSlicesSlice>;
+}
+
+/**
+ * Cookies document from Prismic
+ *
+ * - **API ID**: `cookies`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type CookiesDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<CookiesDocumentData>, "cookies", Lang>;
+
 type ErrorPageDocumentDataSlicesSlice = SimpleErrorPageSlice
 
 /**
@@ -402,7 +431,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CookieBannerSlice
 
 /**
  * Content for Page documents
@@ -689,7 +718,7 @@ interface WebsiteSettingsDocumentData {
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
 
-export type AllDocumentTypes = AuthorDocument | BlogPostDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageNotFoundDocument | PageDocument | PostCategoryDocument | PostTagDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = AuthorDocument | BlogPostDocument | CookiesDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageNotFoundDocument | PageDocument | PostCategoryDocument | PostTagDocument | WebsiteSettingsDocument;
 
 /**
  * Primary content in *AlternateGrid → Primary*
@@ -1715,6 +1744,114 @@ type ContactInfoSliceVariation = ContactInfoSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type ContactInfoSlice = prismic.SharedSlice<"contact_info", ContactInfoSliceVariation>;
+
+/**
+ * Primary content in *CookieBanner → Primary*
+ */
+export interface CookieBannerSliceDefaultPrimary {
+	/**
+	 * Title field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: cookie_banner.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: cookie_banner.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * IMAGE field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookie_banner.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+	
+	/**
+	 * button text field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookie_banner.primary.button_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_text: prismic.KeyTextField;
+	
+	/**
+	 * button color field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookie_banner.primary.button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_color: prismic.ColorField;
+	
+	/**
+	 * background color field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookie_banner.primary.background_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	background_color: prismic.ColorField;
+	
+	/**
+	 * button text color field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookie_banner.primary.button_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_text_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *CookieBanner → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cookie_banner.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+}
+
+/**
+ * Default variation for CookieBanner Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: CookieBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CookieBannerSliceDefault = prismic.SharedSliceVariation<"default", Simplify<CookieBannerSliceDefaultPrimary>, never>;
+
+/**
+ * Slice variation for *CookieBanner*
+ */
+type CookieBannerSliceVariation = CookieBannerSliceDefault
+
+/**
+ * CookieBanner Shared Slice
+ *
+ * - **API ID**: `cookie_banner`
+ * - **Description**: CookieBanner
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CookieBannerSlice = prismic.SharedSlice<"cookie_banner", CookieBannerSliceVariation>;
 
 /**
  * Primary content in *CtaWithBackgroundImage → Primary*
@@ -4487,6 +4624,8 @@ declare module "@prismicio/client" {
 			AuthorDocumentData,
 			BlogPostDocument,
 			BlogPostDocumentData,
+			CookiesDocument,
+			CookiesDocumentData,
 			ErrorPageDocument,
 			ErrorPageDocumentData,
 			FooterDocument,
@@ -4528,6 +4667,9 @@ declare module "@prismicio/client" {
 			ContactInfoSlice,
 			ContactInfoSliceVariation,
 			ContactInfoSliceDefault,
+			CookieBannerSlice,
+			CookieBannerSliceVariation,
+			CookieBannerSliceDefault,
 			CtaWithBackgroundImageSlice,
 			CtaWithBackgroundImageSliceVariation,
 			CtaWithBackgroundImageSliceDefault,

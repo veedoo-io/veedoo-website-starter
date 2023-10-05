@@ -4,6 +4,7 @@ export const state = () => ({
   footer: null,
   notFoundPage: null,
   errorPage: null,
+  cookies: null,
 });
 
 export const getters = {
@@ -21,6 +22,9 @@ export const getters = {
   },
   getErrorPage(state) {
     return state.errorPage;
+  },
+  getCookies(state) {
+    return state.cookies;
   },
 };
 
@@ -40,6 +44,9 @@ export const mutations = {
   setErrorPage(state, errorPage) {
     state.errorPage = errorPage;
   },
+  setCookies(state, cookies) {
+    state.cookies = cookies;
+  },
 };
 
 export const actions = {
@@ -51,6 +58,7 @@ export const actions = {
         $prismic.api.getSingle('footer'),
         $prismic.api.getSingle('page_not_found'),
         $prismic.api.getSingle('error_page'),
+        $prismic.api.getSingle('cookies'),
       ]);
 
       let settings = promises[0];
@@ -58,6 +66,7 @@ export const actions = {
       let footer = promises[2];
       let page_not_found = promises[3];
       let errorPage = promises[4];
+      let cookies = promises[5];
 
       //console.log('footer', JSON.stringify(footer.data.slices));
 
@@ -66,6 +75,7 @@ export const actions = {
       commit('setFooter', footer || null);
       commit('setNotFoundPage', page_not_found || null);
       commit('setErrorPage', errorPage || null);
+      commit('setCookies', cookies || null);
     } catch (error) {
       //console.log('nuxtServerInit error');
       console.log(error);

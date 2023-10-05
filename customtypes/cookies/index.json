@@ -1,0 +1,21 @@
+{
+  "id": "cookies",
+  "label": "Cookies",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "slices": {
+        "type": "Slices",
+        "fieldset": "Slice Zone",
+        "config": {
+          "choices": {
+            "cookie_banner": {
+              "type": "SharedSlice"
+            }
+          }
+        }
+      }
+    }
+  }
+}
