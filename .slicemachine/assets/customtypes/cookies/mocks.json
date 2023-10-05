@@ -1,0 +1,91 @@
+{
+  "slices": {
+    "__TYPE__": "SliceContentType",
+    "value": [
+      {
+        "key": "cookie_banner$02f50e3a-8677-4654-bb79-a7554c07f408",
+        "name": "cookie_banner",
+        "widget": {
+          "__TYPE__": "SharedSliceContent",
+          "variation": "default",
+          "primary": {
+            "title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Excepteur veniam excepteur magna ipsum duis tempor laboris exercitation culpa mollit ex id minim id consectetur. Occaecat exercitation cillum veniam Lorem."
+                  }
+                }
+              ]
+            },
+            "description": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "In dolor occaecat deserunt est sint deserunt irure eu ipsum ullamco voluptate amet excepteur ullamco incididunt. Enim sunt consectetur dolor ullamco cillum sint pariatur anim qui eu et ex anim eiusmod irure."
+                  }
+                }
+              ]
+            },
+            "image": {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+                "width": 4272,
+                "height": 2848
+              },
+              "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6",
+              "width": 4272,
+              "height": 2848,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            },
+            "button_text": {
+              "__TYPE__": "FieldContent",
+              "value": "money",
+              "type": "Text"
+            },
+            "button_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#a87c93",
+              "type": "Color"
+            },
+            "background_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#4e536d",
+              "type": "Color"
+            },
+            "button_text_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#050116",
+              "type": "Color"
+            },
+            "text_color": {
+              "__TYPE__": "FieldContent",
+              "value": "#617f7f",
+              "type": "Color"
+            }
+          },
+          "items": [
+            {
+              "__TYPE__": "GroupItemContent",
+              "value": []
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

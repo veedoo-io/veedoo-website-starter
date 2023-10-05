@@ -374,6 +374,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "CookieBanner": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {
@@ -401,6 +406,7 @@
     },
     "post_tag": {},
     "page_not_found": {},
-    "error_page": {}
+    "error_page": {},
+    "cookies": {}
   }
 }

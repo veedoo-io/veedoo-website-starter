@@ -1,0 +1,84 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Do proident est adipisicing quis velit ad sit esse aliqua enim proident do deserunt sunt fugiat."
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consequat id ullamco sint adipisicing cupidatat nulla magna duis occaecat. Ut ea consectetur cupidatat sint ea laborum eu labore ex voluptate consectetur."
+            }
+          }
+        ]
+      },
+      "image": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+          "width": 4016,
+          "height": 6016
+        },
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482",
+        "width": 4016,
+        "height": 6016,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "contrast",
+        "type": "Text"
+      },
+      "button_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#74624f",
+        "type": "Color"
+      },
+      "background_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#9fc118",
+        "type": "Color"
+      },
+      "button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#2e1ae2",
+        "type": "Color"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#242eb9",
+        "type": "Color"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

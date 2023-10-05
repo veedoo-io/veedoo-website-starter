@@ -7,6 +7,7 @@ import BlurbHorizontal from './BlurbHorizontal';
 import CallToActionWithImage from './CallToActionWithImage';
 import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactUsGrid from './ContactUsGrid';
+import CookieBanner from './CookieBanner';
 import CtaWithBackgroundImage from './CtaWithBackgroundImage';
 import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
@@ -39,6 +40,7 @@ export {
 	CallToActionWithImage,
 	ContactFormVeedoo,
 	ContactUsGrid,
+	CookieBanner,
 	CtaWithBackgroundImage,
 	Divider,
 	FaqAccordion,
@@ -72,6 +74,7 @@ export const components = {
 	call_to_action_with_image: CallToActionWithImage,
 	contact_form_veedoo: ContactFormVeedoo,
 	contact_info: ContactUsGrid,
+	cookie_banner: CookieBanner,
 	cta_with_background_image: CtaWithBackgroundImage,
 	divider: Divider,
 	faq_accordion: FaqAccordion,
