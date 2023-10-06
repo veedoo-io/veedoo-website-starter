@@ -13,7 +13,8 @@
     >
       <nuxt />
     </div>
-    <Cookies />
+    <!--
+    <Cookies />-->
     <Footer />
   </main>
 </template>
