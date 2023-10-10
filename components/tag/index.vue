@@ -1,7 +1,7 @@
 <template>
   <div :class="getContainerClass" class="tag">
     <img v-if="image" class="h-[30px]" :src="image" :alt="imageAlt" />
-    <h6 class="label">{{ title }}</h6>
+    <p class="label">{{ title }}</p>
   </div>
 </template>
 <script>
