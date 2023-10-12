@@ -62,7 +62,7 @@
             "menu_item_type",
             {
               "__TYPE__": "FieldContent",
-              "value": "Menu",
+              "value": "Contacts",
               "type": "Select"
             }
           ],

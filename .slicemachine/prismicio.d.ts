@@ -2658,11 +2658,10 @@ export interface HeaderVeedooSliceDefaultItem {
 	 *
 	 * - **Field Type**: Select
 	 * - **Placeholder**: Select Type
-	 * - **Default Value**: Menu
 	 * - **API ID Path**: header_veedoo.items[].menu_item_type
 	 * - **Documentation**: https://prismic.io/docs/field#select
 	 */
-	menu_item_type: prismic.SelectField<"Menu" | "Contacts" | "Get in touch!", "filled">;
+	menu_item_type: prismic.SelectField<"Menu" | "Contacts" | "Get in touch!">;
 	
 	/**
 	 * menu item text field in *HeaderVeedoo → Items*

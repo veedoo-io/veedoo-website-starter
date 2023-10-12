@@ -181,19 +181,17 @@ export default {
       return classes;
     };
 
-    let menuItems = [];
-    let contactsItems = [];
-    let getInTouchItems = [];
+    console.log(this.slice.items);
 
-    this?.slice?.items.forEach((item) => {
-      if (item.menu_item_type == "Get in touch!") {
-        getInTouchItems.push(item);
-      } else if (item.menu_item_type == "Contacts") {
-        contactsItems.push(item);
-      } else if (item.menu_item_type == "Menu") {
-        menuItems.push(item);
-      }
-    });
+    let menuItems = this?.slice?.items.filter(
+      (item) => item.menu_item_type === "Menu"
+    );
+    let contactsItems = this?.slice?.items.filter(
+      (item) => item.menu_item_type === "Contacts"
+    );
+    let getInTouchItems = this?.slice?.items.filter(
+      (item) => item.menu_item_type === "Get in touch!"
+    );
 
     return {
       getContainerClasses,
