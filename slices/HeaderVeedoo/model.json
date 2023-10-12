@@ -66,8 +66,7 @@
               "Menu",
               "Contacts",
               "Get in touch!"
-            ],
-            "default_value": "Menu"
+            ]
           }
         },
         "menu_text": {
