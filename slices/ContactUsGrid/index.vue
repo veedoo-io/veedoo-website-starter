@@ -33,7 +33,10 @@
         :field="slice.primary.social_media_title"
       />
       <div class="flex gap-2 mt-[27px]">
-        <PrismicLink :field="slice.primary.instagram_link">
+        <PrismicLink
+          :field="slice.primary.instagram_link"
+          v-if="Object.keys(slice.primary.instagram).length"
+        >
           <PrismicImage
             class="w-[36px] h-[36px]"
             :field="slice.primary.instagram"
@@ -43,11 +46,12 @@
           <PrismicImage
             class="w-[36px] h-[36px]"
             :field="slice.primary.facebook"
+            v-if="Object.keys(slice.primary.facebook).length"
           />
         </PrismicLink>
         <PrismicLink
           :field="slice.primary.twitter_link"
-          v-if="slice.primary.twitter"
+          v-if="Object.keys(slice.primary.twitter).length"
         >
           <PrismicImage
             :field="slice.primary.twitter"
