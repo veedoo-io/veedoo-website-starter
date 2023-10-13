@@ -15,6 +15,7 @@
       }`"
     >
       <PrismicRichText
+        class="title"
         :field="slice.primary.title"
         :style="
           slice.primary.center_text
@@ -63,4 +64,17 @@ export default {
 </script>
 
 <style scoped>
+.title {
+  width: 60%;
+}
+@media screen and (max-width: 1024px) {
+  .title {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title {
+    width: 100%;
+  }
+}
 </style>
