@@ -66,8 +66,34 @@
           <p class="font-medium text-red-600">Message is required.</p>
         </div>
       </div>
-      <button type="submit" :class="getButtonClasses()">
-        {{ slice.primary.button_text ?? "Send" }}
+      <button
+        type="submit"
+        ref="submitButton"
+        :class="[getButtonClasses(), { 'flex !bg-green-500': messageSent }]"
+      >
+        <span v-if="messageSent"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4.5 12.75l6 6 9-13.5"
+            />
+          </svg>
+        </span>
+        <template v-if="messageSent"> Sent </template>
+        <template v-else-if="sendingMessage && !messageSent">
+          Sending...
+        </template>
+        <template v-else-if="!sendingMessage && !messageSent">
+          {{ slice.primary.button_text ?? "Send" }}
+        </template>
       </button>
     </form>
   </section>
@@ -163,6 +189,8 @@ export default {
       message: "",
       marginTop,
       marginBottom,
+      sendingMessage: false,
+      messageSent: false,
     };
   },
 
@@ -195,6 +223,7 @@ export default {
 
       let defaultMailTo = this.getSettings.data.default_email_mailto;
       let formMailTo = this.slice.primary.mailto_email;
+      this.sendingMessage = true;
 
       try {
         let request = await fetch(
@@ -219,15 +248,17 @@ export default {
         let result = await request.json();
         //console.log('result', result);
         if (result.status) {
-          alert("Email Sent");
+          this.messageSent = true;
+          // Remove the animation class after a few seconds (adjust the time as needed)
+          setTimeout(() => {
+            this.sendingMessage = false;
+            this.messageSent = false;
+          }, 3000); // 3000 milliseconds (3 seconds) in this example
         } else {
-          alert("there was an error sending your email try again later");
+          this.sendingMessage = false;
+          this.messageSent = false;
         }
-      } catch (error) {
-        alert("there was an error sending your email try again later");
-        console.log("there was an error sending your email");
-        console.log(error);
-      }
+      } catch (error) {}
     },
   },
 
