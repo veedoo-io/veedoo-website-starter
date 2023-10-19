@@ -215,7 +215,7 @@ export default {
       this.posts = posts;
       //console.log('this.posts ', this.posts);
     } catch (error) {
-      console.log("error ", error);
+      // console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;

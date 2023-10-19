@@ -78,7 +78,7 @@ export const actions = {
       commit('setCookies', cookies || null);
     } catch (error) {
       //console.log('nuxtServerInit error');
-      console.log(error);
+      // console.log(error);
     }
   },
 };

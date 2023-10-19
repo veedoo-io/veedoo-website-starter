@@ -73,9 +73,9 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
-    console.log(this.slice);
+    // console.log(this.slice);
     let getContaienrClasses = function () {
-      console.log;
+      // console.log;
       let classes = "w-full py-10 w-full gap-6 grid lg:grid-cols-2 grid-cols-1";
 
       if (this.slice.primary.background_color) {

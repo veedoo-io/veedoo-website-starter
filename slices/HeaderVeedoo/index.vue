@@ -181,7 +181,7 @@ export default {
       return classes;
     };
 
-    console.log(this.slice.items);
+    // console.log(this.slice.items);
 
     let menuItems = this?.slice?.items.filter(
       (item) => item.menu_item_type === "Menu"

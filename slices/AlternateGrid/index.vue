@@ -43,7 +43,7 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
-    // console.log('slice props ', this.slice);
+    //// console.log('slice props ', this.slice);
     let getContainerClasses = function () {
       let classes = "w-full h-full flex flex-col justify-center	";
 

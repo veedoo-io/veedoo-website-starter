@@ -320,7 +320,7 @@ export default {
       let posts = request?.results ?? [];
       this.posts = posts;
     } catch (error) {
-      console.log("error ", error);
+      // console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;

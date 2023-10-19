@@ -291,7 +291,7 @@ export default {
         this.persons = persons;
       }
     } catch (error) {
-      console.log("error ", error);
+      // console.log("error ", error);
       this.error = true;
     } finally {
       this.loading = false;
