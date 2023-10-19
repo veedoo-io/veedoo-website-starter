@@ -3,8 +3,14 @@
     class="w-full h-fit flex max-md:flex-col gap-[72px]"
     :style="`padding:${marginTop} 24px ${marginBottom} 24px; background-color:${backgroundColor}; color:${textColor}`"
   >
-    <PrismicRichText :field="slice.primary.first_column_rich_text" />
-    <PrismicRichText :field="slice.primary.second_column_rich_text" />
+    <PrismicRichText
+      :field="slice.primary.first_column_rich_text"
+      class="md:w-1/2 w-full"
+    />
+    <PrismicRichText
+      :field="slice.primary.second_column_rich_text"
+      class="md:w-1/2 w-full"
+    />
   </section>
 </template>
 
