@@ -74,10 +74,31 @@ export default async () => {
       },
       script: [
         {
+          src: "https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js",
+          charset: 'UTF-8',
+          tagPosition: "bodyOpen"
+        },
+        {
+          innerHTML: `document.addEventListener("DOMContentLoaded", function () {
+            cookieconsent.run({
+              notice_banner_type: "simple",
+              consent_type: "express",
+              palette: "dark",
+              language: "en",
+              page_load_consent_levels: ["strictly-necessary"],
+              notice_banner_reject_button_hide: false,
+              preferences_center_close_button_hide: false,
+            });
+          });`,
+          hid: 'cookie-consent'
+        },
+        {
           src:
             'https://www.googletagmanager.com/gtag/js?id=' +
             google_analytics_code,
           async: true,
+          "data-cookie-consent": "tracking",
+          type: "text/plain"
         },
         {
           hid: 'gtag-content',
@@ -89,10 +110,13 @@ export default async () => {
           gtag("js", new Date());
 
           gtag("config", "${google_analytics_code}");`,
+          "data-cookie-consent": "tracking",
+          type: "text/plain"
         },
       ],
       __dangerouslyDisableSanitizersByTagID: {
         'gtag-content': ['innerHTML'],
+        'cookie-consent': ['innerHTML']
       },
       meta: [
         { charset: 'utf-8' },

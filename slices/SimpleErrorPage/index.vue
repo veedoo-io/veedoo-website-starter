@@ -42,44 +42,44 @@
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
+import { getSliceComponentProps } from "@prismicio/vue/components";
 
 export default {
-  name: 'SimpleErrorPage',
+  name: "SimpleErrorPage",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
     //console.log('this ', this);
-    console.log('errorCode ', errorCode);
+    // console.log('errorCode ', errorCode);
 
     let errorCodeColor = this.slice.primary.error_code_color
       ? this.slice.primary.error_code_color
-      : '#000000';
+      : "#000000";
 
     let errorTitleColor = this.slice.primary.title_color
       ? this.slice.primary.title_color
-      : 'rgba(0, 0, 0, 0.5)';
+      : "rgba(0, 0, 0, 0.5)";
 
     let messageColor = this.slice.primary.message_text_color
       ? this.slice.primary.message_text_color
-      : 'rgba(0, 0, 0, 0.8)';
+      : "rgba(0, 0, 0, 0.8)";
 
     let backgroundColor = this.slice.primary.background_color
       ? this.slice.primary.background_color
-      : 'transparent';
+      : "transparent";
 
     let hasGoHomeText =
       this.slice.primary.go_home_button_text &&
-      this.slice.primary.go_home_button_text != '';
+      this.slice.primary.go_home_button_text != "";
 
     let buttonTextColor = this.slice.primary.go_home_button_text_color
       ? this.slice.primary.go_home_button_text_color
-      : '#FFFFFF';
+      : "#FFFFFF";
 
     let buttonBackgroundColor = this.slice.primary
       .go_home_button_background_color
       ? this.slice.primary.go_home_button_background_color
-      : '#2F80ED';
+      : "#2F80ED";
 
     return {
       errorCodeColor,
