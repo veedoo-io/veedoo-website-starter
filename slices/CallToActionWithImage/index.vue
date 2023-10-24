@@ -1,6 +1,6 @@
 <template>
   <section
-    :style="`padding:${marginTop} 24px ${marginBottom} 24px`"
+    :style="`padding:${marginTop} 0px ${marginBottom} 0px`"
     :class="getContainerClass()"
   >
     <div v-if="slice.primary?.image?.url">
