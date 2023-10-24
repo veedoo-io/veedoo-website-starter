@@ -498,19 +498,19 @@ export default {
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
+              slidesToShow: numberOfSlides > 2 ? 2 : numberOfSlides,
             },
           },
           {
             breakpoint: 1260,
             settings: {
-              slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
+              slidesToShow: numberOfSlides > 2 ? 2 : numberOfSlides,
             },
           },
           {
             breakpoint: 1536,
             settings: {
-              slidesToShow: numberOfSlides > 4 ? 4 : numberOfSlides,
+              slidesToShow: numberOfSlides > 3 ? 3 : numberOfSlides,
             },
           },
         ],

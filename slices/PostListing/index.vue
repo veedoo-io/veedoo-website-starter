@@ -33,7 +33,7 @@
       class="w-full h-fit py-10 flex flex-col justify-center items-center"
     >
       <div
-        class="w-full grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 px-[20px] gap-x-[20px] gap-y-[40px]"
+        class="w-full grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 px-[20px] gap-x-[20px] gap-y-[40px]"
       >
         <div
           class="w-full"
