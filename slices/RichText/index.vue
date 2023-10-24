@@ -3,7 +3,7 @@
     :class="`w-full h-fit flex items-center ${
       slice.primary.center_text ? 'justify-center' : ''
     }`"
-    :style="`padding:${marginTop} 24px ${marginBottom} 24px; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
+    :style="`padding:${marginTop} 0 ${marginBottom} 0; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
   >
     <PrismicRichText
       :field="slice.primary.rich_text"
@@ -97,20 +97,5 @@ li {
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-}
-.rich-text-width {
-  width: 60%;
-  margin: 0 auto;
-}
-@media screen and (max-width: 1024px) {
-  .rich-text-width {
-    width: 70%;
-    margin: 0 auto;
-  }
-}
-@media screen and (max-width: 768px) {
-  .rich-text-width {
-    width: 100%;
-  }
 }
 </style>

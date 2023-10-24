@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full flex md:flex-row flex-col py-10 px-4 gap-4 flex-wrap"
+    class="w-full flex md:flex-row flex-col py-10 gap-4 flex-wrap"
     :style="{
       backgroundColor: containerBackgroundColor,
     }"
