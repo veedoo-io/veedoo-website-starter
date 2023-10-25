@@ -2,7 +2,7 @@
   <section
     v-if="slice.items?.length > 0"
     :class="getContaienrClasses()"
-    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom};`"
+    :style="`paddingTop:${marginTop}; paddingBottom:${marginBottom};`"
   >
     <div
       v-for="(item, i) in slice.items"

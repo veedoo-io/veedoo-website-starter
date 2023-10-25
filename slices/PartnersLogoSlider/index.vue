@@ -1,7 +1,7 @@
 <template>
   <section class="relative w-full h-fit overflow-hidden">
     <button
-      class="absolute h-[32px] w-[32px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[0px] rounded bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[24px] rounded bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToNext()">
@@ -84,7 +84,7 @@
       </div>
     </button>
     <button
-      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[0px] bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[24px] bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
       <div class="" @click="$refs.carousel.goToPrev()">
