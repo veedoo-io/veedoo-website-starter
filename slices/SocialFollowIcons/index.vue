@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="`w-full h-fit flex my-2.5 ${aligment} gap-[9px] items-center`"
+    :class="`w-full h-fit flex ${aligment} gap-[9px] items-center`"
     :style="`background-color:${backgroundColor}; padding-top:${marginTop}; padding-bottom: ${marginBottom};`"
   >
     <div

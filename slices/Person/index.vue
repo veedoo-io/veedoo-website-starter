@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full flex my-2.5"
+    class="w-full flex"
     :style="`background-color: ${sliceBg}; padding-top:${marginTop}; padding-bottom: ${marginBottom};`"
   >
     <div
