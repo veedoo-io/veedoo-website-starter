@@ -64,4 +64,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+img {
+  width: 760px;
+}
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%;
+  }
+}
+</style>
