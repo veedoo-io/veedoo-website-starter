@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full h-fit my-2.5 px-[10px] lg:px-[60px] xl:px-[120px] py-[72px] flex flex-wrap gap-6 gap-y-6 justify-around"
+    class="w-full h-fit px-[10px] lg:px-[60px] xl:px-[120px] py-[72px] flex flex-wrap gap-6 gap-y-6 justify-around"
     :style="`background-color: ${backgroundColor}`"
   >
     <div

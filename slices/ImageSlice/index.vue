@@ -1,6 +1,6 @@
 <template>
   <section
-    :class="`w-full h-fit my-2.5 flex ${aligment}`"
+    :class="`w-full h-fit flex ${aligment}`"
     :style="`background-color:${backgroundColor}; padding:${marginTop} 0px ${marginBottom} 0px; `"
   >
     <PrismicImage

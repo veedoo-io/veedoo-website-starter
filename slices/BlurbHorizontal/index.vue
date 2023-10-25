@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full my-2.5"
+    class="w-full"
     :style="`background-color:${backgroundColor}; padding:${marginTop} 24px ${marginBottom} 24px;`"
   >
     <div

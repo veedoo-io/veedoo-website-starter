@@ -1,6 +1,6 @@
 <template>
   <section
-    class="w-full h-fit my-2.5 py-40 xl:px-40 md:px-16 px-6 gap-10 bg-image"
+    class="w-full h-fit py-40 xl:px-40 md:px-16 px-6 gap-10 bg-image"
     :style="
       backgroundImageUrl
         ? {
