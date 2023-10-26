@@ -1,7 +1,7 @@
 <template>
   <section
     :class="getContainerClasses()"
-    :style="`paddingTop:${marginTop};paddingBottom:${marginBottom}`"
+    :style="`padding:${marginTop} 24px ${marginBottom}`"
   >
     <PrismicRichText
       :field="slice.primary.intro_text"

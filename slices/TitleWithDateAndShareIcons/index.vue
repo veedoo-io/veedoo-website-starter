@@ -1,7 +1,7 @@
 <template>
   <section
     class="w-full h-fit flex flex-col"
-    :style="`padding-top:${marginTop}; padding-bottom: ${marginBottom}; background-color:${backgroundColor}`"
+    :style="`padding:${marginTop} 24px ${marginBottom}; background-color:${backgroundColor}`"
   >
     <div class="w-full h-fit font-medium">
       <PrismicRichText

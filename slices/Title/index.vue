@@ -1,6 +1,6 @@
 <template>
   <section
-    :style="`padding-top:${marginTop}; padding-bottom ${marginBottom};
+    :style="`padding:${marginTop} 24px ${marginBottom};
       color:${slice.primary.text_color ? slice.primary.text_color : '#353C47'};
       background-color:${
         slice.primary.background_color

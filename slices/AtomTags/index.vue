@@ -1,7 +1,7 @@
 <template>
   <section
     :class="getContainerClasses()"
-    :style="`padding-top:${marginTop};padding-bottom: ${marginBottom};`"
+    :style="`padding:${marginTop} 24px  ${marginBottom};`"
   >
     <div v-for="(item, i) in slice.items" :key="`slice-item-${i}`">
       <Tag
