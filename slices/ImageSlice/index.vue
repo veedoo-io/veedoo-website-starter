@@ -66,7 +66,7 @@ export default {
 
 <style scoped>
 img {
-  width: 760px;
+  width: 100%;
 }
 @media screen and (max-width: 768px) {
   img {

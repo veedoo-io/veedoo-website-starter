@@ -70,10 +70,16 @@ export default {
 
 <style scoped>
 ::v-deep img {
-  width: 100%;
+  width: 760px;
+  margin: 0 auto;
   object-fit: cover;
   height: 490px;
   border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+  img {
+    width: 100%;
+  }
 }
 
 ::v-deep div[data-oembed-type="video"] {
