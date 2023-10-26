@@ -94,9 +94,6 @@
             },
             "audio_player_with_image": {
               "type": "SharedSlice"
-            },
-            "cookie_banner": {
-              "type": "SharedSlice"
             }
           }
         }

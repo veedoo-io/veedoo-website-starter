@@ -226,35 +226,6 @@ interface BlogPostDocumentData {
  */
 export type BlogPostDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<BlogPostDocumentData>, "blog_post", Lang>;
 
-type CookiesDocumentDataSlicesSlice = CookieBannerSlice
-
-/**
- * Content for Cookies documents
- */
-interface CookiesDocumentData {
-	/**
-	 * Slice Zone field in *Cookies*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cookies.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<CookiesDocumentDataSlicesSlice>;
-}
-
-/**
- * Cookies document from Prismic
- *
- * - **API ID**: `cookies`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type CookiesDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<CookiesDocumentData>, "cookies", Lang>;
-
 type ErrorPageDocumentDataSlicesSlice = SimpleErrorPageSlice
 
 /**
@@ -431,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CookieBannerSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
 
 /**
  * Content for Page documents
@@ -718,7 +689,7 @@ interface WebsiteSettingsDocumentData {
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
 
-export type AllDocumentTypes = AuthorDocument | BlogPostDocument | CookiesDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageNotFoundDocument | PageDocument | PostCategoryDocument | PostTagDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = AuthorDocument | BlogPostDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageNotFoundDocument | PageDocument | PostCategoryDocument | PostTagDocument | WebsiteSettingsDocument;
 
 /**
  * Primary content in *AlternateGrid → Primary*
@@ -4623,8 +4594,6 @@ declare module "@prismicio/client" {
 			AuthorDocumentData,
 			BlogPostDocument,
 			BlogPostDocumentData,
-			CookiesDocument,
-			CookiesDocumentData,
 			ErrorPageDocument,
 			ErrorPageDocumentData,
 			FooterDocument,
