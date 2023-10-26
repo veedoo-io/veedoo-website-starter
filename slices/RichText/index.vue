@@ -1,13 +1,13 @@
 <template>
   <section
-    :class="`w-full h-fit flex items-center ${
+    :class="`w-full h-fit  ${
       slice.primary.center_text ? 'justify-center' : ''
     }`"
     :style="`padding-top:${marginTop}; padding-bottom:${marginBottom}; color:${slice.primary.text_color};background-color:${slice.primary.background_color} ;`"
   >
     <PrismicRichText
       :field="slice.primary.rich_text"
-      :class="`w-fit h-fit flex flex-col gap-2.5 rich-text rich-text-width`"
+      :class="` h-fit w-full rich-text rich-text-width`"
       :serializer="richTextSerializer"
     />
   </section>
@@ -76,8 +76,14 @@ export default {
   height: 490px;
   border-radius: 10px;
 }
+::v-deep .block-img {
+  width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media screen and (max-width: 768px) {
-  img {
+  ::v-deep img {
     width: 100%;
   }
 }
