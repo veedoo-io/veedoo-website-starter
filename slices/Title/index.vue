@@ -65,16 +65,6 @@ export default {
 
 <style scoped>
 .title {
-  width: 60%;
-}
-@media screen and (max-width: 1024px) {
-  .title {
-    width: 70%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .title {
-    width: 100%;
-  }
+  width: 100%;
 }
 </style>
