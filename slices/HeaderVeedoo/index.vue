@@ -77,7 +77,8 @@
       </div>
     </div>
     <div
-      v-if="isMenuOpen"
+      v-show="isMenuOpen"
+      @click="toggleMobileMenu"
       class="fixed z-50 top-20 left-0 h-full w-full bg-[#353C47]/60 flex justify-end"
     >
       <div :class="getMenuClasses()">
