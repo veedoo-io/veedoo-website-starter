@@ -3,18 +3,18 @@
 </template>
 
 <script>
-import { components } from '~/slices';
+import { components } from "~/slices";
 
 export default {
   async asyncData({ $prismic, params, error }) {
-    const document = await $prismic.api.getByUID('blog_post', params.uid);
+    const document = await $prismic.api.getByUID("blog_post", params.uid);
 
     if (document) {
       //console.log('document ', document);
       return { status: true, page: document };
     } else {
       //console.log('document not found');
-      error({ statusCode: 404, message: 'Page not found' });
+      error({ statusCode: 404, message: "Page not found" });
     }
   },
   data() {
@@ -31,23 +31,23 @@ export default {
       title: title,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
+          hid: "description",
+          name: "description",
           content: this.page?.data?.description,
         },
         {
-          hid: 'og:title',
-          name: 'og:title',
+          hid: "og:title",
+          name: "og:title",
           content: title,
         },
         {
-          property: 'og:description',
+          property: "og:description",
           content: this.page?.data?.description,
         },
         {
-          hid: 'og:image',
-          name: 'og:image',
-          content: this.page?.data?.image?.url,
+          hid: "og:image",
+          name: "og:image",
+          content: this.page?.data?.image?.url + "&fm=jpg",
         },
       ],
     };
