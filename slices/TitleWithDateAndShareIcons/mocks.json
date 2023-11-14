@@ -24,11 +24,6 @@
         "type": "Date",
         "value": "2012-06-15"
       },
-      "text_size": {
-        "__TYPE__": "FieldContent",
-        "value": "39",
-        "type": "Number"
-      },
       "text_color": {
         "__TYPE__": "FieldContent",
         "value": "#1851a8",

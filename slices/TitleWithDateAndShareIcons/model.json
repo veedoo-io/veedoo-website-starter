@@ -40,13 +40,6 @@
             "placeholder": ""
           }
         },
-        "text_size": {
-          "type": "Number",
-          "config": {
-            "label": "text size",
-            "placeholder": ""
-          }
-        },
         "text_color": {
           "type": "Color",
           "config": {

@@ -4230,16 +4230,6 @@ export interface TitleWithDateAndShareIconsSliceDefaultPrimary {
 	date: prismic.DateField;
 	
 	/**
-	 * text size field in *TitleWithDateAndShareIcons → Primary*
-	 *
-	 * - **Field Type**: Number
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: title_with_date_and_share_icons.primary.text_size
-	 * - **Documentation**: https://prismic.io/docs/field#number
-	 */
-	text_size: prismic.NumberField;
-	
-	/**
 	 * text color field in *TitleWithDateAndShareIcons → Primary*
 	 *
 	 * - **Field Type**: Color
