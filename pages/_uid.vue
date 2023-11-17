@@ -30,7 +30,7 @@ export default {
       obj.title = this.page?.data?.meta_title;
       meta.push({
         hid: "og:title",
-        name: "og:title",
+        property: "og:title",
         content: this.page?.data?.meta_title,
       });
     }
@@ -50,7 +50,7 @@ export default {
     if (this.page?.data?.meta_image?.url) {
       meta.push({
         hid: "og:image",
-        name: "og:image",
+        property: "og:image",
         content: this.page?.data?.meta_image?.url,
       });
     }

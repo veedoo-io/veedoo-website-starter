@@ -38,7 +38,7 @@ export default {
         },
         {
           hid: "og:title",
-          name: "og:title",
+          property: "og:title",
           content: title,
         },
         {
@@ -53,7 +53,7 @@ export default {
         },
         {
           hid: "og:url",
-          name: "og:url",
+          property: "og:url",
           content: baseurl,
         },
       ],

@@ -72,6 +72,41 @@ export default async () => {
       htmlAttrs: {
         lang: website_language_code ?? 'en',
       },
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: '' },
+        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'robots', content: 'index, follow' },
+        {
+          hid: 'description',
+          name: 'description',
+          content: description,
+        },
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: title,
+        },
+        {
+          hid: 'og:description',
+          property: 'og:description',
+          content: description,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: image?.url,
+        },
+        {
+          hid: 'og:url',
+          property: 'og:url',
+          content: "",
+        },
+      ],
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: website_fav_icon?.url },
+      ],
       script: [
         {
           src: "https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js",
@@ -118,41 +153,6 @@ export default async () => {
         'gtag-content': ['innerHTML'],
         'cookie-consent': ['innerHTML']
       },
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
-        { name: 'format-detection', content: 'telephone=no' },
-        { name: 'robots', content: 'index, follow' },
-        {
-          hid: 'description',
-          name: 'description',
-          content: description,
-        },
-        {
-          hid: 'og:title',
-          name: 'og:title',
-          content: title,
-        },
-        {
-          hid: 'og:description',
-          property: 'og:description',
-          content: description,
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: image?.url,
-        },
-        {
-          hid: 'og:url',
-          name: 'og:url',
-          content: "",
-        },
-      ],
-      link: [
-        { rel: 'icon', type: 'image/x-icon', href: website_fav_icon?.url },
-      ],
     },
 
     // Global CSS: https://go.nuxtjs.dev/config-css
