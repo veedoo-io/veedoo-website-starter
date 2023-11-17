@@ -3,11 +3,11 @@
 </template>
 
 <script>
-import { components } from '~/slices';
+import { components } from "~/slices";
 
 export default {
   async asyncData({ $prismic, params, error }) {
-    const document = await $prismic.api.getSingle('home_page');
+    const document = await $prismic.api.getSingle("home_page");
 
     if (document) {
       //console.log('document ', document);
@@ -17,7 +17,7 @@ export default {
       error({
         status: false,
         statusCode: 404,
-        message: 'Page not found',
+        message: "Page not found",
       });
     }
   },
@@ -33,27 +33,28 @@ export default {
     if (this.page?.data?.meta_title) {
       obj.title = this.page?.data?.meta_title;
       meta.push({
-        hid: 'og:title',
-        name: 'og:title',
+        hid: "og:title",
+        name: "og:title",
         content: this.page?.data?.meta_title,
       });
     }
 
     if (this.page?.data?.meta_description) {
       meta.push({
-        hid: 'description',
-        name: 'description',
+        hid: "description",
+        name: "description",
         content: this.page?.data?.meta_description,
       });
       meta.push({
-        property: 'og:description',
+        hid: "og:description",
+        property: "og:description",
         content: this.page?.data?.meta_description,
       });
     }
     if (this.page?.data?.meta_image?.url) {
       meta.push({
-        hid: 'og:image',
-        name: 'og:image',
+        hid: "og:image",
+        name: "og:image",
         content: this.page?.data?.meta_image?.url,
       });
     }

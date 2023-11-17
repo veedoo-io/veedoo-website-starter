@@ -53,7 +53,7 @@ export default async () => {
   //console.log('google_analytics_code', google_analytics_code);
 
   return {
-    //target: 'static',
+    target: 'static',
     generate: {
       routes: async () => {
         const client = Prismic.client(apiEndpoint, {
@@ -135,6 +135,7 @@ export default async () => {
           content: title,
         },
         {
+          hid: 'og:description',
           property: 'og:description',
           content: description,
         },
@@ -142,6 +143,11 @@ export default async () => {
           hid: 'og:image',
           name: 'og:image',
           content: image?.url,
+        },
+        {
+          hid: 'og:url',
+          name: 'og:url',
+          content: "",
         },
       ],
       link: [

@@ -27,6 +27,7 @@ export default {
       ? $prismic.asText(this.page?.data?.title)
       : null;
 
+    let baseurl = process.client ? window.location.href : " ";
     return {
       title: title,
       meta: [
@@ -41,6 +42,7 @@ export default {
           content: title,
         },
         {
+          hid: "og:description",
           property: "og:description",
           content: this.page?.data?.description,
         },
@@ -48,6 +50,11 @@ export default {
           hid: "og:image",
           name: "og:image",
           content: this.page?.data?.image?.url + "&fm=jpg&w=1200&h=630",
+        },
+        {
+          hid: "og:url",
+          name: "og:url",
+          content: baseurl,
         },
       ],
     };
