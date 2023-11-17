@@ -141,7 +141,7 @@ export default async () => {
         },
         {
           hid: 'og:image',
-          name: 'og:image',
+          property: 'og:image',
           content: image?.url,
         },
         {
