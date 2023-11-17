@@ -48,7 +48,7 @@ export default {
         },
         {
           hid: "og:image",
-          name: "og:image",
+          property: "og:image",
           content: this.page?.data?.image?.url + "&fm=jpg&w=1200&h=630",
         },
         {
