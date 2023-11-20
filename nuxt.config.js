@@ -80,13 +80,18 @@ export default async () => {
         { name: 'robots', content: 'index, follow' },
         {
           hid: 'description',
-          name: 'description',
+          property: 'description',
           content: description,
         },
         {
           hid: 'og:title',
           property: 'og:title',
           content: title,
+        },
+        {
+          hid: 'og_type',
+          property: 'og:type',
+          content: '',
         },
         {
           hid: 'og:description',
@@ -102,6 +107,36 @@ export default async () => {
           hid: 'og:url',
           property: 'og:url',
           content: "",
+        },
+        {
+          hid: 'og_site_name',
+          property: 'og:site_name',
+          content: '',
+        },
+        {
+          hid: 'twitter_card',
+          property: 'twitter:card',
+          content: '',
+        },
+        {
+          hid: 'twitter_site',
+          property: 'twitter:site',
+          content: '',
+        },
+        {
+          hid: 'twitter_title',
+          property: 'twitter:title',
+          content: '',
+        },
+        {
+          hid: 'twitter_description',
+          property: 'twitter:description',
+          content: '',
+        },
+        {
+          hid: 'twitter_image',
+          property: 'twitter:image',
+          content: '',
         },
       ],
       link: [
