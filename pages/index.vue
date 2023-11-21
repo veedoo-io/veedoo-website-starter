@@ -55,7 +55,7 @@ export default {
       meta.push({
         hid: "og:image",
         property: "og:image",
-        content: this.page?.data?.meta_image?.url,
+        content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
       });
     }
     obj.meta = meta;
