@@ -31,10 +31,8 @@
       class="w-full flex flex-wrap flex-col lg:flex-row gap-[36px] justify-center h-full py-2.5 px-6 items-center"
     >
       <div
-        :class="`lg:flex-[0_0_50%] flex-[0_0_100%]     
-           ${
-             persons.length > 1
-               ? 'max-w-[643px]  max-[1530px]:max-w-none	 '
+        :class="`xl:w-[45%] w-full   
+           ${persons.length > 1 ? 'max-w-[645px]' : 'w-full'} '
                : 'w-full'
            }
           p-6
