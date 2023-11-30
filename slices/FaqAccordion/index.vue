@@ -168,11 +168,11 @@ export default {
 
     let getWidth = function () {
       let classes =
-        "mx-auto lg:w-[45%] md:w-[65%] w-full flex flex-col justify-center text-center items-center px-6";
+        "mx-auto xxl:w-[50%] lg:w-[65%] md:w-[85%] w-full flex flex-col justify-center text-center items-center px-6";
 
       if (this.slice.variation == "withImage") {
         classes =
-          "mx-auto md:w-[65%] w-full flex flex-col justify-center text-center items-center px-6";
+          "mx-auto md:w-[85%] w-full flex flex-col justify-center text-center items-center px-6";
       }
 
       return classes;
