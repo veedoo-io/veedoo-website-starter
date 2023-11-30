@@ -84,6 +84,10 @@ export default {
 
 @media screen and (max-width: 768px) {
   ::v-deep img {
+    width: 90%;
+    margin: 0 24px;
+  }
+  ::v-deep .block-img {
     width: 100%;
   }
 }
