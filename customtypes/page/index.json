@@ -94,6 +94,9 @@
             },
             "audio_player_with_image": {
               "type": "SharedSlice"
+            },
+            "cta_text_block_image_block": {
+              "type": "SharedSlice"
             }
           }
         }

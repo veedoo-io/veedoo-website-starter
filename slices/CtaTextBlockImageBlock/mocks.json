@@ -1,0 +1,264 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Bound"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Nisi officia laboris est veniam elit esse veniam."
+            }
+          }
+        ]
+      },
+      "button_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "everyone",
+        "type": "Text"
+      },
+      "button_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#08d921",
+        "type": "Color"
+      },
+      "button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#0eb49a",
+        "type": "Color"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#5ce094",
+        "type": "Color"
+      },
+      "image": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+          "width": 3456,
+          "height": 3456
+        },
+        "url": "https://images.unsplash.com/photo-1576662712957-9c79ae1280f8",
+        "width": 3456,
+        "height": 3456,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "45",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "46",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "imageRight",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Strike"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Nisi in elit commodo deserunt cupidatat esse laborum quis labore. Voluptate incididunt voluptate mollit eu sint cupidatat laboris cillum."
+            }
+          }
+        ]
+      },
+      "button_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://prismic.io"
+        }
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "collect",
+        "type": "Text"
+      },
+      "button_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#87eb88",
+        "type": "Color"
+      },
+      "button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#3c57cc",
+        "type": "Color"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#68c8e7",
+        "type": "Color"
+      },
+      "image": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+          "width": 3560,
+          "height": 5340
+        },
+        "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+        "width": 3560,
+        "height": 5340,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "imageLeft",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading1",
+            "content": {
+              "text": "Count"
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Fugiat aliquip sint eu consequat velit aute aliquip. Exercitation excepteur irure incididunt veniam enim eiusmod deserunt velit et cupidatat reprehenderit pariatur eiusmod aliquip ullamco. Cillum occaecat consectetur laborum ad magna in qui."
+            }
+          }
+        ]
+      },
+      "button_link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "https://slicemachine.dev"
+        }
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "loose",
+        "type": "Text"
+      },
+      "button_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#edc913",
+        "type": "Color"
+      },
+      "button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#36d30e",
+        "type": "Color"
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#977baf",
+        "type": "Color"
+      },
+      "image": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+          "width": 2545,
+          "height": 2545
+        },
+        "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51",
+        "width": 2545,
+        "height": 2545,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]
