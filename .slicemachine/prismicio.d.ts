@@ -1909,14 +1909,14 @@ export interface CtaTextBlockImageBlockSliceDefaultPrimary {
 	image: prismic.ImageField<never>;
 	
 	/**
-	 * margin top field in *CtaTextBlockImageBlock → Primary*
+	 * background color field in *CtaTextBlockImageBlock → Primary*
 	 *
-	 * - **Field Type**: Number
+	 * - **Field Type**: Color
 	 * - **Placeholder**: *None*
-	 * - **API ID Path**: cta_text_block_image_block.primary.margin_top
-	 * - **Documentation**: https://prismic.io/docs/field#number
+	 * - **API ID Path**: cta_text_block_image_block.primary.background_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
-	margin_top: prismic.NumberField;
+	background_color: prismic.ColorField;
 	
 	/**
 	 * margin bottom field in *CtaTextBlockImageBlock → Primary*
@@ -1927,6 +1927,16 @@ export interface CtaTextBlockImageBlockSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
+	
+	/**
+	 * margin top field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
 }
 
 /**

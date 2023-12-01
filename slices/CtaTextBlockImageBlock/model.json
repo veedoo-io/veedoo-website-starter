@@ -73,10 +73,10 @@
             "thumbnails": []
           }
         },
-        "margin_top": {
-          "type": "Number",
+        "background_color": {
+          "type": "Color",
           "config": {
-            "label": "margin top",
+            "label": "background color",
             "placeholder": ""
           }
         },
@@ -84,6 +84,13 @@
           "type": "Number",
           "config": {
             "label": "margin bottom",
+            "placeholder": ""
+          }
+        },
+        "margin_top": {
+          "type": "Number",
+          "config": {
+            "label": "margin top",
             "placeholder": ""
           }
         }
