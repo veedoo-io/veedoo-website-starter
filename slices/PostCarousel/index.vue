@@ -492,7 +492,7 @@ export default {
           {
             breakpoint: 768,
             settings: {
-              slidesToShow: numberOfSlides > 2 ? 2 : numberOfSlides,
+              slidesToShow: numberOfSlides > 1 ? 1 : numberOfSlides,
             },
           },
           {
