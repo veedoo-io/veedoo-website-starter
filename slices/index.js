@@ -8,6 +8,7 @@ import CallToActionWithImage from './CallToActionWithImage';
 import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactUsGrid from './ContactUsGrid';
 import CookieBanner from './CookieBanner';
+import CtaTextBlockImageBlock from './CtaTextBlockImageBlock';
 import CtaWithBackgroundImage from './CtaWithBackgroundImage';
 import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
@@ -41,6 +42,7 @@ export {
 	ContactFormVeedoo,
 	ContactUsGrid,
 	CookieBanner,
+	CtaTextBlockImageBlock,
 	CtaWithBackgroundImage,
 	Divider,
 	FaqAccordion,
@@ -75,6 +77,7 @@ export const components = {
 	contact_form_veedoo: ContactFormVeedoo,
 	contact_info: ContactUsGrid,
 	cookie_banner: CookieBanner,
+	cta_text_block_image_block: CtaTextBlockImageBlock,
 	cta_with_background_image: CtaWithBackgroundImage,
 	divider: Divider,
 	faq_accordion: FaqAccordion,

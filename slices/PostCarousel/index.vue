@@ -47,7 +47,7 @@
         class="w-full h-full flex justify-center items-center relative"
       >
         <div
-          class="max-md:hidden absolute bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40 rounded cursor-pointer w-[60px] h-[60px]"
+          class="max-md:hidden absolute bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 z-40 rounded cursor-pointer w-[60px] h-[60px]"
           @click="$refs.carousel.goToPrev()"
         >
           <svg

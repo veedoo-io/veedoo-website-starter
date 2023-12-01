@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice
 
 /**
  * Content for Page documents
@@ -1823,6 +1823,322 @@ type CookieBannerSliceVariation = CookieBannerSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type CookieBannerSlice = prismic.SharedSlice<"cookie_banner", CookieBannerSliceVariation>;
+
+/**
+ * Primary content in *CtaTextBlockImageBlock → Primary*
+ */
+export interface CtaTextBlockImageBlockSliceDefaultPrimary {
+	/**
+	 * Title field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: cta_text_block_image_block.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: cta_text_block_image_block.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * button link field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField;
+	
+	/**
+	 * button text field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_text: prismic.KeyTextField;
+	
+	/**
+	 * button color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_color: prismic.ColorField;
+	
+	/**
+	 * button text color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_text_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * image field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+	
+	/**
+	 * margin top field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+	
+	/**
+	 * margin bottom field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+}
+
+/**
+ * Default variation for CtaTextBlockImageBlock Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: CtaTextBlockImageBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaTextBlockImageBlockSliceDefault = prismic.SharedSliceVariation<"default", Simplify<CtaTextBlockImageBlockSliceDefaultPrimary>, never>;
+
+/**
+ * Primary content in *CtaTextBlockImageBlock → Primary*
+ */
+export interface CtaTextBlockImageBlockSliceImageRightPrimary {
+	/**
+	 * Title field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: cta_text_block_image_block.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: cta_text_block_image_block.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * button link field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField;
+	
+	/**
+	 * button text field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_text: prismic.KeyTextField;
+	
+	/**
+	 * button color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_color: prismic.ColorField;
+	
+	/**
+	 * button text color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_text_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * image field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * image right variation for CtaTextBlockImageBlock Slice
+ *
+ * - **API ID**: `imageRight`
+ * - **Description**: CtaTextBlockImageBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaTextBlockImageBlockSliceImageRight = prismic.SharedSliceVariation<"imageRight", Simplify<CtaTextBlockImageBlockSliceImageRightPrimary>, never>;
+
+/**
+ * Primary content in *CtaTextBlockImageBlock → Primary*
+ */
+export interface CtaTextBlockImageBlockSliceImageLeftPrimary {
+	/**
+	 * Title field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: cta_text_block_image_block.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: cta_text_block_image_block.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * button link field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField;
+	
+	/**
+	 * button text field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_text: prismic.KeyTextField;
+	
+	/**
+	 * button color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_color: prismic.ColorField;
+	
+	/**
+	 * button text color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.button_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_text_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * image field in *CtaTextBlockImageBlock → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: cta_text_block_image_block.primary.image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * image left variation for CtaTextBlockImageBlock Slice
+ *
+ * - **API ID**: `imageLeft`
+ * - **Description**: CtaTextBlockImageBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaTextBlockImageBlockSliceImageLeft = prismic.SharedSliceVariation<"imageLeft", Simplify<CtaTextBlockImageBlockSliceImageLeftPrimary>, never>;
+
+/**
+ * Slice variation for *CtaTextBlockImageBlock*
+ */
+type CtaTextBlockImageBlockSliceVariation = CtaTextBlockImageBlockSliceDefault | CtaTextBlockImageBlockSliceImageRight | CtaTextBlockImageBlockSliceImageLeft
+
+/**
+ * CtaTextBlockImageBlock Shared Slice
+ *
+ * - **API ID**: `cta_text_block_image_block`
+ * - **Description**: CtaTextBlockImageBlock
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type CtaTextBlockImageBlockSlice = prismic.SharedSlice<"cta_text_block_image_block", CtaTextBlockImageBlockSliceVariation>;
 
 /**
  * Primary content in *CtaWithBackgroundImage → Primary*
@@ -4628,6 +4944,11 @@ declare module "@prismicio/client" {
 			CookieBannerSlice,
 			CookieBannerSliceVariation,
 			CookieBannerSliceDefault,
+			CtaTextBlockImageBlockSlice,
+			CtaTextBlockImageBlockSliceVariation,
+			CtaTextBlockImageBlockSliceDefault,
+			CtaTextBlockImageBlockSliceImageRight,
+			CtaTextBlockImageBlockSliceImageLeft,
 			CtaWithBackgroundImageSlice,
 			CtaWithBackgroundImageSliceVariation,
 			CtaWithBackgroundImageSliceDefault,
