@@ -3,6 +3,10 @@
     :class="`section w-full flex items-center gap-10 lg:flex-row flex-col ${
       slice.variation == 'imageLeft' ? 'lg:flex-row-reverse' : 'lg:flex-row'
     }`"
+    :style="[
+      { padding: `${marginTop} 24px ${marginBottom} 24px` },
+      { backgroundColor: `${slice.primary.background_color}` },
+    ]"
   >
     <div class="lg:w-1/2 w-full">
       <PrismicRichText
@@ -43,6 +47,14 @@ export default {
   name: "CtaTextBlockImageBlock",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
+  computed: {
+    marginBottom() {
+      return `${this.slice.primary.margin_bottom}px`;
+    },
+    marginTop() {
+      return `${this.slice.primary.margin_top}px`;
+    },
+  },
 };
 </script>
 
