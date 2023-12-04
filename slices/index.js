@@ -13,6 +13,7 @@ import CtaWithBackgroundImage from './CtaWithBackgroundImage';
 import Divider from './Divider';
 import FaqAccordion from './FaqAccordion';
 import FooterVeedoo from './FooterVeedoo';
+import GallerySlider from './GallerySlider';
 import HeaderVeedoo from './HeaderVeedoo';
 import HeroVeedoo from './HeroVeedoo';
 import ImageSlice from './ImageSlice';
@@ -27,6 +28,7 @@ import PostSlider from './PostSlider';
 import RichText from './RichText';
 import SimpleErrorPage from './SimpleErrorPage';
 import SocialFollowIcons from './SocialFollowIcons';
+import Statistics from './Statistics';
 import Testimonial from './Testimonial';
 import Title from './Title';
 import TitleWithDateAndShareIcons from './TitleWithDateAndShareIcons';
@@ -47,6 +49,7 @@ export {
 	Divider,
 	FaqAccordion,
 	FooterVeedoo,
+	GallerySlider,
 	HeaderVeedoo,
 	HeroVeedoo,
 	ImageSlice,
@@ -61,6 +64,7 @@ export {
 	RichText,
 	SimpleErrorPage,
 	SocialFollowIcons,
+	Statistics,
 	Testimonial,
 	Title,
 	TitleWithDateAndShareIcons,
@@ -82,6 +86,7 @@ export const components = {
 	divider: Divider,
 	faq_accordion: FaqAccordion,
 	footer_veedoo: FooterVeedoo,
+	gallery_slider: GallerySlider,
 	header_veedoo: HeaderVeedoo,
 	hero_veedoo: HeroVeedoo,
 	image: ImageSlice,
@@ -96,6 +101,7 @@ export const components = {
 	rich_text: RichText,
 	simple_error_page: SimpleErrorPage,
 	social_follow_icons: SocialFollowIcons,
+	statistics: Statistics,
 	testimonial: Testimonial,
 	title: Title,
 	title_with_date_and_share_icons: TitleWithDateAndShareIcons,
