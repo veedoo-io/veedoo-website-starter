@@ -97,6 +97,12 @@
             },
             "cta_text_block_image_block": {
               "type": "SharedSlice"
+            },
+            "gallery_slider": {
+              "type": "SharedSlice"
+            },
+            "statistics": {
+              "type": "SharedSlice"
             }
           }
         }

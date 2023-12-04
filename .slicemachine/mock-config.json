@@ -384,6 +384,17 @@
       "default": {
         "primary": {}
       }
+    },
+    "GallerySlider": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "Statistics": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {

@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | StatisticsSlice
 
 /**
  * Content for Page documents
@@ -2882,6 +2882,257 @@ type FooterVeedooSliceVariation = FooterVeedooSliceDefault
 export type FooterVeedooSlice = prismic.SharedSlice<"footer_veedoo", FooterVeedooSliceVariation>;
 
 /**
+ * Primary content in *GallerySlider → Primary*
+ */
+export interface GallerySliderSliceDefaultPrimary {
+	/**
+	 * Title field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: gallery_slider.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: gallery_slider.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * text color field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * margin bottom field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+	
+	/**
+	 * margin top field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+}
+
+/**
+ * Primary content in *GallerySlider → Items*
+ */
+export interface GallerySliderSliceDefaultItem {
+	/**
+	 * photo field in *GallerySlider → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.items[].photo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	photo: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for GallerySlider Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: GallerySlider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySliderSliceDefault = prismic.SharedSliceVariation<"default", Simplify<GallerySliderSliceDefaultPrimary>, Simplify<GallerySliderSliceDefaultItem>>;
+
+/**
+ * Primary content in *GallerySlider → Primary*
+ */
+export interface GallerySliderSliceHoryzontalImagePrimary {
+	/**
+	 * Title field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: gallery_slider.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: gallery_slider.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * text color field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * margin bottom field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+	
+	/**
+	 * margin top field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+}
+
+/**
+ * Primary content in *GallerySlider → Items*
+ */
+export interface GallerySliderSliceHoryzontalImageItem {
+	/**
+	 * photo field in *GallerySlider → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.items[].photo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	photo: prismic.ImageField<never>;
+}
+
+/**
+ * HoryzontalImage variation for GallerySlider Slice
+ *
+ * - **API ID**: `horyzontalImage`
+ * - **Description**: GallerySlider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySliderSliceHoryzontalImage = prismic.SharedSliceVariation<"horyzontalImage", Simplify<GallerySliderSliceHoryzontalImagePrimary>, Simplify<GallerySliderSliceHoryzontalImageItem>>;
+
+/**
+ * Primary content in *GallerySlider → Primary*
+ */
+export interface GallerySliderSliceVerticalImagePrimary {
+	/**
+	 * Title field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: gallery_slider.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+	
+	/**
+	 * Description field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: A nice description of your product
+	 * - **API ID Path**: gallery_slider.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * text color field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * margin bottom field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+	
+	/**
+	 * margin top field in *GallerySlider → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+}
+
+/**
+ * Primary content in *GallerySlider → Items*
+ */
+export interface GallerySliderSliceVerticalImageItem {
+	/**
+	 * photo field in *GallerySlider → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: gallery_slider.items[].photo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	photo: prismic.ImageField<never>;
+}
+
+/**
+ * VerticalImage variation for GallerySlider Slice
+ *
+ * - **API ID**: `verticalImage`
+ * - **Description**: GallerySlider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySliderSliceVerticalImage = prismic.SharedSliceVariation<"verticalImage", Simplify<GallerySliderSliceVerticalImagePrimary>, Simplify<GallerySliderSliceVerticalImageItem>>;
+
+/**
+ * Slice variation for *GallerySlider*
+ */
+type GallerySliderSliceVariation = GallerySliderSliceDefault | GallerySliderSliceHoryzontalImage | GallerySliderSliceVerticalImage
+
+/**
+ * GallerySlider Shared Slice
+ *
+ * - **API ID**: `gallery_slider`
+ * - **Description**: GallerySlider
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type GallerySliderSlice = prismic.SharedSlice<"gallery_slider", GallerySliderSliceVariation>;
+
+/**
  * Primary content in *HeaderVeedoo → Primary*
  */
 export interface HeaderVeedooSliceDefaultPrimary {
@@ -4329,6 +4580,109 @@ type SocialFollowIconsSliceVariation = SocialFollowIconsSliceDefault
 export type SocialFollowIconsSlice = prismic.SharedSlice<"social_follow_icons", SocialFollowIconsSliceVariation>;
 
 /**
+ * Primary content in *Statistics → Primary*
+ */
+export interface StatisticsSliceDefaultPrimary {
+	/**
+	 * background color field in *Statistics → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.primary.background_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	background_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *Statistics → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * margin top field in *Statistics → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+	
+	/**
+	 * margin bottom field in *Statistics → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+}
+
+/**
+ * Primary content in *Statistics → Items*
+ */
+export interface StatisticsSliceDefaultItem {
+	/**
+	 * number field in *Statistics → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.items[].number
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	number: prismic.RichTextField;
+	
+	/**
+	 * description field in *Statistics → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.items[].description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+	
+	/**
+	 * icon field in *Statistics → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: statistics.items[].icon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	icon: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for Statistics Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Statistics
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StatisticsSliceDefault = prismic.SharedSliceVariation<"default", Simplify<StatisticsSliceDefaultPrimary>, Simplify<StatisticsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *Statistics*
+ */
+type StatisticsSliceVariation = StatisticsSliceDefault
+
+/**
+ * Statistics Shared Slice
+ *
+ * - **API ID**: `statistics`
+ * - **Description**: Statistics
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type StatisticsSlice = prismic.SharedSlice<"statistics", StatisticsSliceVariation>;
+
+/**
  * Primary content in *Testimonial → Primary*
  */
 export interface TestimonialSliceDefaultPrimary {
@@ -4973,6 +5327,11 @@ declare module "@prismicio/client" {
 			FooterVeedooSlice,
 			FooterVeedooSliceVariation,
 			FooterVeedooSliceDefault,
+			GallerySliderSlice,
+			GallerySliderSliceVariation,
+			GallerySliderSliceDefault,
+			GallerySliderSliceHoryzontalImage,
+			GallerySliderSliceVerticalImage,
 			HeaderVeedooSlice,
 			HeaderVeedooSliceVariation,
 			HeaderVeedooSliceDefault,
@@ -5016,6 +5375,9 @@ declare module "@prismicio/client" {
 			SocialFollowIconsSlice,
 			SocialFollowIconsSliceVariation,
 			SocialFollowIconsSliceDefault,
+			StatisticsSlice,
+			StatisticsSliceVariation,
+			StatisticsSliceDefault,
 			TestimonialSlice,
 			TestimonialSliceVariation,
 			TestimonialSliceDefault,

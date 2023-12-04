@@ -1,0 +1,224 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Et occaecat tempor consectetur excepteur duis deserunt tempor aute minim. Laboris duis non qui dolor est ex exercitation exercitation culpa pariatur consectetur."
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Voluptate enim ex officia incididunt elit et nisi ipsum reprehenderit non aliqua. Ullamco anim mollit incididunt elit tempor elit dolore elit sint laborum ad labore elit. Pariatur id cillum nostrud minim aute sit commodo occaecat non qui culpa labore ex."
+            }
+          }
+        ]
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#835cb6",
+        "type": "Color"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "23",
+        "type": "Number"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "94",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "photo",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+                "width": 3277,
+                "height": 4092
+              },
+              "url": "https://images.unsplash.com/photo-1494173853739-c21f58b16055",
+              "width": 3277,
+              "height": 4092,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "horyzontalImage",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "In in do mollit id ex Lorem minim ipsum officia id proident occaecat occaecat. Voluptate quis anim esse ipsum mollit incididunt velit ullamco ipsum non sint irure anim aute cupidatat. Veniam dolore est non adipisicing amet cillum commodo officia est ea."
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Eu reprehenderit et in minim dolor veniam mollit ipsum incididunt."
+            }
+          }
+        ]
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#6035cd",
+        "type": "Color"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "69",
+        "type": "Number"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "42",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "photo",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+                "width": 3024,
+                "height": 3778
+              },
+              "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
+              "width": 3024,
+              "height": 3778,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "verticalImage",
+    "primary": {
+      "title": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ad Lorem Lorem elit qui dolore officia quis quis id in. Magna labore dolor anim sint. Ipsum eu pariatur Lorem mollit est esse velit esse incididunt minim labore et qui proident aliquip."
+            }
+          }
+        ]
+      },
+      "description": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Id duis eu Lorem est cupidatat ut amet. Eiusmod nisi ullamco ullamco elit magna sit fugiat do non elit. Occaecat et qui sint adipisicing cupidatat officia."
+            }
+          }
+        ]
+      },
+      "text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#756a83",
+        "type": "Color"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "50",
+        "type": "Number"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "50",
+        "type": "Number"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "photo",
+            {
+              "__TYPE__": "ImageContent",
+              "origin": {
+                "id": "main",
+                "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+                "width": 4480,
+                "height": 4480
+              },
+              "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e",
+              "width": 4480,
+              "height": 4480,
+              "edit": {
+                "zoom": 1,
+                "crop": {
+                  "x": 0,
+                  "y": 0
+                },
+                "background": "transparent"
+              },
+              "thumbnails": {}
+            }
+          ]
+        ]
+      }
+    ]
+  }
+]
