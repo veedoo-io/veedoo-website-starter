@@ -395,6 +395,11 @@
         "primary": {},
         "items": {}
       }
+    },
+    "HeaderWithButton": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

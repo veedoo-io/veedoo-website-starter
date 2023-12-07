@@ -1,0 +1,94 @@
+{
+  "id": "header_with_button",
+  "type": "SharedSlice",
+  "name": "HeaderWithButton",
+  "description": "HeaderWithButton",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeaderWithButton",
+      "primary": {
+        "logo": {
+          "type": "Image",
+          "config": {
+            "label": "logo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "background_color": {
+          "type": "Color",
+          "config": {
+            "label": "background color",
+            "placeholder": ""
+          }
+        },
+        "button_text": {
+          "type": "Text",
+          "config": {
+            "label": "button text",
+            "placeholder": ""
+          }
+        },
+        "button_link": {
+          "type": "Link",
+          "config": {
+            "label": "button link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "button_color": {
+          "type": "Color",
+          "config": {
+            "label": "button color",
+            "placeholder": ""
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
+          }
+        },
+        "button_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "button text color",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "menu_link": {
+          "type": "Link",
+          "config": {
+            "label": "menu link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "menu_item": {
+          "type": "Text",
+          "config": {
+            "label": "menu item",
+            "placeholder": ""
+          }
+        },
+        "icon": {
+          "type": "Image",
+          "config": {
+            "label": "icon",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

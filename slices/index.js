@@ -15,6 +15,7 @@ import FaqAccordion from './FaqAccordion';
 import FooterVeedoo from './FooterVeedoo';
 import GallerySlider from './GallerySlider';
 import HeaderVeedoo from './HeaderVeedoo';
+import HeaderWithButton from './HeaderWithButton';
 import HeroVeedoo from './HeroVeedoo';
 import ImageSlice from './ImageSlice';
 import PageNotFound1 from './PageNotFound1';
@@ -51,6 +52,7 @@ export {
 	FooterVeedoo,
 	GallerySlider,
 	HeaderVeedoo,
+	HeaderWithButton,
 	HeroVeedoo,
 	ImageSlice,
 	PageNotFound1,
@@ -88,6 +90,7 @@ export const components = {
 	footer_veedoo: FooterVeedoo,
 	gallery_slider: GallerySlider,
 	header_veedoo: HeaderVeedoo,
+	header_with_button: HeaderWithButton,
 	hero_veedoo: HeroVeedoo,
 	image: ImageSlice,
 	page_not_found1: PageNotFound1,
