@@ -12,6 +12,9 @@
           "choices": {
             "header_veedoo": {
               "type": "SharedSlice"
+            },
+            "header_with_button": {
+              "type": "SharedSlice"
             }
           }
         }

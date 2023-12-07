@@ -284,7 +284,7 @@ interface FooterDocumentData {
  */
 export type FooterDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<FooterDocumentData>, "footer", Lang>;
 
-type HeaderDocumentDataSlicesSlice = HeaderVeedooSlice
+type HeaderDocumentDataSlicesSlice = HeaderVeedooSlice | HeaderWithButtonSlice
 
 /**
  * Content for Header documents
@@ -3256,6 +3256,139 @@ type HeaderVeedooSliceVariation = HeaderVeedooSliceDefault
 export type HeaderVeedooSlice = prismic.SharedSlice<"header_veedoo", HeaderVeedooSliceVariation>;
 
 /**
+ * Primary content in *HeaderWithButton → Primary*
+ */
+export interface HeaderWithButtonSliceDefaultPrimary {
+	/**
+	 * logo field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.logo
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	logo: prismic.ImageField<never>;
+	
+	/**
+	 * background color field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.background_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	background_color: prismic.ColorField;
+	
+	/**
+	 * button text field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.button_text
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	button_text: prismic.KeyTextField;
+	
+	/**
+	 * button link field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.button_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	button_link: prismic.LinkField;
+	
+	/**
+	 * button color field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.button_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_color: prismic.ColorField;
+	
+	/**
+	 * text color field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+	
+	/**
+	 * button text color field in *HeaderWithButton → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.primary.button_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	button_text_color: prismic.ColorField;
+}
+
+/**
+ * Primary content in *HeaderWithButton → Items*
+ */
+export interface HeaderWithButtonSliceDefaultItem {
+	/**
+	 * menu link field in *HeaderWithButton → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.items[].menu_link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	menu_link: prismic.LinkField;
+	
+	/**
+	 * menu item field in *HeaderWithButton → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.items[].menu_item
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	menu_item: prismic.KeyTextField;
+	
+	/**
+	 * icon field in *HeaderWithButton → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: header_with_button.items[].icon
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	icon: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for HeaderWithButton Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: HeaderWithButton
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeaderWithButtonSliceDefault = prismic.SharedSliceVariation<"default", Simplify<HeaderWithButtonSliceDefaultPrimary>, Simplify<HeaderWithButtonSliceDefaultItem>>;
+
+/**
+ * Slice variation for *HeaderWithButton*
+ */
+type HeaderWithButtonSliceVariation = HeaderWithButtonSliceDefault
+
+/**
+ * HeaderWithButton Shared Slice
+ *
+ * - **API ID**: `header_with_button`
+ * - **Description**: HeaderWithButton
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type HeaderWithButtonSlice = prismic.SharedSlice<"header_with_button", HeaderWithButtonSliceVariation>;
+
+/**
  * Primary content in *HeroVeedoo → Primary*
  */
 export interface HeroVeedooSliceDefaultPrimary {
@@ -5335,6 +5468,9 @@ declare module "@prismicio/client" {
 			HeaderVeedooSlice,
 			HeaderVeedooSliceVariation,
 			HeaderVeedooSliceDefault,
+			HeaderWithButtonSlice,
+			HeaderWithButtonSliceVariation,
+			HeaderWithButtonSliceDefault,
 			HeroVeedooSlice,
 			HeroVeedooSliceVariation,
 			HeroVeedooSliceDefault,
