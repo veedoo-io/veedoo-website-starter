@@ -214,6 +214,7 @@ export default async () => {
       '@nuxt/postcss8',
       '@nuxtjs/prismic',
       '@nuxtjs/google-fonts',
+      '@/modules/sitemapRouteGenerator'
     ],
 
     googleFonts: {
@@ -225,7 +226,13 @@ export default async () => {
     },
 
     // Modules: https://go.nuxtjs.dev/config-modules
-    modules: ['nuxt-runtime-compiler'],
+    modules: ['nuxt-runtime-compiler', '@nuxtjs/sitemap', '@nuxtjs/robots'],
+
+    robots: {
+      UserAgent: '*',
+      Allow: '/',
+      Disallow: '',
+    },
 
     prismic: {
       endpoint: apiEndpoint,

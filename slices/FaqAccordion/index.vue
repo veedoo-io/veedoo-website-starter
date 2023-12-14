@@ -53,6 +53,7 @@
                 className="w-6 h-6"
                 width="24px"
                 height="24px"
+                class="cursor-pointer"
               >
                 <path
                   strokeLinecap="round"
@@ -70,6 +71,7 @@
                 className="w-6 h-6"
                 width="24px"
                 height="24px"
+                class="cursor-pointer"
               >
                 <path
                   strokeLinecap="round"
