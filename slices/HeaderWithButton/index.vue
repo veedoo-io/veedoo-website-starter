@@ -72,7 +72,7 @@
               v-for="(item, i) in slice.items"
               :key="`slice-item-m-${i}`"
             >
-              <PrismicImage :field="item.icon" class="w-6 h-6 mr-4" />
+              <PrismicImage :field="item.icon" class="w-6 h-6 mr-4" v-if="Object.keys(item.icon).length"/>
               <PrismicLink
                 class="text-[16px] font-semibold"
                 :field="item.menu_link"
@@ -83,8 +83,8 @@
           </div>
           <PrismicLink
             :style="[
-              { color: `${slice.primary.button_text_color}` },
-              { background: `${slice.primary.button_color}` },
+              { color: `${slice.primary.button_text_color || '#FFFFFF'}` },
+              { background: `${slice.primary.button_color || '#F2776B'}` },
             ]"
             :field="slice.primary.button_link"
             class="ml-7 py-3 px-6 rounded-[5px]"
