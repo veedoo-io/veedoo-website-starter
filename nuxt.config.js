@@ -54,18 +54,18 @@ export default async () => {
 
   return {
     target: 'static',
-    generate: {
-      routes: async () => {
-        const client = Prismic.client(apiEndpoint, {
-          routes: routes,
-        });
-        const pages = await client.query(
-          Prismic.Predicates.at('document.type', 'page')
-        );
-
-        return pages.results.map((page) => page.url);
-      },
-    },
+    /* generate: {
+       routes: async () => {
+         const client = Prismic.client(apiEndpoint, {
+           routes: routes,
+         });
+         const pages = await client.query(
+           Prismic.Predicates.at('document.type', 'page')
+         );
+ 
+         return pages.results.map((page) => page.url);
+       },
+     },*/
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
       title: title,
@@ -234,6 +234,11 @@ export default async () => {
       Disallow: '',
     },
 
+    sitemap: {
+      hostname: process.env.BASE_URL,
+      exclude: ['/slice-simulator', '/preview'],
+    },
+
     prismic: {
       endpoint: apiEndpoint,
       modern: true,
@@ -247,7 +252,10 @@ export default async () => {
     storybook: {
       stories: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
     },
-
+    generate: {
+      exclude: ['/slice-simulator'],
+      routes: ['/'],
+    },
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
       transpile: ['@prismicio/vue', 'vue-agile', 'vue-youtube-embed'],
