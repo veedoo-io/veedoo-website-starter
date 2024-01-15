@@ -1,10 +1,17 @@
 <template>
   <section class="relative w-full h-fit overflow-hidden">
     <button
-      class="absolute h-[32px] w-[32px] z-10 right-[calc(50%_-_80px)] md:right-[16px] lg:right-[24px] rounded bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] z-10 right-[calc(25%_-_70px)] md:right-[16px] lg:right-[24px] rounded bottom-[50%] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
-      <div class="" @click="$refs.carousel.goToNext()">
+      <div
+        @click="$refs.carousel.goToNext()"
+        :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
+      >
         <svg
           class="errow"
           width="60"
@@ -84,10 +91,17 @@
       </div>
     </button>
     <button
-      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(50%_-_80px)] md:left-[16px] lg:left-[24px] bottom-[5px] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(25%_-_70px)] md:left-[16px] lg:left-[24px] bottom-[50%] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
       :class="getSliderButtonClass()"
     >
-      <div class="" @click="$refs.carousel.goToPrev()">
+      <div
+        @click="$refs.carousel.goToPrev()"
+        :style="{
+          filter:
+            'drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))',
+        }"
+        class="bg-white w-8 h-8 active:scale-125 rounded flex justify-center items-center cursor-pointer"
+      >
         <svg
           class="errow"
           width="60"
@@ -168,6 +182,7 @@
     </button>
 
     <agile
+      v-if="slice.items"
       class="pt-[72px] pb-[50px] md:pb-[72px] px-auto md:px-[72px] bg-white w-full"
       ref="carousel"
       :options="myOption"
