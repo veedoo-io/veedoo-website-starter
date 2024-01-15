@@ -12,18 +12,80 @@
           @click="$refs.carousel.goToPrev()"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            class="errow"
+            width="60"
+            height="61"
+            viewBox="0 0 60 61"
             fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="{1.5}"
-            stroke="currentColor"
-            className="w-6 h-6 text-black"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M15.75 19.5L8.25 12l7.5-7.5"
-            />
+            <g filter="url(#filter0_dd_101_2640)">
+              <g clip-path="url(#clip0_101_2640)">
+                <path
+                  d="M37.5 15.1836L22.5 30.1836L37.5 45.1836"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </g>
+            <defs>
+              <filter
+                id="filter0_dd_101_2640"
+                x="-6"
+                y="-1.81641"
+                width="72"
+                height="72"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="3" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_101_2640"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect1_dropShadow_101_2640"
+                  result="effect2_dropShadow_101_2640"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect2_dropShadow_101_2640"
+                  result="shape"
+                />
+              </filter>
+              <clipPath id="clip0_101_2640">
+                <rect y="0.183594" width="60" height="60" rx="4" fill="white" />
+              </clipPath>
+            </defs>
           </svg>
         </div>
         <agile
@@ -77,18 +139,80 @@
           @click="$refs.carousel.goToNext()"
         >
           <svg
-            xmlns="http://www.w3.org/2000/svg"
+            class="errow"
+            width="60"
+            height="61"
+            viewBox="0 0 60 61"
             fill="none"
-            viewBox="0 0 24 24"
-            strokeWidth="{1.5}"
-            stroke="currentColor"
-            className="w-6 h-6 text-black"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M8.25 4.5l7.5 7.5-7.5 7.5"
-            />
+            <g filter="url(#filter0_dd_101_2641)">
+              <g clip-path="url(#clip0_101_2641)">
+                <path
+                  d="M22.5 45.1836L37.5 30.1836L22.5 15.1836"
+                  stroke="black"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </g>
+            </g>
+            <defs>
+              <filter
+                id="filter0_dd_101_2641"
+                x="-6"
+                y="-1.81641"
+                width="72"
+                height="72"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="4" />
+                <feGaussianBlur stdDeviation="3" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_101_2641"
+                />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="2" />
+                <feGaussianBlur stdDeviation="2" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="effect1_dropShadow_101_2641"
+                  result="effect2_dropShadow_101_2641"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect2_dropShadow_101_2641"
+                  result="shape"
+                />
+              </filter>
+              <clipPath id="clip0_101_2641">
+                <rect y="0.183594" width="60" height="60" rx="4" fill="white" />
+              </clipPath>
+            </defs>
           </svg>
         </div>
       </div>
