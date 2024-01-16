@@ -92,9 +92,11 @@
                 v-for="(item, i) in menuItems"
                 :key="`slice-item-${i}`"
               >
-                <PrismicLink :field="item.menu_link">{{
-                  item.menu_text
-                }}</PrismicLink>
+                <PrismicLink
+                  :field="item.menu_link"
+                  @click.native="isMenuOpen = false"
+                  >{{ item.menu_text }}</PrismicLink
+                >
               </div>
             </div>
           </div>
@@ -108,9 +110,11 @@
                 v-for="(item, i) in contactsItems"
                 :key="`slice-item-${i}`"
               >
-                <PrismicLink :field="item.menu_link">{{
-                  item.menu_text
-                }}</PrismicLink>
+                <PrismicLink
+                  :field="item.menu_link"
+                  @click.native="isMenuOpen = false"
+                  >{{ item.menu_text }}</PrismicLink
+                >
               </div>
             </div>
             <p class="text-[#B3B3B3] pb-2 text-sm">Get in touch!</p>
@@ -121,9 +125,11 @@
                 v-for="(item, i) in getInTouchItems"
                 :key="`slice-item-${i}`"
               >
-                <PrismicLink :field="item.menu_link">{{
-                  item.menu_text
-                }}</PrismicLink>
+                <PrismicLink
+                  :field="item.menu_link"
+                  @click.native="isMenuOpen = false"
+                  >{{ item.menu_text }}</PrismicLink
+                >
               </div>
             </div>
           </div>
@@ -173,7 +179,7 @@ export default {
 
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
-        //console.log('colorName ', colorName);
+
         classes = classes + ` bg-${colorName} `;
       } else {
         classes = classes + ` bg-[#FFFFFF] `;
@@ -181,8 +187,6 @@ export default {
 
       return classes;
     };
-
-    // console.log(this.slice.items);
 
     let menuItems = this?.slice?.items.filter(
       (item) => item.menu_item_type === "Menu"
