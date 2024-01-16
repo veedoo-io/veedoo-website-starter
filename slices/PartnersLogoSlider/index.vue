@@ -1,7 +1,7 @@
 <template>
   <section class="relative w-full h-fit overflow-hidden">
     <button
-      class="absolute h-[32px] w-[32px] z-10 right-[calc(25%_-_70px)] md:right-[16px] lg:right-[24px] rounded bottom-[50%] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] z-10 right-[calc(25%_-_70px)] md:right-[16px] lg:right-[24px] rounded bottom-[50%] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75 hidden md:block"
       :class="getSliderButtonClass()"
     >
       <div
@@ -91,7 +91,7 @@
       </div>
     </button>
     <button
-      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(25%_-_70px)] md:left-[16px] lg:left-[24px] bottom-[50%] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75"
+      class="absolute h-[32px] w-[32px] rounded z-10 left-[calc(25%_-_70px)] md:left-[16px] lg:left-[24px] bottom-[50%] md:bottom-[72px] md:top-[calc(50%_-_30px)] hover:scale-125 active:scale-75 hidden md:block"
       :class="getSliderButtonClass()"
     >
       <div
@@ -201,7 +201,7 @@
           }"
         >
           <PrismicImage
-            class="object-contain display:block logo w-[194px] h-[83px]"
+            class="object-contain display:block logo md:w-[194px] md:h-[83px] w-full"
             :class="getSlideImageClass()"
             :field="item.partner_logo"
           />
@@ -267,21 +267,21 @@ export default {
 
     let getSlideClass = function () {
       let classNames =
-        "w-[250px] h-[83px] bg-white mx-auto  flex justify-center items-center";
+        "md:w-[250px] md:h-[83px] bg-white mx-auto  flex justify-center items-center w-full";
 
       if (this.slice.variation == "partnersLogoSlider2") {
         classNames =
-          "w-[250px] h-[145px] rounded-md bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center";
+          "md:w-[250px] md:h-[145px] rounded-md bg-white shadow-[0_5px_10px_0px_#D4D4D4] mx-auto flex justify-center items-center w-full";
       }
 
       return classNames;
     };
 
     let getSlideImageClass = function () {
-      let classNames = "w-[194px] h-[83px]";
+      let classNames = "md:w-[194px] md:h-[83px] w-full";
 
       if (this.slice.variation == "partnersLogoSlider2") {
-        classNames = "w-[194px] h-[83px]";
+        classNames = "md:w-[194px] md:h-[83px] w-full";
       }
 
       return classNames;

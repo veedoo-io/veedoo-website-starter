@@ -99,7 +99,6 @@ export default {
     },
   },
 };
-//url(https://veedoo.io/assets/images/main_font_bg.svg)
 </script>
 
 <style scoped>
