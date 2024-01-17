@@ -4,6 +4,7 @@ import AlternateGrid from './AlternateGrid';
 import AtomTags from './AtomTags';
 import AudioPlayerWithImage from './AudioPlayerWithImage';
 import BlurbHorizontal from './BlurbHorizontal';
+import Button from './Button';
 import CallToActionWithImage from './CallToActionWithImage';
 import ContactFormVeedoo from './ContactFormVeedoo';
 import ContactUsGrid from './ContactUsGrid';
@@ -42,6 +43,7 @@ export {
 	AtomTags,
 	AudioPlayerWithImage,
 	BlurbHorizontal,
+	Button,
 	CallToActionWithImage,
 	ContactFormVeedoo,
 	ContactUsGrid,
@@ -81,6 +83,7 @@ export const components = {
 	atom_tags: AtomTags,
 	audio_player_with_image: AudioPlayerWithImage,
 	blurb: BlurbHorizontal,
+	button: Button,
 	call_to_action_with_image: CallToActionWithImage,
 	contact_form_veedoo: ContactFormVeedoo,
 	contact_info: ContactUsGrid,

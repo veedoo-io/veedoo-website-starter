@@ -106,6 +106,9 @@
             },
             "logo_grid": {
               "type": "SharedSlice"
+            },
+            "button": {
+              "type": "SharedSlice"
             }
           }
         }
