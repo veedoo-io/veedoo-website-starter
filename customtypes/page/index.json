@@ -103,6 +103,9 @@
             },
             "statistics": {
               "type": "SharedSlice"
+            },
+            "logo_grid": {
+              "type": "SharedSlice"
             }
           }
         }

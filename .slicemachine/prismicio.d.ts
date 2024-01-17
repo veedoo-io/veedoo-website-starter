@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | StatisticsSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | StatisticsSlice | LogoGridSlice
 
 /**
  * Content for Page documents
@@ -3565,6 +3565,69 @@ type ImageSliceVariation = ImageSliceDefault
 export type ImageSlice = prismic.SharedSlice<"image", ImageSliceVariation>;
 
 /**
+ * Primary content in *LogoGrid → Primary*
+ */
+export interface LogoGridSliceDefaultPrimary {
+	/**
+	 * margin top field in *LogoGrid → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: logo_grid.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+	
+	/**
+	 * margin bottom field in *LogoGrid → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: logo_grid.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+}
+
+/**
+ * Primary content in *LogoGrid → Items*
+ */
+export interface LogoGridSliceDefaultItem {
+	/**
+	 * image field in *LogoGrid → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: logo_grid.items[].image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for LogoGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: LogoGrid
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LogoGridSliceDefault = prismic.SharedSliceVariation<"default", Simplify<LogoGridSliceDefaultPrimary>, Simplify<LogoGridSliceDefaultItem>>;
+
+/**
+ * Slice variation for *LogoGrid*
+ */
+type LogoGridSliceVariation = LogoGridSliceDefault
+
+/**
+ * LogoGrid Shared Slice
+ *
+ * - **API ID**: `logo_grid`
+ * - **Description**: LogoGrid
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LogoGridSlice = prismic.SharedSlice<"logo_grid", LogoGridSliceVariation>;
+
+/**
  * Primary content in *PageNotFound1 → Primary*
  */
 export interface PageNotFound1SliceDefaultPrimary {
@@ -5477,6 +5540,9 @@ declare module "@prismicio/client" {
 			ImageSlice,
 			ImageSliceVariation,
 			ImageSliceDefault,
+			LogoGridSlice,
+			LogoGridSliceVariation,
+			LogoGridSliceDefault,
 			PageNotFound1Slice,
 			PageNotFound1SliceVariation,
 			PageNotFound1SliceDefault,

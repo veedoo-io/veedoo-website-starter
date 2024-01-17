@@ -9,9 +9,7 @@
       :field="slice.primary.description"
       class="flex flex-wrap items-center gap-2.5"
     />
-    <div
-      class="mt-[78px] grid md:grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-14 w-full"
-    >
+    <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-14 w-full">
       <div
         class="flex-[0_0_98%] md:flex-[0_0_48%] lg:flex-[0_0_23%]"
         v-for="(item, i) in slice.items"

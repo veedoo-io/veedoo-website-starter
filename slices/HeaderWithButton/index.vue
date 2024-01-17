@@ -72,7 +72,11 @@
               v-for="(item, i) in slice.items"
               :key="`slice-item-m-${i}`"
             >
-              <PrismicImage :field="item.icon" class="w-6 h-6 mr-4" v-if="Object.keys(item.icon).length"/>
+              <PrismicImage
+                :field="item.icon"
+                class="w-6 h-6 mr-4"
+                v-if="Object.keys(item.icon).length"
+              />
               <PrismicLink
                 class="text-[16px] font-semibold"
                 :field="item.menu_link"
