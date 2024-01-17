@@ -400,6 +400,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "LogoGrid": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

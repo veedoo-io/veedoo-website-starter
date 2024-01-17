@@ -18,6 +18,7 @@ import HeaderVeedoo from './HeaderVeedoo';
 import HeaderWithButton from './HeaderWithButton';
 import HeroVeedoo from './HeroVeedoo';
 import ImageSlice from './ImageSlice';
+import LogoGrid from './LogoGrid';
 import PageNotFound1 from './PageNotFound1';
 import PartnerLogoGridWithDescriptionText from './PartnerLogoGridWithDescriptionText';
 import PartnersLogoSlider from './PartnersLogoSlider';
@@ -55,6 +56,7 @@ export {
 	HeaderWithButton,
 	HeroVeedoo,
 	ImageSlice,
+	LogoGrid,
 	PageNotFound1,
 	PartnerLogoGridWithDescriptionText,
 	PartnersLogoSlider,
@@ -93,6 +95,7 @@ export const components = {
 	header_with_button: HeaderWithButton,
 	hero_veedoo: HeroVeedoo,
 	image: ImageSlice,
+	logo_grid: LogoGrid,
 	page_not_found1: PageNotFound1,
 	partner_logo_grid_with_description_text: PartnerLogoGridWithDescriptionText,
 	partners_logo_slider: PartnersLogoSlider,
