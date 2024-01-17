@@ -405,6 +405,11 @@
       "default": {
         "primary": {}
       }
+    },
+    "Button": {
+      "default": {
+        "primary": {}
+      }
     }
   },
   "_cts": {

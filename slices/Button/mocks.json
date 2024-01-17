@@ -1,0 +1,51 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://twitter.com"
+        }
+      },
+      "button_text": {
+        "__TYPE__": "FieldContent",
+        "value": "create",
+        "type": "Text"
+      },
+      "button_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#c89913",
+        "type": "Color"
+      },
+      "button_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#b6b416",
+        "type": "Color"
+      },
+      "margin_top": {
+        "__TYPE__": "FieldContent",
+        "value": "45",
+        "type": "Number"
+      },
+      "margin_bottom": {
+        "__TYPE__": "FieldContent",
+        "value": "45",
+        "type": "Number"
+      },
+      "alignment": {
+        "__TYPE__": "FieldContent",
+        "value": "right",
+        "type": "Select"
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

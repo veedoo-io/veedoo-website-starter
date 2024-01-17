@@ -87,6 +87,21 @@
             },
             "blurb": {
               "type": "SharedSlice"
+            },
+            "button": {
+              "type": "SharedSlice"
+            },
+            "cta_text_block_image_block": {
+              "type": "SharedSlice"
+            },
+            "gallery_slider": {
+              "type": "SharedSlice"
+            },
+            "logo_grid": {
+              "type": "SharedSlice"
+            },
+            "statistics": {
+              "type": "SharedSlice"
             }
           }
         }

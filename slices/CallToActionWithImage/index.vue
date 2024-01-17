@@ -29,8 +29,6 @@ export default {
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
   props: getSliceComponentProps(["slice", "index", "slices", "context"]),
   data() {
-    //console.log('slice ', this.slice);
-
     let getContainerClass = function () {
       let classNames =
         "flex flex-col w-full h-full justify-center gap-[40px] overflow-hidden  ";
@@ -67,10 +65,9 @@ export default {
 
         classNames = classNames + ` bg-${colorName} `;
       } else {
-        classNames = classNames + " bg-[#2F80ED]";
+        classNames = classNames + " bg-[#F25849]";
       }
 
-      //console.log('textcolor', this.slice.primary.button_text_color);
       if (
         this.slice.primary?.button_text_color &&
         this.slice.primary?.button_text_color != ""
