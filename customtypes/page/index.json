@@ -109,6 +109,9 @@
             },
             "button": {
               "type": "SharedSlice"
+            },
+            "text_with_tags": {
+              "type": "SharedSlice"
             }
           }
         }
