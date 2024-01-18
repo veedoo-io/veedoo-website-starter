@@ -1,0 +1,150 @@
+{
+  "id": "text_with_tags",
+  "type": "SharedSlice",
+  "name": "TextWithTags",
+  "description": "TextWithTags",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextWithTags",
+      "primary": {
+        "margin_top": {
+          "type": "Number",
+          "config": {
+            "label": "margin top",
+            "placeholder": ""
+          }
+        },
+        "margin_bottom": {
+          "type": "Number",
+          "config": {
+            "label": "margin bottom",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "tag_label": {
+          "type": "Text",
+          "config": {
+            "label": "tag label",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "tag_label_color": {
+          "type": "Color",
+          "config": {
+            "label": "tag label color",
+            "placeholder": ""
+          }
+        },
+        "tag_color": {
+          "type": "Color",
+          "config": {
+            "label": "tag color",
+            "placeholder": ""
+          }
+        },
+        "tag_image": {
+          "type": "Image",
+          "config": {
+            "label": "tag image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "noShadowTag",
+      "name": "noShadowTag",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "TextWithTags",
+      "primary": {
+        "margin_top": {
+          "type": "Number",
+          "config": {
+            "label": "margin top",
+            "placeholder": ""
+          }
+        },
+        "margin_bottom": {
+          "type": "Number",
+          "config": {
+            "label": "margin bottom",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "tag_label": {
+          "type": "Text",
+          "config": {
+            "label": "tag label",
+            "placeholder": ""
+          }
+        },
+        "text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "tag_label_color": {
+          "type": "Color",
+          "config": {
+            "label": "tag label color",
+            "placeholder": ""
+          }
+        },
+        "tag_color": {
+          "type": "Color",
+          "config": {
+            "label": "tag color",
+            "placeholder": ""
+          }
+        },
+        "tag_image": {
+          "type": "Image",
+          "config": {
+            "label": "tag image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "text_color": {
+          "type": "Color",
+          "config": {
+            "label": "text color",
+            "placeholder": ""
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

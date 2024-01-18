@@ -33,6 +33,7 @@ import SimpleErrorPage from './SimpleErrorPage';
 import SocialFollowIcons from './SocialFollowIcons';
 import Statistics from './Statistics';
 import Testimonial from './Testimonial';
+import TextWithTags from './TextWithTags';
 import Title from './Title';
 import TitleWithDateAndShareIcons from './TitleWithDateAndShareIcons';
 import TwoColumnTextBlock from './TwoColumnTextBlock';
@@ -72,6 +73,7 @@ export {
 	SocialFollowIcons,
 	Statistics,
 	Testimonial,
+	TextWithTags,
 	Title,
 	TitleWithDateAndShareIcons,
 	TwoColumnTextBlock,
@@ -112,6 +114,7 @@ export const components = {
 	social_follow_icons: SocialFollowIcons,
 	statistics: Statistics,
 	testimonial: Testimonial,
+	text_with_tags: TextWithTags,
 	title: Title,
 	title_with_date_and_share_icons: TitleWithDateAndShareIcons,
 	two_column_text_block: TwoColumnTextBlock,

@@ -313,7 +313,7 @@ interface HeaderDocumentData {
  */
 export type HeaderDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<HeaderDocumentData>, "header", Lang>;
 
-type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | ButtonSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | LogoGridSlice | StatisticsSlice
+type HomePageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | HeroVeedooSlice | AlternateGridSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | DividerSlice | RichTextSlice | PostListingSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | AudioPlayerWithImageSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | ButtonSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | LogoGridSlice | StatisticsSlice | TextWithTagsSlice
 
 /**
  * Content for Home Page documents
@@ -402,7 +402,7 @@ interface PageNotFoundDocumentData {
  */
 export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
 
-type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | StatisticsSlice | LogoGridSlice | ButtonSlice
+type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | StatisticsSlice | LogoGridSlice | ButtonSlice | TextWithTagsSlice
 
 /**
  * Content for Page documents
@@ -5080,6 +5080,218 @@ type TestimonialSliceVariation = TestimonialSliceDefault
 export type TestimonialSlice = prismic.SharedSlice<"testimonial", TestimonialSliceVariation>;
 
 /**
+ * Primary content in *TextWithTags → Primary*
+ */
+export interface TextWithTagsSliceDefaultPrimary {
+	/**
+	 * margin top field in *TextWithTags → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+	
+	/**
+	 * margin bottom field in *TextWithTags → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+}
+
+/**
+ * Primary content in *TextWithTags → Items*
+ */
+export interface TextWithTagsSliceDefaultItem {
+	/**
+	 * tag label field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tag_label: prismic.KeyTextField;
+	
+	/**
+	 * text field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	text: prismic.RichTextField;
+	
+	/**
+	 * tag label color field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_label_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	tag_label_color: prismic.ColorField;
+	
+	/**
+	 * tag color field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	tag_color: prismic.ColorField;
+	
+	/**
+	 * tag image field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	tag_image: prismic.ImageField<never>;
+	
+	/**
+	 * text color field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+}
+
+/**
+ * Default variation for TextWithTags Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: TextWithTags
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithTagsSliceDefault = prismic.SharedSliceVariation<"default", Simplify<TextWithTagsSliceDefaultPrimary>, Simplify<TextWithTagsSliceDefaultItem>>;
+
+/**
+ * Primary content in *TextWithTags → Primary*
+ */
+export interface TextWithTagsSliceNoShadowTagPrimary {
+	/**
+	 * margin top field in *TextWithTags → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.primary.margin_top
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_top: prismic.NumberField;
+	
+	/**
+	 * margin bottom field in *TextWithTags → Primary*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.primary.margin_bottom
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	margin_bottom: prismic.NumberField;
+}
+
+/**
+ * Primary content in *TextWithTags → Items*
+ */
+export interface TextWithTagsSliceNoShadowTagItem {
+	/**
+	 * tag label field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tag_label: prismic.KeyTextField;
+	
+	/**
+	 * text field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	text: prismic.RichTextField;
+	
+	/**
+	 * tag label color field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_label_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	tag_label_color: prismic.ColorField;
+	
+	/**
+	 * tag color field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	tag_color: prismic.ColorField;
+	
+	/**
+	 * tag image field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].tag_image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	tag_image: prismic.ImageField<never>;
+	
+	/**
+	 * text color field in *TextWithTags → Items*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: text_with_tags.items[].text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	text_color: prismic.ColorField;
+}
+
+/**
+ * noShadowTag variation for TextWithTags Slice
+ *
+ * - **API ID**: `noShadowTag`
+ * - **Description**: TextWithTags
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithTagsSliceNoShadowTag = prismic.SharedSliceVariation<"noShadowTag", Simplify<TextWithTagsSliceNoShadowTagPrimary>, Simplify<TextWithTagsSliceNoShadowTagItem>>;
+
+/**
+ * Slice variation for *TextWithTags*
+ */
+type TextWithTagsSliceVariation = TextWithTagsSliceDefault | TextWithTagsSliceNoShadowTag
+
+/**
+ * TextWithTags Shared Slice
+ *
+ * - **API ID**: `text_with_tags`
+ * - **Description**: TextWithTags
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type TextWithTagsSlice = prismic.SharedSlice<"text_with_tags", TextWithTagsSliceVariation>;
+
+/**
  * Primary content in *Title → Primary*
  */
 export interface TitleSliceDefaultPrimary {
@@ -5684,6 +5896,10 @@ declare module "@prismicio/client" {
 			TestimonialSlice,
 			TestimonialSliceVariation,
 			TestimonialSliceDefault,
+			TextWithTagsSlice,
+			TextWithTagsSliceVariation,
+			TextWithTagsSliceDefault,
+			TextWithTagsSliceNoShadowTag,
 			TitleSlice,
 			TitleSliceVariation,
 			TitleSliceDefault,

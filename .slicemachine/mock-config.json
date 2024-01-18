@@ -410,6 +410,12 @@
       "default": {
         "primary": {}
       }
+    },
+    "TextWithTags": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
     }
   },
   "_cts": {
