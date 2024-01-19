@@ -223,7 +223,7 @@
                 />
                 <div class="px-10 pt-10">
                   <PrismicRichText
-                    class="text-[28px] font-medium text-center"
+                    class="text-[28px] font-medium"
                     :style="`color: ${slice.primary.primary_color}`"
                     :field="item.data.title"
                   />
