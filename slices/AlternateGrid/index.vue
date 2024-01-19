@@ -7,7 +7,7 @@
     <PrismicRichText
       :class="getDescriptionClasses()"
       :field="slice.primary.description"
-      class="flex flex-wrap items-center gap-2.5"
+      class="flex flex-wrap items-center gap-2.5 md:pb-16 pb-10"
     />
     <div class="grid md:grid-cols-2 xl:grid-cols-4 gap-x-6 gap-y-14 w-full">
       <div

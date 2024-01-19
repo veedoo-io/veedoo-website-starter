@@ -12,6 +12,7 @@
       v-if="slice.primary.title"
       :class="getTitleClasses()"
       :style="getTitleStyle"
+      class="text-[30px] md:text-[40px] lg:text-[60px]"
     >
       {{ slice.primary.title }}
     </h1>

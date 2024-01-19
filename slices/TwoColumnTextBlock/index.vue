@@ -50,4 +50,13 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+::v-deep .block-img img {
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+</style>
