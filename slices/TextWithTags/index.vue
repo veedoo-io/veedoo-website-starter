@@ -23,10 +23,11 @@
          `"
         />
       </div>
-      <div class="xl:w-[80%] md:w-[70%] w-full">
+      <div class="xl:w-[80%] md:w-[70%] w-full md:pl-10">
         <PrismicRichText
           :field="item.text"
           :style="`color: ${item.text_color}`"
+          class=""
         />
       </div>
     </div>

@@ -47,12 +47,13 @@
         class="w-full h-full flex justify-center items-center relative"
       >
         <div
-          class="max-md:hidden absolute bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 z-40 rounded cursor-pointer w-[60px] h-[60px]"
+          class="max-md:hidden absolute bg-white w-8 h-8 active:scale-125 rounded shadow-[0_5px_10px_0px_#D4D4D4] left-0 z-40 cursor-pointer"
           @click="$refs.carousel.goToPrev()"
         >
           <svg
-            width="60"
-            height="61"
+            class="errow"
+            width="32"
+            height="32"
             viewBox="0 0 60 61"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -127,12 +128,13 @@
           </svg>
         </div>
         <div
-          class="max-md:hidden absolute right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-[60px] z-40 rounded cursor-pointer"
+          class="max-md:hidden absolute right-0 bg-white w-8 h-8 shadow-[0_5px_10px_0px_#D4D4D4] z-40 rounded cursor-pointer"
           @click="$refs.carousel.goToNext()"
         >
           <svg
-            width="60"
-            height="61"
+            class="errow"
+            width="32"
+            height="32"
             viewBox="0 0 60 61"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -239,12 +241,12 @@
 
           <div class="flex md:hidden justify-center items-center w-full gap-10">
             <div
-              class="bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-[60px] z-40 rounded cursor-pointer"
+              class="bg-white shadow-[0_5px_10px_0px_#D4D4D4] left-0 h-8 w-8 z-40 rounded cursor-pointer"
               @click="$refs.carousel.goToPrev()"
             >
               <svg
-                width="60"
-                height="61"
+                width="32"
+                height="32"
                 viewBox="0 0 60 61"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
@@ -325,12 +327,12 @@
               </svg>
             </div>
             <div
-              class="right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-[60px] z-40"
+              class="right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-8 w-8 z-40"
               @click="$refs.carousel.goToNext()"
             >
               <svg
-                width="60"
-                height="61"
+                width="32"
+                height="32"
                 viewBox="0 0 60 61"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
