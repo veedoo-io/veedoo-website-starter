@@ -220,7 +220,7 @@
                 class="w-full h-full bg-white flex flex-col items-center overflow-hidden rounded-[10px] shadow-[0_5px_10px_0px_#D4D4D4] card"
               >
                 <PrismicImage
-                  class="text-[#353C47] hover:cursor-pointer w-full h-[330px] object-cover"
+                  class="text-[#353C47] hover:cursor-pointer w-full md:h-[330px] h-[240px] object-cover"
                   :field="item.data.image"
                 />
                 <div class="px-10 pt-10">
