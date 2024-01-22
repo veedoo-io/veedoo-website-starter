@@ -120,4 +120,9 @@ export default {
   transform: translate3d(0, 0, 0);
   font-family: "Poppins", sans-serif;
 }
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 30px !important;
+  }
+}
 </style>
