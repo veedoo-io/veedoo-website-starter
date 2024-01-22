@@ -213,7 +213,7 @@
             <div
               v-for="(item, i) in posts"
               :key="`posts-item-${i}`"
-              class="slide my-2 h-full justify-center px-[20px] rounded overflow-hidden py-10"
+              class="slide my-2 h-full justify-center px-0 md:px-[20px] rounded overflow-hidden py-10"
             >
               <PrismicLink
                 :field="item"
