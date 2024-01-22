@@ -128,7 +128,7 @@
           </svg>
         </div>
         <div
-          class="max-md:hidden absolute right-0 bg-white w-8 h-8 shadow-[0_5px_10px_0px_#D4D4D4] z-40 rounded cursor-pointer"
+          class="max-md:hidden absolute right-0 bg-white w-8 h-8 shadow-[0_5px_10px_0px_#D4D4D4] z-40 cursor-pointer rounded"
           @click="$refs.carousel.goToNext()"
         >
           <svg
@@ -327,7 +327,7 @@
               </svg>
             </div>
             <div
-              class="right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-8 w-8 z-40"
+              class="right-0 bg-white shadow-[0_5px_10px_0px_#D4D4D4] h-8 w-8 z-40 rounded"
               @click="$refs.carousel.goToNext()"
             >
               <svg
