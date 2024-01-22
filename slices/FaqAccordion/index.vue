@@ -33,7 +33,7 @@
                 : '#FFFFFF'
             }; filter:drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)) `"
           >
-            <div class="flex justify-between w-full">
+            <div class="flex w-full">
               <PrismicRichText
                 :style="`color: ${
                   slice.primary.question_text_color
@@ -53,7 +53,7 @@
                 className="w-6 h-6"
                 width="24px"
                 height="24px"
-                class="cursor-pointer"
+                class="cursor-pointer ml-auto w-6 h-6 flex-none"
               >
                 <path
                   strokeLinecap="round"

@@ -17,7 +17,7 @@
       {{ slice.primary.title }}
     </h1>
     <h1
-      class="text-[40px] md:hidden block leading-10 tracking-wide text-[#353C47]"
+      class="text-[40px] md:hidden block leading-10 tracking-wide text-[#353C47] font-bold"
     >
       {{ slice.primary.title }}
     </h1>
