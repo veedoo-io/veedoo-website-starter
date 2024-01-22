@@ -12,7 +12,12 @@
       v-if="slice.primary.title"
       :class="getTitleClasses()"
       :style="getTitleStyle"
-      class="md:text-[40px] lg:text-[60px]"
+      class="md:text-[40px] lg:text-[60px] hidden md:block leading-10 tracking-wide"
+    >
+      {{ slice.primary.title }}
+    </h1>
+    <h1
+      class="text-[40px] md:hidden block leading-10 tracking-wide text-[#353C47]"
     >
       {{ slice.primary.title }}
     </h1>
@@ -55,7 +60,7 @@ export default {
 
     let getTitleClasses = function () {
       let classes =
-        "b-page__home-title text-[40px] w-full sm:text-[60px] xl:text-[102px]";
+        "b-page__home-title text-[40px] w-full sm:text-[60px] xl:text-[102px] text-[#353C47]";
 
       return classes;
     };
@@ -81,7 +86,6 @@ export default {
   },
   mounted() {
     document.addEventListener("mousemove", (event) => {
-      //console.log();
       this.mousePosX = event.clientX;
     });
   },
