@@ -9,7 +9,7 @@
   >
     <Header />
     <div
-      class="pt-20 first-letter:w-full xl:px-8 md-8 xl:w-[75%] lg:w-[80%] w-full px-[24px] flex-1 pb-9 mx-auto"
+      class="pt-20 first-letter:w-full xl:px-8 md-8 xl:w-[75%] lg:w-[80%] w-full flex-1 pb-9 mx-auto"
     >
       <nuxt />
     </div>

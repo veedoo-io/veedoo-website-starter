@@ -118,7 +118,7 @@ export default {
 
   data() {
     let getContainerClasses = function () {
-      let classes = "w-full h-full py-10 flex flex-col justify-center px-0";
+      let classes = "w-full h-full py-10 flex flex-col justify-center px-6";
 
       if (this.slice.primary.background_color) {
         let colorName = tailwindMatcher(this.slice.primary.background_color);
