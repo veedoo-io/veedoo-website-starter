@@ -12,7 +12,7 @@
       v-if="slice.primary.title"
       :class="getTitleClasses()"
       :style="getTitleStyle"
-      class="text-[30px] md:text-[40px] lg:text-[60px]"
+      class="md:text-[40px] lg:text-[60px]"
     >
       {{ slice.primary.title }}
     </h1>
@@ -119,10 +119,5 @@ export default {
   margin-top: 10px;
   transform: translate3d(0, 0, 0);
   font-family: "Poppins", sans-serif;
-}
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 30px !important;
-  }
 }
 </style>
