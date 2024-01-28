@@ -109,7 +109,7 @@ interface AuthorDocumentData {
  */
 export type AuthorDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<AuthorDocumentData>, "author", Lang>;
 
-type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordionSlice | AtomTagsSlice | AlternateGridSlice | BlurbSlice | ButtonSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ContactInfoSlice | CtaTextBlockImageBlockSlice | CtaWithBackgroundImageSlice | GallerySliderSlice | HeroVeedooSlice | LogoGridSlice | PartnerLogoGridWithDescriptionTextSlice | PartnersLogoSliderSlice | PersonSlice | PortfolioItemsSlice | PostListingSlice | SocialFollowIconsSlice | StatisticsSlice | TestimonialSlice | TextWithTagsSlice
+type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordionSlice | AtomTagsSlice | AlternateGridSlice | BlurbSlice | ButtonSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ContactInfoSlice | CtaTextBlockImageBlockSlice | CtaWithBackgroundImageSlice | GallerySliderSlice | HeroVeedooSlice | LogoGridSlice | PartnerLogoGridWithDescriptionTextSlice | PartnersLogoSliderSlice | PersonSlice | PortfolioItemsSlice | SocialFollowIconsSlice | StatisticsSlice | TestimonialSlice | TextWithTagsSlice
 
 /**
  * Content for blog Post documents

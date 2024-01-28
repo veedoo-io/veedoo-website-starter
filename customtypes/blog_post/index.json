@@ -169,9 +169,6 @@
             "portfolio_items": {
               "type": "SharedSlice"
             },
-            "post_listing": {
-              "type": "SharedSlice"
-            },
             "social_follow_icons": {
               "type": "SharedSlice"
             },
