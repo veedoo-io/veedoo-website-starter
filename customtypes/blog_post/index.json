@@ -120,6 +120,69 @@
             },
             "faq_accordion": {
               "type": "SharedSlice"
+            },
+            "atom_tags": {
+              "type": "SharedSlice"
+            },
+            "alternate_grid": {
+              "type": "SharedSlice"
+            },
+            "blurb": {
+              "type": "SharedSlice"
+            },
+            "button": {
+              "type": "SharedSlice"
+            },
+            "call_to_action_with_image": {
+              "type": "SharedSlice"
+            },
+            "contact_form_veedoo": {
+              "type": "SharedSlice"
+            },
+            "contact_info": {
+              "type": "SharedSlice"
+            },
+            "cta_text_block_image_block": {
+              "type": "SharedSlice"
+            },
+            "cta_with_background_image": {
+              "type": "SharedSlice"
+            },
+            "gallery_slider": {
+              "type": "SharedSlice"
+            },
+            "hero_veedoo": {
+              "type": "SharedSlice"
+            },
+            "logo_grid": {
+              "type": "SharedSlice"
+            },
+            "partner_logo_grid_with_description_text": {
+              "type": "SharedSlice"
+            },
+            "partners_logo_slider": {
+              "type": "SharedSlice"
+            },
+            "person": {
+              "type": "SharedSlice"
+            },
+            "portfolio_items": {
+              "type": "SharedSlice"
+            },
+            "post_listing": {
+              "type": "SharedSlice"
+            },
+            "social_follow_icons": {
+              "type": "SharedSlice"
+            },
+            "statistics": {
+              "type": "SharedSlice"
+            },
+            "testimonial": {
+              "type": "SharedSlice"
+            },
+            "text_with_tags": {
+              "type": "SharedSlice"
             }
           }
         }

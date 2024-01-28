@@ -232,6 +232,7 @@ export default async () => {
       UserAgent: '*',
       Allow: '/',
       Disallow: '',
+      sitemap: 'https://veedoo.io/sitemap.xml'
     },
 
     sitemap: {
