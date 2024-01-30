@@ -2939,6 +2939,36 @@ export interface FooterVeedooSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#color
 	 */
 	text_color: prismic.ColorField;
+	
+	/**
+	 * link field in *FooterVeedoo → Primary*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_veedoo.primary.link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+	
+	/**
+	 * link text field in *FooterVeedoo → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_veedoo.primary.link_text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	link_text: prismic.RichTextField;
+	
+	/**
+	 * link text color field in *FooterVeedoo → Primary*
+	 *
+	 * - **Field Type**: Color
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: footer_veedoo.primary.link_text_color
+	 * - **Documentation**: https://prismic.io/docs/field#color
+	 */
+	link_text_color: prismic.ColorField;
 }
 
 /**
