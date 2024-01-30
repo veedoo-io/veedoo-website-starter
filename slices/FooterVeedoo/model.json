@@ -41,6 +41,30 @@
             "label": "text color",
             "placeholder": ""
           }
+        },
+        "link": {
+          "type": "Link",
+          "config": {
+            "label": "link",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "link_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "link text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em"
+          }
+        },
+        "link_text_color": {
+          "type": "Color",
+          "config": {
+            "label": "link text color",
+            "placeholder": ""
+          }
         }
       },
       "items": {

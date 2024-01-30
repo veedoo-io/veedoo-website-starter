@@ -10,22 +10,29 @@
         <PrismicImage class="h-8" :field="item.footer_flag" />
       </div>
     </div>
+    <PrismicLink :field="slice.primary.link">
+      <PrismicRichText
+        :style="`color: ${slice.primary.link_text_color}`"
+        key=""
+        :field="slice.primary.link_text"
+      />
+    </PrismicLink>
   </footer>
 </template>
 
 <script>
-import { getSliceComponentProps } from '@prismicio/vue/components';
-import tailwindMatcher from 'hex2tailwind';
+import { getSliceComponentProps } from "@prismicio/vue/components";
+import tailwindMatcher from "hex2tailwind";
 
 export default {
-  name: 'FooterVeedoo',
+  name: "FooterVeedoo",
   // The array passed to `getSliceComponentProps` is purely optional and acts as a visual hint for you
-  props: getSliceComponentProps(['slice', 'index', 'slices', 'context']),
+  props: getSliceComponentProps(["slice", "index", "slices", "context"]),
 
   data() {
     let getContainerClasses = function () {
       let classes =
-        'flex flex-col gap-4 justify-center items-center py-8 text-center ';
+        "flex flex-col gap-4 justify-center items-center py-8 text-center ";
 
       if (this?.slice?.primary?.background_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.background_color);
@@ -37,7 +44,7 @@ export default {
     };
 
     let getFooterTextClasses = function () {
-      let classes = 'text-sm	';
+      let classes = "text-sm	";
 
       if (this?.slice?.primary?.text_color) {
         let colorName = tailwindMatcher(this?.slice?.primary?.text_color);

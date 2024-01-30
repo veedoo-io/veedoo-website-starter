@@ -4,7 +4,6 @@
     "variation": "default",
     "primary": {
       "footer_logo": {
-        "__TYPE__": "ImageContent",
         "origin": {
           "id": "main",
           "url": "https://images.unsplash.com/photo-1504198070170-4ca53bb1c1fa",
@@ -22,6 +21,9 @@
           },
           "background": "transparent"
         },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
         "thumbnails": {}
       },
       "footer_text": {
@@ -44,6 +46,29 @@
         "__TYPE__": "FieldContent",
         "value": "#e97836",
         "type": "Color"
+      },
+      "link": {
+        "__TYPE__": "LinkContent",
+        "value": {
+          "__TYPE__": "ExternalLink",
+          "url": "http://google.com"
+        }
+      },
+      "link_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Elit voluptate proident nisi fugiat qui ipsum incididunt occaecat fugiat deserunt culpa. Id eiusmod quis quis officia aliqua sint sint cupidatat deserunt veniam quis nisi aliqua commodo."
+            }
+          }
+        ]
+      },
+      "link_text_color": {
+        "__TYPE__": "FieldContent",
+        "value": "#8da560",
+        "type": "Color"
       }
     },
     "items": [
@@ -53,7 +78,6 @@
           [
             "footer_flag",
             {
-              "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
                 "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a",
@@ -71,6 +95,9 @@
                 },
                 "background": "transparent"
               },
+              "credits": null,
+              "alt": null,
+              "__TYPE__": "ImageContent",
               "thumbnails": {}
             }
           ]
