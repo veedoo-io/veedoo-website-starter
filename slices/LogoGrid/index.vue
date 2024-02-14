@@ -10,9 +10,8 @@
         class="h-full flex"
       >
         <div class="flex">
-          <PrismicLink :field="item.link">
+          <PrismicLink :field="item.link" target="_blank">
             <PrismicImage
-              target="_blank"
               v-if="Object.keys(item.image).length"
               class="h-[80px] md:w-[212px] w-full mb-6 object-contain"
               :field="item.image"
