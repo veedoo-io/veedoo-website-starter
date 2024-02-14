@@ -12,6 +12,7 @@
         <div class="flex">
           <PrismicLink :field="item.link">
             <PrismicImage
+              target="_blank"
               v-if="Object.keys(item.image).length"
               class="h-[80px] md:w-[212px] w-full mb-6 object-contain"
               :field="item.image"
