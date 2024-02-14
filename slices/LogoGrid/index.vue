@@ -10,11 +10,13 @@
         class="h-full flex"
       >
         <div class="flex">
-          <PrismicImage
-            v-if="Object.keys(item.image).length"
-            class="h-[80px] md:w-[212px] w-full mb-6 object-contain"
-            :field="item.image"
-          />
+          <PrismicLink :field="item.link">
+            <PrismicImage
+              v-if="Object.keys(item.image).length"
+              class="h-[80px] md:w-[212px] w-full mb-6 object-contain"
+              :field="item.image"
+            />
+          </PrismicLink>
         </div>
       </div>
     </div>
