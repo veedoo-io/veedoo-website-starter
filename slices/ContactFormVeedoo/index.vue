@@ -51,9 +51,6 @@
           :class="getInputClasses()"
           :placeholder="slice.primary.surname_placeholder ?? 'Name'"
         />
-        <div class="text-sm mt-1" v-if="v$.name?.$error">
-          <p class="font-medium text-red-600">Surname is required.</p>
-        </div>
       </div>
       <div class="flex flex-col mb-4">
         <label class="mb-2">{{
