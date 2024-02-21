@@ -289,7 +289,7 @@ export default {
           }
         );
 
-        const response = await fetch("/server-middleware/contact", {
+        const response = await fetch("/proxy/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

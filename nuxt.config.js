@@ -241,7 +241,7 @@ export default async () => {
     },
 
     serverMiddleware: [
-      { path: '/server-middleware', handler: '~/server-middleware/contact.js' },
+      { path: '/contact', handler: '~/server-middleware/contact.js' },
     ],
 
     prismic: {
