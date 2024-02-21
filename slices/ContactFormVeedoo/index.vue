@@ -7,6 +7,11 @@
       marginBottom: `${marginBottom} `,
     }"
   >
+    <!--<iframe
+      src="https://veedoo.fibery.io/@public/forms/jQnOre1W"
+      style="width: 100%; height: 1400px"
+      frameborder="0"
+    ></iframe>-->
     <PrismicImage
       class="w-[60px] h-[60px] object-cover"
       :field="slice.primary.image"
@@ -19,6 +24,7 @@
       <PrismicRichText class="font-medium" :field="slice.primary.description" />
     </div>
     <form
+      novalidate
       v-on:submit.prevent="onSubmit()"
       class="flex-1 flex flex-col w-full max-w-[400px]"
     >
@@ -38,6 +44,19 @@
       </div>
       <div class="flex flex-col mb-4">
         <label class="mb-2">{{
+          slice.primary.surname_label ?? "Your surname"
+        }}</label>
+        <input
+          v-model="surname"
+          :class="getInputClasses()"
+          :placeholder="slice.primary.surname_placeholder ?? 'Name'"
+        />
+        <div class="text-sm mt-1" v-if="v$.name?.$error">
+          <p class="font-medium text-red-600">Surname is required.</p>
+        </div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="mb-2">{{
           slice.primary.email_title ?? "Your Email"
         }}</label>
         <input
@@ -49,6 +68,23 @@
         />
         <div class="text-sm mt-1" v-if="v$.email?.$error">
           <p class="font-medium text-red-600">Enter valid email.</p>
+        </div>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label class="mb-2">{{
+          slice.primary.phone_number_label ?? "Your Email"
+        }}</label>
+        <input
+          v-model="phone"
+          type="phone"
+          required=""
+          :class="getInputClasses()"
+          :placeholder="
+            slice.primary.phone_number_placeholder ?? 'Joe@mail.com'
+          "
+        />
+        <div class="text-sm mt-1" v-if="v$.phone?.$error">
+          <p class="font-medium text-red-600">Enter valid phone.</p>
         </div>
       </div>
       <div class="flex-1 flex-col mb-4">
@@ -66,6 +102,7 @@
           <p class="font-medium text-red-600">Message is required.</p>
         </div>
       </div>
+      <PrismicRichText :field="slice.primary.agreement_text" />
       <button
         type="submit"
         ref="submitButton"
@@ -103,8 +140,12 @@
 import { getSliceComponentProps } from "@prismicio/vue/components";
 import tailwindMatcher from "hex2tailwind";
 import { mapGetters } from "vuex";
-import { required, email } from "@vuelidate/validators";
+import { required, email, helpers } from "@vuelidate/validators";
 import { useVuelidate } from "@vuelidate/core";
+
+const phoneValid = helpers.regex(
+  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+);
 
 export default {
   name: "ContactFormVeedoo",
@@ -186,7 +227,9 @@ export default {
       getButtonClasses,
       email: null,
       name: "",
+      surname: "",
       message: "",
+      phone: "",
       marginTop,
       marginBottom,
       sendingMessage: false,
@@ -209,6 +252,11 @@ export default {
       },
       message: {
         required,
+        $autoDirty: true,
+        $lazy: true,
+      },
+      phone: {
+        phoneValid,
         $autoDirty: true,
         $lazy: true,
       },
@@ -243,6 +291,21 @@ export default {
             }),
           }
         );
+
+        const response = await fetch("/server-middleware/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            firstName: this.name,
+            lastName: this.surname,
+            phone: this.phone,
+            email: this.email,
+            message: this.message,
+          }),
+        });
+        const res = await response.json();
 
         //console.log('request', request);
         let result = await request.json();

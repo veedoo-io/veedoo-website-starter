@@ -240,6 +240,10 @@ export default async () => {
       exclude: ['/slice-simulator', '/preview'],
     },
 
+    serverMiddleware: [
+      { path: '/server-middleware', handler: '~/server-middleware/contact.js' },
+    ],
+
     prismic: {
       endpoint: apiEndpoint,
       modern: true,
