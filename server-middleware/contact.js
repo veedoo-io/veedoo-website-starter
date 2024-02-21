@@ -31,4 +31,4 @@ app.all('/contact', async (req, res) => {
 
 })
 
-module.exports = app
+module.exports = { path: "/proxy", handler: app };
