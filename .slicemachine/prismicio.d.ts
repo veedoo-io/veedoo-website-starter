@@ -1518,6 +1518,46 @@ export interface ContactFormVeedooSliceDefaultPrimary {
 	name_placeholder: prismic.KeyTextField;
 	
 	/**
+	 * surname label field in *ContactFormVeedoo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_form_veedoo.primary.surname_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	surname_label: prismic.KeyTextField;
+	
+	/**
+	 * surname placeholder field in *ContactFormVeedoo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_form_veedoo.primary.surname_placeholder
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	surname_placeholder: prismic.KeyTextField;
+	
+	/**
+	 * phone number label field in *ContactFormVeedoo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_form_veedoo.primary.phone_number_label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	phone_number_label: prismic.KeyTextField;
+	
+	/**
+	 * phone number placeholder field in *ContactFormVeedoo → Primary*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_form_veedoo.primary.phone_number_placeholder
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	phone_number_placeholder: prismic.KeyTextField;
+	
+	/**
 	 * email label field in *ContactFormVeedoo → Primary*
 	 *
 	 * - **Field Type**: Text
@@ -1626,6 +1666,16 @@ export interface ContactFormVeedooSliceDefaultPrimary {
 	 * - **Documentation**: https://prismic.io/docs/field#number
 	 */
 	margin_bottom: prismic.NumberField;
+	
+	/**
+	 * agreement text field in *ContactFormVeedoo → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: contact_form_veedoo.primary.agreement_text
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	agreement_text: prismic.RichTextField;
 }
 
 /**

@@ -58,6 +58,34 @@
             "placeholder": ""
           }
         },
+        "surname_label": {
+          "type": "Text",
+          "config": {
+            "label": "surname label",
+            "placeholder": ""
+          }
+        },
+        "surname_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "surname placeholder",
+            "placeholder": ""
+          }
+        },
+        "phone_number_label": {
+          "type": "Text",
+          "config": {
+            "label": "phone number label",
+            "placeholder": ""
+          }
+        },
+        "phone_number_placeholder": {
+          "type": "Text",
+          "config": {
+            "label": "phone number placeholder",
+            "placeholder": ""
+          }
+        },
         "email_title": {
           "type": "Text",
           "config": {
@@ -133,6 +161,15 @@
           "config": {
             "label": "margin bottom",
             "placeholder": ""
+          }
+        },
+        "agreement_text": {
+          "type": "StructuredText",
+          "config": {
+            "label": "agreement text",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,list-item,o-list-item,rtl"
           }
         }
       },

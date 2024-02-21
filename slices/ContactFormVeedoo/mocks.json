@@ -117,6 +117,37 @@
         "__TYPE__": "FieldContent",
         "value": "24",
         "type": "Number"
+      },
+      "surname_label": {
+        "__TYPE__": "FieldContent",
+        "value": "aloud",
+        "type": "Text"
+      },
+      "surname_placeholder": {
+        "__TYPE__": "FieldContent",
+        "value": "horse",
+        "type": "Text"
+      },
+      "phone_number_label": {
+        "__TYPE__": "FieldContent",
+        "value": "shoe",
+        "type": "Text"
+      },
+      "phone_number_placeholder": {
+        "__TYPE__": "FieldContent",
+        "value": "star",
+        "type": "Text"
+      },
+      "agreement_text": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Ex minim tempor occaecat sit mollit do aliqua ipsum laborum. Reprehenderit cillum sit duis aute consequat laboris ea eu irure ea ex ex."
+            }
+          }
+        ]
       }
     },
     "items": [
