@@ -23,8 +23,8 @@ export default {
     };
   },
   head({ $prismic }) {
-    let title = this.page?.data?.meta_title
-      ? $prismic.asText(this.page?.data?.meta_title)
+    let title = this.page?.data?.title
+      ? $prismic.asText(this.page?.data?.title)
       : null;
 
     let baseurl = process.client ? window.location.href : " ";
@@ -39,7 +39,7 @@ export default {
         {
           hid: "og:title",
           property: "og:title",
-          content: title,
+          content: this.page?.data?.meta_title,
         },
         {
           hid: "og:description",
