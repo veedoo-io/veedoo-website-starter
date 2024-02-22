@@ -23,8 +23,8 @@ export default {
     };
   },
   head({ $prismic }) {
-    let title = this.page?.data?.title
-      ? $prismic.asText(this.page?.data?.title)
+    let title = this.page?.data?.meta_title
+      ? $prismic.asText(this.page?.data?.meta_title)
       : null;
 
     let baseurl = process.client ? window.location.href : " ";
@@ -34,7 +34,7 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.page?.data?.description,
+          content: this.page?.data?.meta_description,
         },
         {
           hid: "og:title",
@@ -44,12 +44,12 @@ export default {
         {
           hid: "og:description",
           property: "og:description",
-          content: this.page?.data?.description,
+          content: this.page?.data?.meta_description,
         },
         {
           hid: "og:image",
           property: "og:image",
-          content: this.page?.data?.image?.url + "&fm=jpg&w=1200&h=630",
+          content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
         },
         {
           hid: "og:url",
