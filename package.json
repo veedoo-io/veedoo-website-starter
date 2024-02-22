@@ -36,6 +36,7 @@
     "glob": "^8.0.3",
     "hex2tailwind": "^1.0.3",
     "nearest-color": "^0.4.4",
+    "node-fetch": "^3.3.2",
     "nuxt": "^2.15.8",
     "nuxt-runtime-compiler": "^1.1.0",
     "prettier": "^2.8.3",

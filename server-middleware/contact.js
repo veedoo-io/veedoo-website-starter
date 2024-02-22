@@ -3,6 +3,7 @@ const app = require('express')()
 const bodyParser = require('body-parser')
 const Fibery = require('fibery-unofficial');
 const fibery = new Fibery({ host: "veedoo.fibery.io", token: 'ded167ea.63db341695a2b43fc72fd20aa3d3564f0f0' });
+const fetch = require("node-fetch");
 
 app.use(bodyParser.json());
 
@@ -12,6 +13,10 @@ const FIBERY_TOKEN = 'ded167ea.63db341695a2b43fc72fd20aa3d3564f0f0'
 app.all('/contact', async (req, res) => {
 
     const { firstName, email, lastName, phone, message } = req.body;
+
+    if(!firstName || !email || !lastName || !phone || !message){
+        return res.json({status:false, dataError:'All fields are required' })
+    }
 
     try {
         // const player = await fibery.entity.createBatch([
@@ -33,7 +38,7 @@ app.all('/contact', async (req, res) => {
       email:"${email}",
       name:"${firstName} ${lastName}",
       phone:"${phone}",
-
+       project: {id: {is: "11f8db24-df42-11ec-8482-378615511c84"}}
     ){
       message,
       entities{
@@ -88,6 +93,7 @@ app.all('/contact', async (req, res) => {
 
        return  res.json({ status: true })
     } catch (error) {
+      console.log('error', error)
         return res.json({ status:false ,dataError: error })
     }
 
