@@ -111,6 +111,8 @@ export type AuthorDocument<Lang extends string = string> = prismic.PrismicDocume
 
 type BlogPostDocumentDataSlicesSlice = RichTextSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | ImageSlice | YoutubeVideoSlice | DividerSlice | FaqAccordionSlice | AtomTagsSlice | AlternateGridSlice | BlurbSlice | ButtonSlice | CallToActionWithImageSlice | ContactFormVeedooSlice | ContactInfoSlice | CtaTextBlockImageBlockSlice | CtaWithBackgroundImageSlice | GallerySliderSlice | HeroVeedooSlice | LogoGridSlice | PartnerLogoGridWithDescriptionTextSlice | PartnersLogoSliderSlice | PersonSlice | PortfolioItemsSlice | SocialFollowIconsSlice | StatisticsSlice | TestimonialSlice | TextWithTagsSlice
 
+type BlogPostDocumentDataSlices1Slice = never
+
 /**
  * Content for blog Post documents
  */
@@ -212,7 +214,49 @@ interface BlogPostDocumentData {
 	 * - **Tab**: Main
 	 * - **Documentation**: https://prismic.io/docs/field#slices
 	 */
-	slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice>;
+	slices: prismic.SliceZone<BlogPostDocumentDataSlicesSlice>;/**
+	 * meta title field in *blog Post*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.meta_title
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_title: prismic.KeyTextField;
+	
+	/**
+	 * meta description field in *blog Post*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.meta_description
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	meta_description: prismic.KeyTextField;
+	
+	/**
+	 * meta image field in *blog Post*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.meta_image
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	meta_image: prismic.ImageField<never>;
+	
+	/**
+	 * Slice Zone field in *blog Post*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog_post.slices1[]
+	 * - **Tab**: SEO
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices1: prismic.SliceZone<BlogPostDocumentDataSlices1Slice>;
 }
 
 /**
