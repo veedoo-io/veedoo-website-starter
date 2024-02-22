@@ -38,7 +38,7 @@ export default {
     if (this.page?.data?.meta_description) {
       meta.push({
         hid: "description",
-        name: "description",
+        property: "description",
         content: this.page?.data?.meta_description,
       });
     }
@@ -47,6 +47,13 @@ export default {
         hid: "og:image",
         property: "og:image",
         content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
+      });
+    }
+    if (this.page?.data?.meta_description) {
+      meta.push({
+        hid: "og:description",
+        property: "og:description",
+        content: this.page?.data?.meta_description,
       });
     }
     obj.meta = meta;

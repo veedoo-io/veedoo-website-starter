@@ -38,7 +38,7 @@ export default {
     if (this.page?.data?.meta_description) {
       meta.push({
         hid: "description",
-        name: "description",
+        property: "description",
         content: this.page?.data?.meta_description,
       });
       meta.push({
