@@ -34,22 +34,22 @@ export default {
         {
           hid: "description",
           name: "description",
-          content: this.page?.data?.description,
+          content: this.page?.data?.meta_description,
         },
         {
           hid: "og:title",
           property: "og:title",
-          content: title,
+          content: this.page?.data?.meta_title,
         },
         {
           hid: "og:description",
           property: "og:description",
-          content: this.page?.data?.description,
+          content: this.page?.data?.meta_description,
         },
         {
           hid: "og:image",
           property: "og:image",
-          content: this.page?.data?.image?.url + "&fm=jpg&w=1200&h=630",
+          content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
         },
         {
           hid: "og:url",
