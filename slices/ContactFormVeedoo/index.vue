@@ -289,7 +289,7 @@ export default {
           }
         );
 
-        const response = await fetch("/proxy/contact", {
+        /*   const response = await fetch("/proxy/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -301,7 +301,7 @@ export default {
             email: this.email,
             message: this.message,
           }),
-        });
+        });*/
         const res = await response.json();
 
         //console.log('request', request);
