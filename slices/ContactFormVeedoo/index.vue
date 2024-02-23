@@ -289,7 +289,7 @@ export default {
           }
         );
 
-        /*const response = await fetch("/proxy/contact", {
+        const response = await fetch("/proxy/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -302,7 +302,7 @@ export default {
             message: this.message,
           }),
         });
-        const res = await response.json();*/
+        const res = await response.json();
 
         //console.log('request', request);
         let result = await request.json();

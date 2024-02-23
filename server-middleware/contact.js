@@ -12,27 +12,27 @@ const FIBERY_TOKEN = 'ded167ea.63db341695a2b43fc72fd20aa3d3564f0f0'
 
 app.all('/contact', async (req, res) => {
 
-    const { firstName, email, lastName, phone, message } = req.body;
+  const { firstName, email, lastName, phone, message } = req.body;
 
-    if(!firstName || !email || !lastName || !phone || !message){
-        return res.json({status:false, dataError:'All fields are required' })
-    }
+  if (!firstName || !email || !lastName || !phone || !message) {
+    return res.json({ status: false, dataError: 'All fields are required' })
+  }
 
-    try {
-        // const player = await fibery.entity.createBatch([
-        //     {
-        //         'type': 'CRM and Sales/Contacts',
-        //         'entity': {
-        //             'CRM and Sales/First Name': firstName,
-        //             'CRM and Sales/Work e-mail': email,
-        //             'CRM and Sales/Last Name': lastName,
-        //             'CRM and Sales/Phone #': phone,
-        //             'CRM and Sales/Message': phone,
-        //         }
-        //     }
-        // ]);
+  try {
+    // const player = await fibery.entity.createBatch([
+    //     {
+    //         'type': 'CRM and Sales/Contacts',
+    //         'entity': {
+    //             'CRM and Sales/First Name': firstName,
+    //             'CRM and Sales/Work e-mail': email,
+    //             'CRM and Sales/Last Name': lastName,
+    //             'CRM and Sales/Phone #': phone,
+    //             'CRM and Sales/Message': phone,
+    //         }
+    //     }
+    // ]);
 
-      let query =`mutation{
+    let query = `mutation{
   websiteMessages{
     create(
       email:"${email}",
@@ -50,52 +50,52 @@ app.all('/contact', async (req, res) => {
 
 },`;
 
-      let response = await fetch(GRAPHQL_API_CRM_SPACE_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': `application/json`,
-          Authorization: `Token ${FIBERY_TOKEN}`,
-        },
-        body: JSON.stringify({ query }),
+    let response = await fetch(GRAPHQL_API_CRM_SPACE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': `application/json`,
+        Authorization: `Token ${FIBERY_TOKEN}`,
+      },
+      body: JSON.stringify({ query }),
 
-      });
+    });
 
-      if(response.status !== 200){
-        return res.json({status:false, dataError:'No new item was created' })
-      }
+    if (response.status !== 200) {
+      return res.json({ status: false, dataError: 'No new item was created' })
+    }
 
-      response = await response.json();
+    response = await response.json();
 
-      let newItemId = response?.data?.websiteMessages?.create?.entities[0]?.id ?? null;
+    let newItemId = response?.data?.websiteMessages?.create?.entities[0]?.id ?? null;
 
-      if(!newItemId){
-        return res.json({status:false, dataError: 'No new item was created' })
-      }
+    if (!newItemId) {
+      return res.json({ status: false, dataError: 'No new item was created' })
+    }
 
-      let messageQuery = `mutation{
+    let messageQuery = `mutation{
   websiteMessages(id:{is:"${newItemId}"}){
     appendContentToMessage(value:"${message}"){message}
   }
 }`
 
-      response = await fetch(GRAPHQL_API_CRM_SPACE_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': `application/json`,
-          Authorization: `Token ${FIBERY_TOKEN}`,
-        },
-        body: JSON.stringify({ query:messageQuery }),
-      });
+    response = await fetch(GRAPHQL_API_CRM_SPACE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': `application/json`,
+        Authorization: `Token ${FIBERY_TOKEN}`,
+      },
+      body: JSON.stringify({ query: messageQuery }),
+    });
 
 
 
 
 
-       return  res.json({ status: true })
-    } catch (error) {
-      console.log('error', error)
-        return res.json({ status:false ,dataError: error })
-    }
+    return res.json({ status: true })
+  } catch (error) {
+    console.log('error', error)
+    return res.json({ status: false, dataError: error })
+  }
 
 })
 
