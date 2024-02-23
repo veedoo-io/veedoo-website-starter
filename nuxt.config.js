@@ -163,6 +163,35 @@ export default async () => {
           hid: 'cookie-consent'
         },
         {
+          hid: 'linkedin-tag-1',
+          type: 'text/javascript',
+          innerHTML: `
+            _linkedin_partner_id = "6680169";
+            window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+            window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+          `
+        },
+        {
+          hid: 'linkedin-tag-2',
+          type: 'text/javascript',
+          innerHTML: `
+            (function(l) {
+              if (!l) {
+                window.lintrk = function(a, b) {
+                  window.lintrk.q.push([a, b]);
+                };
+                window.lintrk.q = [];
+              }
+              var s = document.getElementsByTagName("script")[0];
+              var b = document.createElement("script");
+              b.type = "text/javascript";
+              b.async = true;
+              b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+              s.parentNode.insertBefore(b, s);
+            })(window.lintrk);
+          `
+        },
+        {
           src:
             'https://www.googletagmanager.com/gtag/js?id=' +
             google_analytics_code,
@@ -184,9 +213,20 @@ export default async () => {
           type: "text/plain"
         },
       ],
+      noscript: [
+        {
+          hid: 'linkedin-tab-noscript',
+          innerHTML: `
+            <img height="1" width="1" style="display:none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=6680169&fmt=gif" />
+          `
+        }
+      ],
       __dangerouslyDisableSanitizersByTagID: {
         'gtag-content': ['innerHTML'],
-        'cookie-consent': ['innerHTML']
+        'cookie-consent': ['innerHTML'],
+        'linkedin-tag-1': ['innerHTML'],
+        'linkedin-tag-2': ['innerHTML'],
+        'linkedin-tab-noscript': ['innerHTML']
       },
     },
 
