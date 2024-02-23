@@ -302,7 +302,7 @@ export default {
             message: this.message,
           }),
         });*/
-        const res = await response.json();
+        //const res = await response.json();
 
         //console.log('request', request);
         let result = await request.json();
