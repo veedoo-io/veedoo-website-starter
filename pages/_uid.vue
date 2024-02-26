@@ -7,13 +7,17 @@ import { components } from "~/slices";
 
 export default {
   async asyncData({ $prismic, params, error }) {
-    const document = await $prismic.api.getByUID("page", params.uid);
+    try {
+      const document = await $prismic.api.getByUID("page", params.uid);
 
-    if (document) {
-      //console.log('document ', document);
-      return { status: true, page: document };
-    } else {
-      //console.log('document not found');
+      if (document) {
+        //console.log('document ', document);
+        return { status: true, page: document };
+      } else {
+        //console.log('document not found');
+        error({ statusCode: 404, message: "Page not found" });
+      }
+    } catch (errorMessage) {
       error({ statusCode: 404, message: "Page not found" });
     }
   },
