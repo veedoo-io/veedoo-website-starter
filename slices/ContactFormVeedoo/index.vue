@@ -304,6 +304,24 @@ export default {
         });*/
         //const res = await response.json();
 
+        let addToFibery = await fetch(
+          "https://veedoo-website-starter-api.vercel.app/api/addWebsiteMessageTofibery",
+          {
+            method: "POST",
+            body: JSON.stringify({
+              name: this.name+" "+this.surname,
+              phone: this.phone,
+              email: this.email,
+              message: this.message,
+            }),
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+
+
         //console.log('request', request);
         let result = await request.json();
         //console.log('result', result);
