@@ -54,18 +54,18 @@ export default async () => {
 
   return {
     target: 'static',
-    /* generate: {
-       routes: async () => {
-         const client = Prismic.client(apiEndpoint, {
-           routes: routes,
-         });
-         const pages = await client.query(
-           Prismic.Predicates.at('document.type', 'page')
-         );
- 
-         return pages.results.map((page) => page.url);
-       },
-     },*/
+    generate: {
+      routes: async () => {
+        const client = Prismic.client(apiEndpoint, {
+          routes: routes,
+        });
+        const pages = await client.query(
+          Prismic.Predicates.at('document.type', 'page')
+        );
+
+        return pages.results.map((page) => page.url);
+      },
+    },
     // Global page headers: https://go.nuxtjs.dev/config-head
     head: {
       title: title,
