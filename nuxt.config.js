@@ -55,6 +55,7 @@ export default async () => {
   return {
     target: 'static',
     generate: {
+      fallback: "404.html",
       routes: async () => {
         const client = Prismic.client(apiEndpoint, {
           routes: routes,
