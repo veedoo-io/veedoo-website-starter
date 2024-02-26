@@ -55,6 +55,7 @@ export default async () => {
   return {
     target: 'static',
     generate: {
+      exclude: ['/slice-simulator'],
       fallback: "404.html",
       routes: async () => {
         const client = Prismic.client(apiEndpoint, {
@@ -298,10 +299,10 @@ export default async () => {
     storybook: {
       stories: [...getStoriesPaths().map((path) => path.replace('../', '~/'))],
     },
-    generate: {
+    /*generate: {
       exclude: ['/slice-simulator'],
       routes: ['/'],
-    },
+    },*/
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {
       transpile: ['@prismicio/vue', 'vue-agile', 'vue-youtube-embed'],
