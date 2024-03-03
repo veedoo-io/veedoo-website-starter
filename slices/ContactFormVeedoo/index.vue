@@ -61,24 +61,20 @@
           type="email"
           required=""
           :class="getInputClasses()"
-          :placeholder="slice.primary.email_placeholder ?? 'Joe@mail.com'"
+          :placeholder="slice.primary.email_placeholder"
         />
         <div class="text-sm mt-1" v-if="v$.email?.$error">
           <p class="font-medium text-red-600">Enter valid email.</p>
         </div>
       </div>
       <div class="flex flex-col mb-4">
-        <label class="mb-2">{{
-          slice.primary.phone_number_label ?? "Your Email"
-        }}</label>
+        <label class="mb-2">{{ slice.primary.phone_number_label }}</label>
         <input
           v-model="phone"
           type="phone"
           required=""
           :class="getInputClasses()"
-          :placeholder="
-            slice.primary.phone_number_placeholder ?? 'Joe@mail.com'
-          "
+          :placeholder="slice.primary.phone_number_placeholder"
         />
         <div class="text-sm mt-1" v-if="v$.phone?.$error">
           <p class="font-medium text-red-600">Enter valid phone.</p>
@@ -309,7 +305,7 @@ export default {
           {
             method: "POST",
             body: JSON.stringify({
-              name: this.name+" "+this.surname,
+              name: this.name + " " + this.surname,
               phone: this.phone,
               email: this.email,
               message: this.message,
@@ -319,8 +315,6 @@ export default {
             },
           }
         );
-
-
 
         //console.log('request', request);
         let result = await request.json();
