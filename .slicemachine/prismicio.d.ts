@@ -417,35 +417,6 @@ interface HomePageDocumentData {
  */
 export type HomePageDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<HomePageDocumentData>, "home_page", Lang>;
 
-type PageNotFoundDocumentDataSlicesSlice = PageNotFound1Slice
-
-/**
- * Content for Page Not Found documents
- */
-interface PageNotFoundDocumentData {
-	/**
-	 * Slice Zone field in *Page Not Found*
-	 *
-	 * - **Field Type**: Slice Zone
-	 * - **Placeholder**: *None*
-	 * - **API ID Path**: page_not_found.slices[]
-	 * - **Tab**: Main
-	 * - **Documentation**: https://prismic.io/docs/field#slices
-	 */
-	slices: prismic.SliceZone<PageNotFoundDocumentDataSlicesSlice>;
-}
-
-/**
- * Page Not Found document from Prismic
- *
- * - **API ID**: `page_not_found`
- * - **Repeatable**: `false`
- * - **Documentation**: https://prismic.io/docs/custom-types
- *
- * @typeParam Lang - Language API ID of the document.
- */
-export type PageNotFoundDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<PageNotFoundDocumentData>, "page_not_found", Lang>;
-
 type PageDocumentDataSlicesSlice = PartnersLogoSliderSlice | CallToActionWithImageSlice | TestimonialSlice | AlternateGridSlice | HeroVeedooSlice | AtomTagsSlice | FaqAccordionSlice | ContactFormVeedooSlice | PortfolioItemsSlice | RichTextSlice | PostListingSlice | DividerSlice | ContactInfoSlice | TitleSlice | PostSliderSlice | PostCarouselSlice | TitleWithDateAndShareIconsSlice | TwoColumnTextBlockSlice | CtaWithBackgroundImageSlice | PartnerLogoGridWithDescriptionTextSlice | PersonSlice | YoutubeVideoSlice | SocialFollowIconsSlice | ImageSlice | BlurbSlice | AudioPlayerWithImageSlice | CtaTextBlockImageBlockSlice | GallerySliderSlice | StatisticsSlice | LogoGridSlice | ButtonSlice | TextWithTagsSlice | PageNotFound1Slice
 
 /**
@@ -733,7 +704,7 @@ interface WebsiteSettingsDocumentData {
  */
 export type WebsiteSettingsDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<WebsiteSettingsDocumentData>, "website_settings", Lang>;
 
-export type AllDocumentTypes = AuthorDocument | BlogPostDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageNotFoundDocument | PageDocument | PostCategoryDocument | PostTagDocument | WebsiteSettingsDocument;
+export type AllDocumentTypes = AuthorDocument | BlogPostDocument | ErrorPageDocument | FooterDocument | HeaderDocument | HomePageDocument | PageDocument | PostCategoryDocument | PostTagDocument | WebsiteSettingsDocument;
 
 /**
  * Primary content in *AlternateGrid → Primary*
@@ -5912,8 +5883,6 @@ declare module "@prismicio/client" {
 			HeaderDocumentData,
 			HomePageDocument,
 			HomePageDocumentData,
-			PageNotFoundDocument,
-			PageNotFoundDocumentData,
 			PageDocument,
 			PageDocumentData,
 			PostCategoryDocument,
