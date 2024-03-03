@@ -112,6 +112,9 @@
             },
             "text_with_tags": {
               "type": "SharedSlice"
+            },
+            "page_not_found1": {
+              "type": "SharedSlice"
             }
           }
         }
