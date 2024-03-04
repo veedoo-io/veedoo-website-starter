@@ -33,6 +33,11 @@ export default {
         property: "og:title",
         content: this.page?.data?.meta_title,
       });
+      meta.push({
+        hid: "twitter_title",
+        name: "twitter:title",
+        content: this.page?.data?.meta_title,
+      });
     }
 
     if (this.page?.data?.meta_description) {
@@ -48,11 +53,21 @@ export default {
         property: "og:image",
         content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
       });
+      meta.push({
+        hid: "twitter_image",
+        property: "twitter:image",
+        content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
+      });
     }
     if (this.page?.data?.meta_description) {
       meta.push({
         hid: "og:description",
         property: "og:description",
+        content: this.page?.data?.meta_description,
+      });
+      meta.push({
+        hid: "twitter_description",
+        name: "twitter:description",
         content: this.page?.data?.meta_description,
       });
     }
