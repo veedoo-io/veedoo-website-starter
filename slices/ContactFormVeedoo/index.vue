@@ -68,13 +68,15 @@
         </div>
       </div>
       <div class="flex flex-col mb-4">
-        <label class="mb-2">{{ slice.primary.phone_number_label }}</label>
+        <label class="mb-2">{{
+          slice.primary.phone_number_label ?? "Your phone number"
+        }}</label>
         <input
           v-model="phone"
           type="phone"
           required=""
           :class="getInputClasses()"
-          :placeholder="slice.primary.phone_number_placeholder"
+          :placeholder="slice.primary.phone_number_placeholder ?? '+XXXXXXX'"
         />
         <div class="text-sm mt-1" v-if="v$.phone?.$error">
           <p class="font-medium text-red-600">Enter valid phone.</p>
