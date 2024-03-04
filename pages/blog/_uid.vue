@@ -56,6 +56,32 @@ export default {
           property: "og:url",
           content: baseurl,
         },
+        // TWITTER
+        {
+          hid: "twitter_card",
+          name: "twitter:card",
+          content: "",
+        },
+        {
+          hid: "twitter_site",
+          name: "twitter:site",
+          content: "",
+        },
+        {
+          hid: "twitter_title",
+          name: "twitter:title",
+          content: this.page?.data?.meta_title,
+        },
+        {
+          hid: "twitter_description",
+          name: "twitter:description",
+          content: this.page?.data?.meta_description,
+        },
+        {
+          hid: "twitter_image",
+          name: "twitter:image",
+          content: this.page?.data?.meta_image?.url + "&fm=jpg&w=1200&h=630",
+        },
       ],
     };
   },
