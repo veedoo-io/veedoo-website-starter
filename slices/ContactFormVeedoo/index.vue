@@ -323,11 +323,16 @@ export default {
         //console.log('result', result);
         if (result.status) {
           this.messageSent = true;
-          // Remove the animation class after a few seconds (adjust the time as needed)
-          setTimeout(() => {
-            this.sendingMessage = false;
-            this.messageSent = false;
-          }, 3000); // 3000 milliseconds (3 seconds) in this example
+          (this.email = ""),
+            (this.name = ""),
+            (this.surname = ""),
+            (this.message = ""),
+            (this.phone = ""),
+            // Remove the animation class after a few seconds (adjust the time as needed)
+            setTimeout(() => {
+              this.sendingMessage = false;
+              this.messageSent = false;
+            }, 3000); // 3000 milliseconds (3 seconds) in this example
         } else {
           this.sendingMessage = false;
           this.messageSent = false;
