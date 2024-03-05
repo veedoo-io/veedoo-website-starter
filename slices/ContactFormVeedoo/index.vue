@@ -76,7 +76,9 @@
           type="phone"
           required=""
           :class="getInputClasses()"
-          :placeholder="slice.primary.phone_number_placeholder ?? '+XXXXXXX'"
+          :placeholder="
+            slice.primary.phone_number_placeholder ?? '+XXXXXXXXXXXX'
+          "
         />
         <div class="text-sm mt-1" v-if="v$.phone?.$error">
           <p class="font-medium text-red-600">Enter valid phone.</p>
