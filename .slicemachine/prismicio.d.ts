@@ -651,6 +651,28 @@ interface WebsiteSettingsDocumentData {
 	website_language_code: prismic.KeyTextField;
 	
 	/**
+	 * facebook pixel field in *Website settings*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: website_settings.facebook_pixel
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	facebook_pixel: prismic.KeyTextField;
+	
+	/**
+	 * hotjar field in *Website settings*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: website_settings.hotjar
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	hotjar: prismic.KeyTextField;
+	
+	/**
 	 * Slice Zone field in *Website settings*
 	 *
 	 * - **Field Type**: Slice Zone

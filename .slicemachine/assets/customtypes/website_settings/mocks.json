@@ -1,12 +1,12 @@
 {
   "website_name_for_logs": {
     "__TYPE__": "FieldContent",
-    "value": "setting",
+    "value": "thou",
     "type": "Text"
   },
   "google_analytics_code": {
     "__TYPE__": "FieldContent",
-    "value": "prove",
+    "value": "horn",
     "type": "Text"
   },
   "fibery_settings": {
@@ -29,7 +29,7 @@
             "fibery_token",
             {
               "__TYPE__": "FieldContent",
-              "value": "lungs",
+              "value": "you",
               "type": "Text"
             }
           ]
@@ -39,20 +39,20 @@
   },
   "default_email_mailto": {
     "__TYPE__": "FieldContent",
-    "value": "nearly",
+    "value": "thirty",
     "type": "Text"
   },
   "website_fav_icon": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
-      "width": 3500,
-      "height": 2338
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      "width": 3882,
+      "height": 2584
     },
-    "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
-    "width": 3500,
-    "height": 2338,
+    "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+    "width": 3882,
+    "height": 2584,
     "edit": {
       "zoom": 1,
       "crop": {
@@ -65,12 +65,22 @@
   },
   "default_background_color": {
     "__TYPE__": "FieldContent",
-    "value": "#74ba9c",
+    "value": "#929cc1",
     "type": "Color"
   },
   "website_language_code": {
     "__TYPE__": "FieldContent",
-    "value": "blew",
+    "value": "couple",
+    "type": "Text"
+  },
+  "facebook_pixel": {
+    "__TYPE__": "FieldContent",
+    "value": "neck",
+    "type": "Text"
+  },
+  "hotjar": {
+    "__TYPE__": "FieldContent",
+    "value": "saved",
     "type": "Text"
   },
   "slices": {
@@ -79,25 +89,25 @@
   },
   "title": {
     "__TYPE__": "FieldContent",
-    "value": "doll",
+    "value": "darkness",
     "type": "Text"
   },
   "description": {
     "__TYPE__": "FieldContent",
-    "value": "obtain",
+    "value": "moving",
     "type": "Text"
   },
   "image": {
     "__TYPE__": "ImageContent",
     "origin": {
       "id": "main",
-      "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
-      "width": 3456,
-      "height": 3456
+      "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+      "width": 3560,
+      "height": 5340
     },
-    "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89",
-    "width": 3456,
-    "height": 3456,
+    "url": "https://images.unsplash.com/photo-1471897488648-5eae4ac6686b",
+    "width": 3560,
+    "height": 5340,
     "edit": {
       "zoom": 1,
       "crop": {
