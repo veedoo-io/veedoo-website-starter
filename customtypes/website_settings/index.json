@@ -71,6 +71,20 @@
           "placeholder": ""
         }
       },
+      "facebook_pixel": {
+        "type": "Text",
+        "config": {
+          "label": "facebook pixel",
+          "placeholder": ""
+        }
+      },
+      "hotjar": {
+        "type": "Text",
+        "config": {
+          "label": "hotjar",
+          "placeholder": ""
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
