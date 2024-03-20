@@ -38,13 +38,18 @@ export default {
       const items = [hotjar, facebook_pixel];
 
       items.forEach((element) => {
-        //  const script = document.createElement("script");
-        // script.innerHTML = element;
-        var parser = new DOMParser();
-        var doc = parser.parseFromString(element, "text/html");
+        const plainText = element;
 
-        // Append the script tag to the head
-        document.head.append(doc.body);
+        var tempContainer = document.createElement("div");
+        tempContainer.innerHTML = plainText;
+
+        var headElement =
+          document.head || document.getElementsByTagName("head")[0];
+
+        var childNodes = tempContainer.childNodes;
+        for (var i = 0; i < childNodes.length; i++) {
+          headElement.appendChild(childNodes[i].cloneNode(true));
+        }
       });
     },
   },
