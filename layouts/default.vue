@@ -27,7 +27,7 @@ export default {
   computed: {
     ...mapGetters(["getSettings"]),
   },
-  beforeMount() {
+  /* beforeMount() {
     this.injectScript();
   },
   methods: {
@@ -51,7 +51,8 @@ export default {
           headElement.appendChild(childNodes[i].cloneNode(true));
         }
       });
+      console.log(response);
     },
-  },
+  },*/
 };
 </script>
