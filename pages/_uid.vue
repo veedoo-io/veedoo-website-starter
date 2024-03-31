@@ -9,7 +9,6 @@ export default {
   async asyncData({ $prismic, params, error }) {
     try {
       const document = await $prismic.api.getByUID("page", params.uid);
-      console.log("d_", document);
       if (document) {
         //console.log('document ', document);
         return { status: true, page: document };

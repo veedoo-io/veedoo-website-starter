@@ -127,7 +127,7 @@
               >
                 <PrismicLink
                   :field="item.menu_link"
-                  @click.native="isMenuOpen = false"
+                  @click.native="closeMenu(item.menu_text)"
                   >{{ item.menu_text }}</PrismicLink
                 >
               </div>
@@ -207,6 +207,16 @@ export default {
   methods: {
     toggleMobileMenu() {
       this.isMenuOpen = !this.isMenuOpen;
+    },
+    closeMenu(text) {
+      isMenuOpen = false;
+      if (text === "hello@veedoo.io") {
+        if (process.client) {
+          fbq("track", "ViewContent", {
+            content_name: "Click on hello@veedoo.io",
+          });
+        }
+      }
     },
   },
 };

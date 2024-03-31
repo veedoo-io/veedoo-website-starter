@@ -27,6 +27,14 @@ export default {
   computed: {
     ...mapGetters(["getSettings"]),
   },
+  watch: {
+    '$route'() {
+      if(process.client){
+        fbq('track', 'ViewContent');
+      }
+
+    }
+  }
   /* beforeMount() {
     this.injectScript();
   },
